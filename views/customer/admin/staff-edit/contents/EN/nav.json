@@ -1,0 +1,13 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/admin"
+        },
+        "links": [
+            { "text": "Edit Staff Information", "href": "/admin/staff-edit", "active": "" }
+        ]
+    }
+}

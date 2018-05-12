@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/edl/admin"
+        },
+        "links": [
+            {
+                "text": "Staff Home",
+                "href": "/edl/admin/staff-home",
+                "active": ""
+            }
+        ]
+    }
+}

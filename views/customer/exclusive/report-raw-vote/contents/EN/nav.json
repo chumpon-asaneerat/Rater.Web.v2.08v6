@@ -1,0 +1,18 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/exclusive"
+        },
+        "links": [
+            { "text": "Rater Home", "href": "/exclusive", "active": "" },
+            {
+                "text": "Raw vote report",
+                "href": "/exclusive/report-raw-vote",
+                "active": ""
+            }
+        ]
+    }
+}

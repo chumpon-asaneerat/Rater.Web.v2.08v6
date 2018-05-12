@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/admin"
+        },
+        "links": [
+            {
+                "text": "Vote summary report",
+                "href": "/admin/report-vote-summary",
+                "active": ""
+            }
+        ]
+    }
+}

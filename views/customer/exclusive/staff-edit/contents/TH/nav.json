@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/exclusive"
+        },
+        "links": [
+            {
+                "text": "Edit Staff Information",
+                "href": "/exclusive/staff-edit",
+                "active": ""
+            }
+        ]
+    }
+}

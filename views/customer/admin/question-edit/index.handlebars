@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{title}}</title>
+
+    <link href="/dist/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/css/bootstrap.united.min.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="/dist/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/css/emojisymbol.min.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/css/animate.min.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        body { 
+            /* prevent overlap navbar */
+            padding-top: 40px; 
+            /* prevent overlap footer */
+            padding-bottom: 25px; 
+            overflow-x: hidden; /* no body scroll bar */
+            overflow-y: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div data-is="page-nav-bar" title="Edit Question Information" src=""></div>
+
+        <div data-is="page-content-absolute">
+            <div data-is="customer-admin-question-edit-content"></div>
+        </div>
+        <!--
+        <div data-is="page-content-relative">
+            <div data-is="customer-question-edit-content"></div>
+        </div>
+         -->
+        <div data-is="page-footer"></div>
+    </div>
+    
+    <script src="/dist/js/jquery.min.js"></script>
+    <script src="/dist/jquery-ui.min.js"></script>
+    <script src="/dist/js/popper.min.js"></script>
+    <script src="/dist/js/tooltip.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js">/* bootstrap required jQuery and popperjs. */</script>
+    <script src="/dist/js/client.min.js"></script>
+    <script src="/dist/js/moment.min.js"></script>
+
+    <script src="/dist/js/riot.min.js"></script>
+
+    <script src="/lib/js/nlib.js"></script>
+    <script src="/lib/js/services.js"></script>
+    <script src="/lib/js/tags.js"></script>
+    <script src="{{baseUrl}}/js/model.js"></script>
+    <script src="{{baseUrl}}/js/app.js"></script>
+
+    <script>
+        $(function () {
+            //console.log('ready...');
+        });
+    </script>
+</body>
+
+</html>

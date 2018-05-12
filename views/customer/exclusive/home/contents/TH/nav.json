@@ -1,0 +1,13 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/exclusive"
+        },
+        "links": [
+            { "text": "หน้าหลัก Exclusive", "href": "/exclusive", "active": "" }
+        ]
+    }
+}

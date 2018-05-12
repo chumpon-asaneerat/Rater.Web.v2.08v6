@@ -1,0 +1,18 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/admin"
+        },
+        "links": [
+            { "text": "Rater Home", "href": "/admin", "active": "" },
+            {
+                "text": "Organization Home",
+                "href": "/admin/org-home",
+                "active": ""
+            }
+        ]
+    }
+}

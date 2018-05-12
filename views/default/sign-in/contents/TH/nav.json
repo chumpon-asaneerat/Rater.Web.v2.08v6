@@ -1,0 +1,14 @@
+{
+    "nav": {
+        "banner": {
+            "title": "หน้าหลัก",
+            "src": "",
+            "icon": "home",
+            "href": "/"
+        },
+        "links": [
+            { "text": "ลงทะเบียน", "href": "/register", "active": "" },
+            { "text": "เข้าสู่ระบบ", "href": "/signin", "active": "active" }
+        ]
+    }
+}

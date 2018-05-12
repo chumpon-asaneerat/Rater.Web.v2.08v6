@@ -1,0 +1,13 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/edl/admin"
+        },
+        "links": [
+            { "text": "หน้าหลัก Customer Home", "href": "/edl/admin/customer-home", "active": "" }
+        ]
+    }
+}

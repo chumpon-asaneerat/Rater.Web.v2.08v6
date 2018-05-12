@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/admin"
+        },
+        "links": [
+            {
+                "text": "Edit Question Information",
+                "href": "/admin/question-edit",
+                "active": ""
+            }
+        ]
+    }
+}

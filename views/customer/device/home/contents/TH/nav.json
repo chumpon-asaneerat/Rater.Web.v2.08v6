@@ -1,0 +1,13 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/device"
+        },
+        "links": [
+            { "text": "หน้าหลัก admin", "href": "/device", "active": "" }
+        ]
+    }
+}

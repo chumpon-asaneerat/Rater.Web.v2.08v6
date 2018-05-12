@@ -1,0 +1,14 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/"
+        },
+        "links": [
+            { "text": "Register", "href": "/register", "active": "active" },
+            { "text": "Sign In", "href": "/signin", "active": "" }
+        ]
+    }
+}

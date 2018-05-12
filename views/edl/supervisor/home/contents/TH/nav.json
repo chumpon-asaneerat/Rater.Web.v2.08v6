@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/edl/supervisor"
+        },
+        "links": [
+            {
+                "text": "EDL Supervisor Home",
+                "href": "/edl/supervisor",
+                "active": ""
+            }
+        ]
+    }
+}

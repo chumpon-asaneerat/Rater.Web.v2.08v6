@@ -1,0 +1,17 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/exclusive"
+        },
+        "links": [
+            {
+                "text": "Report Home",
+                "href": "/exclusive/report-home",
+                "active": ""
+            }
+        ]
+    }
+}

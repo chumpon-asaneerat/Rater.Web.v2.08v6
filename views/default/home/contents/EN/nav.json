@@ -1,0 +1,34 @@
+{
+    "nav": {
+        "banner": {
+            "title": "Home",
+            "src": "",
+            "icon": "home",
+            "href": "/"
+        },
+        "links": [
+            { "text": "Register", "href": "/register", "active": "" },
+            { "text": "Sign In", "href": "/signin", "active": "" },
+            {
+                "text": "About",
+                "href": "#about",
+                "active": ""
+            },
+            {
+                "text": "Services",
+                "href": "#services",
+                "active": ""
+            },
+            {
+                "text": "Product",
+                "href": "#product",
+                "active": ""
+            },
+            {
+                "text": "Contact",
+                "href": "#contact",
+                "active": ""
+            }
+        ]
+    }
+}
