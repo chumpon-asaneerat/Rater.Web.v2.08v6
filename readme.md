@@ -1,5 +1,5 @@
 # My Choice Rater Web v2.08
 
-instalation
+instalation node_modules
 
-> npm init
+> npm install
