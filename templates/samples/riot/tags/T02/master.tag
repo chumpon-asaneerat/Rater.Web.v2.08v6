@@ -1,25 +1,9 @@
 <master class="container-fluid">
     <div data-is="main-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 4</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 5</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 6</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 7</a>
+        <li each={app.navLinks} class="nav-item">
+            <a class="nav-link" href="{ url }">
+                { text }
+            </a>
         </li>
     </div>
     <div data-is="page-content">
@@ -63,6 +47,17 @@
         <p>Line !!! END</p>
     </div>
     <div data-is="main-footer"></div>
+
+    <script>
+        let self = this;
+        //this.links = app.navLinks;
+        //console.log(this.links);
+
+        this.on('languagechanged', () => {
+            console.log('language changed.');
+            self.update();
+        });
+    </script>
 </master>
 
 <main-nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary m-0 p-1">
@@ -76,22 +71,22 @@
     <div class="d-flex flex-row order-2 order-sm-3 order-md-3 order-lg-3">
         <ul class="navbar-nav flex-row">
             <li class="nav-item">
-                <a class="nav-link px-2" href="#">
-                    <span class="fab fa-facebook"></span>
+                <a class="nav-link px-2" href="javascript:;" onclick="{ changeLanguage }">
+                    <span class="fab fa-facebook" langId="EN"></span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2" href="#">
-                    <span class="fab fa-twitter"></span>
+                <a class="nav-link px-2" href="javascript:;" onclick="{ changeLanguage }">
+                    <span class="fab fa-twitter" langId="TH"></span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2" href="#">
+                <a class="nav-link px-2" href="javascript:;">
                     <span class="fab fa-youtube"></span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link px-2" href="#">
+                <a class="nav-link px-2" href="javascript:;">
                     <span class="fab fa-linkedin"></span>
                 </a>
             </li>
@@ -107,20 +102,6 @@
             <yield />
         </ul>
     </div>
-    <!--
-    <div class="dropdown show justify-content-end">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Dropdown link
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-    </div>
-    -->
 
     <style>
         :scope {
@@ -134,6 +115,13 @@
             height: 28px;
         }
     </style>
+    <script>
+        this.changeLanguage = function(e) {
+            e.preventDefault();
+            var langIdAttr = e.target.attributes.getNamedItem('langId');            
+            app.changeLanguage(langIdAttr.value);
+        };
+    </script>
 </main-nav>
 
 <page-content class="container-fluid">
@@ -173,4 +161,8 @@
             border-left: 1px solid whitesmoke;
         }        
     </style>
+
+    <script>
+
+    </script>
 </main-footer>
