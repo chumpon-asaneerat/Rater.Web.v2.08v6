@@ -958,6 +958,7 @@ nlib = function () {
  */
 class NDelegate {
     constructor() {
+        this._locked = false;
         this._events = [];
     };
 
@@ -994,7 +995,22 @@ class NDelegate {
         }
     };
 
+    locked() {
+        this._locked = true;
+    };
+
+    unlocked() {
+        this._locked = false;
+    };
+
+    get isLocked() {
+        return this._locked;
+    };
+
     invoke(...args) {
+        if (this._locked) {
+            return;
+        }
         let evtDataObj = this.createEventData(args);
         this._events.forEach((evt) => {
             this.raiseEvent(evt, evtDataObj);
@@ -1093,6 +1109,13 @@ class DataSource {
         return this._selectedIndex;
     };
     set selectedIndex(value) {
+        /*
+        if (this._selectedIndex === value) {
+            //console.log('same index.');
+            return;
+        }
+        */
+        
         let oVal = this._selectedIndex;
         let nVal = -1;
 

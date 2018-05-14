@@ -109,7 +109,7 @@ class LanguageService extends DataSource {
 
     onSelectedIndexChange() {
         //console.log('detected selected index changed.');
-        super.onDatasourceChange();
+        super.onSelectedIndexChange();
 
         if (this._locked) {
             //console.log('detected lock update local storage.');
@@ -141,7 +141,12 @@ class LanguageService extends DataSource {
             let index = this.findLanguage(langId);
             if (index !== -1) {
                 //console.log('Use Language :', langId);
-                this.selectedIndex = index;
+                if (!this._locked) {
+                    this.selectedIndex = index;
+                }
+                else {
+                    //console.log('deteced lock selectedindex.');
+                }
             }
             else {
                 //console.log('Not found language match langId:', langId);
@@ -150,7 +155,12 @@ class LanguageService extends DataSource {
                     index = this.findLanguage('EN');
                     if (index !== -1) {
                         //console.log('Use EN.');
-                        this.selectedIndex = index;
+                        if (!this._locked) {
+                            this.selectedIndex = index;
+                        }
+                        else {
+                            //console.log('deteced lock selectedindex.');
+                        }
                     }
                     else {
                         // not found EN.
@@ -162,7 +172,12 @@ class LanguageService extends DataSource {
                     index = this.findLanguage(this.currentLangId);
                     if (index !== -1) {
                         //console.log('Use Current Language Selection.');
-                        this.selectedIndex = index; // use current selection.
+                        if (!this._locked) {
+                            this.selectedIndex = index; // use current selection.
+                        }
+                        else {
+                            //console.log('deteced lock selectedindex.');
+                        }
                     }
                     else {
                         // no current language selection.
@@ -183,13 +198,10 @@ class LanguageService extends DataSource {
             if (!r.errors.hasError) {
                 //console.log('load languages...success');
                 this._locked = true; // lock update local storage.
-
                 this.datasource = r.data;
-
+                this._locked = false; // unlock update local storage.
                 //console.log('Previous LangId:', this._pref.langId);
                 this.changeLanguage(this._pref.langId); // set language previous set.
-
-                this._locked = false; // unlock update local storage.
             }
             else {
                 //console.error('load languages...failed');
@@ -205,38 +217,126 @@ class LanguageService extends DataSource {
         }
         return langId;
     };
+
+    get isLocked() {
+        return this._locked;
+    }
 };
 
-// The Content Service class.
-class ContentService {
+class ContentModel {
+    //-- constructor.
     constructor() {
-        this._content = { };
+        this._model = { };
+        this._model_loaded = null;
+
+        let self = this;
+        //-- event handler(s).
+        let onLanguageChanged = (sender, evtData) => { 
+            if (lang.isLocked) {
+                return;
+            }
+            //console.log(evtData);
+            let langId = lang.currentLangId;
+            //console.log('langId:', langId);
+            if (!self._model) {
+                self._model = { };
+            }
+            if (!self._model[langId]) {
+                self._model[langId] = { };                
+            }
+            self.loadModels(langId);
+        };
+        lang.selectedindexchanged.add(onLanguageChanged);
     };
 
-    //-- public methods.
-    loadModel(langId, modelType) {
+    //-- public, virtual methods.
+    loadModels(langId) { }
+    
+    loadModel(langId, modelType, callback) {
+        //console.log('Current LangId:', lang.currentLangId);
+        let self = this;
         let data = {
             langId: langId,
             modelType: modelType
         }
         let fn = api.getModel(data);
         $.when(fn).then((r) => {
-            console.log(r);
+            if (!r.errors.hasError) {
+                if (!self._model[langId]) {
+                    self._model[langId] = { }
+                }
+                if (!self._model[langId][modelType]) {
+                    self._model[langId][modelType] = r.data;
+                    //console.log(self._model);
+                }                
+                if (callback && callback instanceof Function) {
+                    //console.log('Raise callback. data:', model[modelType], ', langId:', lang.currentLangId);
+                    callback(self._model[langId][modelType]);
+                    if (this._model_loaded) {
+                        this._model_loaded(langId, modelType, self._model[langId]);
+                    }
+                }
+            }
+            else {
+                console.error('detected error when get model:', modelType);
+            }
         });
+    };
+
+    //-- public properties.
+    get model() {
+        return this._model;
+    }
+
+    //-- callback properties.
+    get modelloaded() {
+        return this._model_loaded;
+    };
+    set modelloaded(value) {
+        this._model_loaded = value;
+    };
+};
+
+// The Content Service class.
+class ContentService {
+    constructor() {
+        this._contentModel = null;
+    };
+
+    //-- public properties.
+    get ContentModel() {
+        return this._contentModel;
+    };
+    set ContentModel(value) {
+        this._contentModel = value;
+    };
+
+    get model() {
+        let langId = lang.currentLangId;
+        //console.log('langId:', langId);
+        if (this._contentModel && 
+            this._contentModel.model) {
+            // returns model on current selected language.
+            if (!this._contentModel.model[langId]) {
+                this._contentModel.loadModels(langId);
+            }
+            return this._contentModel.model[langId];
+        }
+        else {
+            // not found.
+            console.log('not found.');
+            return null;
+        }
     };
 };
 
 // The Client App class.
 class ClientApp {
     constructor() {
-        this._langServ = new LanguageService();
         this._contServ = new ContentService();
     }
 
     //-- public properties.
-    get lang() {
-        return this._langServ;
-    };
     get content() {
         return this._contServ;
     };
@@ -244,5 +344,6 @@ class ClientApp {
 
 ; (function () {
     //console.log('Init app core...');
+    window.lang = window.lang || new LanguageService();
     window.app = window.app || new ClientApp();
 })();
