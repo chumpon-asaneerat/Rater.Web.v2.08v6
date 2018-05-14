@@ -125,10 +125,7 @@ class LanguageService extends DataSource {
         if (this.datasource && this.datasource.length > 0 &&
             langId && langId !== '') {
             let maps = this.datasource.map((item) => {
-                // TODO: 
-                // BEWARE THIS the LangId from database first letter is Uppercase.
-                // So be sure to check spelling.
-                return item.LangId;
+                return item.langId;
             });            
             let index = maps.indexOf(langId);
             return index;
@@ -204,10 +201,7 @@ class LanguageService extends DataSource {
     get currentLangId() {
         let langId = null;
         if (this.selectedObject) {
-            // TODO: 
-            // BEWARE THIS the LangId from database first letter is Uppercase.
-            // So be sure to check spelling.
-            langId = this.selectedObject.LangId;
+            langId = this.selectedObject.langId;
         }
         return langId;
     };
