@@ -192,6 +192,13 @@ BEGIN
     EXEC SaveErrorMsg 2003, N'QSeq cannot be null.'
     EXEC SaveErrorMsg 2004, N'The default OrgId not found.'
     EXEC SaveErrorMsg 2005, N'The BranchId not found.'
+
+    -- GET RAW VOTES
+    EXEC SaveErrorMsg 2101, N'CustomerId cannot be null or empty string.'
+    EXEC SaveErrorMsg 2102, N'QSetId cannot be null or empty string.'
+    EXEC SaveErrorMsg 2103, N'QSeq cannot be null or less than 1.'
+    EXEC SaveErrorMsg 2104, N'Begin Date and End Date cannot be null.'
+    EXEC SaveErrorMsg 2105, N'LangId Is Null Or Empty String.'
 END
 
 GO
