@@ -1,27 +1,29 @@
-<page-footer class="navbar fixed-bottom m-0 p-1 navbar-light bg-primary">
-    <span class="float-left m-0 p-0" style="font-size: 0.7em;">
-        &nbsp;&nbsp;{ label.status }&nbsp;
+<page-footer class="navbar fixed-bottom m-0 p-0 navbar-light bg-primary">
+    <span class="float-left m-0 p-0">
+        <label class="m-0 p-1">&nbsp;{label.status}&nbsp;:</label>
         <div class="v-divider">&nbsp;</div>
     </span>
     <span class="float-right m-0 p-0 ml-auto">
-        <div class="v-divider">&nbsp;</div>
-        &copy;&nbsp;{ label.copyright }&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="v-divider"></div>
+        <label class="m-0 p-1">&copy;&nbsp;{label.copyright}&nbsp;&nbsp;&nbsp;</label>
     </span>
 
     <style>
-        :scope,
-        nav,
-        span,
-        .navbar-text {
-            color: whitesmoke;
-            font-size: 0.8em;
+        :scope, .navbar, .nav, span {
             margin: 0 auto;
+            padding: 0;
+        }
+
+        label {
+            color: whitesmoke;
+            font-size: 0.95em;
+            font-weight: bold;
         }
 
         .v-divider {
             display: inline;
-            margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
             border-left: 1px solid whitesmoke;
         }
     </style>
@@ -37,7 +39,7 @@
             if (modelType === 'footer') {
                 let model = app.content.model; // same as loadedModel
                 //let model = loadedModel;
-                console.log('Model Loaded:', model);
+                //console.log('Model Loaded:', model);
                 self.label = model.footer.label;
                 self.update();
             }

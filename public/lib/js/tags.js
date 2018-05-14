@@ -3,7 +3,7 @@ riot.tag2('page-content-relative', '<h3>Content gone below.</h3> <yield></yield>
 riot.tag2('page-content-absolute', '<div> <yield></yield> </div>', 'page-content-absolute,[data-is="page-content-absolute"]{ margin: 1px auto; padding: 1px; position: absolute; top: 48px; bottom: 24px; left: 1px; right: 4px; overflow-x: hidden; overflow-y: auto; }', '', function(opts) {
 });
 
-riot.tag2('page-footer', '<span class="float-left m-0 p-0" style="font-size: 0.7em;"> &nbsp;&nbsp;{label.status}&nbsp; <div class="v-divider">&nbsp;</div> </span> <span class="float-right m-0 p-0 ml-auto"> <div class="v-divider">&nbsp;</div> &copy;&nbsp;{label.copyright}&nbsp;&nbsp;&nbsp;&nbsp; </span>', 'page-footer,[data-is="page-footer"],page-footer nav,[data-is="page-footer"] nav,page-footer span,[data-is="page-footer"] span,page-footer .navbar-text,[data-is="page-footer"] .navbar-text{ color: whitesmoke; font-size: 0.8em; margin: 0 auto; } page-footer .v-divider,[data-is="page-footer"] .v-divider{ display: inline; margin-left: 5px; margin-right: 5px; border-left: 1px solid whitesmoke; }', 'class="navbar fixed-bottom m-0 p-1 navbar-light bg-primary"', function(opts) {
+riot.tag2('page-footer', '<span class="float-left m-0 p-0"> <label class="m-0 p-1">&nbsp;{label.status}&nbsp;:</label> <div class="v-divider">&nbsp;</div> </span> <span class="float-right m-0 p-0 ml-auto"> <div class="v-divider"></div> <label class="m-0 p-1">&copy;&nbsp;{label.copyright}&nbsp;&nbsp;&nbsp;</label> </span>', 'page-footer,[data-is="page-footer"],page-footer .navbar,[data-is="page-footer"] .navbar,page-footer .nav,[data-is="page-footer"] .nav,page-footer span,[data-is="page-footer"] span{ margin: 0 auto; padding: 0; } page-footer label,[data-is="page-footer"] label{ color: whitesmoke; font-size: 0.95em; font-weight: bold; } page-footer .v-divider,[data-is="page-footer"] .v-divider{ display: inline; margin-left: 2px; margin-right: 2px; border-left: 1px solid whitesmoke; }', 'class="navbar fixed-bottom m-0 p-0 navbar-light bg-primary"', function(opts) {
         let self = this;
 
         this.label = {
@@ -15,7 +15,6 @@ riot.tag2('page-footer', '<span class="float-left m-0 p-0" style="font-size: 0.7
             if (modelType === 'footer') {
                 let model = app.content.model;
 
-                console.log('Model Loaded:', model);
                 self.label = model.footer.label;
                 self.update();
             }
