@@ -67,8 +67,10 @@ class API {
             { name: "signIn", url: "/api/edl/signin" },
             { name: "getUserHomeUrl", url: "/api/edl/utils/userhome" },
             /* reports */
-            { name: "signIn", url: "/api/reports/raw-votes/search" },
-            { name: "signIn", url: "/api/reports/vote-summaries/search" }
+            { name: "getRawVotes", url: "/api/reports/raw-votes/search" },
+            { name: "getVoteSummaries", url: "/api/reports/vote-summaries/search" },
+            /* page content model */
+            { name: "getModel", url: window.location.href + "/models" }
         ]
     };
     

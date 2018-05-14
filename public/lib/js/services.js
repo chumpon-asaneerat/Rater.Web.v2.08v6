@@ -212,6 +212,18 @@ class ContentService {
     constructor() {
         this._content = { };
     };
+
+    //-- public methods.
+    loadModel(langId, modelType) {
+        let data = {
+            langId: langId,
+            modelType: modelType
+        }
+        let fn = api.getModel(data);
+        $.when(fn).then((r) => {
+            console.log(r);
+        });
+    };
 };
 
 // The Client App class.
