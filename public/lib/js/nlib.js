@@ -160,6 +160,13 @@ nlib = function () {
         date.setTime(date.getTime() + (seconds * 1000));
         return date;
     };
+    /**
+     * Generate new Unique Id.
+     */
+    Utils.prototype.newUId = function() {
+        return Math.random().toString(36).substring(2, 15) +
+            Math.random().toString(36).substring(2, 15);
+    };
 
     // declare namespace. If not exists create new one with assigned factory.
     if (!nlib.utils) {
