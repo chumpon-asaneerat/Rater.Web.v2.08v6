@@ -41,7 +41,7 @@ class LocalStorage {
     set ttl(value) { this._ttl = value; }
 };
 
-/* user perference. */
+// The user perference class.
 class UserPerference extends LocalStorage {
     constructor() {
         super();
