@@ -204,13 +204,6 @@ class App {
     get propertychanged() { return this._propertychanged; }
 }
 
-function getlanguages() { 
-    return [
-        { "langId": "EN", "DescriptionNative": "English" },
-        { "langId": "TH", "DescriptionNative": "ไทย" }
-    ]; 
-};
-
 ;(function() {
     // set global app variable in window.
     window.app = window.app || new App();

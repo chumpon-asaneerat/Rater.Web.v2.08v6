@@ -1037,3 +1037,96 @@ class EventHandler extends NDelegate {
 class EventArgs {
     static get Empty() { return null; }
 };
+/**
+ * The DataSource class.
+ */
+class DataSource {
+    //-- constructor.
+    constructor() {
+        this._datasource = null;
+        this._selectedIndex = -1;
+        this._datasourcechanged = new EventHandler();
+        this._selectedindexchanged = new EventHandler();
+    };
+
+    //-- protected methods.
+    onDatasourceChange() {
+
+    };
+
+    onSelectedIndexChange() {
+
+    };
+
+    //-- public properties.
+    get datasource() {
+        return this._datasource;
+    };
+    set datasource(value) {
+        let oVal = this._datasource;
+        let nVal = value;
+
+        if (value && (value instanceof Array)) {
+            //console.log('new data source assigned.');
+            this._datasource = value;
+            //console.log(self._datasource);
+            this._datasourcechanged.invoke(this, { "oldValue": oVal, "newValue": nVal })
+            if (this._datasource && this._datasource.length > 0) {
+                //console.log('datasource is not null so set to first item');
+                this.selectedIndex = 0;
+            }
+            else {
+                //console.log('datasource is null');
+                this.selectedIndex = -1;
+            }
+            // call protected method.
+            this.onDatasourceChange();
+            // raise event
+            this._selectedindexchanged.invoke(self, { "oldValue": oVal, "newValue": nVal })
+        }
+        else {
+            console.log('datasource is null and is not instance of array.');
+        }
+    };
+
+    get selectedIndex() {
+        return this._selectedIndex;
+    };
+    set selectedIndex(value) {
+        let oVal = this._selectedIndex;
+        let nVal = -1;
+
+        if (!this._datasource ||
+            value < 0 || value >= this._datasource.length) {
+            nVal = -1;
+            this._selectedIndex = -1;
+        }
+        else {
+            nVal = value;
+            this._selectedIndex = value;
+        }
+        // call protected method.
+        this.onSelectedIndexChange();
+        // raise event
+        this._selectedindexchanged.invoke(self, { "oldValue": oVal, "newValue": nVal })
+    };
+
+    get selectedObject() {
+        if (!this.datasource ||
+            this.selectedIndex < 0 || this.selectedIndex >= this.datasource.length) {
+            return null;
+        }
+        else {
+            //console.log(this.datasource[this.selectedIndex]);
+            return this.datasource[this.selectedIndex];
+        }
+    };
+
+    //-- event handlers.
+    get datasourcechanged() {
+        return this._datasourcechanged;
+    };
+    get selectedindexchanged() {
+        return this._selectedindexchanged;
+    };
+};
