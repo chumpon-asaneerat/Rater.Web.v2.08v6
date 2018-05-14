@@ -56,12 +56,19 @@ class API {
             { name: "saveOrg", url: "/api/orgs/save" },
             { name: "saveOrgML", url: "/api/orgs/save-ml" },
             { name: "getOrgs", url: "/api/orgs/search" },
+            /* qsets */
+            /* qslides */
+            /* qslideItems */
+            /* devices */
             /* votes */
             { name: "saveVote", url: "/api/votes/save" },
             /* register/signIn/getUserHomeUrl */
             { name: "register", url: "/api/edl/register" },
             { name: "signIn", url: "/api/edl/signin" },
-            { name: "getUserHomeUrl", url: "/api/edl/utils/userhome" }
+            { name: "getUserHomeUrl", url: "/api/edl/utils/userhome" },
+            /* reports */
+            { name: "signIn", url: "/api/reports/raw-votes/search" },
+            { name: "signIn", url: "/api/reports/vote-summaries/search" }
         ]
     };
     

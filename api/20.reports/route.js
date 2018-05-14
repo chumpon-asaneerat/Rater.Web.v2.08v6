@@ -10,9 +10,17 @@ const nlib = require(path.join(rootPath, 'lib', 'nlib-core'));
 const mssqldb = require(path.join(rootPath, 'lib', 'mssql-db'));
 const raterdb = require(path.join(rootPath, 'lib', 'rater-web-db'));
 
-function __SaveVote(req, res) {
+function __GetRawVotes(req, res) {
     raterdb.CallSp(req, res, function (req, res, reqModel) {
-        raterdb.SaveVote(reqModel.data, function (dbResult) {
+        raterdb.GetRawVotes(reqModel.data, function (dbResult) {
+            nlib.sendJson(req, res, dbResult);
+        });
+    });
+};
+
+function __GetVoteSummaries(req, res) {
+    raterdb.CallSp(req, res, function (req, res, reqModel) {
+        raterdb.GetVoteSummaries(reqModel.data, function (dbResult) {
             nlib.sendJson(req, res, dbResult);
         });
     });
@@ -25,7 +33,8 @@ function __SaveVote(req, res) {
  */
 function init_routes(app) {
     // votes.
-    app.all('/api/votes/save', __SaveVote); // OK.
+    app.all('/api/reports/raw-votes/search', __GetRawVotes); // OK.
+    app.all('/api/reports/vote-summaries/search', __GetVoteSummaries); // OK.
 };
 
 exports.init_routes = init_routes;
