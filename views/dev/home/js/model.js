@@ -1,3 +1,4 @@
+// The DevHomeModel class.
 class DevHomeModel extends ContentModel {
     //-- constructor.
     constructor() {        
