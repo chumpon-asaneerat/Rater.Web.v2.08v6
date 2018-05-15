@@ -28,6 +28,10 @@
         }
     </style>
     <script>
+        //#region LOCAL VARIABLES
+
+        //-- LOCAL VARIABLES
+
         let self = this;
         //-- default before load content from server.
         this.label = { 
@@ -35,8 +39,20 @@
             copyright: "EDL Co., Ltd."
         };
 
-        app.content.ContentModel.modelloaded = (langId, modelType, loadedModel) => {
-            if (modelType === 'footer') {
+        //-- END LOCAL VARIABLES
+
+        //#endregion
+
+        //#region SERVICE EVENT HANDLERS
+        
+        //-- SERVICE EVENT HANDLERS
+
+        let onModelLoaded = (sender, evtData) => {
+            //console.log('page-footer');
+            //console.log(evtData.langId);
+            //console.log(evtData.type);
+            //console.log(evtData.model);            
+            if (evtData.type === 'footer') {
                 let model = app.content.model; // same as loadedModel
                 //let model = loadedModel;
                 //console.log('Model Loaded:', model);
@@ -44,5 +60,11 @@
                 self.update();
             }
         };
+
+        app.content.ContentModel.modelloaded.add(onModelLoaded);
+
+        //-- END SERVICE EVENT HANDLERS
+
+        //#endregion 
     </script>
 </page-footer>

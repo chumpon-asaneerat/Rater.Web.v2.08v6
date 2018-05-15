@@ -1,102 +1,215 @@
-<page-nav-bar>
-    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary m-0 p-1">
-        <div class="container-fluid">
-            <a href="{ nav.banner.href }" class="navbar-brand align-middle">
-                <div if={ (nav.banner.src !== '' && nav.banner.src !== '#') } 
-                    class="d-inline-block align-middle">
-                    <img src="{ nav.banner.src }" 
-                        class="d-inline-block align-middle" 
-                        width="24" height="24">
-                    { nav.banner.title }
-                </div>                    
-                <div if={ (!(nav.banner.src !== '' && nav.banner.src !== '#') && nav.banner.icon !== '') } 
-                    class="d-inline-block align-middle">
-                    <span class="fas fa-{ nav.banner.icon }" 
-                        style="width:24px; height:24px;"></span>
-                    { nav.banner.title }
+<page-nav-bar class="container-fluid">
+    <div class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary m-0 p-1">
+        <!-- Banner -->
+        <a href="{banner.url}" class="navbar-band m-1 p-0 align-middle">
+            <div class="d-inline-block">
+                <!-- IMAGE AND TEXT -->
+                <div if={(banner.type === 'image')}
+                     class="d-inline-block m-0 p-0">
+                    <img src="{banner.src}" class="d-inline-block m-0 p-0 logo">
                 </div>
-            </a>
-            <!-- Collapse button -->
-            <button class="navbar-toggler align-middle" type="button" data-target="#{ nav.target }" data-toggle="collapse" aria-controls="{ nav.target }"
-                aria-expanded="false" aria-label="Toggle navigation">
+                <!-- FONT-ICON AND TEXT -->
+                <div if={(banner.type==='font')}
+                     class="d-inline-block m-0 p-0">
+                    <span class="fas fa-{banner.src} navbar-text w-auto m-0 p-0">
+                        <div if={(banner.text !=='')} class="d-inline-block m-0 p-0">
+                            <span class="rater-text w-auto m-0 p-0">
+                                &nbsp;&nbsp;{banner.text}&nbsp;&nbsp;
+                            </span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </a>
+        <!-- Right Nav Item for languages -->
+        <div class="d-flex flex-row order-2 order-sm-3 order-md-3 order-lg-3">
+            <ul class="navbar-nav flex-row ml-auto">
+                <!-- CURRENT LANGUAGE WITH DROPDOWN ARROW -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle px-2 align-middle" data-toggle="dropdown" href="javascript:void(0);" id="nav-languages">
+                        <span class="flag-icon flag-icon-{selectedLanguage.flagId.toLowerCase()}"></span>
+                        &nbsp;&nbsp;{selectedLanguage.DescriptionNative}&nbsp;&nbsp;
+                        <span class="caret"></span>
+                    </a>
+                    <!-- ALL LANGUAGES DROP MENU LIST -->
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-languages">
+                        <a each={languages} class="dropdown-item {(selectedLanguage.flagId === flagId) ? 'active': ''}" 
+                            href="javascript:void(0);" 
+                            langId="{langId}" 
+                            onclick="{selectLanguage}">
+                            <span class="flag-icon flag-icon-{flagId.toLowerCase()}"></span>
+                            &nbsp;&nbsp;{DescriptionNative}&nbsp;&nbsp;
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Toggle Collapse Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="{ nav.target }">
-                <!-- Links -->                
+        </div>
+        <!-- Collapse Items -->
+        <div class="collapse navbar-collapse m-0 p-0 order-3 order-sm-2 order-md-2 order-lg-2" id="collapsibleNavbar">
+            <ul class="navbar-nav m-0 p-0">
                 <ul class="navbar-nav">
-                    <li each={ nav.links } class="nav-item { active }">
-                        <a class="nav-link { active }" href="{ href }">
-                             { text }
+                    <!-- EACH MAIN MENU ITEM LINKS -->
+                    <li each={nav.links} class="nav-item {active}">
+                        <a class="nav-link align-middle" href="{url}">
+                            <span>&nbsp;</span>
+                            <div class="v-divider"></div>
+                            <span>&nbsp;</span>
+                            <!-- IMAGE AND TEXT -->
+                            <div if={(type==='image')} class="d-inline-block m-0 p-0">
+                                <img src="{src}" class="d-inline-block m-0 p-0 menu-img">
+                                <div if={(text !=='' )} class="d-inline-block m-0 p-0">
+                                    <span class="rater-text w-auto m-0 p-0">
+                                        &nbsp;{text}&nbsp;
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- FONT-ICON AND TEXT -->
+                            <div if={(type==='font')} class="d-inline-block m-0 p-0">
+                                <span class="fas fa-{src} navbar-text w-auto m-0 p-0">
+                                    <div if={(text !=='' )} class="d-inline-block m-0 p-0">
+                                        <span class="rater-text w-auto m-0 p-0">
+                                            &nbsp;{text}&nbsp;
+                                        </span>
+                                    </div>
+                                </span>
+                            </div>
+                            <!-- TEXT ONLY -->
+                            <div if={(type==='none' || type==='')} class="d-inline-block m-0 p-0">
+                                <div if={(text !=='' )} class="d-inline-block m-0 p-0">
+                                    <span class="rater-text w-auto m-0 p-0">
+                                        &nbsp;{text}&nbsp;
+                                    </span>
+                                </div>
+                            </div>
                         </a>
                     </li>
                 </ul>
-                <!-- Languages -->
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" 
-                            data-toggle="dropdown" href="javascript:void(0);"
-                            id="nav-languages"> 
-                            <span class="flag-icon flag-icon-{ nav.language.FlagId }"></span>
-                            &nbsp;&nbsp;{ nav.language.DescriptionNative }&nbsp;&nbsp;
-                            <span class="caret"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" 
-                            aria-labelledby="nav-languages">
-                            <a each={ nav.languages } class="dropdown-item { active }"
-                                href="javascript:void(0);"
-                                langId="{ LangId }"
-                                onclick="{ selectLanguage }">
-                                <span class="flag-icon flag-icon-{ FlagId }"></span>
-                                &nbsp;&nbsp;{ DescriptionNative }&nbsp;&nbsp;
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            </ul>
         </div>
     </div>
     <style>
-        .navbar-brand {
-            padding-top: 3px;
+        :scope {
+            padding-top: 2px;
             padding-bottom: 0px;
             font-size: 1em;
         }
+    
+        .logo {
+            height: 28px;
+            /* color: white; */
+        }
+
+        .menu-img {
+            height: 1em;
+        }
+
+        .rater-text {
+            font-family: "Lucida Sans Unicode", sans-serif;
+            /* font-family: "Comic Sans MS", sans-serif; */
+        }
+
+        .v-divider {
+            display: inline;
+            margin-left: 2px;
+            margin-right: 2px;
+            border-left: 1px solid whitesmoke;
+        }
+
+        li>a:hover>.v-divider {
+            border-color: orange;
+        }
+
+        li>a:hover .fas {
+            color: orange;
+        }
+
+        li>a:hover .rater-text {
+            color: orange;
+        }
     </style>
     <script>
-        //console.log('run script on TAG: nav-bar');
-        this.nav = { }
-        // Banner Logo and text.
-        this.nav.banner = { 
-            title: opts.title || 'DEFAULT_TIELE', 
-            src: opts.src || '',
-            icon: opts.icon || 'home',
-            href: 'javascript:void(0);'
+        //#region LOCAL VARIABLES
+
+        //-- LOCAL VARIABLES
+        let self = this;
+
+        this.banner = {
+            "type": "font",
+            "src": "home",
+            "text": "My Choice Rater",
+            "url": "JavaScript:void(0);"
+        };
+
+        this.nav = {
+            "links": [
+                { "text": "Register", "url": "#" },
+                { "text": "Sign In", "url": "#" }
+            ]
+        };
+
+        this.languages = [
+            { "langId": "EN", "flagId": "US", "DescriptionNative": "English" },
+            { "langId": "TH", "flagId": "TH", "DescriptionNative": "ไทย" }
+        ];
+
+        this.selectedLanguage = {
+            "langId": "EN", "flagId": "US", "DescriptionNative": "English"
         };
         
-        // Collapse target.
-        this.nav.target = opts.target || 'collapse_menu';
-        // Avaliable links.
-        this.nav.links = [
-            /*
-            { text: 'Features', href: 'javascript:void(0);', active: 'active' },
-            { text: 'Prices', href: 'javascript:void(0);', active: '' }
-            */
-        ];
+        //-- END LOCAL VARIABLES
 
-        this.nav.hasLinks = (this.nav.links.length > 0);
+        //#endregion
 
-        // Avaliable languages.
-        this.nav.languages = [
-            { LangId: 'EN', FlagId: 'us', DescriptionNative: 'English', active: 'active' }
-        ];
+        //#region SERVICE EVENT HANDLERS
 
-        this.nav.hasLanguages = (this.nav.languages.length > 0);
+        //-- SERVICE EVENT HANDLERS 
 
-        // Current language.
-        this.nav.language = this.nav.languages[0];
+        let onLanguagesLoaded = (sender, evtData) => {
+            this.languages = lang.datasource;
+            self.update();
+        };
 
-        var self = this;
+        let onLanguageChanged = (sender, evtData) => {
+            this.selectedLanguage = lang.selectedObject;
+            self.update();
+        };
+
+        let onModelLoaded = (sender, evtData) => {
+            //console.log('page-nav');
+            //console.log(evtData.langId);
+            //console.log(evtData.type);
+            //console.log(evtData.model);
+            if (evtData.type === 'banner') {
+                let model = app.content.model; // same as loadedModel
+                //let model = loadedModel;
+                //console.log('Model Loaded:', model);
+                self.banner = model.banner;
+                self.update();
+            }
+            else if (evtData.type === 'nav') {
+                let model = app.content.model; // same as loadedModel
+                //let model = loadedModel;
+                //console.log('Model Loaded:', model);
+                self.nav = model.nav;
+                self.update();
+            }
+        };
+
+        lang.datasourcechanged.add(onLanguagesLoaded);
+        lang.selectedindexchanged.add(onLanguageChanged);
+        app.content.ContentModel.modelloaded.add(onModelLoaded);
+
+        //-- END SERVICE EVENT HANDLERS
+
+        //#endregion
+
+        //#region PAGE EVENT HANDLERS
+        
+        //-- PAGE EVENT HANDLERS
 
         this.selectLanguage = function(e) {
             e.preventDefault();
@@ -104,9 +217,7 @@
             var langIdAttr = e.target.attributes.getNamedItem('langId');
             if (langIdAttr !== 'undefined') {
                 //console.log('change language to: ', langIdAttr.value)
-                app.idService.upref.langId = langIdAttr.value;
-                app.idService.save();
-                app.languageService.changeLanguage(app.idService.upref.langId);
+                lang.changeLanguage(langIdAttr.value);
             }
             else {
                 console.log('cannot find langId attribute.');
@@ -114,41 +225,8 @@
             }
         };
 
-        this.on('mount', function () {
-            app.languageService.on('languagechanged', self.changeLanguage);
-            app.contentService.on('contentchanged', self.changeContent);
-            self.changeLanguage();
-            
-            self.update();
-        });
+        //-- END PAGE EVENT HANDLERS
 
-        this.changeLanguage = function () {
-            //console.log('changeLanguage');
-            // Current language.
-            self.nav.language = app.languageService.language;
-            // Avaliable languages.
-            self.nav.languages = app.languageService.languages;
-            // render tag.
-            self.update();
-        }
-
-        this.changeContent = function () {
-            //console.log('changeContent');
-            // Current Content
-            var currLang =  app.languageService.language;
-            var contentServ = app.contentService;
-            var langId = currLang.LangId;                        
-            var langData = contentServ.content[langId]
-            //console.log('data for langId:', langId, ' is: ', langData);
-            if (!langData) {
-                langData = contentServ.content['EN'];
-            }
-
-            self.nav.banner = langData.nav.banner;
-            self.nav.links = langData.nav.links;
-
-            // render tag.
-            self.update();
-        }
+        //#endregion
     </script>
 </page-nav-bar>

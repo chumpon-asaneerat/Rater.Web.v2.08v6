@@ -603,6 +603,7 @@ My Choice Rater v2.0:
                     ✔ To access ClientApp call by window global varialbe 'app'. @done (5/15/2018, 7:16:21 PM)
                 tags.js:
                     ✔ page-footer tag update to used content from server (supports ML). @done (5/15/2018, 7:16:22 PM)
+                    ✔ page-nav-bar tag update now should work properly (supports ML). @done (5/15/2018, 11:18:53 PM)
     Update on [2018-05-18]:
         Database Create Scripts:
             Tables and Views:

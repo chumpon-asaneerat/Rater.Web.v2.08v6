@@ -227,9 +227,10 @@ class ContentModel {
     //-- constructor.
     constructor() {
         this._model = { };
-        this._model_loaded = null;
-
         let self = this;
+
+        this._model_loaded = new EventHandler();
+
         //-- event handler(s).
         let onLanguageChanged = (sender, evtData) => { 
             if (lang.isLocked) {
@@ -268,12 +269,17 @@ class ContentModel {
                 if (!self._model[langId][modelType]) {
                     self._model[langId][modelType] = r.data;
                     //console.log(self._model);
-                }                
+                }
+                let loadModel = self._model[langId][modelType];
                 if (callback && callback instanceof Function) {
                     //console.log('Raise callback. data:', model[modelType], ', langId:', lang.currentLangId);
-                    callback(self._model[langId][modelType]);
+                    callback(loadModel);
                     if (this._model_loaded) {
-                        this._model_loaded(langId, modelType, self._model[langId]);
+                        this._model_loaded.invoke(this, { 
+                            "langId": langId, 
+                            "type": modelType, 
+                            "model": loadModel 
+                        })
                     }
                 }
             }
@@ -288,12 +294,9 @@ class ContentModel {
         return this._model;
     }
 
-    //-- callback properties.
+    //-- event properties.
     get modelloaded() {
         return this._model_loaded;
-    };
-    set modelloaded(value) {
-        this._model_loaded = value;
     };
 };
 

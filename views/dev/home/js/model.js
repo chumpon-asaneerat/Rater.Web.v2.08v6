@@ -11,8 +11,14 @@ class DevHomeModel extends ContentModel {
         this.loadModel(langId, 'page', (r) => {
             document.title = self.model[langId].page.header.title;
         });
+        this.loadModel(langId, 'banner', (r) => {
+            //console.log(r);
+        });
+        this.loadModel(langId, 'nav', (r) => {
+            //console.log(r);
+        });
         this.loadModel(langId, 'footer', (r) => {
-
+            //console.log(r);
         });
     };
 

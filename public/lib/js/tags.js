@@ -4,6 +4,8 @@ riot.tag2('page-content-absolute', '<div> <yield></yield> </div>', 'page-content
 });
 
 riot.tag2('page-footer', '<span class="float-left m-0 p-0"> <label class="m-0 p-1">&nbsp;{label.status}&nbsp;:</label> <div class="v-divider">&nbsp;</div> </span> <span class="float-right m-0 p-0 ml-auto"> <div class="v-divider"></div> <label class="m-0 p-1">&copy;&nbsp;{label.copyright}&nbsp;&nbsp;&nbsp;</label> </span>', 'page-footer,[data-is="page-footer"],page-footer .navbar,[data-is="page-footer"] .navbar,page-footer .nav,[data-is="page-footer"] .nav,page-footer span,[data-is="page-footer"] span{ margin: 0 auto; padding: 0; } page-footer label,[data-is="page-footer"] label{ color: whitesmoke; font-size: 0.95em; font-weight: bold; } page-footer .v-divider,[data-is="page-footer"] .v-divider{ display: inline; margin-left: 2px; margin-right: 2px; border-left: 1px solid whitesmoke; }', 'class="navbar fixed-bottom m-0 p-0 navbar-light bg-primary"', function(opts) {
+
+
         let self = this;
 
         this.label = {
@@ -11,43 +13,76 @@ riot.tag2('page-footer', '<span class="float-left m-0 p-0"> <label class="m-0 p-
             copyright: "EDL Co., Ltd."
         };
 
-        app.content.ContentModel.modelloaded = (langId, modelType, loadedModel) => {
-            if (modelType === 'footer') {
+        let onModelLoaded = (sender, evtData) => {
+
+            if (evtData.type === 'footer') {
                 let model = app.content.model;
 
                 self.label = model.footer.label;
                 self.update();
             }
         };
+
+        app.content.ContentModel.modelloaded.add(onModelLoaded);
+
 });
-riot.tag2('page-nav-bar', '<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary m-0 p-1"> <div class="container-fluid"> <a href="{nav.banner.href}" class="navbar-brand align-middle"> <div if="{(nav.banner.src !== \'\' && nav.banner.src !== \'#\')}" class="d-inline-block align-middle"> <img riot-src="{nav.banner.src}" class="d-inline-block align-middle" width="24" height="24"> {nav.banner.title} </div> <div if="{(!(nav.banner.src !== \'\' && nav.banner.src !== \'#\') && nav.banner.icon !== \'\')}" class="d-inline-block align-middle"> <span class="fas fa-{nav.banner.icon}" style="width:24px; height:24px;"></span> {nav.banner.title} </div> </a> <button class="navbar-toggler align-middle" type="button" data-target="#{nav.target}" data-toggle="collapse" aria-controls="{nav.target}" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="{nav.target}"> <ul class="navbar-nav"> <li each="{nav.links}" class="nav-item {active}"> <a class="nav-link {active}" href="{href}"> {text} </a> </li> </ul> <ul class="nav navbar-nav ml-auto"> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" id="nav-languages"> <span class="flag-icon flag-icon-{nav.language.FlagId}"></span> &nbsp;&nbsp;{nav.language.DescriptionNative}&nbsp;&nbsp; <span class="caret"></span> </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-languages"> <a each="{nav.languages}" class="dropdown-item {active}" href="javascript:void(0);" langid="{LangId}" onclick="{selectLanguage}"> <span class="flag-icon flag-icon-{FlagId}"></span> &nbsp;&nbsp;{DescriptionNative}&nbsp;&nbsp; </a> </div> </li> </ul> </div> </div> </div>', 'page-nav-bar .navbar-brand,[data-is="page-nav-bar"] .navbar-brand{ padding-top: 3px; padding-bottom: 0px; font-size: 1em; }', '', function(opts) {
+riot.tag2('page-nav-bar', '<div class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary m-0 p-1"> <a href="{banner.url}" class="navbar-band m-1 p-0 align-middle"> <div class="d-inline-block"> <div if="{(banner.type === \'image\')}" class="d-inline-block m-0 p-0"> <img riot-src="{banner.src}" class="d-inline-block m-0 p-0 logo"> </div> <div if="{(banner.type===\'font\')}" class="d-inline-block m-0 p-0"> <span class="fas fa-{banner.src} navbar-text w-auto m-0 p-0"> <div if="{(banner.text !==\'\')}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;&nbsp;{banner.text}&nbsp;&nbsp; </span> </div> </span> </div> </div> </a> <div class="d-flex flex-row order-2 order-sm-3 order-md-3 order-lg-3"> <ul class="navbar-nav flex-row ml-auto"> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle px-2 align-middle" data-toggle="dropdown" href="javascript:void(0);" id="nav-languages"> <span class="flag-icon flag-icon-{selectedLanguage.flagId.toLowerCase()}"></span> &nbsp;&nbsp;{selectedLanguage.DescriptionNative}&nbsp;&nbsp; <span class="caret"></span> </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-languages"> <a each="{languages}" class="dropdown-item {(selectedLanguage.flagId === flagId) ? \'active\': \'\'}" href="javascript:void(0);" langid="{langId}" onclick="{selectLanguage}"> <span class="flag-icon flag-icon-{flagId.toLowerCase()}"></span> &nbsp;&nbsp;{DescriptionNative}&nbsp;&nbsp; </a> </div> </li> </ul> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button> </div> <div class="collapse navbar-collapse m-0 p-0 order-3 order-sm-2 order-md-2 order-lg-2" id="collapsibleNavbar"> <ul class="navbar-nav m-0 p-0"> <ul class="navbar-nav"> <li each="{nav.links}" class="nav-item {active}"> <a class="nav-link align-middle" href="{url}"> <span>&nbsp;</span> <div class="v-divider"></div> <span>&nbsp;</span> <div if="{(type===\'image\')}" class="d-inline-block m-0 p-0"> <img riot-src="{src}" class="d-inline-block m-0 p-0 menu-img"> <div if="{(text !==\'\' )}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;{text}&nbsp; </span> </div> </div> <div if="{(type===\'font\')}" class="d-inline-block m-0 p-0"> <span class="fas fa-{src} navbar-text w-auto m-0 p-0"> <div if="{(text !==\'\' )}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;{text}&nbsp; </span> </div> </span> </div> <div if="{(type===\'none\' || type===\'\')}" class="d-inline-block m-0 p-0"> <div if="{(text !==\'\' )}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;{text}&nbsp; </span> </div> </div> </a> </li> </ul> </ul> </div> </div>', 'page-nav-bar,[data-is="page-nav-bar"]{ padding-top: 2px; padding-bottom: 0px; font-size: 1em; } page-nav-bar .logo,[data-is="page-nav-bar"] .logo{ height: 28px; } page-nav-bar .menu-img,[data-is="page-nav-bar"] .menu-img{ height: 1em; } page-nav-bar .rater-text,[data-is="page-nav-bar"] .rater-text{ font-family: "Lucida Sans Unicode", sans-serif; } page-nav-bar .v-divider,[data-is="page-nav-bar"] .v-divider{ display: inline; margin-left: 2px; margin-right: 2px; border-left: 1px solid whitesmoke; } page-nav-bar li>a:hover>.v-divider,[data-is="page-nav-bar"] li>a:hover>.v-divider{ border-color: orange; } page-nav-bar li>a:hover .fas,[data-is="page-nav-bar"] li>a:hover .fas{ color: orange; } page-nav-bar li>a:hover .rater-text,[data-is="page-nav-bar"] li>a:hover .rater-text{ color: orange; }', 'class="container-fluid"', function(opts) {
 
-        this.nav = { }
 
-        this.nav.banner = {
-            title: opts.title || 'DEFAULT_TIELE',
-            src: opts.src || '',
-            icon: opts.icon || 'home',
-            href: 'javascript:void(0);'
+        let self = this;
+
+        this.banner = {
+            "type": "font",
+            "src": "home",
+            "text": "My Choice Rater",
+            "url": "JavaScript:void(0);"
         };
 
-        this.nav.target = opts.target || 'collapse_menu';
+        this.nav = {
+            "links": [
+                { "text": "Register", "url": "#" },
+                { "text": "Sign In", "url": "#" }
+            ]
+        };
 
-        this.nav.links = [
-
+        this.languages = [
+            { "langId": "EN", "flagId": "US", "DescriptionNative": "English" },
+            { "langId": "TH", "flagId": "TH", "DescriptionNative": "ไทย" }
         ];
 
-        this.nav.hasLinks = (this.nav.links.length > 0);
+        this.selectedLanguage = {
+            "langId": "EN", "flagId": "US", "DescriptionNative": "English"
+        };
 
-        this.nav.languages = [
-            { LangId: 'EN', FlagId: 'us', DescriptionNative: 'English', active: 'active' }
-        ];
+        let onLanguagesLoaded = (sender, evtData) => {
+            this.languages = lang.datasource;
+            self.update();
+        };
 
-        this.nav.hasLanguages = (this.nav.languages.length > 0);
+        let onLanguageChanged = (sender, evtData) => {
+            this.selectedLanguage = lang.selectedObject;
+            self.update();
+        };
 
-        this.nav.language = this.nav.languages[0];
+        let onModelLoaded = (sender, evtData) => {
 
-        var self = this;
+            if (evtData.type === 'banner') {
+                let model = app.content.model;
+
+                self.banner = model.banner;
+                self.update();
+            }
+            else if (evtData.type === 'nav') {
+                let model = app.content.model;
+
+                self.nav = model.nav;
+                self.update();
+            }
+        };
+
+        lang.datasourcechanged.add(onLanguagesLoaded);
+        lang.selectedindexchanged.add(onLanguageChanged);
+        app.content.ContentModel.modelloaded.add(onModelLoaded);
 
         this.selectLanguage = function(e) {
             e.preventDefault();
@@ -55,9 +90,7 @@ riot.tag2('page-nav-bar', '<div class="navbar navbar-expand-lg fixed-top navbar-
             var langIdAttr = e.target.attributes.getNamedItem('langId');
             if (langIdAttr !== 'undefined') {
 
-                app.idService.upref.langId = langIdAttr.value;
-                app.idService.save();
-                app.languageService.changeLanguage(app.idService.upref.langId);
+                lang.changeLanguage(langIdAttr.value);
             }
             else {
                 console.log('cannot find langId attribute.');
@@ -65,39 +98,6 @@ riot.tag2('page-nav-bar', '<div class="navbar navbar-expand-lg fixed-top navbar-
             }
         };
 
-        this.on('mount', function () {
-            app.languageService.on('languagechanged', self.changeLanguage);
-            app.contentService.on('contentchanged', self.changeContent);
-            self.changeLanguage();
-
-            self.update();
-        });
-
-        this.changeLanguage = function () {
-
-            self.nav.language = app.languageService.language;
-
-            self.nav.languages = app.languageService.languages;
-
-            self.update();
-        }
-
-        this.changeContent = function () {
-
-            var currLang =  app.languageService.language;
-            var contentServ = app.contentService;
-            var langId = currLang.LangId;
-            var langData = contentServ.content[langId]
-
-            if (!langData) {
-                langData = contentServ.content['EN'];
-            }
-
-            self.nav.banner = langData.nav.banner;
-            self.nav.links = langData.nav.links;
-
-            self.update();
-        }
 });
 
 riot.tag2('customer-admin-home-content', '<h2>Administrator Home.</h2>', '', '', function(opts) {
@@ -163,7 +163,7 @@ riot.tag2('customer-staff-staff-edit-content', '<h2>Edit Staff Information.</h2>
 riot.tag2('default-home-content', '', '', '', function(opts) {
         var self = this;
 });
-riot.tag2('dev-home-content', '<h1>This is Developer - Home</h1> <h4>Test Load Style Sheet and Java Script</h4> <yield></yield> <page-footer></page-footer>', '', '', function(opts) {
+riot.tag2('dev-home-content', '<page-nav-bar></page-nav-bar> <h1>This is Developer - Home</h1> <h4>Test Load Style Sheet and Java Script</h4> <yield></yield> <page-footer></page-footer>', '', '', function(opts) {
 });
 riot.tag2('edl-admin-home-content', '<h2>EDL Administrator Home.</h2>', '', '', function(opts) {
         var self = this;
