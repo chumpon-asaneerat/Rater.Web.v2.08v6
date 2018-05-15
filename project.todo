@@ -499,44 +499,121 @@ My Choice Rater v2.0:
                 ✔ EventQueue class (ES6) concept. @done (5/11/2018, 2:11:49 AM)
                 ✔ DataSource class (ES6) concept. @done (5/11/2018, 2:12:05 AM)
                 ✔ Riotjs tag used global variable prove works. @done (5/11/2018, 2:12:46 AM)
-            XXX:
-    Update on [2018-05-18]:
+    Update on [2018-05-15]:
         Database Create Scripts:
             Tables and Views:
+                ✔ QSetView (VIEW). @done (5/15/2018, 6:57:08 PM)
+                ✔ QSetMLView (VIEW). @done (5/15/2018, 6:57:09 PM)
+                ✔ QSlideView (VIEW). @done (5/15/2018, 6:57:10 PM)
+                ✔ QSlideMLView (VIEW). @done (5/15/2018, 6:57:10 PM)
+                ✔ QSlideItemView (VIEW). @done (5/15/2018, 6:57:11 PM)
+                ✔ QSlideItemMLView (VIEW). @done (5/15/2018, 6:57:12 PM)
                 ☐ Device (TABLE).
                 ☐ DeviceML (TABLE).
                 ☐ DeviceView (VIEW).
                 ☐ DeviceMLView (VIEW).
-                ☐ QSetView (VIEW).
-                ☐ QSetMLView (VIEW).
-                ☐ QSlideView (VIEW).
-                ☐ QSlideMLView (VIEW).
-                ☐ QSlideItemView (VIEW).
-                ☐ QSlideItemMLView (VIEW).
-                ☐ ClientSession (TABLE).                
             Stored Procedures and Functions:
+                ✔ SaveQSet (SP). @done (5/15/2018, 6:57:20 PM)
+                ✔ SaveQSetML (SP). @done (5/15/2018, 6:57:21 PM)
+                ✔ GetQsets (SP). @done (5/15/2018, 6:57:21 PM)
+                ✔ SaveQSlide (SP). @done (5/15/2018, 6:57:22 PM)
+                ✔ SaveQSlideML (SP). @done (5/15/2018, 6:57:23 PM)
+                ✔ GetQSlides (SP). @done (5/15/2018, 6:57:23 PM)
+                ✔ SaveQSlideItem (SP). @done (5/15/2018, 6:57:24 PM)
+                ✔ SaveQSlideItemML (SP). @done (5/15/2018, 6:57:25 PM)
+                ✔ GetQSlideItems (SP). @done (5/15/2018, 6:57:25 PM)
+                ✔ GetRawVotes (SP). @done (5/15/2018, 6:57:27 PM)
                 ☐ SaveDevice (SP).
                 ☐ SaveDeviceML (SP).
                 ☐ GetDevices (SP).                
-                ☐ SaveQSet (SP).
-                ☐ SaveQSetML (SP).
-                ☐ GetQsets (SP).
-                ☐ SaveQSlide (SP).
-                ☐ SaveQSlideML (SP).
-                ☐ GetQSlides (SP).
-                ☐ SaveQSlideItem (SP).
-                ☐ SaveQSlideItemML (SP).
-                ☐ GetQSlideItems (SP).
-                ☐ GetRawVotes (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-15 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                QSet:
+                    SaveQSet:
+                        ✔ definition file created. @done (5/15/2018, 7:02:04 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:05 PM)
+                    SaveQSetML:
+                        ✔ definition file created. @done (5/15/2018, 7:02:07 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:08 PM)
+                    GetQSets:
+                        ✔ definition file created. @done (5/15/2018, 7:02:08 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:09 PM)
+                QSlide:
+                    SaveQSlide:
+                        ✔ definition file created. @done (5/15/2018, 7:02:09 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:10 PM)
+                    SaveQSlideML:
+                        ✔ definition file created. @done (5/15/2018, 7:02:11 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:12 PM)
+                    GetQSlides:
+                        ✔ definition file created. @done (5/15/2018, 7:02:12 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:13 PM)
+                QSlideItem:
+                    SaveQSlideItem:
+                        ✔ definition file created. @done (5/15/2018, 7:02:14 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:15 PM)
+                    SaveQSlideItemML:
+                        ✔ definition file created. @done (5/15/2018, 7:02:15 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:16 PM)
+                    GetQSlideItems:
+                        ✔ definition file created. @done (5/15/2018, 7:02:17 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:17 PM)
+                Votes:
+                    GetRawVotes:
+                        ✔ definition file created. @done (5/15/2018, 7:02:18 PM)
+                        ✔ wrapper code updated. @done (5/15/2018, 7:02:18 PM)
+            Core Libraries:
+                Modules:
+                    ✔ app-paths.js updated. Add  third party libraries. @done (5/15/2018, 7:05:21 PM)
+                    ✔ app-routes.js updated. Add routes for apis and views @done (5/15/2018, 7:05:24 PM)
+                    ✔ rater-web-db.js updated. Add stored procedures. @done (5/15/2018, 7:05:26 PM)
+                Views:
+                    ✔ Temporary remove all views and routes excepts dev-home. @done (5/15/2018, 7:07:01 PM)
+                    ✔ Update view and route for dev-home. @done (5/15/2018, 7:07:01 PM)
+                    ✔ Each view route code update to supports get model in both GET and POST method. @done (5/15/2018, 7:19:15 PM)
+        Clients:
+            Third Parties:
+                reveal 3.4.1:
+                    ✔ organize files. @done (5/15/2018, 7:07:54 PM)
+                    ✔ setup route. @done (5/15/2018, 7:07:55 PM)
+            Core Libraries:
+                api.js:
+                    ☐ Update api add new url for updated SPs.
+                nlib.js:
+                    ✔ Add NDelegate class. @done (5/15/2018, 7:11:38 PM)
+                    ✔ Add EventHandler class. @done (5/15/2018, 7:11:38 PM)
+                    ✔ Add EventArgs class. @done (5/15/2018, 7:11:39 PM)
+                    ✔ Add DataSource class. @done (5/15/2018, 7:11:39 PM)
+                service.js:
+                    ✔ Add LocalStorage class. @done (5/15/2018, 7:16:16 PM)
+                    ✔ Add UserPerference class. @done (5/15/2018, 7:16:17 PM)
+                    ✔ Add LanguageService class. @done (5/15/2018, 7:16:17 PM)
+                    ✔ Add ContentModel class. For model.js file to implements how to load each page contents. @done (5/15/2018, 7:16:19 PM)
+                    ✔ Add ContentService class. @done (5/15/2018, 7:16:20 PM)
+                    ✔ Add ClientApp class. @done (5/15/2018, 7:16:20 PM)
+                    ✔ To access LanguageService call by window global varialbe 'lang'. @done (5/15/2018, 7:16:21 PM)
+                    ✔ To access ClientApp call by window global varialbe 'app'. @done (5/15/2018, 7:16:21 PM)
+                tags.js:
+                    ✔ page-footer tag update to used content from server (supports ML). @done (5/15/2018, 7:16:22 PM)
+    Update on [2018-05-18]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ ClientSession (TABLE).                
+            Stored Procedures and Functions:
                 ☐ SaveClientSession (SP).
                 ☐ ClearClientSessions (SP).
                 ☐ GetClientSession (SP).
                 ☐ GetClientSessions (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
-        Database Document Updated:
-            Error Code:
-                ☐ Update Error Code in Excel file.
         Node Server:
             Build Scripts:
                 Gulp Tasks:
@@ -611,7 +688,48 @@ My Choice Rater v2.0:
                         ☐ Save (Normal).
                     GetOrgs:
                         ☐ Gets all.
+                QSets:
+                    SaveQSet:
+                        ☐ Save (Normal).
+                    SaveQSetML:
+                        ☐ Save (Normal).
+                    GetQSets:
+                        ☐ Gets all.
+                QSlides:
+                    SaveQSlide:
+                        ☐ Save (Normal).
+                    SaveQSlideML:
+                        ☐ Save (Normal).
+                    GetQSlides:
+                        ☐ Gets all.
+                QSlideItems:
+                    SaveQSlideItem:
+                        ☐ Save (Normal).
+                    SaveQSlideItemML:
+                        ☐ Save (Normal).
+                    GetQSlideItems:
+                        ☐ Gets all.
                 Votes:
                     SaveVote:
                         ☐ Save (Normal).
-
+                Reports:
+                    GetRawVote:
+                        ☐ Gets all.
+                    VoteSummaries:
+                        ☐ Gets all.
+        Clients:
+            Third Parties:
+                AAA X.X.X:
+                    ☐ organize files.
+                    ☐ setup route.
+            Core Libraries:
+                api.js:
+                    ☐ xxx
+                nlib.js:
+                    ☐ xxx
+                service.js:
+                    ☐ xxx
+                tags.js:
+                    ☐ xxx
+            Concepts:
+                ☐ concept1 tested.

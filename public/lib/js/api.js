@@ -57,8 +57,17 @@ class API {
             { name: "saveOrgML", url: "/api/orgs/save-ml" },
             { name: "getOrgs", url: "/api/orgs/search" },
             /* qsets */
+            { name: "saveQSet", url: "/api/qsets/save" },
+            { name: "saveQSetML", url: "/api/qsets/save-ml" },
+            { name: "getQSets", url: "/api/qsets/search" },
             /* qslides */
+            { name: "saveQSlide", url: "/api/qslides/save" },
+            { name: "saveQSlideML", url: "/api/qslides/save-ml" },
+            { name: "getQSlides", url: "/api/qslides/search" },
             /* qslideItems */
+            { name: "saveQSlideItem", url: "/api/qslideitems/save" },
+            { name: "saveQSlideItemML", url: "/api/qslideitems/save-ml" },
+            { name: "getQSlideItems", url: "/api/qslideitems/search" },
             /* devices */
             /* votes */
             { name: "saveVote", url: "/api/votes/save" },
