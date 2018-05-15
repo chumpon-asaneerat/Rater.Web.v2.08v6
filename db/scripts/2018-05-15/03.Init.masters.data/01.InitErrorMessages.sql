@@ -164,8 +164,21 @@ BEGIN
     EXEC SaveErrorMsg 1406, N'Display Mode is null or value is not in 0 to 1.'
     EXEC SaveErrorMsg 1407, N'Begin Date should less than End Date.'
     EXEC SaveErrorMsg 1408, N'Begin Date or End Date is overlap with another Question Set.'
+    EXEC SaveErrorMsg 1409, N'Lang Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 1410, N'Lang Id not found.'
+    EXEC SaveErrorMsg 1411, N'Customer Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 1412, N'Customer Id not found.'
+    EXEC SaveErrorMsg 1413, N'QSetId cannot be null or empty string.'
+    EXEC SaveErrorMsg 1414, N'No QSet match QSetId in specificed Customer Id.'
+    EXEC SaveErrorMsg 1415, N'Description(ML) already exists.'
+    EXEC SaveErrorMsg 1416, N'Description (default) already exists.'
 
     -- QSLIDES.
+    EXEC SaveErrorMsg 1501, N'Customer Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 1502, N'Question Set Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 1503, N'Question Text cannot be null or empty string.'
+    EXEC SaveErrorMsg 1504, N'Customer Id is not found.'
+    EXEC SaveErrorMsg 1505, N'QSetId is not found.'
 
     -- QSLIDEITEMS.
 
