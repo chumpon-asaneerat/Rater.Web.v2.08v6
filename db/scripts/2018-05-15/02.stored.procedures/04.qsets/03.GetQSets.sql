@@ -6,16 +6,11 @@ GO
 
 -- =============================================
 -- Author: Chumpon Asaneerat
--- Name: GetPeriodUnits.
--- Description:	Get Period Units.
+-- Name: GetQSets.
+-- Description:	Get Question Sets.
 -- [== History ==]
--- <2017-05-31> :
---	- Stored Procedure Created.
--- <2018-04-16> :
---	- change language id from nvarchar(10) to nvarchar(3).
 -- <2018-05-15> :
---	- change column LangId to langId
---	- change column PeriodUnitId to periodUnitId
+--	- Stored Procedure Created.
 --
 -- [== Example ==]
 --
