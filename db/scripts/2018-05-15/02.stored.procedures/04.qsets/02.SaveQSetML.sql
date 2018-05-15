@@ -37,6 +37,7 @@ DECLARE @iQSetCnt int = 0;
 	-- 1413 : QSetId cannot be null or empty string.
 	-- 1414 : No QSet match QSetId in specificed Customer Id.
 	-- 1415 : Description(ML) already exists.
+	-- 1418 : Description (ML) cannot be null or empty string.
 	-- OTHER : SQL Error Number & Error Message.
 	BEGIN TRY
 		/* Check if lang id is not null. */
@@ -90,8 +91,15 @@ DECLARE @iQSetCnt int = 0;
 		   AND UPPER(RTRIM(LTRIM(CustomerId))) = UPPER(RTRIM(LTRIM(@customerId)))
 		IF (@iQSetCnt = 0)
 		BEGIN
-			-- No Org match Org Id in specificed Customer Id.
+			-- No QSet match QSetId in specificed Customer Id.
             EXEC GetErrorMsg 1414, @errNum out, @errMsg out
+			RETURN
+		END
+
+		IF (dbo.IsNullOrEmpty(@description) = 1)
+		BEGIN
+			-- Description (ML) cannot be null or empty string.
+            EXEC GetErrorMsg 1418, @errNum out, @errMsg out
 			RETURN
 		END
 

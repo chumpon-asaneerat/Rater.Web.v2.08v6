@@ -71,7 +71,8 @@ DECLARE @vEndDateStr nvarchar(40);
 	-- 1406 : Display Mode is null or value is not in 0 to 1.
 	-- 1407 : Begin Date should less than End Date.
 	-- 1408 : Begin Date or End Date is overlap with another Question Set.
-	-- 1416 : Description (default) already exists.
+	-- 1416 : Description (default) cannot be null or empty string.
+	-- 1417 : Description (default) already exists.
 	-- OTHER : SQL Error Number & Error Message.
 	BEGIN TRY
 		IF @isDefault IS NULL
@@ -92,7 +93,7 @@ DECLARE @vEndDateStr nvarchar(40);
 		IF (@iCustCnt = 0)
 		BEGIN
 			-- Customer Id is not found.
-            EXEC GetErrorMsg 1402, @errNum out, @errMsg out
+            EXEC GetErrorMsg 1504, @errNum out, @errMsg out
 			RETURN
 		END
 
@@ -211,6 +212,13 @@ DECLARE @vEndDateStr nvarchar(40);
 			END
 		END
 
+		IF (dbo.IsNullOrEmpty(@description) = 1)
+		BEGIN
+			-- Description (default) cannot be null or empty string.
+            EXEC GetErrorMsg 1416, @errNum out, @errMsg out
+			RETURN
+		END
+
 		SET @iQSetCnt = 0; -- Reset Counter.
 
 		-- Checks Duplicated desctiption.
@@ -223,7 +231,7 @@ DECLARE @vEndDateStr nvarchar(40);
 			IF (@iQSetCnt <> 0)
 			BEGIN
 				-- Description (default) already exists.
-                EXEC GetErrorMsg 1416, @errNum out, @errMsg out
+                EXEC GetErrorMsg 1417, @errNum out, @errMsg out
 				RETURN
 			END
 		END
@@ -237,7 +245,7 @@ DECLARE @vEndDateStr nvarchar(40);
 			IF (@iQSetCnt <> 0)
 			BEGIN
 				-- Description (default) already exists.
-                EXEC GetErrorMsg 1416, @errNum out, @errMsg out
+                EXEC GetErrorMsg 1417, @errNum out, @errMsg out
 				RETURN
 			END
 		END

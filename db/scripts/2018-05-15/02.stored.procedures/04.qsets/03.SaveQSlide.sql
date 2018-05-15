@@ -89,11 +89,6 @@ DECLARE @vQSeq int = 0;
 			END
 		END
 
-		IF @hasRemark is null
-		BEGIN
-			SET @hasRemark = 0; -- default
-		END
-
 		-- Checks is Seq has value and exists
 		IF (@qSeq IS NULL OR @qSeq <= 0)
 		BEGIN
@@ -115,6 +110,11 @@ DECLARE @vQSeq int = 0;
 			IF @sortOrder is null or @sortOrder <= 0
 			BEGIN
 				SET @sortOrder = @iLastSeq;
+			END
+			-- Check Has Remark.
+			IF @hasRemark is null
+			BEGIN
+				SET @hasRemark = 0; -- default
 			END
 			-- INSERT
 			INSERT INTO QSlide
@@ -160,7 +160,7 @@ DECLARE @vQSeq int = 0;
 			-- UPDATE
 			UPDATE QSlide
 			   SET QText = RTRIM(LTRIM(@qText))
-			     , HasRemark = @hasRemark
+			     , HasRemark = COALESCE(@hasRemark, HasRemark)
 				 , SortOrder = COALESCE(@sortOrder, SortOrder)
 			 WHERE LOWER(CustomerId) = LOWER(RTRIM(LTRIM(@customerId)))
 			   AND LOWER(QSetId) = LOWER(RTRIM(LTRIM(@qSetId)))
