@@ -137,6 +137,8 @@ DECLARE @vQSeq int = 0;
 				, @sortOrder
 				, 1
 			);
+			-- SET OUTPUT.
+			SET @qSeq = @iLastSeq;
 		END
 		ELSE
 		BEGIN
