@@ -97,39 +97,18 @@
             padding-bottom: 0px;
             font-size: 1em;
         }
-    
-        .logo {
-            height: 28px;
-            /* color: white; */
-        }
-
-        .menu-img {
-            height: 1em;
-        }
-
-        .rater-text {
-            font-family: "Lucida Sans Unicode", sans-serif;
-            /* font-family: "Comic Sans MS", sans-serif; */
-        }
-
+        .logo { height: 28px; }
+        .menu-img { height: 1em; }
+        .rater-text { font-family: "Lucida Sans Unicode", sans-serif; }
         .v-divider {
             display: inline;
             margin-left: 2px;
             margin-right: 2px;
             border-left: 1px solid whitesmoke;
         }
-
-        li>a:hover>.v-divider {
-            border-color: orange;
-        }
-
-        li>a:hover .fas {
-            color: orange;
-        }
-
-        li>a:hover .rater-text {
-            color: orange;
-        }
+        a:hover .v-divider { border-color: white; }
+        a:hover .fas { color: white; }
+        a:hover .rater-text { color: white; }
     </style>
     <script>
         //#region LOCAL VARIABLES

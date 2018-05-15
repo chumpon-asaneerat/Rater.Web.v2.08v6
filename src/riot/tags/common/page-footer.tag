@@ -13,13 +13,11 @@
             margin: 0 auto;
             padding: 0;
         }
-
         label {
             color: whitesmoke;
             font-size: 0.95em;
             font-weight: bold;
         }
-
         .v-divider {
             display: inline;
             margin-left: 2px;
