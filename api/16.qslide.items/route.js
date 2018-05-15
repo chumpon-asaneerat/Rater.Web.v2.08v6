@@ -41,9 +41,9 @@ function __GetQSlideItems(req, res) {
  */
 function init_routes(app) {
     // qslide.items.
-    app.all('/api/qslide.items/save', __SaveQSlideItem); // OK.
-    app.all('/api/qslide.items/save-ml', __SaveQSlideItemML); // OK.
-    app.all('/api/qslide.items/search', __GetQSlideItems); // OK.
+    app.all('/api/qslideitems/save', __SaveQSlideItem); // OK.
+    app.all('/api/qslideitems/save-ml', __SaveQSlideItemML); // OK.
+    app.all('/api/qslideitems/search', __GetQSlideItems); // OK.
 };
 
 exports.init_routes = init_routes;
