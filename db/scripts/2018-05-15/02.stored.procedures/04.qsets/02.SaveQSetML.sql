@@ -16,7 +16,7 @@ GO
 --exec SaveQSetML N'EDL-C2018050001', N'QS00001', N'TH', N'คำถามที่ 1'
 --exec SaveQSetML N'EDL-C2018050001', N'QS00001', N'JA', N'質問 1'
 -- =============================================
-ALTER PROCEDURE [dbo].[SaveQSetML] (
+CREATE PROCEDURE [dbo].[SaveQSetML] (
   @customerId as nvarchar(30)
 , @qSetId as nvarchar(30)
 , @langId as nvarchar(3)

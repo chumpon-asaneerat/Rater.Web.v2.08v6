@@ -179,8 +179,20 @@ BEGIN
     EXEC SaveErrorMsg 1503, N'Question Text cannot be null or empty string.'
     EXEC SaveErrorMsg 1504, N'Customer Id is not found.'
     EXEC SaveErrorMsg 1505, N'QSetId is not found.'
+    EXEC SaveErrorMsg 1506, N'QSeq is not found.'
 
     -- QSLIDEITEMS.
+    EXEC SaveErrorMsg 1601, N''
+    EXEC SaveErrorMsg 1602, N''
+    EXEC SaveErrorMsg 1603, N''
+    EXEC SaveErrorMsg 1604, N''
+    EXEC SaveErrorMsg 1605, N''
+    EXEC SaveErrorMsg 1606, N''
+    EXEC SaveErrorMsg 1607, N''
+    EXEC SaveErrorMsg 1608, N''
+    EXEC SaveErrorMsg 1609, N''
+    EXEC SaveErrorMsg 1610, N''
+    EXEC SaveErrorMsg 1611, N''
 
     -- VOTES.
     EXEC SaveErrorMsg 1701, N'Customer Id cannot be null or empty string.'
