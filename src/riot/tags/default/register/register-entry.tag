@@ -48,6 +48,7 @@
         //-- LOCAL VARIABLES
 
         let self = this;
+        this.uid = nlib.utils.newUId(); // for debug instance id.
         //-- default before load content from server.
         this.label = {
             title: "Register",
@@ -73,21 +74,21 @@
         
         //-- SERVICE EVENT HANDLERS
 
-        let onModelLoaded = (sender, evtData) => {
+        this.onModelLoaded = (sender, evtData) => {
             //console.log(evtData.langId);
             //console.log(evtData.type);
             //console.log(evtData.model);
             if (evtData.type === 'register') {
                 let model = app.content.model; // same as loadedModel
                 //let model = loadedModel;
-                //console.log('Model Loaded:', model);
+                console.log('Model Loaded:', model);
                 self.label = model.register.label;
                 self.hint = model.register.hint;
                 self.update();
             }
         };
 
-        app.content.ModelService.modelLoaded.add(onModelLoaded);
+        app.content.modelService.modelLoaded.add(this.onModelLoaded);
 
         //-- END SERVICE EVENT HANDLERS
 

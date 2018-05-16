@@ -27,5 +27,16 @@
         }
     </style>
     <script>
+        //#region LOCAL VARIABLES
+
+        //-- LOCAL VARIABLES
+        
+        let self = this;
+        this.uid = nlib.utils.newUId(); // for debug instance id.
+        //-- default before load content from server.
+
+        //-- END LOCAL VARIABLES
+
+        //#endregion
     </script>
 </page-content-absolute>

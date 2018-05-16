@@ -1,12 +1,18 @@
 riot.tag2('page-content-relative', '<h3>Content gone below.</h3> <yield></yield> <h3>Content end here.</h3>', 'page-content-relative,[data-is="page-content-relative"]{ margin: 1px auto; padding: 1px; }', '', function(opts) {
 });
 riot.tag2('page-content-absolute', '<div id="page-content-abs"> <yield></yield> </div>', 'page-content-absolute,[data-is="page-content-absolute"]{ margin: 1px auto; padding: 1px; position: absolute; top: 3em; bottom: 2em; left: 1px; right: 4px; overflow-x: hidden; overflow-y: auto; }', '', function(opts) {
+
+
+        let self = this;
+        this.uid = nlib.utils.newUId();
+
 });
 
 riot.tag2('page-footer', '<span class="float-left m-0 p-0"> <label class="m-0 p-1">&nbsp;{label.status}&nbsp;:</label> <div class="v-divider">&nbsp;</div> </span> <span class="float-right m-0 p-0 ml-auto"> <div class="v-divider"></div> <label class="m-0 p-1">&copy;&nbsp;{label.copyright}&nbsp;&nbsp;&nbsp;</label> </span>', 'page-footer,[data-is="page-footer"],page-footer .navbar,[data-is="page-footer"] .navbar,page-footer .nav,[data-is="page-footer"] .nav,page-footer span,[data-is="page-footer"] span{ margin: 0 auto; padding: 0; } page-footer label,[data-is="page-footer"] label{ color: whitesmoke; font-size: 0.95em; font-weight: bold; } page-footer .v-divider,[data-is="page-footer"] .v-divider{ display: inline; margin-left: 2px; margin-right: 2px; border-left: 1px solid whitesmoke; }', 'class="navbar fixed-bottom m-0 p-0 navbar-light bg-primary"', function(opts) {
 
 
         let self = this;
+        this.uid = nlib.utils.newUId();
 
         this.label = {
             status: "status",
@@ -23,13 +29,14 @@ riot.tag2('page-footer', '<span class="float-left m-0 p-0"> <label class="m-0 p-
             }
         };
 
-        app.content.ModelService.modelLoaded.add(onModelLoaded);
+        app.content.modelService.modelLoaded.add(onModelLoaded);
 
 });
 riot.tag2('page-nav-bar', '<div class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary m-0 p-1"> <a href="{banner.url}" class="navbar-band m-1 p-0 align-middle"> <div class="d-inline-block"> <div if="{(banner.type === \'image\')}" class="d-inline-block m-0 p-0"> <img riot-src="{banner.src}" class="d-inline-block m-0 p-0 logo"> </div> <div if="{(banner.type===\'font\')}" class="d-inline-block m-0 p-0"> <span class="fas fa-{banner.src} navbar-text w-auto m-0 p-0"> <div if="{(banner.text !==\'\')}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;&nbsp;{banner.text}&nbsp;&nbsp; </span> </div> </span> </div> </div> </a> <div class="d-flex flex-row order-2 order-sm-3 order-md-3 order-lg-3"> <ul class="navbar-nav flex-row ml-auto"> <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle px-2 align-middle" data-toggle="dropdown" href="javascript:void(0);" id="nav-languages"> <span class="flag-icon flag-icon-{selectedLanguage.flagId.toLowerCase()}"></span> &nbsp;&nbsp;{selectedLanguage.DescriptionNative}&nbsp;&nbsp; <span class="caret"></span> </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-languages"> <a each="{languages}" class="dropdown-item {(selectedLanguage.flagId === flagId) ? \'active\': \'\'}" href="javascript:void(0);" langid="{langId}" onclick="{selectLanguage}"> <span class="flag-icon flag-icon-{flagId.toLowerCase()}"></span> &nbsp;&nbsp;{DescriptionNative}&nbsp;&nbsp; </a> </div> </li> </ul> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span class="navbar-toggler-icon"></span> </button> </div> <div class="collapse navbar-collapse m-0 p-0 order-3 order-sm-2 order-md-2 order-lg-2" id="collapsibleNavbar"> <ul class="navbar-nav"> <li each="{nav.links}" class="nav-item {active}"> <a class="nav-link align-middle" href="{url}"> <span>&nbsp;</span> <div class="v-divider"></div> <span>&nbsp;</span> <div if="{(type===\'image\')}" class="d-inline-block m-0 p-0"> <img riot-src="{src}" class="d-inline-block m-0 p-0 menu-img"> <div if="{(text !==\'\' )}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;{text}&nbsp; </span> </div> </div> <div if="{(type===\'font\')}" class="d-inline-block m-0 p-0"> <span class="fas fa-{src} navbar-text w-auto m-0 p-0"> <div if="{(text !==\'\' )}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;{text}&nbsp; </span> </div> </span> </div> <div if="{(type===\'none\' || type===\'\')}" class="d-inline-block m-0 p-0"> <div if="{(text !==\'\' )}" class="d-inline-block m-0 p-0"> <span class="rater-text w-auto m-0 p-0"> &nbsp;{text}&nbsp; </span> </div> </div> </a> </li> </ul> </div> </div>', 'page-nav-bar,[data-is="page-nav-bar"]{ padding-top: 2px; padding-bottom: 0px; font-size: 1em; } page-nav-bar .logo,[data-is="page-nav-bar"] .logo{ height: 28px; } page-nav-bar .menu-img,[data-is="page-nav-bar"] .menu-img{ height: 1em; } page-nav-bar .rater-text,[data-is="page-nav-bar"] .rater-text{ font-family: "Lucida Sans Unicode", sans-serif; } page-nav-bar .v-divider,[data-is="page-nav-bar"] .v-divider{ display: inline; margin-left: 2px; margin-right: 2px; border-left: 1px solid whitesmoke; } page-nav-bar a:hover .v-divider,[data-is="page-nav-bar"] a:hover .v-divider{ border-color: white; } page-nav-bar a:hover .fas,[data-is="page-nav-bar"] a:hover .fas{ color: white; } page-nav-bar a:hover .rater-text,[data-is="page-nav-bar"] a:hover .rater-text{ color: white; }', 'class="container-fluid"', function(opts) {
 
 
         let self = this;
+        this.uid = nlib.utils.newUId();
 
         this.banner = {
             "type": "font",
@@ -82,7 +89,7 @@ riot.tag2('page-nav-bar', '<div class="navbar navbar-expand-sm fixed-top navbar-
 
         lang.datasourceChanged.add(onLanguagesLoaded);
         lang.selectedIndexChanged.add(onLanguageChanged);
-        app.content.ModelService.modelLoaded.add(onModelLoaded);
+        app.content.modelService.modelLoaded.add(onModelLoaded);
 
         this.selectLanguage = function(e) {
             e.preventDefault();
@@ -114,6 +121,7 @@ riot.tag2('register-entry', '<div class="container-fluid py-3 semi-trans"> <div 
 
 
         let self = this;
+        this.uid = nlib.utils.newUId();
 
         this.label = {
             title: "Register",
@@ -131,18 +139,19 @@ riot.tag2('register-entry', '<div class="container-fluid py-3 semi-trans"> <div 
             confirmPassWord: "Enter Confirm Password"
         };
 
-        let onModelLoaded = (sender, evtData) => {
+        this.onModelLoaded = (sender, evtData) => {
 
             if (evtData.type === 'register') {
                 let model = app.content.model;
 
+                console.log('Model Loaded:', model);
                 self.label = model.register.label;
                 self.hint = model.register.hint;
                 self.update();
             }
         };
 
-        app.content.ModelService.modelLoaded.add(onModelLoaded);
+        app.content.modelService.modelLoaded.add(this.onModelLoaded);
 
         this.onsubmit = function(e) {
             e.preventDefault();
@@ -183,7 +192,7 @@ riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div cl
             }
         };
 
-        app.content.ModelService.modelLoaded.add(onModelLoaded);
+        app.content.modelService.modelLoaded.add(onModelLoaded);
 
         this.onsubmit = function (e) {
             e.preventDefault();

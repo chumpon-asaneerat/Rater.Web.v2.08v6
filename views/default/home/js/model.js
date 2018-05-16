@@ -1,5 +1,10 @@
 // The DefaultHomeModelService class.
 class DefaultHomeModelService extends ClientPageModelService {
+    constructor() {
+        super();
+        this.mountTags = 'default-page';
+    }
+
     //-- override method(s).
     loadPage(langId) {
         super.loadPage(langId); // call base class.
@@ -14,5 +19,5 @@ class DefaultHomeModelService extends ClientPageModelService {
 
 ; (function () {
     // Inject Model Service.
-    app.content.ModelService = new DefaultHomeModelService();
+    app.content.modelService = new DefaultHomeModelService();
 })();

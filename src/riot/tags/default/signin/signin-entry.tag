@@ -77,7 +77,7 @@
             }
         };
 
-        app.content.ModelService.modelLoaded.add(onModelLoaded);
+        app.content.modelService.modelLoaded.add(onModelLoaded);
 
         //-- END SERVICE EVENT HANDLERS
 

@@ -227,6 +227,8 @@ class ContentModel {
     //-- constructor.
     constructor() {
         this._model = { };
+        this._mountTags = '';
+
         let self = this;
 
         this._modelLoaded = new EventHandler();
@@ -292,6 +294,13 @@ class ContentModel {
     };
 
     //-- public properties.
+    get mountTags() {
+        return this._mountTags;
+    };
+    set mountTags(value) {
+        this._mountTags = value;
+    };
+
     get model() {
         return this._model;
     }
@@ -345,10 +354,10 @@ class ContentService {
     };
 
     //-- public properties.
-    get ModelService() {
+    get modelService() {
         return this._modelService;
     };
-    set ModelService(value) {
+    set modelService(value) {
         //console.log('detected set model service.');
         this._modelService = value;
         this._modelServiceChanged.invoke(this, EventArgs.Empty);
@@ -398,7 +407,7 @@ class ClientApp {
     // mount riot method call when model service assigned.
     let onModelServiceChanged = (sender, evtData) => {        
         //console.log('Model Service loaded.');
-        riot.mount('*');
+        riot.mount(app.content.modelService.mountTags);
     };
     
     app.content.modelServiceChanged.add(onModelServiceChanged);

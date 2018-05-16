@@ -112,7 +112,9 @@
         //#region LOCAL VARIABLES
 
         //-- LOCAL VARIABLES
+
         let self = this;
+        this.uid = nlib.utils.newUId(); // for debug instance id.
         //-- default before load content from server.
         /*
         let __model = app.content.model;
@@ -209,7 +211,7 @@
 
         lang.datasourceChanged.add(onLanguagesLoaded);
         lang.selectedIndexChanged.add(onLanguageChanged);
-        app.content.ModelService.modelLoaded.add(onModelLoaded);
+        app.content.modelService.modelLoaded.add(onModelLoaded);
 
         //-- END SERVICE EVENT HANDLERS
 

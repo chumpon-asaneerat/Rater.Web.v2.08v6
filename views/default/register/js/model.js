@@ -1,5 +1,10 @@
 // The RegisterModelService class.
 class RegisterModelService extends ClientPageModelService {
+    constructor() {
+        super();
+        this.mountTags = 'default-page';
+    }
+
     //-- override method(s).
     loadPage(langId) {        
         super.loadPage(langId); // call base class.
@@ -13,5 +18,5 @@ class RegisterModelService extends ClientPageModelService {
 
 ; (function () {
     // Inject Model Service.
-    app.content.ModelService = new RegisterModelService();
+    app.content.modelService = new RegisterModelService();
 })();
