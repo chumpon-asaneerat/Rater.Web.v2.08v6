@@ -9,6 +9,10 @@ GO
 -- [== History ==]
 -- <2016-12-15> :
 --	- Stored Procedure Created.
+-- <2016-12-16> :
+--	- Add returns langId column.
+--	- Change CustomerId to customerId.
+--	- Change MemberId to memberId.
 --
 -- [== Example ==]
 --
