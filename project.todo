@@ -636,7 +636,9 @@ My Choice Rater v2.0:
                     ☐ app-routes.js updated. Add routes for apis and views
                     ☐ rater-web-db.js updated. Add stored procedures.
                 Views:
-                    ☐ Update for XXXX.
+                    ✔ Implements default-home supports page, nav, footer content (ML). @done (5/16/2018, 6:45:17 PM)
+                    ✔ Implements register supports page, nav, footer, entry content (ML). @done (5/16/2018, 6:45:17 PM)
+                    ✔ Implements signin supports page, nav, footer, entry content (ML). @done (5/16/2018, 6:45:17 PM)
         Clients:
             Core Libraries:
                 css files:
@@ -645,11 +647,12 @@ My Choice Rater v2.0:
                 api.js:
                     ☐ Update api add new url for updated SPs.
                 nlib.js:
-                    ☐ 
+                    ✔ Add data type extenstion method -> string.format. @done (5/16/2018, 6:44:03 PM)
                 service.js:
                     ☐ 
                 tags.js:
-                    ☐ 
+                    ✔ Add register-entry tag with supports ML code. @done (5/16/2018, 6:44:05 PM)
+                    ✔ Add signin-entry tag with supports ML code. @done (5/16/2018, 6:44:05 PM)
     Update on [2018-05-18]:
         Database Create Scripts:
             Tables and Views:
