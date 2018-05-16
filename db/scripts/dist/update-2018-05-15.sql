@@ -1,16 +1,4 @@
 /*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
 SET ANSI_NULLS ON
 GO
 
@@ -263,9 +251,6 @@ AS
 		  AND QItemML.QSSeq = QItemV.QSSeq)
 
 GO
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
 
 
 /*********** Script Update Date: 2018-05-15  ***********/
@@ -1124,15 +1109,6 @@ BEGIN
 END
 
 GO
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
 
 
 /*********** Script Update Date: 2018-05-15  ***********/
@@ -2698,18 +2674,6 @@ BEGIN
 END
 
 GO
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
-
-
-/*********** Script Update Date: 2018-05-15  ***********/
 
 
 /*********** Script Update Date: 2018-05-15  ***********/
