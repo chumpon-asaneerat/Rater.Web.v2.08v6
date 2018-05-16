@@ -1,14 +1,6 @@
 {
-    "nav": {
-        "banner": {
-            "title": "หน้าหลัก",
-            "src": "",
-            "icon": "home",
-            "href": "/"
-        },
-        "links": [
-            { "text": "ลงทะเบียน", "href": "/register", "active": "active" },
-            { "text": "เข้าสู่ระบบ", "href": "/signin", "active": "" }
-        ]
-    }
+    "links": [
+        { "text": "ลงทะเบียน", "url": "#", "active": "", "type": "font", "src": "user-plus" },
+        { "text": "เข้าใช้งาน", "url": "#", "active": "", "type": "font", "src": "user-circle" }
+    ]
 }

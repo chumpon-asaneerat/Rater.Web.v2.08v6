@@ -18,7 +18,6 @@ function getIndex(req, res, next) {
     if (fs.existsSync(targetFile)) {
         res.render(targetFile, { 
             title: "Developer Home.", 
-            pageContent: "Hello Wow!!!",
             baseUrl: baseUrl
         });
     }

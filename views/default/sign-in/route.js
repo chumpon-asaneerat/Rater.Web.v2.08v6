@@ -17,7 +17,7 @@ function getIndex(req, res, next) {
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {
         res.render(targetFile, {
-            title: "Default - Sign In.",
+            title: "Sign In.",
             baseUrl: baseUrl
         })
     }
@@ -45,14 +45,20 @@ function getCSSFile(req, res, next) {
 };
 
 function getJsonModelByLangId(req, res, next) {
-    var modelType = req.params.modelType;
-    var langId = req.params.langId;
-    var targetFile = path.join(workPath, 'contents', langId, modelType + '.json');
-    if (!fs.existsSync(targetFile)) {
-        targetFile = path.join(workPath, 'contents', 'EN', modelType + '.json');
+    var reqModel = nlib.parseReq(req);
+    if (!reqModel.errors.hasError) {
+        var modelType = reqModel.data.modelType;
+        var langId = reqModel.data.langId;
+        var targetFile = path.join(workPath, 'contents', langId, modelType + '.json');
+        if (!fs.existsSync(targetFile)) {
+            targetFile = path.join(workPath, 'contents', 'EN', modelType + '.json');
+        }
+        var result = nlib.loadJsonFile(targetFile);
+        nlib.sendJson(req, res, result);
     }
-    var result = nlib.loadJsonFile(targetFile);
-    nlib.sendJson(req, res, result);
+    else {
+        next();
+    }
 };
 
 /**
@@ -64,7 +70,7 @@ function init_routes(app) {
     app.get(baseUrl + '/', getIndex);
     app.get(baseUrl + '/js/:fileName', getJSFile);
     app.get(baseUrl + '/css/:fileName', getCSSFile);
-    app.get(baseUrl + '/models/:modelType/:langId', getJsonModelByLangId);
+    app.all(baseUrl + '/models', getJsonModelByLangId);
 };
 
 exports.init_routes = init_routes;

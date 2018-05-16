@@ -300,36 +300,74 @@ class ContentModel {
     };
 };
 
+class ClientPageModelService extends ContentModel {
+    //-- constructor.
+    constructor() {
+        super();
+    };
+
+    //-- virtual methods.
+    loadPage(langId) {
+        let self = this;
+        this.loadModel(langId, 'page', (r) => {
+            document.title = self.model[langId].page.header.title;
+        });
+        this.loadModel(langId, 'banner', (r) => {
+            //console.log(r);
+        });
+        this.loadModel(langId, 'nav', (r) => {
+            //console.log(r);
+        });
+        this.loadModel(langId, 'footer', (r) => {
+            //console.log(r);
+        });
+    };
+
+    //-- public, override methods.
+    loadModels(langId) {
+        //console.log('Request to load models.');
+        this.loadPage(langId);
+    };
+};
+
 // The Content Service class.
 class ContentService {
     constructor() {
-        this._contentModel = null;
+        this._modelService = null;
+        this._modelserviceloaded = new EventHandler();
     };
 
     //-- public properties.
-    get ContentModel() {
-        return this._contentModel;
+    get ModelService() {
+        return this._modelService;
     };
-    set ContentModel(value) {
-        this._contentModel = value;
+    set ModelService(value) {
+        //console.log('detected set model service.');
+        this._modelService = value;
+        this._modelserviceloaded.invoke(this, EventArgs.Empty);
     };
 
     get model() {
         let langId = lang.currentLangId;
         //console.log('langId:', langId);
-        if (this._contentModel && 
-            this._contentModel.model) {
+        if (this._modelService && 
+            this._modelService.model) {
             // returns model on current selected language.
-            if (!this._contentModel.model[langId]) {
-                this._contentModel.loadModels(langId);
+            if (!this._modelService.model[langId]) {
+                this._modelService.loadModels(langId);
             }
-            return this._contentModel.model[langId];
+            return this._modelService.model[langId];
         }
         else {
             // not found.
             console.log('not found.');
             return null;
         }
+    };
+
+    //-- event properties.
+    get modelserviceloaded() {
+        return this._modelserviceloaded;
     };
 };
 
@@ -349,4 +387,12 @@ class ClientApp {
     //console.log('Init app core...');
     window.lang = window.lang || new LanguageService();
     window.app = window.app || new ClientApp();
+
+    // mount riot method call when model service assigned.
+    let onModelServiceLoaded = (sender, evtData) => {
+        //console.log('Model Service loaded.');
+        riot.mount('*');
+    };
+
+    app.content.modelserviceloaded.add(onModelServiceLoaded);
 })();

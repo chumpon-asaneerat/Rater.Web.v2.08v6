@@ -79,10 +79,32 @@ class API {
             { name: "getRawVotes", url: "/api/reports/raw-votes/search" },
             { name: "getVoteSummaries", url: "/api/reports/vote-summaries/search" },
             /* page content model */
-            { name: "getModel", url: window.location.href + "/models" }
+            { name: "getModel", url: API.getUrl("models") }
         ]
     };
     
+    static getUrl(relUrl) {
+        let result = window.location.pathname;
+        if (!result.endsWith('/')) {
+            if (!relUrl.startsWith('/')) {
+                result = result + '/' + relUrl;
+            }
+            else {
+                result = result + relUrl;
+            }
+        }
+        else {
+            if (!relUrl.startsWith('/')) {
+                result = result + relUrl;
+            }
+            else {
+                result = result + relUrl.substring(1);
+            }
+        }
+        //console.log(window.location);
+        return result;
+    };
+
     constructor() {
         let self = this;
         API.functions.forEach(fn => {

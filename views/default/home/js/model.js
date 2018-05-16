@@ -1,17 +1,19 @@
-class DefaultHomeModel extends ContentModel {
-    //-- constructor.
-    constructor() {        
-        super();
-    };
-
-    //-- public, override methods.
-    loadModels(langId, model) {
-        console.log('Request to load models.');
+// The DefaultHomeModelService class.
+class DefaultHomeModelService extends ClientPageModelService {
+    //-- override method(s).
+    loadPage(langId) {
+        super.loadPage(langId); // call base class.
+        /*
+        let self = this;
+        this.loadModel(langId, 'some-special-content', (r) => {
+            //console.log(r);
+        });
+        */
     };
 };
 
 ; (function () {
     // Inject Model Service.
-    console.log('Inject "Default-Home" Model Service.');
-    app.content.ModelService = new DefaultHomeModel();
+    console.log('Inject Model Service:', 'DefaultHomeModelService');
+    app.content.ModelService = new DefaultHomeModelService();
 })();

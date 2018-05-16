@@ -31,8 +31,12 @@
         //-- LOCAL VARIABLES
 
         let self = this;
+        let __model = app.content.model;
+        let __footer = (__model) ? __model.footer : null;
+        let __label = (__footer) ? __footer.label : null;
+        
         //-- default before load content from server.
-        this.label = { 
+        this.label = (__label) ? __label : { 
             status: "status",
             copyright: "EDL Co., Ltd."
         };
@@ -59,7 +63,7 @@
             }
         };
 
-        app.content.ContentModel.modelloaded.add(onModelLoaded);
+        app.content.ModelService.modelloaded.add(onModelLoaded);
 
         //-- END SERVICE EVENT HANDLERS
 

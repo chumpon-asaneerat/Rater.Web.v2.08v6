@@ -1,14 +1,6 @@
 {
-    "nav": {
-        "banner": {
-            "title": "Home",
-            "src": "",
-            "icon": "home",
-            "href": "/"
-        },
-        "links": [
-            { "text": "Register", "href": "/register", "active": "active" },
-            { "text": "Sign In", "href": "/signin", "active": "" }
-        ]
-    }
+    "links": [
+        { "text": "Register", "url": "#", "active": "", "type": "none", "src": "" },
+        { "text": "Sign In", "url": "#", "active": "", "type": "image", "src": "/images/common/login.gif" }
+    ]
 }

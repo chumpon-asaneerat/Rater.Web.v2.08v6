@@ -116,26 +116,32 @@
         //-- LOCAL VARIABLES
         let self = this;
 
-        this.banner = {
+        let __model = app.content.model;
+        let __banner = (__model) ? __model.banner : null;
+        let __nav = (__model) ? __model.nav : null;
+        let __langs = (app.lang && app.lang.datasource) ? app.lang.datasource : null;
+        let __selectedLang = (app.lang && app.lang.selectedObject) ? app.lang.selectedObject : null;
+
+        this.banner = (__banner) ? __banner : {
             "type": "font",
             "src": "home",
             "text": "My Choice Rater",
             "url": "JavaScript:void(0);"
         };
 
-        this.nav = {
+        this.nav = (__nav) ? __nav : {
             "links": [
                 { "text": "Register", "url": "#" },
                 { "text": "Sign In", "url": "#" }
             ]
         };
 
-        this.languages = [
+        this.languages = (__langs) ? __langs : [
             { "langId": "EN", "flagId": "US", "DescriptionNative": "English" },
             { "langId": "TH", "flagId": "TH", "DescriptionNative": "ไทย" }
         ];
 
-        this.selectedLanguage = {
+        this.selectedLanguage = (__selectedLang) ? __selectedLang : {
             "langId": "EN", "flagId": "US", "DescriptionNative": "English"
         };
         
@@ -180,7 +186,7 @@
 
         lang.datasourcechanged.add(onLanguagesLoaded);
         lang.selectedindexchanged.add(onLanguageChanged);
-        app.content.ContentModel.modelloaded.add(onModelLoaded);
+        app.content.ModelService.modelloaded.add(onModelLoaded);
 
         //-- END SERVICE EVENT HANDLERS
 

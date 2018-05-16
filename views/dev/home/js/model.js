@@ -1,36 +1,18 @@
-// The DevHomeModel class.
-class DevHomeModel extends ContentModel {
-    //-- constructor.
-    constructor() {        
-        super();
-    };
-
-    //-- private methods.
+// The DevHomeModelService class.
+class DevHomeModelService extends ClientPageModelService {
+    //-- override method(s).
     loadPage(langId) {
-        let self = this;        
-        this.loadModel(langId, 'page', (r) => {
-            document.title = self.model[langId].page.header.title;
-        });
-        this.loadModel(langId, 'banner', (r) => {
+        super.loadPage(langId); // call base class.
+        /*
+        let self = this;
+        this.loadModel(langId, 'some-special-content', (r) => {
             //console.log(r);
         });
-        this.loadModel(langId, 'nav', (r) => {
-            //console.log(r);
-        });
-        this.loadModel(langId, 'footer', (r) => {
-            //console.log(r);
-        });
-    };
-
-    //-- public, override methods.
-    loadModels(langId) {
-        //console.log('Request to load models.');
-        this.loadPage(langId);
+        */
     };
 };
 
 ; (function () {
     // Inject Content Model.
-    //console.log('Inject "Dev-Home" Content Model.');
-    app.content.ContentModel = new DevHomeModel();
+    app.content.ModelService = new DevHomeModelService();
 })();
