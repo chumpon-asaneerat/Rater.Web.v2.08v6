@@ -27,7 +27,7 @@ function getIndex(req, res, next) {
 };
 
 function getJSFile(req, res, next) {
-    var allowFiles = [ 'app.js', 'model.js' ];
+    var allowFiles = ['app.js', 'model.js'];
     var fileName = req.params.fileName;
     if (allowFiles.indexOf(fileName.toLowerCase()) == -1) {
         next();

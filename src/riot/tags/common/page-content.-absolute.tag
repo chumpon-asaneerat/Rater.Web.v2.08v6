@@ -1,5 +1,5 @@
 <page-content-absolute>
-    <div id="page-content-abs"> <!-- position: relative -->
+    <div id="page-content-abs" class="container-fluid"> <!-- position: relative -->
         <!--
         <h3>Content gone below.</h3>
         -->
