@@ -599,13 +599,43 @@ My Choice Rater v2.0:
                     ✔ page-nav-bar tag update now should work properly (supports ML). @done (5/15/2018, 11:18:53 PM)
     Update on [2018-05-16]:
         Database Create Scripts:
+            Stored Procedures and Functions:
+                ✔ SignIn (SP) update. @done (5/16/2018, 3:36:31 PM)
+        Database Document Updated:
+            Server Update History:
+                ✔ Add server-update.todo to keep track generate script file status. @done (5/16/2018, 11:07:24 AM)
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ✔ db-script-2018-05-16 (generate db script). @done (5/16/2018, 11:07:35 AM)
+            Core Libraries:
+                Views:
+                    ✔ Implements default-home supports page, nav, footer content (ML). @done (5/16/2018, 6:45:17 PM)
+                    ✔ Implements register supports page, nav, footer, entry content (ML). @done (5/16/2018, 6:45:17 PM)
+                    ✔ Implements signin supports page, nav, footer, entry content (ML). @done (5/16/2018, 6:45:17 PM)
+        Clients:
+            Core Libraries:
+                css files:
+                    ✔ Add rater-client.css for client browser uses. @done (5/16/2018, 11:22:45 AM)
+                    ✔ Add rater-device.css for device view (for display question) uses. @done (5/16/2018, 11:22:46 AM)
+                nlib.js:
+                    ✔ Add data type extenstion method -> string.format. @done (5/16/2018, 6:44:03 PM)
+                service.js:
+                    ✔ ContentModel class add property mountTags. @done (5/16/2018, 11:33:13 PM)
+                    ✔ ContentService class change property ModelService to modelService. @done (5/16/2018, 11:33:48 PM)
+                tags.js:
+                    ✔ Add register-entry tag with supports ML code. @done (5/16/2018, 6:44:05 PM)
+                    ✔ Add signin-entry tag with supports ML code. @done (5/16/2018, 6:44:05 PM)
+                model.js files:
+                    ✔ all model.js file must implements constructor with set mountTags. @done (5/16/2018, 11:35:02 PM)
+    Update on [2018-05-17]:
+        Database Create Scripts:
             Tables and Views:
                 ☐ Device (TABLE).
                 ☐ DeviceML (TABLE).
                 ☐ DeviceView (VIEW).
                 ☐ DeviceMLView (VIEW).
             Stored Procedures and Functions:
-                ✔ SignIn (SP) update. @done (5/16/2018, 3:36:31 PM)
                 ☐ SaveDevice (SP).
                 ☐ SaveDeviceML (SP).
                 ☐ GetDevices (SP).                
@@ -615,11 +645,11 @@ My Choice Rater v2.0:
             Error Code:
                 ☐ Update Error Code in Excel file.
             Server Update History:
-                ✔ Add server-update.todo to keep track generate script file status. @done (5/16/2018, 11:07:24 AM)
+                ☐ Add server-update.todo to keep track generate script file status.
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ✔ db-script-2018-05-16 (generate db script). @done (5/16/2018, 11:07:35 AM)
+                    ☐ db-script-2018-05-17 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Device:
                     SaveDevice:
@@ -636,23 +666,17 @@ My Choice Rater v2.0:
                     ☐ app-routes.js updated. Add routes for apis and views
                     ☐ rater-web-db.js updated. Add stored procedures.
                 Views:
-                    ✔ Implements default-home supports page, nav, footer content (ML). @done (5/16/2018, 6:45:17 PM)
-                    ✔ Implements register supports page, nav, footer, entry content (ML). @done (5/16/2018, 6:45:17 PM)
-                    ✔ Implements signin supports page, nav, footer, entry content (ML). @done (5/16/2018, 6:45:17 PM)
+                    ☐ Implements xxxxx supports page, nav, footer, content (ML).
         Clients:
             Core Libraries:
-                css files:
-                    ✔ Add rater-client.css for client browser uses. @done (5/16/2018, 11:22:45 AM)
-                    ✔ Add rater-device.css for device view (for display question) uses. @done (5/16/2018, 11:22:46 AM)
                 api.js:
                     ☐ Update api add new url for updated SPs.
                 nlib.js:
-                    ✔ Add data type extenstion method -> string.format. @done (5/16/2018, 6:44:03 PM)
+                    ☐ 
                 service.js:
                     ☐ 
                 tags.js:
-                    ✔ Add register-entry tag with supports ML code. @done (5/16/2018, 6:44:05 PM)
-                    ✔ Add signin-entry tag with supports ML code. @done (5/16/2018, 6:44:05 PM)
+                    ☐ 
     Update on [2018-05-18]:
         Database Create Scripts:
             Tables and Views:
