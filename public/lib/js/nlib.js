@@ -1061,8 +1061,8 @@ class DataSource {
     constructor() {
         this._datasource = null;
         this._selectedIndex = -1;
-        this._datasourcechanged = new EventHandler();
-        this._selectedindexchanged = new EventHandler();
+        this._datasourceChanged = new EventHandler();
+        this._selectedIndexChanged = new EventHandler();
     };
 
     //-- protected methods.
@@ -1086,7 +1086,7 @@ class DataSource {
             //console.log('new data source assigned.');
             this._datasource = value;
             //console.log(self._datasource);
-            this._datasourcechanged.invoke(this, { "oldValue": oVal, "newValue": nVal })
+            this._datasourceChanged.invoke(this, { "oldValue": oVal, "newValue": nVal })
             if (this._datasource && this._datasource.length > 0) {
                 //console.log('datasource is not null so set to first item');
                 this.selectedIndex = 0;
@@ -1097,8 +1097,6 @@ class DataSource {
             }
             // call protected method.
             this.onDatasourceChange();
-            // raise event
-            this._selectedindexchanged.invoke(self, { "oldValue": oVal, "newValue": nVal })
         }
         else {
             console.log('datasource is null and is not instance of array.');
@@ -1131,7 +1129,7 @@ class DataSource {
         // call protected method.
         this.onSelectedIndexChange();
         // raise event
-        this._selectedindexchanged.invoke(self, { "oldValue": oVal, "newValue": nVal })
+        this._selectedIndexChanged.invoke(self, { "oldValue": oVal, "newValue": nVal })
     };
 
     get selectedObject() {
@@ -1146,10 +1144,10 @@ class DataSource {
     };
 
     //-- event handlers.
-    get datasourcechanged() {
-        return this._datasourcechanged;
+    get datasourceChanged() {
+        return this._datasourceChanged;
     };
-    get selectedindexchanged() {
-        return this._selectedindexchanged;
+    get selectedIndexChanged() {
+        return this._selectedIndexChanged;
     };
 };

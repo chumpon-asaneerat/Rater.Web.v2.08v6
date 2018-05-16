@@ -184,9 +184,9 @@
             }
         };
 
-        lang.datasourcechanged.add(onLanguagesLoaded);
-        lang.selectedindexchanged.add(onLanguageChanged);
-        app.content.ModelService.modelloaded.add(onModelLoaded);
+        lang.datasourceChanged.add(onLanguagesLoaded);
+        lang.selectedIndexChanged.add(onLanguageChanged);
+        app.content.ModelService.modelLoaded.add(onModelLoaded);
 
         //-- END SERVICE EVENT HANDLERS
 

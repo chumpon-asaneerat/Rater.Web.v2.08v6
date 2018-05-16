@@ -229,7 +229,7 @@ class ContentModel {
         this._model = { };
         let self = this;
 
-        this._model_loaded = new EventHandler();
+        this._modelLoaded = new EventHandler();
 
         //-- event handler(s).
         let onLanguageChanged = (sender, evtData) => { 
@@ -247,7 +247,7 @@ class ContentModel {
             }
             self.loadModels(langId);
         };
-        lang.selectedindexchanged.add(onLanguageChanged);
+        lang.selectedIndexChanged.add(onLanguageChanged);
     };
 
     //-- public, virtual methods.
@@ -274,8 +274,8 @@ class ContentModel {
                 if (callback && callback instanceof Function) {
                     //console.log('Raise callback. data:', model[modelType], ', langId:', lang.currentLangId);
                     callback(loadModel);
-                    if (this._model_loaded) {
-                        this._model_loaded.invoke(this, { 
+                    if (this._modelLoaded) {
+                        this._modelLoaded.invoke(this, { 
                             "langId": langId, 
                             "type": modelType, 
                             "model": loadModel 
@@ -295,8 +295,8 @@ class ContentModel {
     }
 
     //-- event properties.
-    get modelloaded() {
-        return this._model_loaded;
+    get modelLoaded() {
+        return this._modelLoaded;
     };
 };
 
@@ -334,7 +334,7 @@ class ClientPageModelService extends ContentModel {
 class ContentService {
     constructor() {
         this._modelService = null;
-        this._modelserviceloaded = new EventHandler();
+        this._modelServiceChanged = new EventHandler();
     };
 
     //-- public properties.
@@ -344,7 +344,7 @@ class ContentService {
     set ModelService(value) {
         //console.log('detected set model service.');
         this._modelService = value;
-        this._modelserviceloaded.invoke(this, EventArgs.Empty);
+        this._modelServiceChanged.invoke(this, EventArgs.Empty);
     };
 
     get model() {
@@ -366,8 +366,8 @@ class ContentService {
     };
 
     //-- event properties.
-    get modelserviceloaded() {
-        return this._modelserviceloaded;
+    get modelServiceChanged() {
+        return this._modelServiceChanged;
     };
 };
 
@@ -389,10 +389,10 @@ class ClientApp {
     window.app = window.app || new ClientApp();
 
     // mount riot method call when model service assigned.
-    let onModelServiceLoaded = (sender, evtData) => {
+    let onModelServiceChanged = (sender, evtData) => {
         //console.log('Model Service loaded.');
         riot.mount('*');
     };
 
-    app.content.modelserviceloaded.add(onModelServiceLoaded);
+    app.content.modelServiceChanged.add(onModelServiceChanged);
 })();

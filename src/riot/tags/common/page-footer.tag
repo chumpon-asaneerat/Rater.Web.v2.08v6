@@ -63,7 +63,7 @@
             }
         };
 
-        app.content.ModelService.modelloaded.add(onModelLoaded);
+        app.content.ModelService.modelLoaded.add(onModelLoaded);
 
         //-- END SERVICE EVENT HANDLERS
 
