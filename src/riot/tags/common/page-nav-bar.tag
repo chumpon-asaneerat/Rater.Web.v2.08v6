@@ -113,7 +113,8 @@
 
         //-- LOCAL VARIABLES
         let self = this;
-
+        //-- default before load content from server.
+        /*
         let __model = app.content.model;
         let __banner = (__model) ? __model.banner : null;
         let __nav = (__model) ? __model.nav : null;
@@ -140,6 +141,30 @@
         ];
 
         this.selectedLanguage = (__selectedLang) ? __selectedLang : {
+            "langId": "EN", "flagId": "US", "DescriptionNative": "English"
+        };
+        */
+
+        this.banner = {
+            "type": "font",
+            "src": "home",
+            "text": "My Choice Rater",
+            "url": "JavaScript:void(0);"
+        };
+
+        this.nav = {
+            "links": [
+                { "text": "Register", "url": "#" },
+                { "text": "Sign In", "url": "#" }
+            ]
+        };
+
+        this.languages = [
+            { "langId": "EN", "flagId": "US", "DescriptionNative": "English" },
+            { "langId": "TH", "flagId": "TH", "DescriptionNative": "ไทย" }
+        ];
+
+        this.selectedLanguage = {
             "langId": "EN", "flagId": "US", "DescriptionNative": "English"
         };
         

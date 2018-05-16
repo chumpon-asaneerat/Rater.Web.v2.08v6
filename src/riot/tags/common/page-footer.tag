@@ -31,12 +31,19 @@
         //-- LOCAL VARIABLES
 
         let self = this;
+        //-- default before load content from server.
+        /*
         let __model = app.content.model;
         let __footer = (__model) ? __model.footer : null;
         let __label = (__footer) ? __footer.label : null;
         
-        //-- default before load content from server.
         this.label = (__label) ? __label : { 
+            status: "status",
+            copyright: "EDL Co., Ltd."
+        };
+        */
+
+        this.label = {
             status: "status",
             copyright: "EDL Co., Ltd."
         };

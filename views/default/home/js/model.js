@@ -14,6 +14,5 @@ class DefaultHomeModelService extends ClientPageModelService {
 
 ; (function () {
     // Inject Model Service.
-    console.log('Inject Model Service:', 'DefaultHomeModelService');
     app.content.ModelService = new DefaultHomeModelService();
 })();

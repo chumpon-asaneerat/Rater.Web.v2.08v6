@@ -390,10 +390,10 @@ class ClientApp {
     window.app = window.app || new ClientApp();
 
     // mount riot method call when model service assigned.
-    let onModelServiceChanged = (sender, evtData) => {
+    let onModelServiceChanged = (sender, evtData) => {        
         //console.log('Model Service loaded.');
         riot.mount('*');
     };
-
+    
     app.content.modelServiceChanged.add(onModelServiceChanged);
 })();

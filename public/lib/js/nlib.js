@@ -954,6 +954,26 @@ nlib = function () {
 })();
 
 /**
+ * module: NLib various data type extenstion methods.
+ * version  1.0.8
+ * required: none.
+ */
+; (function () {
+    //-- String.format - The C# like format.
+    // Usage:
+    // let a = "welcome {0} to {1}";
+    // a.format('Joe', 'My world');
+    String.prototype.format = function () {
+        var a = this;
+        for (var k in arguments) {
+            a = a.replace(new RegExp("\\{" + k + "\\}", 'g'), arguments[k]);
+        }
+        return a
+    }
+})();
+
+
+/**
  * NDelegate class. The .NET like delegate.
  */
 class NDelegate {

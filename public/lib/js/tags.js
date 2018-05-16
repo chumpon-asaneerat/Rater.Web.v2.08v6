@@ -7,11 +7,8 @@ riot.tag2('page-footer', '<span class="float-left m-0 p-0"> <label class="m-0 p-
 
 
         let self = this;
-        let __model = app.content.model;
-        let __footer = (__model) ? __model.footer : null;
-        let __label = (__footer) ? __footer.label : null;
 
-        this.label = (__label) ? __label : {
+        this.label = {
             status: "status",
             copyright: "EDL Co., Ltd."
         };
@@ -34,32 +31,26 @@ riot.tag2('page-nav-bar', '<div class="navbar navbar-expand-sm fixed-top navbar-
 
         let self = this;
 
-        let __model = app.content.model;
-        let __banner = (__model) ? __model.banner : null;
-        let __nav = (__model) ? __model.nav : null;
-        let __langs = (app.lang && app.lang.datasource) ? app.lang.datasource : null;
-        let __selectedLang = (app.lang && app.lang.selectedObject) ? app.lang.selectedObject : null;
-
-        this.banner = (__banner) ? __banner : {
+        this.banner = {
             "type": "font",
             "src": "home",
             "text": "My Choice Rater",
             "url": "JavaScript:void(0);"
         };
 
-        this.nav = (__nav) ? __nav : {
+        this.nav = {
             "links": [
                 { "text": "Register", "url": "#" },
                 { "text": "Sign In", "url": "#" }
             ]
         };
 
-        this.languages = (__langs) ? __langs : [
+        this.languages = [
             { "langId": "EN", "flagId": "US", "DescriptionNative": "English" },
             { "langId": "TH", "flagId": "TH", "DescriptionNative": "ไทย" }
         ];
 
-        this.selectedLanguage = (__selectedLang) ? __selectedLang : {
+        this.selectedLanguage = {
             "langId": "EN", "flagId": "US", "DescriptionNative": "English"
         };
 

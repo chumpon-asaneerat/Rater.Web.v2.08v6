@@ -13,6 +13,6 @@ class DevHomeModelService extends ClientPageModelService {
 };
 
 ; (function () {
-    // Inject Content Model.
+    // Inject Model Service.
     app.content.ModelService = new DevHomeModelService();
 })();
