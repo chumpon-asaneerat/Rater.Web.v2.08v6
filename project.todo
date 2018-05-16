@@ -638,6 +638,9 @@ My Choice Rater v2.0:
                     ☐ Update for XXXX.
         Clients:
             Core Libraries:
+                css files:
+                    ✔ Add rater-client.css for client browser uses. @done (5/16/2018, 11:22:45 AM)
+                    ✔ Add rater-device.css for device view (for display question) uses. @done (5/16/2018, 11:22:46 AM)
                 api.js:
                     ☐ Update api add new url for updated SPs.
                 nlib.js:
