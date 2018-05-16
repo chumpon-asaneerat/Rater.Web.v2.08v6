@@ -398,7 +398,7 @@ My Choice Rater v2.0:
                 ✔ Nlib.js added. @done (5/11/2018, 2:07:02 AM)
                 ✔ services.js added. @done (5/11/2018, 2:07:03 AM)
                 ✔ tags.js (setup riot auto compile tag files to single tags.js file). @done (5/11/2018, 2:07:04 AM)
-    Update on [2018-05-10]:
+    Update on [2018-05-14] to [2018-05-14]:
         Database Create Scripts:
             Tables and Views:
                 ✔ LocalLog (TABLE). @done (5/11/2018, 1:15:31 AM)
@@ -613,10 +613,12 @@ My Choice Rater v2.0:
         Database Document Updated:
             Error Code:
                 ☐ Update Error Code in Excel file.
+            Server Update History:
+                ✔ Add server-update.todo to keep track generate script file status. @done (5/16/2018, 11:07:24 AM)
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-16 (generate db script).
+                    ✔ db-script-2018-05-16 (generate db script). @done (5/16/2018, 11:07:35 AM)
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Device:
                     SaveDevice:
