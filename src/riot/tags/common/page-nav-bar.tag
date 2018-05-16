@@ -50,44 +50,42 @@
         </div>
         <!-- Collapse Items -->
         <div class="collapse navbar-collapse m-0 p-0 order-3 order-sm-2 order-md-2 order-lg-2" id="collapsibleNavbar">
-            <ul class="navbar-nav m-0 p-0">
-                <ul class="navbar-nav">
-                    <!-- EACH MAIN MENU ITEM LINKS -->
-                    <li each={nav.links} class="nav-item {active}">
-                        <a class="nav-link align-middle" href="{url}">
-                            <span>&nbsp;</span>
-                            <div class="v-divider"></div>
-                            <span>&nbsp;</span>
-                            <!-- IMAGE AND TEXT -->
-                            <div if={(type==='image')} class="d-inline-block m-0 p-0">
-                                <img src="{src}" class="d-inline-block m-0 p-0 menu-img">
-                                <div if={(text !=='' )} class="d-inline-block m-0 p-0">
-                                    <span class="rater-text w-auto m-0 p-0">
-                                        &nbsp;{text}&nbsp;
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- FONT-ICON AND TEXT -->
-                            <div if={(type==='font')} class="d-inline-block m-0 p-0">
-                                <span class="fas fa-{src} navbar-text w-auto m-0 p-0">
-                                    <div if={(text !=='' )} class="d-inline-block m-0 p-0">
-                                        <span class="rater-text w-auto m-0 p-0">
-                                            &nbsp;{text}&nbsp;
-                                        </span>
-                                    </div>
+            <ul class="navbar-nav">
+                <!-- EACH MAIN MENU ITEM LINKS -->
+                <li each={nav.links} class="nav-item {active}">
+                    <a class="nav-link align-middle" href="{url}">
+                        <span>&nbsp;</span>
+                        <div class="v-divider"></div>
+                        <span>&nbsp;</span>
+                        <!-- IMAGE AND TEXT -->
+                        <div if={(type==='image')} class="d-inline-block m-0 p-0">
+                            <img src="{src}" class="d-inline-block m-0 p-0 menu-img">
+                            <div if={(text !=='' )} class="d-inline-block m-0 p-0">
+                                <span class="rater-text w-auto m-0 p-0">
+                                    &nbsp;{text}&nbsp;
                                 </span>
                             </div>
-                            <!-- TEXT ONLY -->
-                            <div if={(type==='none' || type==='')} class="d-inline-block m-0 p-0">
+                        </div>
+                        <!-- FONT-ICON AND TEXT -->
+                        <div if={(type==='font')} class="d-inline-block m-0 p-0">
+                            <span class="fas fa-{src} navbar-text w-auto m-0 p-0">
                                 <div if={(text !=='' )} class="d-inline-block m-0 p-0">
                                     <span class="rater-text w-auto m-0 p-0">
                                         &nbsp;{text}&nbsp;
                                     </span>
                                 </div>
+                            </span>
+                        </div>
+                        <!-- TEXT ONLY -->
+                        <div if={(type==='none' || type==='')} class="d-inline-block m-0 p-0">
+                            <div if={(text !=='' )} class="d-inline-block m-0 p-0">
+                                <span class="rater-text w-auto m-0 p-0">
+                                    &nbsp;{text}&nbsp;
+                                </span>
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

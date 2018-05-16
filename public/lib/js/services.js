@@ -300,6 +300,7 @@ class ContentModel {
     };
 };
 
+// The ClientPageModelService class. Provide function for load common contents.
 class ClientPageModelService extends ContentModel {
     //-- constructor.
     constructor() {

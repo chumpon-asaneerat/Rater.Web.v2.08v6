@@ -1,8 +1,12 @@
 <page-content-absolute>
     <div id="page-content-abs"> <!-- position: relative -->
+        <!--
         <h3>Content gone below.</h3>
+        -->
         <yield />
+        <!--
         <h3>Content end here.</h3>
+        -->
     </div>
     <style>
         :scope {
