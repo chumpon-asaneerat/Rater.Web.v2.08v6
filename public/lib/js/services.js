@@ -243,8 +243,9 @@ class ContentModel {
                 self._model = { };
             }
             if (!self._model[langId]) {
-                self._model[langId] = { };                
+                self._model[langId] = { };
             }
+            //console.log(langId);
             self.loadModels(langId);
         };
         lang.selectedIndexChanged.add(onLanguageChanged);
@@ -275,11 +276,12 @@ class ContentModel {
                     //console.log('Raise callback. data:', model[modelType], ', langId:', lang.currentLangId);
                     callback(loadModel);
                     if (this._modelLoaded) {
+                        //console.log('raise event for type:', modelType);
                         this._modelLoaded.invoke(this, { 
                             "langId": langId, 
                             "type": modelType, 
                             "model": loadModel 
-                        })
+                        });
                     }
                 }
             }
@@ -307,19 +309,23 @@ class ClientPageModelService extends ContentModel {
         super();
     };
 
-    //-- virtual methods.
+    //-- base methods.
     loadPage(langId) {
         let self = this;
         this.loadModel(langId, 'page', (r) => {
+            //console.log(langId, 'page');
             document.title = self.model[langId].page.header.title;
         });
         this.loadModel(langId, 'banner', (r) => {
+            //console.log(langId, 'banner');
             //console.log(r);
         });
         this.loadModel(langId, 'nav', (r) => {
+            //console.log(langId, 'nav');
             //console.log(r);
         });
         this.loadModel(langId, 'footer', (r) => {
+            //console.log(langId, 'footer');
             //console.log(r);
         });
     };

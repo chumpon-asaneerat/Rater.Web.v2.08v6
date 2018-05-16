@@ -1,14 +1,13 @@
 // The RegisterModelService class.
 class RegisterModelService extends ClientPageModelService {
     //-- override method(s).
-    loadPage(langId) {
+    loadPage(langId) {        
         super.loadPage(langId); // call base class.
-        /*
         let self = this;
-        this.loadModel(langId, 'some-special-content', (r) => {
+        this.loadModel(langId, 'register', (r) => {
+            //console.log(langId, 'register');
             //console.log(r);
         });
-        */
     };
 };
 

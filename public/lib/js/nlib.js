@@ -997,6 +997,7 @@ class NDelegate {
                 this._events.push(value); // append.
             }
             else this._events[index] = value; // replace.
+            //console.log(this._events);
         }
         else {
             console.log('The value is null or is not instance of Function.');
@@ -1032,6 +1033,7 @@ class NDelegate {
             return;
         }
         let evtDataObj = this.createEventData(args);
+        //console.log(this._events.length);
         this._events.forEach((evt) => {
             this.raiseEvent(evt, evtDataObj);
         });
