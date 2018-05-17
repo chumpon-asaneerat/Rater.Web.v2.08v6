@@ -150,7 +150,7 @@
         };
         */
         this.updateCurrentUser = (user) => {
-            let str = (user) ? user.FullNameNative : '';
+            let str = (user) ? user.FullNameNative + ' (' + user.CustomerName + ')' : '';
             //console.log(str);
             $('#currUser').text(str);
         };
