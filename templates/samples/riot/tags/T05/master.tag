@@ -24,7 +24,9 @@
                                 value="" 
                                 type="password">
                         </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="{onsubmit}">
+                        <button class="btn btn-lg btn-primary btn-block" 
+                                type="submit" 
+                                onclick={onsubmituser}>
                             <i class="fas fa-key"></i>
                             Sign In
                         </button>
@@ -39,30 +41,49 @@
     </div>
 
     <br/>
-    
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-    </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="selectCustomer" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title">Please Choose Company.</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
-                    ...
-                    ...
+                    <div class="container-fluid">
+                        <div class="list-group m-0 p-0">
+                            <a each={company in companies} href="javascript:void(0);"
+                                class="list-group-item list-group-item-action m-auto p-0"
+                                customerId="{company.customerId}"
+                                onclick={onsubmitusercompany}>
+                                <div class="d-flex m-0 p-1">
+                                    <div class="flex-column m-1 p-0">
+                                        <div class="profile-image align-middle"></div>
+                                    </div>
+                                    <div class="flex-column m-0 p-1">
+                                        <div class="row m-0 p-0">
+                                            <p>{company.CustomerName}</p>
+                                        </div>
+                                        <!--
+                                        <div class="row m-0 p-0">
+                                            <p>{company.FullNameNative}</p>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" 
+                            class="btn btn-secondary" 
+                            data-dismiss="modal">
+                            Close
+                    </button>
                 </div>
             </div>
         </div>
@@ -75,6 +96,15 @@
         .semi-trans { opacity: 0.97; }
         .err-msg { color: red; }
         .curr-user { color: navy; }
+        .profile-image { 
+            margin: 0px auto;
+            padding: 1px;
+            width: 30px;
+            height: 30px;
+            background-color: rebeccapurple;
+            border: 1px solid cornflowerblue;
+            border-radius: 50%;
+        }
     </style>
     <script>
         this.showToolTip = ($ctrl, msg, placement) => {
@@ -89,7 +119,7 @@
             let attr = $ctrl.attr('rel');
             if (!attr) {
                 $ctrl.attr('rel', 'tooltip');
-            }            
+            }
 
             $ctrl.tooltip(options).tooltip('show');
             setTimeout(() => { 
@@ -143,7 +173,9 @@
             return true;
         };
 
-        this.doSignIn = (user) => {
+        this.companies = [];
+
+        this.doSignIn = (user, selectUsersCallback) => {
             if (!user) {
                 return;
             }
@@ -157,8 +189,13 @@
                         this.updateCurrentUser(r[0]);
                     }
                     else {
-                        console.log('Has more than one users. Please select company.');
-                        console.log(r);
+                        //console.log('Has more than one users. Please select company.');
+                        //console.log(r);
+                        if (!selectUsersCallback) {
+                            this.showAlert('Has more than one users. Please select company.');
+                            return;
+                        }
+                        selectUsersCallback(r);
                     }
                 }
                 else {
@@ -168,7 +205,7 @@
             });
         };
 
-        this.onsubmit = function (e) {
+        this.onsubmituser = (e) => {
             e.preventDefault();
             let user = {
                 userName: $('#userName').val(),
@@ -178,7 +215,34 @@
                 //console.log(user);
                 return;
             }
-            this.doSignIn(user);
+            
+            //this.doSignIn(user); // no callback the alert message shown.
+            this.doSignIn(user, (users) => {
+                this.companies = users; // setup companies array.
+                this.update();
+                let options = { };
+                let $modal = $('#selectCustomer');
+                $modal.modal(options).modal('show');
+            });
+        };
+
+        this.onsubmitusercompany = (e) => {
+            e.preventDefault();
+            //console.log(e);
+            //console.log(e.item);
+            let selectedItem = e.item;
+            let selectedUser = (selectedItem) ? selectedItem.company : null;
+            if (selectedUser) {
+                this.updateCurrentUser(selectedUser);
+                this.update();
+            }
+            else {
+                this.showAlert('No user choose.');
+            }
+            let $modal = $('#selectCustomer');
+            let options = { };
+            $modal.modal(options).modal('hide');
+            this.companies = []; // clear list.
         };
     </script>
 </master>
