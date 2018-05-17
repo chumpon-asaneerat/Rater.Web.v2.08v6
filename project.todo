@@ -684,7 +684,8 @@ My Choice Rater v2.0:
                 tags.js:
                     ☐ 
             Concepts:
-                ☐ Update sample highchart (example 08).
+                ✔ Add sample Flexbox (BS4) (example 08). @done (5/18/2018, 5:52:21 AM)
+                ☐ Update sample highchart (example 09).
     Update on [2018-05-21]:
         Database Create Scripts:
             Tables and Views:
