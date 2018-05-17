@@ -72,7 +72,11 @@
                 userName: $('#userName').val(),
                 passWord: $('#passWord').val()
             };
-            console.log(user);
+            //console.log(user);
+            let fn = app.signin(user);
+            $.when(fn).then((r) => {
+                console.log(r);
+            });
         }
     </script>
 </master>
