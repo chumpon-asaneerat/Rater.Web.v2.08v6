@@ -629,6 +629,12 @@ My Choice Rater v2.0:
                 model.js files:
                     ✔ all model.js file must implements constructor with set mountTags. @done (5/16/2018, 11:35:02 PM)
     Update on [2018-05-17]:
+        Clients:
+            Concepts:
+                ✔ Add sample signin process (example 05). @done (5/17/2018, 11:18:27 PM)
+                ✔ Add sample dashboard (example 06). @done (5/17/2018, 11:32:47 PM)
+                ✔ Add sample clientjs (example 07). @done (5/17/2018, 11:36:07 PM)
+    Update on [2018-05-18]:
         Database Create Scripts:
             Tables and Views:
                 ☐ Device (TABLE).
@@ -649,7 +655,7 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-17 (generate db script).
+                    ☐ db-script-2018-05-18 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Device:
                     SaveDevice:
@@ -678,8 +684,8 @@ My Choice Rater v2.0:
                 tags.js:
                     ☐ 
             Concepts:
-                ✔ Add sample signin process (example 05). @done (5/17/2018, 11:18:27 PM)
-    Update on [2018-05-18]:
+                ☐ Update sample dashboard (example 06).
+    Update on [2018-05-21]:
         Database Create Scripts:
             Tables and Views:
                 ☐ ClientSession (TABLE).                

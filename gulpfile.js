@@ -126,8 +126,8 @@ gulp.task('db-script-2018-05-16', function () {
         .pipe(gulp.dest('db/scripts/dist/'));
 });
 
-gulp.task('db-script-2018-05-17', function () {
-    var sDate = '2018-05-17'
+gulp.task('db-script-2018-05-18', function () {
+    var sDate = '2018-05-18'
     var rootPath = 'db/scripts/' + sDate;
     var src = [
         /* Concat all *.sql file in subdirectories. */
