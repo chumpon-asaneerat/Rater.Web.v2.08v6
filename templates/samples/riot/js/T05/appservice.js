@@ -22,6 +22,7 @@ class UnitTest {
     */
 }
 
+// The UserService class.
 class UserService {
     //-- constructor.
     constructor() {
@@ -93,7 +94,7 @@ class UserService {
                 resolve(foundUsers);
             }, 1000);
         };
-        
+
         return new Promise(fn);
     };
 
