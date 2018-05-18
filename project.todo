@@ -398,7 +398,7 @@ My Choice Rater v2.0:
                 ✔ Nlib.js added. @done (5/11/2018, 2:07:02 AM)
                 ✔ services.js added. @done (5/11/2018, 2:07:03 AM)
                 ✔ tags.js (setup riot auto compile tag files to single tags.js file). @done (5/11/2018, 2:07:04 AM)
-    Update on [2018-05-14] to [2018-05-14]:
+    Update on [2018-05-14]:
         Database Create Scripts:
             Tables and Views:
                 ✔ LocalLog (TABLE). @done (5/11/2018, 1:15:31 AM)
@@ -672,7 +672,8 @@ My Choice Rater v2.0:
                     ✔ app-routes.js updated. Add routes for error message apis. @done (5/18/2018, 11:53:14 AM)
                     ✔ rater-web-db.js updated. Add stored procedures for error message. @done (5/18/2018, 11:52:59 AM)
                 Views:
-                    ☐ Implements xxxxx supports page, nav, footer, content (ML).
+                    ✔ Implements EDL Admin Home supports page, nav, footer, content (ML). @done (5/18/2018, 1:29:45 PM)
+                    ✔ Implements Customer Admin Home supports page, nav, footer, content (ML). @done (5/18/2018, 1:29:46 PM)
         Clients:
             Core Libraries:
                 api.js:
