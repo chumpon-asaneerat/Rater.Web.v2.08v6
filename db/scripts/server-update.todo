@@ -1,29 +1,33 @@
 EDL Database Server:
     Script for 2018-04-26:
-        ✔ Verify and checks correction. @done (5/16/2018, 11:01:34 AM)
-        ✔ Generate script. @done (5/16/2018, 11:01:34 AM)
-        ✔ Update to production server. @done (5/16/2018, 11:01:35 AM)
-    Script for 2018-04-26:
         ✔ Verify and checks correction. @done (5/16/2018, 11:01:37 AM)
         ✔ Generate script. @done (5/16/2018, 11:01:37 AM)
-        ☐ Update to production server.
+        ✔ Update to production server. @done (5/18/2018, 12:53:08 PM)
     Script for 2018-05-09:
         ✔ Verify and checks correction. @done (5/16/2018, 11:01:39 AM)
         ✔ Generate script. @done (5/16/2018, 11:01:40 AM)
-        ☐ Update to production server.
+        ✔ Update to production server. @done (5/18/2018, 12:53:11 PM)
     Script for 2018-05-14:
         ✔ Verify and checks correction. @done (5/16/2018, 11:01:43 AM)
         ✔ Generate script. @done (5/16/2018, 11:01:43 AM)
-        ☐ Update to production server.
+        ✔ Update to production server. @done (5/18/2018, 12:53:14 PM)
     Script for 2018-05-15:
         ✔ Verify and checks correction. @done (5/16/2018, 11:01:50 AM)
         ✔ Generate script. @done (5/16/2018, 11:01:51 AM)
-        ☐ Update to production server.
+        ✔ Update to production server. @done (5/18/2018, 12:53:15 PM)
     Script for 2018-05-16:
         ✔ Verify and checks correction. @done (5/16/2018, 11:39:38 PM)
         ✔ Generate script. @done (5/16/2018, 11:39:39 PM)
-        ☐ Update to production server.
+        ✔ Update to production server. @done (5/18/2018, 12:53:17 PM)
     Script for 2018-05-18:
+        ✔ Verify and checks correction. @done (5/18/2018, 12:53:21 PM)
+        ✔ Generate script. @done (5/18/2018, 12:53:22 PM)
+        ✔ Update to production server. @done (5/18/2018, 12:53:22 PM)
+    Script for 2018-05-19:
+        ☐ Verify and checks correction.
+        ☐ Generate script.
+        ☐ Update to production server.
+    Script for 2018-05-21:
         ☐ Verify and checks correction.
         ☐ Generate script.
         ☐ Update to production server.

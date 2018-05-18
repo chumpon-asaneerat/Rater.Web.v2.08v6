@@ -13,6 +13,10 @@ class API {
 
     static get functions() {
         return [
+            /* error messages */
+            { name: "getErrorMessages", url: "/api/edl/errors/search" },
+            { name: "saveErrorMessage", url: "/api/edl/errors/save" },
+            { name: "saveErrorMessageML", url: "/api/edl/errors/save-ml" },
             /* languages */
             { name: "getLanguages", url: "/api/edl/languages/search" },
             { name: "enableLanguage", url: "/api/edl/languages/enable" },

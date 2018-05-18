@@ -147,6 +147,27 @@ gulp.task('db-script-2018-05-18', function () {
         .pipe(gulp.dest('db/scripts/dist/'));
 });
 
+gulp.task('db-script-2018-05-19', function () {
+    var sDate = '2018-05-19'
+    var rootPath = 'db/scripts/' + sDate;
+    var src = [
+        /* Concat all *.sql file in subdirectories. */
+        rootPath + '/**/*.sql',
+        /* Ignore all *.sql in 99.test.scripts path */
+        '!' + rootPath + '/99.test.scripts/*.sql',
+        /* Ignore all *.sql in root path */
+        '!' + rootPath + '/*.sql'
+    ];
+
+    gulp.src(src)
+        .pipe(sort())
+        .pipe(debug())
+        .pipe(insert.prepend(`/*********** Script Update Date: ` + sDate + `  ***********/\n`))
+        .pipe(insert.append(`\n`))
+        .pipe(concat('update-' + sDate + '.sql'))
+        .pipe(gulp.dest('db/scripts/dist/'));
+});
+
 gulp.task('task2', function () {
     console.log('vscode call log task2 running...');
 });

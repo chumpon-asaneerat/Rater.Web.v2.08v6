@@ -1,3 +1,299 @@
+/*********** Script Update Date: 2018-05-18  ***********/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ErrorMessageML](
+	[ErrCode] [int] NOT NULL,
+	[LangId] [nvarchar](3) NOT NULL,
+	[ErrMsg] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_ErrorMessageML] PRIMARY KEY CLUSTERED 
+(
+	[ErrCode] ASC,
+	[LangId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The Error Code.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ErrorMessageML', @level2type=N'COLUMN',@level2name=N'ErrCode'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The ISO 639-1 alpha 2 code.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ErrorMessageML', @level2type=N'COLUMN',@level2name=N'LangId'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The Error Message.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ErrorMessageML', @level2type=N'COLUMN',@level2name=N'ErrMsg'
+GO
+
+
+/*********** Script Update Date: 2018-05-18  ***********/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [dbo].[ErrorMessageView]
+AS
+    SELECT LanguageView.LangId
+		 --, LanguageView.FlagId
+	     --, LanguageView.DescriptionEN
+		 --, LanguageView.DescriptionNative
+		 , LanguageView.Enabled
+		 , LanguageView.SortOrder
+		 , ErrorMessage.ErrCode
+		 , ErrorMessage.ErrMsg
+    FROM LanguageView CROSS JOIN dbo.ErrorMessage
+
+GO
+
+
+/*********** Script Update Date: 2018-05-18  ***********/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author: Chumpon Asaneerat
+-- Name: ErrorMessageMLView.
+-- Description:	The Error Message ML View.
+-- [== History ==]
+-- <2018-05-18> :
+--	- View Created.
+--
+-- [== Example ==]
+--
+-- =============================================
+CREATE VIEW [dbo].[ErrorMessageMLView]
+AS
+	SELECT EMV.LangId
+		 , EMV.ErrCode
+		 , EMV.ErrMsg AS ErrMsgEN
+		 , CASE 
+			WHEN EMML.ErrMsg IS NULL THEN 
+				EMV.ErrMsg 
+			ELSE 
+				EMML.ErrMsg 
+		   END AS ErrMsgNative
+		 , EMV.Enabled
+		 , EMV.SortOrder
+		FROM dbo.ErrorMessageML AS EMML RIGHT OUTER JOIN ErrorMessageView AS EMV
+		  ON (EMML.LangId = EMV.LangId AND EMML.ErrCode = EMV.ErrCode)
+
+GO
+
+
+/*********** Script Update Date: 2018-05-18  ***********/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author: Chumpon Asaneerat
+-- Name: SaveErrorMsg.
+-- Description:	Save Error Message.
+-- [== History ==]
+-- <2018-04-16> :
+--	- Stored Procedure Created.
+-- <2018-05-18> :
+--	- Change parameter name.
+--
+-- [== Example ==]
+--
+--EXEC SaveErrorMsg 0, N'Success.';
+--EXEC SaveErrorMsg 101, N'Language Id cannot be null or empty string.';
+-- =============================================
+ALTER PROCEDURE [dbo].[SaveErrorMsg](
+  @errCode as int
+, @message as nvarchar(MAX))
+AS
+BEGIN
+DECLARE @iCnt int = 0;
+    SELECT @iCnt = COUNT(*)
+      FROM ErrorMessage
+     WHERE ErrCode = @errCode;
+
+    IF @iCnt = 0
+    BEGIN
+        -- INSERT
+        INSERT INTO ErrorMessage
+        (
+              ErrCode
+            , ErrMsg
+        )
+        VALUES
+        (
+              @errCode
+            , @message
+        );
+    END
+    ELSE
+    BEGIN
+        -- UPDATE
+        UPDATE ErrorMessage
+           SET ErrMsg = COALESCE(@message, ErrMsg)
+         WHERE ErrCode = @errCode;
+    END 
+END
+
+GO
+
+
+/*********** Script Update Date: 2018-05-18  ***********/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author: Chumpon Asaneerat
+-- Name: SaveErrorMsgML.
+-- Description:	Save LimitUnit ML.
+-- [== History ==]
+-- <2018-05-18> :
+--	- Stored Procedure Created.
+--
+-- [== Example ==]
+--
+--exec SaveErrorMsgML 101, N'TH', N'รหัสภาษาไม่สามารถใส่ค่าว่างได้'
+-- =============================================
+CREATE PROCEDURE [dbo].[SaveErrorMsgML] (
+  @errCode as int = null
+, @langId as nvarchar(3) = null
+, @message as nvarchar(MAX) = null
+, @errNum as int = 0 out
+, @errMsg as nvarchar(MAX) = N'' out)
+AS
+BEGIN
+DECLARE @iLangCnt int = 0;
+DECLARE @iMsgCnt int = 0;
+	-- Error Code:
+	--    0 : Success
+	-- 2201 : Error Code cannot be null or empty string.
+	-- 2202 : Language Id cannot be null or empty string.
+	-- 2203 : Language Id not found.
+	-- 2204 : Error Message (ML) cannot be null or empty string.
+	-- OTHER : SQL Error Number & Error Message.
+	BEGIN TRY
+		IF (@errCode IS NULL)
+		BEGIN
+            -- LimitUnit Id cannot be null.
+            EXEC GetErrorMsg 2201, @errNum out, @errMsg out
+			RETURN
+		END
+
+		IF (dbo.IsNullOrEmpty(@langId) = 1)
+		BEGIN
+            -- Language Id cannot be null or empty string.
+            EXEC GetErrorMsg 2202, @errNum out, @errMsg out
+			RETURN
+		END
+
+		SELECT @iLangCnt = COUNT(*)
+		  FROM Language
+		 WHERE UPPER(LTRIM(RTRIM(LangId))) = UPPER(LTRIM(RTRIM(@langId)));
+		IF (@iLangCnt = 0)
+		BEGIN
+            -- Language Id not found.
+            EXEC GetErrorMsg 2203, @errNum out, @errMsg out
+			RETURN
+		END
+
+		IF (dbo.IsNullOrEmpty(@message) = 1)
+		BEGIN
+            -- Error Message (ML) cannot be null or empty string.
+            EXEC GetErrorMsg 2204, @errNum out, @errMsg out
+			RETURN
+		END
+
+		-- Check INSERT OR UPDATE?.
+		SELECT @iMsgCnt = COUNT(*)
+		  FROM ErrorMessageML
+		 WHERE ErrCode = @errCode
+		   AND UPPER(LTRIM(RTRIM(LangId))) = UPPER(LTRIM(RTRIM(@langId)));
+
+		IF @iMsgCnt = 0
+		BEGIN
+			-- INSERT
+			INSERT INTO ErrorMessageML
+			(
+				  ErrCode
+				, [LangId]
+				, ErrMsg
+			)
+			VALUES
+			(
+				  @errCode
+				, UPPER(RTRIM(LTRIM(@langId)))
+				, RTRIM(LTRIM(@message))
+			);
+		END
+		ELSE
+		BEGIN
+			-- UPDATE
+			UPDATE ErrorMessageML
+			   SET ErrMsg = RTRIM(LTRIM(@message))
+			 WHERE ErrCode = @errCode
+			   AND UPPER(RTRIM(LTRIM([LangId]))) = UPPER(RTRIM(LTRIM(@langId)));
+		END
+
+        EXEC GetErrorMsg 0, @errNum out, @errMsg out
+	END TRY
+	BEGIN CATCH
+		SET @errNum = ERROR_NUMBER();
+		SET @errMsg = ERROR_MESSAGE();
+	END CATCH
+END
+
+GO
+
+
+/*********** Script Update Date: 2018-05-18  ***********/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Author: Chumpon Asaneerat
+-- Name: GetErrorMessages.
+-- Description:	Get Error Messages.
+-- [== History ==]
+-- <2018-05-18> :
+--	- Stored Procedure Created.
+--
+-- [== Example ==]
+--
+--exec GetErrorMsgs N'EN'; -- for only EN language.
+--exec GetErrorMsgs;       -- for get all.
+-- =============================================
+ALTER PROCEDURE [dbo].[GetErrorMsgs] 
+(
+  @langId nvarchar(3) = null 
+)
+AS
+BEGIN
+	SELECT langId
+		 , ErrCode
+		 , ErrMsgEN
+		 , ErrMsgNative
+		 , SortOrder
+		 , Enabled
+	  FROM ErrorMessageMLView
+	 WHERE langId = COALESCE(@langId, langId)
+	   AND Enabled = 1
+	 Order By SortOrder, ErrCode
+END
+
+GO
+
+
+/*********** Script Update Date: 2018-05-18  ***********/
 SET ANSI_NULLS ON
 GO
 
@@ -258,3 +554,4 @@ GO
 EXEC InitErrorMessages;
 
 GO
+

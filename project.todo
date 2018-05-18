@@ -637,6 +637,60 @@ My Choice Rater v2.0:
     Update on [2018-05-18]:
         Database Create Scripts:
             Tables and Views:
+                ✔ ErrorMessageML (TABLE). @done (5/18/2018, 11:39:32 AM)
+                ✔ ErrorMessageView (VIEW). @done (5/18/2018, 11:49:58 AM)
+                ✔ ErrorMessageMLView (VIEW). @done (5/18/2018, 11:49:58 AM)
+            Stored Procedures and Functions:
+                ✔ SaveErrorMsg (SP). @done (5/18/2018, 12:26:02 PM)
+                ✔ SaveErrorMsgML (SP). @done (5/18/2018, 11:40:16 AM)
+                ✔ GetErrorMsg (SP) droped. @done (5/18/2018, 11:46:16 AM)
+                ✔ GetErrorMsgs (SP). @done (5/18/2018, 11:46:16 AM)
+            Init Stored Procedures:
+                ✔ InitErrorMessages (SP) Add New Error Code. @done (5/18/2018, 12:13:12 PM)
+        Database Document Updated:
+            Error Code:
+                ✔ Update Error Code in Excel file. @done (5/18/2018, 12:13:14 PM)
+            Server Update History:
+                ✔ Add server-update.todo to keep track generate script file status. @done (5/18/2018, 12:13:15 PM)
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ✔ db-script-2018-05-18 (generate db script). @done (5/18/2018, 12:55:15 PM)
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                Error Message:
+                    SaveErrorMsg:
+                        ✔ definition file created. @done (5/18/2018, 12:14:29 PM)
+                        ✔ wrapper code updated. @done (5/18/2018, 12:14:30 PM)
+                    SaveErrorMsgML:
+                        ✔ definition file created. @done (5/18/2018, 12:14:31 PM)
+                        ✔ wrapper code updated. @done (5/18/2018, 12:14:31 PM)
+                    GetErrorMsgs:
+                        ✔ definition file created. @done (5/18/2018, 12:14:32 PM)
+                        ✔ wrapper code updated. @done (5/18/2018, 12:14:32 PM)
+            Core Libraries:
+                Modules:
+                    ✔ app-routes.js updated. Add routes for error message apis. @done (5/18/2018, 11:53:14 AM)
+                    ✔ rater-web-db.js updated. Add stored procedures for error message. @done (5/18/2018, 11:52:59 AM)
+                Views:
+                    ☐ Implements xxxxx supports page, nav, footer, content (ML).
+        Clients:
+            Core Libraries:
+                api.js:
+                    ✔ Update api add new url for error message SPs. @done (5/18/2018, 11:49:23 AM)
+                nlib.js:
+                    ☐ 
+                service.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+            Concepts:
+                ✔ Add sample Flexbox (BS4) (example 08). @done (5/18/2018, 5:52:21 AM)
+                ✔ Add sample Card/div scrollable (BS4) (example 08). @done (5/18/2018, 9:08:17 AM)
+                ☐ Update sample dashboard (example 06).
+                ☐ Update sample highchart (example 09).
+    Update on [2018-05-19]:
+        Database Create Scripts:
+            Tables and Views:
                 ☐ Device (TABLE).
                 ☐ DeviceML (TABLE).
                 ☐ DeviceView (VIEW).
@@ -655,7 +709,7 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-18 (generate db script).
+                    ☐ db-script-2018-05-19 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Device:
                     SaveDevice:
@@ -669,25 +723,10 @@ My Choice Rater v2.0:
                         ☐ wrapper code updated.
             Core Libraries:
                 Modules:
-                    ☐ app-routes.js updated. Add routes for apis and views
-                    ☐ rater-web-db.js updated. Add stored procedures.
+                    ☐ app-routes.js updated. Add routes update SPs apis.
+                    ☐ rater-web-db.js updated. Add stored procedures update SPs.
                 Views:
                     ☐ Implements xxxxx supports page, nav, footer, content (ML).
-        Clients:
-            Core Libraries:
-                api.js:
-                    ☐ Update api add new url for updated SPs.
-                nlib.js:
-                    ☐ 
-                service.js:
-                    ☐ 
-                tags.js:
-                    ☐ 
-            Concepts:
-                ✔ Add sample Flexbox (BS4) (example 08). @done (5/18/2018, 5:52:21 AM)
-                ✔ Add sample Card/div scrollable (BS4) (example 08). @done (5/18/2018, 9:08:17 AM)
-                ☐ Update sample dashboard (example 06).
-                ☐ Update sample highchart (example 09).
     Update on [2018-05-21]:
         Database Create Scripts:
             Tables and Views:
