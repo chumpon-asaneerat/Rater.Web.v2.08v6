@@ -675,6 +675,11 @@ My Choice Rater v2.0:
                     ✔ Implements EDL Admin Home supports page, nav, footer, content (ML). @done (5/18/2018, 1:29:45 PM)
                     ✔ Implements Customer Admin Home supports page, nav, footer, content (ML). @done (5/18/2018, 1:29:46 PM)
         Clients:
+            Third Parties:
+                animate-css 3.6.1:
+                    ✔ update version. @done (5/18/2018, 2:34:12 PM)
+                wow 1.3.0:
+                    ✔ update version. @done (5/18/2018, 2:34:12 PM)
             Core Libraries:
                 api.js:
                     ✔ Update api add new url for error message SPs. @done (5/18/2018, 11:49:23 AM)
