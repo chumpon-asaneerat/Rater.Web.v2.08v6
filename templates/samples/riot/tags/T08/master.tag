@@ -42,7 +42,7 @@
             <a class="nav-link" data-toggle="tab" role="tab" 
                 aria-controls="profile-tab-panel" aria-selected="false"
                 id="profile-tab-header" href="#profile-tab-panel">
-                Profile
+                Card/div scrollable
             </a>
         </li>
         <li class="nav-item">
@@ -242,7 +242,7 @@
         <div class="tab-pane m-auto fade" role="tabpanel"
             aria-labelledby="profile-tab-header"
             id="profile-tab-panel">
-            Content 2
+            <div data-is="scrollable-left" />
         </div>
         <div class="tab-pane m-auto fade" role="tabpanel"
             aria-labelledby="contact-tab-header"
@@ -268,3 +268,175 @@
     <script>
     </script>
 </master>
+
+<scrollable-left class="d-flex flex-column">
+        <div class="flex-main d-flex mb-3">
+            <div class="d-flex">
+                <div class="container-fluid d-flex">
+                    <div class="row">
+                        <div class="col-auto d-flex flex-column">
+                            <div class="card">
+                                <div class="list-group list-group-flush scrollable">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <b>FIRST LINK</b>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                                    <a href="#" class="list-group-item list-group-item-action disabled">
+                                        <b>LAST LINK</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-auto pr-5 scrollable">
+                            <h1>FIRST LINE</h1> So many words, so many words. So many words, so many words. So many words, so many
+                            words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br> So many words, so many words. So many words, so many words. So many words, so many words.
+                            <br>
+                            <h1>LAST LINE</h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <style>
+        /* Logic */
+        :scope {
+            min-height: 90vh;
+        }
+        .flex-main { flex: 1 1 0; }
+        .scrollable { overflow-y: auto; }
+    </style>
+</scrollable-left>
