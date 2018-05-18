@@ -7,8 +7,8 @@ const rootPath = process.env['ROOT_PATHS'];
 
 const nlib = require(path.join(rootPath, 'lib', 'nlib-core'));
 
-const workPath = path.join(rootPath, 'views', 'default', 'register');
-const baseUrl = '/register';
+const workPath = path.join(rootPath, 'views', 'edl', 'supervisor', 'home');
+const baseUrl = '/edl/supervisor';
 
 function getIndex(req, res, next) {
     //var targetFile = path.join(workPath, 'index.html');
@@ -16,8 +16,8 @@ function getIndex(req, res, next) {
 
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {
-        res.render(targetFile, {
-            title: "Register.",
+        res.render(targetFile, { 
+            title: "Supervisor Home.", 
             baseUrl: baseUrl
         })
     }
@@ -27,7 +27,7 @@ function getIndex(req, res, next) {
 };
 
 function getJSFile(req, res, next) {
-    var allowFiles = ['app.js', 'model.js'];
+    var allowFiles = [ 'app.js', 'model.js' ];
     var fileName = req.params.fileName;
     if (allowFiles.indexOf(fileName.toLowerCase()) == -1) {
         next();

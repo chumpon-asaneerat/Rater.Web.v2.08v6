@@ -49,7 +49,7 @@ function getJsonModelByLangId(req, res, next) {
     if (!reqModel.errors.hasError) {
         var modelType = reqModel.data.modelType;
         var langId = reqModel.data.langId;
-        console.log(baseUrl, ' request model:', modelType, ' for langId:', langId);
+        //console.log(baseUrl, ' request model:', modelType, ' for langId:', langId);
         var targetFile = path.join(workPath, 'contents', langId, modelType + '.json');
         if (!fs.existsSync(targetFile)) {
             targetFile = path.join(workPath, 'contents', 'EN', modelType + '.json');
