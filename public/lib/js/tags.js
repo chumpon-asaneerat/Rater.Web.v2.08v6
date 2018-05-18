@@ -111,6 +111,8 @@ riot.tag2('admin-home-dashboard', '<yield></yield>', '', '', function(opts) {
 });
 riot.tag2('admin-page', '<div data-is="page-nav-bar"></div> <div data-is="page-content-absolute" data-simplebar> <yield></yield> </div> <div data-is="page-footer"></div>', '', '', function(opts) {
 });
+riot.tag2('device-home-dashboard', '<yield></yield>', '', '', function(opts) {
+});
 riot.tag2('device-page', '<div data-is="page-nav-bar"></div> <div data-is="page-content-absolute" data-simplebar> <yield></yield> </div> <div data-is="page-footer"></div>', '', '', function(opts) {
 });
 riot.tag2('exclusive-home-dashboard', '<yield></yield>', '', '', function(opts) {
