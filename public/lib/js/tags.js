@@ -219,6 +219,8 @@ riot.tag2('edl-admin-home-dashboard', '<yield></yield>', '', '', function(opts) 
 });
 riot.tag2('edl-admin-page', '<div data-is="page-nav-bar"></div> <div data-is="page-content-absolute" data-simplebar> <yield></yield> </div> <div data-is="page-footer"></div>', '', '', function(opts) {
 });
+riot.tag2('edl-staff-home-dashboard', '<yield></yield>', '', '', function(opts) {
+});
 riot.tag2('edl-staff-page', '<div data-is="page-nav-bar"></div> <div data-is="page-content-absolute" data-simplebar> <yield></yield> </div> <div data-is="page-footer"></div>', '', '', function(opts) {
 });
 riot.tag2('edl-supervisor-home-dashboard', '<yield></yield>', '', '', function(opts) {
