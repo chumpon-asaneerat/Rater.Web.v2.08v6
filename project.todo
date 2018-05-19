@@ -726,6 +726,28 @@ My Choice Rater v2.0:
                     ✔ Add 08.date.extension.method.js. @done (5/19/2018, 10:23:14 PM)
                     ✔ Add 09.objects.properties.merger.js. @done (5/19/2018, 10:41:57 PM)
                     ✔ Add 10.delegate.take.2.js. !!FINISHED!! @done (5/19/2018, 11:13:40 PM)
+    Update on [2018-05-20]:
+        Node Server:
+            Core Libraries:
+                Modules:
+                    ☐ mssql-db.js.
+                    ☐ app-routes.js.
+                Views:
+                    ☐ Implements .
+                    ☐ Implements .
+        Clients:
+            Core Libraries:
+                api.js:
+                    ☐ 
+                nlib.js:
+                    ☐ 
+                service.js:
+                    ☐ 
+                tags.js:
+                    ☐ Add XXX tag with supports ML code.
+                    ☐ Add XXX tag with supports ML code.
+                model.js files:
+                    ☐ all model.js file.
     Update on [2018-05-21]:
         Database Create Scripts:
             Tables and Views:
