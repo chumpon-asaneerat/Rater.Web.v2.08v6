@@ -687,18 +687,43 @@ My Choice Rater v2.0:
             Core Libraries:
                 api.js:
                     ✔ Update api add new url for error message SPs. @done (5/18/2018, 11:49:23 AM)
-                nlib.js:
+            Concepts:
+                ✔ Add sample Flexbox (BS4) (example 08). @done (5/18/2018, 5:52:21 AM)
+                ✔ Add sample Card/div scrollable (BS4) (example 08). @done (5/18/2018, 9:08:17 AM)
+    Update on [2018-05-19]:
+        Node Server:
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):
+                Reports:
+                    GetRawVotes:
+                        ✔ definition file updated fixed Misspell and Invalid datatype. @done (5/19/2018, 10:16:54 PM)
+            Core Libraries:
+                Modules:
+                    ✔ mssql-db.js Rewrite code use array.forEach. @done (5/19/2018, 10:16:56 PM)
+                    ✔ mssql-db.js Update code supports to map input case-insensitive (auto map). @done (5/19/2018, 10:16:57 PM)
+        Clients:
+            Core Libraries:
+                api.js:
                     ☐ 
+                nlib.js:
+                    ✔ Add MockPromise class. @done (5/19/2018, 10:22:30 PM)
+                    ✔ Add Date format extension method. @done (5/19/2018, 10:25:19 PM)
                 service.js:
                     ☐ 
                 tags.js:
                     ☐ 
             Concepts:
-                ✔ Add sample Flexbox (BS4) (example 08). @done (5/18/2018, 5:52:21 AM)
-                ✔ Add sample Card/div scrollable (BS4) (example 08). @done (5/18/2018, 9:08:17 AM)
-                ☐ Update sample dashboard (example 06).
-                ☐ Update sample highchart (example 09).
-    Update on [2018-05-19]:
+                Quokka samples:
+                    ✔ Add 03.promise.js !!PROVED!!. @done (5/19/2018, 10:21:19 PM)
+                    ✔ Add 04.objects.case.sensitive.js. !!PROVED!!. @done (5/19/2018, 10:22:53 PM)
+                    ✔ Add 05.objects.fluent.interface.js. @done (5/19/2018, 10:23:17 PM)
+                    ✔ Add 06.design.pattern.pipe.js. @done (5/19/2018, 10:23:10 PM)
+                    ✔ Add 07.design.pattern.pub-sub.js. @done (5/19/2018, 10:23:11 PM)
+                    ✔ Add 08.date.extension.method.js. @done (5/19/2018, 10:23:14 PM)
+                    ☐ Add 09.objects.properties.merger.js.
+                    ☐ Add 10.delegate.take.2.js.
+
+
+    Update on [2018-05-21]:
         Database Create Scripts:
             Tables and Views:
                 ☐ Device (TABLE).
@@ -737,7 +762,19 @@ My Choice Rater v2.0:
                     ☐ rater-web-db.js updated. Add stored procedures update SPs.
                 Views:
                     ☐ Implements xxxxx supports page, nav, footer, content (ML).
-    Update on [2018-05-21]:
+        Clients:
+            Core Libraries:
+                service.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+            Concepts:
+                ☐ Update sample dashboard (example 06).
+                ☐ Update sample highchart (example 09).
+
+
+
+    Update on [2018-05-23]:
         Database Create Scripts:
             Tables and Views:
                 ☐ ClientSession (TABLE).                
