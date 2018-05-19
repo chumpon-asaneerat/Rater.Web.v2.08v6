@@ -748,6 +748,10 @@ My Choice Rater v2.0:
                     ☐ Add XXX tag with supports ML code.
                 model.js files:
                     ☐ all model.js file.
+            Concepts:
+                NetBeans:
+                    ✔ Port NetBeans sample site 1. @done (5/20/2018, 12:33:12 AM)
+                    ✔ Port NetBeans sample site 1. @done (5/20/2018, 12:33:13 AM)
     Update on [2018-05-21]:
         Database Create Scripts:
             Tables and Views:
@@ -796,9 +800,6 @@ My Choice Rater v2.0:
             Concepts:
                 ☐ Update sample dashboard (example 06).
                 ☐ Update sample highchart (example 09).
-
-
-
     Update on [2018-05-23]:
         Database Create Scripts:
             Tables and Views:
