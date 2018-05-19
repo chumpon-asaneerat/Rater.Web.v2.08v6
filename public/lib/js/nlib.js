@@ -1261,3 +1261,23 @@ class DataSource {
         return this._selectedIndexChanged;
     };
 };
+
+/**
+ * The Mock Promise class. Use setTimeout to make function look like call from server.
+ */
+class MockPromise {
+    static create(fn, timeout) {
+        let ret = new Promise((resolve, reject) => {
+            let result = null;
+            if (!fn || !(fn instanceof Function)) {
+                console.log('The assigned value should be function.');
+            }
+            setTimeout(() => {
+                result = fn();
+                resolve(result);
+            }, (timeout || !(typeof timeout !== 'Number')) ? timeout : 33);
+        });
+
+        return ret;
+    };
+};
