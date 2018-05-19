@@ -1060,7 +1060,6 @@ nlib = function () {
         return format;
     };    
 })();
-
 /**
  * NDelegate class. The .NET like delegate.
  */
@@ -1148,13 +1147,29 @@ class EventHandler extends NDelegate {
             var a0 = args[0];
             if (a0.length >= 1) sender = a0[0];
             if (a0.length >= 2) evtData = a0[1];
+
+            if (!evtData) {
+                evtData = { sender: null, handled: false };
+            }
         }
 
         return { "sender": sender, "evtData": evtData }
     };
 
     raiseEvent(evt, evtDataObj) {
-        evt(evtDataObj.sender, evtDataObj.evtData);
+        let evtData = (!evtDataObj) ? { sender: null, handled: false } : evtDataObj.evtData;
+
+        if (!evtData) {
+            evtData = { handled: false };
+        }
+
+        if (typeof evtData.handled === 'undefined' || evtData.handled === null) {
+            evtData.handled = false;
+        }
+
+        if (!evtData.handled) {
+            evt(evtDataObj.sender, evtData);
+        }
     };
 };
 /**

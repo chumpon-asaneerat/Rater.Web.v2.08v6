@@ -707,6 +707,7 @@ My Choice Rater v2.0:
                 nlib.js:
                     ✔ Add MockPromise class. @done (5/19/2018, 10:22:30 PM)
                     ✔ Add Date format extension method. @done (5/19/2018, 10:25:19 PM)
+                    ✔ Update EventHandler class. Add handled property in evtData. @done (5/19/2018, 11:13:42 PM)
                 service.js:
                     ☐ 
                 tags.js:
@@ -719,10 +720,8 @@ My Choice Rater v2.0:
                     ✔ Add 06.design.pattern.pipe.js. @done (5/19/2018, 10:23:10 PM)
                     ✔ Add 07.design.pattern.pub-sub.js. @done (5/19/2018, 10:23:11 PM)
                     ✔ Add 08.date.extension.method.js. @done (5/19/2018, 10:23:14 PM)
-                    ☐ Add 09.objects.properties.merger.js.
-                    ☐ Add 10.delegate.take.2.js.
-
-
+                    ✔ Add 09.objects.properties.merger.js. @done (5/19/2018, 10:41:57 PM)
+                    ✔ Add 10.delegate.take.2.js. !!FINISHED!! @done (5/19/2018, 11:13:40 PM)
     Update on [2018-05-21]:
         Database Create Scripts:
             Tables and Views:
