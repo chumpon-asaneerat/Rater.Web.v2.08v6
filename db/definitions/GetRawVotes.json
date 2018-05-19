@@ -15,10 +15,10 @@
             { "name": "endDate", "sqlType": "datetime", "default": null }
         ],
         "outputs": [
-            { "name": "pageNum", "sqlType": "nvarchar(30)", "default": 1 },
-            { "name": "rowPerPage", "sqlType": "nvarchar(30)", "default": 10 },
-            { "name": "totalRecords", "sqlType": "nvarchar(30)", "default": 0 },
-            { "name": "maxPage", "sqlType": "nvarchar(30)", "default": 0 },
+            { "name": "pageNum", "sqlType": "int", "default": 1 },
+            { "name": "rowsPerPage", "sqlType": "int", "default": 10 },
+            { "name": "totalRecords", "sqlType": "int", "default": 0 },
+            { "name": "maxPage", "sqlType": "int", "default": 0 },
             { "name": "errNum", "sqlType": "int", "default": null },
             { "name": "errMsg", "sqlType": "nvarchar(max)", "default": null }
         ]
