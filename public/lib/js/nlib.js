@@ -1266,6 +1266,8 @@ class DataSource {
  * The Mock Promise class. Use setTimeout to make function look like call from server.
  */
 class MockPromise {
+    //-- create promist
+    // The fn parameter is the function that has no parameter and returns result.
     static create(fn, timeout) {
         let ret = new Promise((resolve, reject) => {
             let result = null;
