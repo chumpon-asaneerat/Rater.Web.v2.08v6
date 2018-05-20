@@ -1058,7 +1058,7 @@ nlib = function () {
         }
 
         return format;
-    };    
+    };
 })();
 /**
  * NDelegate class. The .NET like delegate.
@@ -1298,3 +1298,37 @@ class MockPromise {
         return ret;
     };
 };
+
+/**
+ * NJson class. Provide helper functions to work with JSON object.
+ */
+class NJson {
+    //- Create New object with clone all properties with supports ignore case sensitive.
+    /**
+     * Clone json object and change all properties name with auto change new 
+     * object's property name to lowercase if required.
+     * @param {Object} o The dest object (json object).
+     * @param {Boolean} caseSensitive true if require returns object has all property name in lowercase.
+     */
+    static cloneJSON(o, caseSensitive) {
+        var oRet = {}
+        var ignoreCase = (caseSensitive) ? false : true;
+        var keys = Object.keys(o);
+        keys.forEach((key) => {
+            oRet[(ignoreCase) ? key.toLowerCase() : key] = o[key];
+        });
+        return oRet;
+    };
+    /**
+     * Assigned all properties value from src object to desc object.
+     * @param {Object} dest The dest object (json object).
+     * @param {Object} src The source object (json object).
+     */
+    static setValues(dest, src) {
+        var keys = Object.keys(dest);
+        keys.forEach(key => {
+            let dKey = key.toLowerCase();
+            dest[key] = (!src[dKey]) ? null : src[dKey];
+        })
+    };
+}
