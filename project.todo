@@ -804,11 +804,12 @@ My Choice Rater v2.0:
                     ✔ UserService class implements signOut method. @done (2018-5-21 01:01:02)
                     ✔ Add ClientInfo class. @done (2018-5-21 01:18:41)
                     ✔ UserService class update logic to save/load data from local storage. @done (2018-5-21 02:56:07)
-                    ☐ UserService class update code to sync member description when language changed.
+                    ✔ UserService class update code to sync member description when language changed. @done (2018-5-21 04:09:17)
                 tags.js:
                     ✔ Update signin-entry tag now show CustomerName instead of CustomerId. @done (2018-5-21 00:12:27)
                     ✔ update register-entry tag now work properly. @done (2018-5-21 00:56:53)
                     ✔ Update signin-entry tag now supports show scrollbar in choose company properly. @done (2018-5-21 01:58:48)
+                    ✔ Update page-footer tag now show current user on footer. @done (2018-5-21 04:09:40)
             Concepts:
                 ☐ Update sample dashboard (example 06).
                 ☐ Update sample highchart (example 09).
