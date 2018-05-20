@@ -92,6 +92,42 @@ class UserPerference extends LocalStorage {
     };
 };
 
+/* client information. */
+class ClientInfo extends LocalStorage {
+    constructor() {
+        super();        
+        this.name = 'cinfo'
+        this.ttl = 0;
+        this.load();
+        this.checkExist();
+    }
+
+    /* public methods. */
+    getDefault() {
+        let clientjs = new ClientJS();
+        return {
+            
+            clientId: clientjs.getFingerprint(),
+            initTime: new moment().format('DD-MM-YYYY HH.mm.ss.SSS')
+        }
+    };
+
+    /* public properties. */
+    get clientId() {
+        if (!this.data) this.checkExist();
+        return this.data.clientId;
+    }
+    set clientId(value) {
+        if (!this.data) this.checkExist();
+        this.data.clientId = value;
+    }
+
+    get initTime() {
+        if (!this.data) this.checkExist();
+        return this.data.initTime;
+    }
+};
+
 // The Language Service class.
 class LanguageService extends DataSource {
     //-- constructor
@@ -460,11 +496,15 @@ class UserService {
 // The Client App class.
 class ClientApp {
     constructor() {
+        this._clientInfo = new ClientInfo();
         this._contServ = new ContentService();
         this._userServ = new UserService();
     }
 
     //-- public properties.
+    get client() {
+        return this._clientInfo;
+    };
     get content() {
         return this._contServ;
     };
