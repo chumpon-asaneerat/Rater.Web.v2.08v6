@@ -768,7 +768,57 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-19 (generate db script).
+                    ☐ db-script-2018-05-21 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                Device:
+                    SaveDevice:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+                    SaveDeviceML:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+                    GetDevices:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+            Core Libraries:
+                Modules:
+                    ☐ app-routes.js updated. Add routes update SPs apis.
+                    ☐ rater-web-db.js updated. Add stored procedures update SPs.
+                Views:
+                    ☐ Implements xxxxx supports page, nav, footer, content (ML).
+        Clients:
+            Core Libraries:
+                nlib.js:
+                    ☐ 
+                service.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+            Concepts:
+                ☐ Update sample dashboard (example 06).
+                ☐ Update sample highchart (example 09).
+    Update on [2018-05-22]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ Device (TABLE).
+                ☐ DeviceML (TABLE).
+                ☐ DeviceView (VIEW).
+                ☐ DeviceMLView (VIEW).
+            Stored Procedures and Functions:
+                ☐ SaveDevice (SP).
+                ☐ SaveDeviceML (SP).
+                ☐ GetDevices (SP).                
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+            Server Update History:
+                ☐ Add server-update.todo to keep track generate script file status.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-22 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Device:
                     SaveDevice:
@@ -814,7 +864,7 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-18 (generate db script).
+                    ☐ db-script-2018-05-23 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 XXX:
                     YYY:
@@ -930,3 +980,4 @@ My Choice Rater v2.0:
                     ☐ xxx
             Concepts:
                 ☐ concept1 tested.
+                ☐ concept2 tested.
