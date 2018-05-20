@@ -4,7 +4,7 @@ class LocalStorage {
         this._name = ''
         this._data = null
         this._ttl = 0;
-    }
+    };
 
     //-- public methods.
     checkExist() {
@@ -12,33 +12,39 @@ class LocalStorage {
             this.data = this.getDefault();
             this.save();
         }
-    }
+    };
 
     getDefault() {
         return {}
-    }
+    };
 
     save() {
         if (!this._name) return; // no name specificed.
         let ttl = (this._ttl) ? this._ttl : 0;
         nlib.storage.set(this._name, this._data, { TTL: ttl }); // 1 days.
-    }
+        this.onsaved();
+    };
+
+    onsaved() { }
 
     load() {
         if (!this._name) return; // no name specificed.
         let ttl = (this._ttl) ? this._ttl : 0;
         this._data = nlib.storage.get(this._name);
-    }
+        this.onloaded();
+    };
+
+    onloaded() { }
 
     //-- public properties.
-    get name() { return this._name; }
-    set name(value) { this._name = value; }
+    get name() { return this._name; };
+    set name(value) { this._name = value; };
 
-    get data() { return this._data; }
-    set data(value) { this._data = value; }
+    get data() { return this._data; };
+    set data(value) { this._data = value; };
 
-    get ttl() { return this._ttl; }
-    set ttl(value) { this._ttl = value; }
+    get ttl() { return this._ttl; };
+    set ttl(value) { this._ttl = value; };
 };
 
 // The user perference class.
@@ -140,6 +146,7 @@ class UserInfo extends LocalStorage {
 
         this._FullNameNative = "";
         this._CustomerNameNative = "";
+        this._homeUrl = "";
     };
 
     //- public methods
@@ -156,6 +163,34 @@ class UserInfo extends LocalStorage {
         this._FullNameNative = "";
         this._CustomerNameNative = "";
         this.save();
+    };
+
+    redirect() {
+        // redirect.
+        if (this.data && this.data.MemberType) {
+            let data2 = { "MemberType": this.data.MemberType };
+            let fn2 = api.getUserHomeUrl(data2);
+            $.when(fn2).done(function (r2) {
+                console.log(r2);
+                if (!r2.errors.hasError && r2.data.url !== '') {
+                    nlib.nav.gotoUrl(r2.data.url);
+                }
+                else {
+                    // TODO: invalid member type.
+                    console.log('invalid member type.');
+                    this._userInfo.reset();
+                    nlib.nav.gotoUrl('/');
+                }
+            });
+        }
+    };
+
+    onsaved() {
+        //this.redirect();
+    };
+
+    onloaded() {
+        //this.redirect();
     };
 
     sync(langId) {
@@ -228,6 +263,10 @@ class UserInfo extends LocalStorage {
             "FullNameNative": this.FullNameNative,
             "CustomerNameNative": this.CustomerNameNative
         }
+    };
+
+    get homeUrl() {
+        return this._homeUrl;
     };
 
     //-- event properties
@@ -619,10 +658,11 @@ class UserService {
             this._userInfo.FullNameNative = value.FullNameNative;
             this._userInfo.CustomerNameNative = value.CustomerNameNative;
         }
-        this._userInfo.save();
 
         this._selectedUser = value;
         this._currentUserChanged.invoke(this, EventArgs.Empty);
+
+        this._userInfo.save();
     };
 
     //-- public events.
