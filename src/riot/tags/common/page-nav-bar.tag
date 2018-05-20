@@ -1,26 +1,30 @@
 <page-nav-bar class="container-fluid">
     <div class="navbar navbar-expand-sm fixed-top navbar-dark bg-primary m-0 p-1">
         <!-- Banner -->
-        <a href="{banner.url}" class="navbar-band m-1 p-0 align-middle">
-            <div class="d-inline-block">
-                <!-- IMAGE AND TEXT -->
-                <div if={(banner.type === 'image')}
-                     class="d-inline-block m-0 p-0">
-                    <img src="{banner.src}" class="d-inline-block m-0 p-0 logo">
-                </div>
-                <!-- FONT-ICON AND TEXT -->
-                <div if={(banner.type==='font')}
-                     class="d-inline-block m-0 p-0">
-                    <span class="fas fa-{banner.src} navbar-text w-auto m-0 p-0">
-                        <div if={(banner.text !=='')} class="d-inline-block m-0 p-0">
-                            <span class="rater-text w-auto m-0 p-0">
-                                &nbsp;&nbsp;{banner.text}&nbsp;&nbsp;
+        <virtual if={(banner)}>
+            <a href="{banner.url}" class="navbar-band m-1 p-0 align-middle">
+                <div class="d-inline-block">
+                    <!-- IMAGE AND TEXT -->
+                    <virtual if={(banner.type === 'image')}>
+                        <div class="d-inline-block m-0 p-0">
+                            <img src="{banner.src}" class="d-inline-block m-0 p-0 logo">
+                        </div>
+                    </virtual>
+                    <!-- FONT-ICON AND TEXT -->
+                    <virtual if={(banner.type==='font')}>
+                        <div class="d-inline-block m-0 p-0">
+                            <span class="fas fa-{banner.src} navbar-text w-auto m-0 p-0">
+                                <virtual if={(banner.text !=='')} class="d-inline-block m-0 p-0">
+                                    <span class="rater-text w-auto m-0 p-0">
+                                        &nbsp;&nbsp;{banner.text}&nbsp;&nbsp;
+                                    </span>
+                                </virtual>
                             </span>
                         </div>
-                    </span>
+                    </virtual>
                 </div>
-            </div>
-        </a>
+            </a>
+        </virtual>
         <!-- Right Nav Item for languages -->
         <div class="d-flex flex-row order-2 order-sm-3 order-md-3 order-lg-3">
             <ul class="navbar-nav flex-row ml-auto">
@@ -33,13 +37,13 @@
                     </a>
                     <!-- ALL LANGUAGES DROP MENU LIST -->
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-languages">
-                        <a each={languages} class="dropdown-item {(selectedLanguage.flagId === flagId) ? 'active': ''}" 
-                            href="javascript:void(0);" 
-                            langId="{langId}" 
-                            onclick="{selectLanguage}">
-                            <span class="flag-icon flag-icon-{flagId.toLowerCase()}"></span>
-                            &nbsp;&nbsp;{DescriptionNative}&nbsp;&nbsp;
-                        </a>
+                        <virtual each={languages}>
+                            <a class="dropdown-item {(selectedLanguage.flagId === flagId) ? 'active': ''}" href="javascript:void(0);"
+                               langId="{langId}" onclick="{selectLanguage}">
+                               <span class="flag-icon flag-icon-{flagId.toLowerCase()}"></span>
+                               &nbsp;&nbsp;{DescriptionNative}&nbsp;&nbsp;
+                            </a>
+                        </virtual>
                     </div>
                 </li>
             </ul>
@@ -52,40 +56,52 @@
         <div class="collapse navbar-collapse m-0 p-0 order-3 order-sm-2 order-md-2 order-lg-2" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <!-- EACH MAIN MENU ITEM LINKS -->
-                <li each={nav.links} class="nav-item {active}">
-                    <a class="nav-link align-middle" href="{url}">
-                        <span>&nbsp;</span>
-                        <div class="v-divider"></div>
-                        <span>&nbsp;</span>
-                        <!-- IMAGE AND TEXT -->
-                        <div if={(type==='image')} class="d-inline-block m-0 p-0">
-                            <img src="{src}" class="d-inline-block m-0 p-0 menu-img">
-                            <div if={(text !=='' )} class="d-inline-block m-0 p-0">
-                                <span class="rater-text w-auto m-0 p-0">
-                                    &nbsp;{text}&nbsp;
-                                </span>
-                            </div>
-                        </div>
-                        <!-- FONT-ICON AND TEXT -->
-                        <div if={(type==='font')} class="d-inline-block m-0 p-0">
-                            <span class="fas fa-{src} navbar-text w-auto m-0 p-0">
-                                <div if={(text !=='' )} class="d-inline-block m-0 p-0">
-                                    <span class="rater-text w-auto m-0 p-0">
-                                        &nbsp;{text}&nbsp;
-                                    </span>
-                                </div>
-                            </span>
-                        </div>
-                        <!-- TEXT ONLY -->
-                        <div if={(type==='none' || type==='')} class="d-inline-block m-0 p-0">
-                            <div if={(text !=='' )} class="d-inline-block m-0 p-0">
-                                <span class="rater-text w-auto m-0 p-0">
-                                    &nbsp;{text}&nbsp;
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+                <virtual if={(nav && nav.links && nav.links.length > 0)}>
+                    <virtual each={nav.links}>
+                        <li class="nav-item {active}">
+                            <a class="nav-link align-middle" href="{url}">
+                                <span>&nbsp;</span>
+                                <div class="v-divider"></div>
+                                <span>&nbsp;</span>
+                                <!-- IMAGE AND TEXT -->
+                                <virtual if={(type==='image')}>
+                                    <div class="d-inline-block m-0 p-0">
+                                        <img src="{src}" class="d-inline-block m-0 p-0 menu-img">
+                                        <virtual if={(text !== '')} class="d-inline-block m-0 p-0">
+                                            <span class="rater-text w-auto m-0 p-0">
+                                                &nbsp;{text}&nbsp;
+                                            </span>
+                                        </virtual>
+                                    </div>
+                                </virtual>
+                                <!-- FONT-ICON AND TEXT -->
+                                <virtual if={(type==='font')}>
+                                    <div class="d-inline-block m-0 p-0">
+                                        <span class="fas fa-{src} navbar-text w-auto m-0 p-0">
+                                            <virtual if={(text !== '')} class="d-inline-block m-0 p-0">
+                                                <span class="rater-text w-auto m-0 p-0">
+                                                    &nbsp;{text}&nbsp;
+                                                </span>
+                                            </virtual>
+                                        </span>
+                                    </div>
+                                </virtual>
+                                <!-- TEXT ONLY -->
+                                <virtual if={(type==='none' || type==='')}>
+                                    <div class="d-inline-block m-0 p-0">
+                                        <virtual if={(text !== '')}>
+                                            <div class="d-inline-block m-0 p-0">
+                                                <span class="rater-text w-auto m-0 p-0">
+                                                    &nbsp;{text}&nbsp;
+                                                </span>
+                                            </div>
+                                        </virtual>
+                                    </div>
+                                </virtual>
+                            </a>
+                        </li>
+                    </virtual>
+                </virtual>
             </ul>
         </div>
     </div>
@@ -153,13 +169,15 @@
             "text": "My Choice Rater",
             "url": "JavaScript:void(0);"
         };
-
+        this.nav = { "links": [] };
+        /*
         this.nav = {
             "links": [
                 { "text": "Register", "url": "#" },
                 { "text": "Sign In", "url": "#" }
             ]
         };
+        */
 
         this.languages = [
             { "langId": "EN", "flagId": "US", "DescriptionNative": "English" },
