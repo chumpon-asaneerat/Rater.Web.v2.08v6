@@ -156,7 +156,7 @@
             }, 3000);
         };
 
-        this.validateUser = (user) => {
+        this.validateInput = (user) => {
             if (!user) {
                 this.showErrMessage('User is null.');
                 return false;
@@ -164,6 +164,11 @@
             if (!user.userName || user.userName.trim() === '') {
                 //this.showErrMessage('Please Enter User Name.');
                 this.showToolTip($('#userName'), 'Please Enter User Name.');
+                return false;
+            }
+            if (!nlib.utils.isValidEmail(user.userName)) {
+                //this.showErrMessage('Please Enter User Name.');
+                this.showToolTip($('#userName'), 'User Name is not valid email address.');
                 return false;
             }
             if (!user.passWord || user.passWord.trim() === '') {
@@ -229,7 +234,7 @@
                 userName: $('#userName').val(),
                 passWord: $('#passWord').val()
             };
-            if (!self.validateUser(user)) {
+            if (!self.validateInput(user)) {
                 //console.log(user);
                 return;
             }

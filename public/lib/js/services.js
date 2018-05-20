@@ -396,8 +396,19 @@ class UserService {
     };
 
     //-- public methods.
-    registerCustomer(customer) {
-
+    register(customer, errorCallback) {
+        let fn = api.register(customer);
+        $.when(fn).then((r) => {
+            if (!r || !r.errors || r.errors.hasError) {
+                if (errorCallback) {
+                    errorCallback(r);
+                }
+            }
+            else {
+                // goto home.
+                nlib.nav.gotoUrl('/');
+            }
+        });
     };
     
     signIn(user, chooseCompanies) {

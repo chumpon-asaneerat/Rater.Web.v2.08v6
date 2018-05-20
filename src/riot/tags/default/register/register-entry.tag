@@ -3,7 +3,9 @@
         <div class="row">
             <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;">
                 <div class="card card-body">
-                    <h3 class="text-center mb-4">{label.title}</h3>
+                    <h3 class="text-center mb-4 alert alert-success" role="alert">
+                        {label.title}
+                    </h3>
                     <fieldset>
                         <div class="form-group has-error">
                             <label for="customerName">&nbsp;{label.customerName}</label>
@@ -36,10 +38,7 @@
             width: 100%;
             height: 100%;
         }
-
-        .semi-trans {
-            opacity: 0.97;
-        }
+        .semi-trans { opacity: 0.97; }
     </style>
 
     <script>
@@ -70,6 +69,87 @@
 
         //#endregion
 
+        //#region PRIVATE METHODS
+
+        //-- PRIVATE METHODS
+        
+        this.showToolTip = ($ctrl, msg, placement) => {
+            if (!$ctrl) return;
+            
+            let options = { 
+                trigger: 'manual',
+                placement: (placement) ? placement : 'top',
+                title: msg
+            };
+
+            let attr = $ctrl.attr('rel');
+            if (!attr) {
+                $ctrl.attr('rel', 'tooltip');
+            }
+
+            $ctrl.tooltip(options).tooltip('show');
+            setTimeout(() => { 
+                //$ctrl.tooltip('hide');
+                $ctrl.tooltip('dispose');
+            }, 3000);
+        };
+
+        this.showAlert = (msg) => {
+            let x = "alert-primary";
+            let $ctrl = $('[role="alert"]');
+
+            $ctrl.removeClass("alert-primary");
+            $ctrl.addClass("alert-danger");
+            
+            this.showToolTip($ctrl, msg, 'bottom');
+            
+            setTimeout(() => { 
+                $ctrl.removeClass("alert-danger");
+                $ctrl.addClass("alert-primary");
+            }, 3000);
+        };
+
+        this.validateInput = (customer) => {
+            if (!customer) {
+                this.showErrMessage('User is null.');
+                return false;
+            }
+            if (!customer.customerName || customer.customerName.trim() === '') {
+                //this.showErrMessage('Please Enter User Name.');
+                this.showToolTip($('#customerName'), 'Please Enter Customer Name.');
+                return false;
+            }
+            if (!customer.userName || customer.userName.trim() === '') {
+                //this.showErrMessage('Please Enter User Name.');
+                this.showToolTip($('#userName'), 'Please Enter User Name.');
+                return false;
+            }
+            if (!nlib.utils.isValidEmail(customer.userName)) {
+                //this.showErrMessage('Please Enter User Name.');
+                this.showToolTip($('#userName'), 'User Name is not valid email address.');
+                return false;
+            }
+            if (!customer.passWord || customer.passWord.trim() === '') {
+                //this.showErrMessage('Please Enter Password.');
+                this.showToolTip($('#passWord'), 'Please Enter Password.');
+                return false;
+            }
+            if (!customer.confirnPassword || customer.confirnPassword.trim() === '') {
+                //this.showErrMessage('Please Enter Password.');
+                this.showToolTip($('#confirnPassword'), 'Please Enter Confirm Password.');
+                return false;
+            }
+            if (customer.confirnPassword !== customer.passWord) {
+                this.showToolTip($('#confirnPassword'), 'The Confirm Password not match Password.');
+                return false;
+            }
+            return true;
+        };
+        
+        //-- END PRIVATE METHODS
+
+        //#endregion
+
         //#region SERVICE EVENT HANDLERS
         
         //-- SERVICE EVENT HANDLERS
@@ -81,7 +161,7 @@
             if (evtData.type === 'register') {
                 let model = app.content.model; // same as loadedModel
                 //let model = loadedModel;
-                console.log('Model Loaded:', model);
+                //console.log('Model Loaded:', model);
                 self.label = model.register.label;
                 self.hint = model.register.hint;
                 self.update();
@@ -96,13 +176,33 @@
 
         this.onsubmit = function(e) {
             e.preventDefault();
-            let user = {
+            let customer = {
                 customerName: $('#customerName').val(),
                 userName: $('#userName').val(),
                 passWord: $('#passWord').val(),
                 confirnPassword: $('#confirnPassword').val()
             };
-            console.log(user);
+            //console.log(user);
+            if (!self.validateInput(customer)) {
+                //console.log(user);
+                return;
+            }
+
+            app.user.register(customer, (r) => {
+                console.log(r);        
+                if (r.errors.hasError) {
+                    console.log(r.errors);
+                    if (r.errors.errNum >= 900 && r.errors.errNum <= 999) {
+                        self.showToolTip($('#customerName'), r.errors.errMsg);
+                    }
+                    else {
+                        self.showAlert(r.errors.errNum, ' - ', r.errors.errMsg);
+                    }
+                    //self.showToolTip($('#userName'), '');
+                    //self.showToolTip($('#passWord'), '');
+                    //self.showAlert('');
+                }
+            });
         }
     </script>
 </register-entry>
