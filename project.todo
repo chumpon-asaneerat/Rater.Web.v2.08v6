@@ -755,6 +755,7 @@ My Choice Rater v2.0:
                 ☐ DeviceView (VIEW).
                 ☐ DeviceMLView (VIEW).
             Stored Procedures and Functions:
+                ✔ SignIn (SP) updated. @done (2018-5-21 00:06:01)
                 ☐ SaveDevice (SP).
                 ☐ SaveDeviceML (SP).
                 ☐ GetDevices (SP).                
