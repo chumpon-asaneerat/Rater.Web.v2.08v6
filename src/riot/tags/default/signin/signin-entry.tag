@@ -27,7 +27,7 @@
     
     <!-- Modal -->
     <div class="modal fade" id="selectCustomer" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header alert-success">
                     <h5 class="modal-title">
@@ -37,9 +37,9 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="list-group m-0 p-0">
+                <div class="modal-body m-0 p-0">
+                    <div class="container-fluid m-0 p-0" data-simplebar>
+                        <div class="list-group m-1 p-1 pl-1 pr-2">
                             <virtial each={company in companies}>
                                 <a href="javascript:void(0);" 
                                     class="list-group-item list-group-item-action m-auto p-0" 
@@ -49,12 +49,16 @@
                                         <div class="flex-column m-1 p-0">
                                             <div class="profile-image align-middle"></div>
                                         </div>
-                                        <div class="flex-column m-0 p-1">
-                                            <div class="row m-0 p-0">
-                                                <p>{company.CustomerNameNative}</p>
-                                                <span>&nbsp; - [&nbsp;</span>
-                                                <p>{company.FullNameNative}</p>
-                                                <span>&nbsp;]</span>
+                                        <div class="flex-column m-0 p-0">
+                                            <div class="m-0 p-0">
+                                                <p class="m-0 p-0">
+                                                    &nbsp;{company.CustomerNameNative}
+                                                </p>
+                                            </div>
+                                            <div class="m-0 p-0">
+                                                <p class="m-0 p-0">
+                                                    &nbsp;{company.FullNameNative}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -81,14 +85,16 @@
         .err-msg { color: red; }
         .curr-user { color: navy; }
         .profile-image { 
-            margin: 0px auto;
-            padding: 1px;
+            margin: 5px auto;
+            padding: 5px;
             width: 30px;
             height: 30px;
             background-color: rebeccapurple;
             border: 1px solid cornflowerblue;
             border-radius: 50%;
         }
+        .modal-dialog { padding-top: 3em; }
+        .modal-body { max-height: 300px; }        
     </style>
     
     <script>
