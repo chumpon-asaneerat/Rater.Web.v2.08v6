@@ -10,7 +10,6 @@
     "hint": {
         "customerName": "Enter Customer Name",
         "userName": "Enter E-Mail address as User Name",
-        "passWord": "Enter Password",
-        "confirmPassWord": "Enter Confirm Password"
+        "passWord": "Enter Password"
     }
 }

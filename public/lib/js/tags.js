@@ -170,7 +170,7 @@ riot.tag2('register-entry', '<div class="container-fluid py-3 semi-trans"> <div 
             console.log(user);
         }
 });
-riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div class="row"> <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;"> <div class="card card-body"> <h3 class="text-center mb-4">{label.title}</h3> <fieldset> <div class="form-group has-error"> <label for="userName">&nbsp;{label.userName}</label> <input class="form-control input-lg" placeholder="{hint.userName}" id="userName" name="userName" type="email"> </div> <div class="form-group has-success"> <label for="passWord">&nbsp;{label.passWord}</label> <input class="form-control input-lg" placeholder="{hint.passWord}" id="passWord" name="passWord" value="" type="password"> </div> <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="{onsubmit}"> <i class="fas fa-key"></i> {label.signIn} </button> </fieldset> </div> </div> </div> </div>', 'signin-entry,[data-is="signin-entry"]{ width: 100%; height: 100%; } signin-entry .semi-trans,[data-is="signin-entry"] .semi-trans{ opacity: 0.97; }', 'class="h-100"', function(opts) {
+riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div class="row"> <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;"> <div class="card card-body"> <h3 class="text-center mb-4 alert alert-success" role="alert"> {label.title} </h3> <fieldset> <div class="form-group"> <label for="userName">&nbsp;{label.userName}</label> <input class="form-control input-lg" placeholder="{hint.userName}" id="userName" name="userName" type="email"> </div> <div class="form-group"> <label for="passWord">&nbsp;{label.passWord}</label> <input class="form-control input-lg" placeholder="{hint.passWord}" id="passWord" name="passWord" value="" type="password"> </div> <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="{onsubmituser}"> <i class="fas fa-key"></i> {label.signIn} </button> </fieldset> </div> </div> </div> </div> <div class="modal fade" id="selectCustomer" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false"> <div class="modal-dialog modal-dialog-centered" role="document"> <div class="modal-content"> <div class="modal-header alert-success"> <h5 class="modal-title"> {label.chooseCompany} </h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div> <div class="modal-body"> <div class="container-fluid"> <div class="list-group m-0 p-0"> <virtial each="{company in companies}"> <a href="javascript:void(0);" class="list-group-item list-group-item-action m-auto p-0" customerid="{company.customerId}" onclick="{onsubmitusercompany}"> <div class="d-flex m-0 p-1"> <div class="flex-column m-1 p-0"> <div class="profile-image align-middle"></div> </div> <div class="flex-column m-0 p-1"> <div class="row m-0 p-0"> <p>{company.customerId}</p> <span>&nbsp;&nbsp;</span> <p>{company.FullNameNative}</p> </div> </div> </div> </a> </virtial> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button> </div> </div> </div> </div>', 'signin-entry,[data-is="signin-entry"]{ width: 100%; height: 100%; } signin-entry .semi-trans,[data-is="signin-entry"] .semi-trans{ opacity: 0.97; } signin-entry .err-msg,[data-is="signin-entry"] .err-msg{ color: red; } signin-entry .curr-user,[data-is="signin-entry"] .curr-user{ color: navy; } signin-entry .profile-image,[data-is="signin-entry"] .profile-image{ margin: 0px auto; padding: 1px; width: 30px; height: 30px; background-color: rebeccapurple; border: 1px solid cornflowerblue; border-radius: 50%; }', 'class="h-100"', function(opts) {
 
 
         let self = this;
@@ -179,12 +179,67 @@ riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div cl
             title: "Sign In",
             userName: "User Name:",
             passWord: "Password:",
-            signIn: "Sign In"
+            signIn: "Sign In",
+            chooseCompany: "Please Choose Company."
         };
 
         this.hint = {
             userName: "Enter E-Mail address as User Name",
             passWord: "Enter Password"
+        };
+
+        this.showToolTip = ($ctrl, msg, placement) => {
+            if (!$ctrl) return;
+
+            let options = {
+                trigger: 'manual',
+                placement: (placement) ? placement : 'top',
+                title: msg
+            };
+
+            let attr = $ctrl.attr('rel');
+            if (!attr) {
+                $ctrl.attr('rel', 'tooltip');
+            }
+
+            $ctrl.tooltip(options).tooltip('show');
+            setTimeout(() => {
+
+                $ctrl.tooltip('dispose');
+            }, 3000);
+        };
+
+        this.showAlert = (msg) => {
+            let x = "alert-primary";
+            let $ctrl = $('[role="alert"]');
+
+            $ctrl.removeClass("alert-primary");
+            $ctrl.addClass("alert-danger");
+
+            this.showToolTip($ctrl, msg, 'bottom');
+
+            setTimeout(() => {
+                $ctrl.removeClass("alert-danger");
+                $ctrl.addClass("alert-primary");
+            }, 3000);
+        };
+
+        this.validateUser = (user) => {
+            if (!user) {
+                this.showErrMessage('User is null.');
+                return false;
+            }
+            if (!user.userName || user.userName.trim() === '') {
+
+                this.showToolTip($('#userName'), 'Please Enter User Name.');
+                return false;
+            }
+            if (!user.passWord || user.passWord.trim() === '') {
+
+                this.showToolTip($('#passWord'), 'Please Enter Password.');
+                return false;
+            }
+            return true;
         };
 
         let onModelLoaded = (sender, evtData) => {
@@ -198,16 +253,71 @@ riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div cl
             }
         };
 
+        let onUserNotFound = (sender, evtData) => {
+            self.showAlert('No user found.');
+        };
+
+        let onUserChanged = (sender, evtData) => {
+            let user = app.user.selectedUser;
+            let str = (user) ? user.FullNameNative + ' (' + user.customerId + ')' : '';
+            console.log(str);
+
+            let $ctrl = $('#currUser');
+            if ($ctrl) {
+                $ctrl.text(str);
+            }
+            else {
+                console.log(str);
+            }
+        };
+
         app.content.modelService.modelLoaded.add(onModelLoaded);
 
-        this.onsubmit = function (e) {
+        app.user.userNotFound.add(onUserNotFound);
+        app.user.currentUserChanged.add(onUserChanged);
+
+        this.companies = [];
+
+        this.onsubmituser = function (e) {
             e.preventDefault();
+
             let user = {
+                langId: lang.currentLangId,
                 userName: $('#userName').val(),
                 passWord: $('#passWord').val()
             };
-            console.log(user);
+            if (!self.validateUser(user)) {
+
+                return;
+            }
+
+            app.user.signIn(user, (users) => {
+                self.companies = users;
+                self.update();
+                let options = {};
+                let $modal = $('#selectCustomer');
+                $modal.modal(options).modal('show');
+            });
         }
+
+        this.onsubmitusercompany = (e) => {
+            e.preventDefault();
+
+            let selectedItem = e.item;
+            let selectedUser = (selectedItem) ? selectedItem.company : null;
+
+            let $modal = $('#selectCustomer');
+            let options = {};
+            $modal.modal(options).modal('hide');
+            self.companies = [];
+
+            if (selectedUser) {
+                app.user.selectedUser = selectedUser;
+            }
+            else {
+                self.showAlert('No user choose.');
+            }
+        };
 });
 riot.tag2('default-page', '<div data-is="page-nav-bar"></div> <div data-is="page-content-absolute" data-simplebar> <yield></yield> </div> <div data-is="page-footer"></div>', '', '', function(opts) {
 });

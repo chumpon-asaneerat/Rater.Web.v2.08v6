@@ -387,16 +387,77 @@ class ContentService {
     };
 };
 
+// The User Service class.
+class UserService {
+    constructor() {
+        this._selectedUser = null;
+        this._userNotFound = new EventHandler();
+        this._currentUserChanged = new EventHandler();
+    };
+
+    //-- public methods.
+    registerCustomer(customer) {
+
+    };
+    
+    signIn(user, chooseCompanies) {
+        let fn = api.signIn(user);
+        $.when(fn).then((r) => {
+            if (r && r.data && r.data.length > 0) {
+                if (r.data.length === 1) {
+                    this.selectedUser = r.data[0];
+                }
+                else {
+                    //console.log('Sign In - found multiple companies for specificed user.');
+                    if (chooseCompanies) {
+                        chooseCompanies(r.data);
+                    }
+                }
+            }
+            else {
+                // User not found.
+                this._userNotFound.invoke(this, EventArgs.Empty);
+            }
+        });
+    };
+
+    signOut() {
+
+    };
+
+    //-- public properties.
+    get selectedUser() {
+        return this._selectedUser;
+    };
+    set selectedUser(value) {
+        // some checking reqired.
+        this._selectedUser = value;
+        this.currentUserChanged.invoke(this, EventArgs.Empty);
+    };
+
+    //-- public events.
+    get userNotFound() {
+        return this._userNotFound;
+    }
+    get currentUserChanged() {
+        return this._currentUserChanged;
+    }
+}
+
 // The Client App class.
 class ClientApp {
     constructor() {
         this._contServ = new ContentService();
+        this._userServ = new UserService();
     }
 
     //-- public properties.
     get content() {
         return this._contServ;
     };
+    get user() {
+        return this._userServ;
+    }
 };
 
 ; (function () {
