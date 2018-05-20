@@ -51,9 +51,10 @@
                                         </div>
                                         <div class="flex-column m-0 p-1">
                                             <div class="row m-0 p-0">
-                                                <p>{company.customerId}</p>
-                                                <span>&nbsp;&nbsp;</span>
+                                                <p>{company.CustomerNameNative}</p>
+                                                <span>&nbsp; - [&nbsp;</span>
                                                 <p>{company.FullNameNative}</p>
+                                                <span>&nbsp;]</span>
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +201,7 @@
 
         let onUserChanged = (sender, evtData) => {
             let user = app.user.selectedUser;
-            let str = (user) ? user.FullNameNative + ' (' + user.customerId + ')' : '';
+            let str = (user) ? user.FullNameNative + ' (' + user.CustomerNameNative + ')' : '';
             console.log(str);
             let $ctrl = $('#currUser');
             if ($ctrl) {

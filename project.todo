@@ -794,7 +794,7 @@ My Choice Rater v2.0:
                 service.js:
                     ☐ 
                 tags.js:
-                    ☐ 
+                    ✔ Update signin-entry tag now show CustomerName instead of CustomerId. @done (2018-5-21 00:12:27)
             Concepts:
                 ☐ Update sample dashboard (example 06).
                 ☐ Update sample highchart (example 09).
