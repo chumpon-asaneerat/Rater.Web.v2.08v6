@@ -433,7 +433,9 @@ class UserService {
     };
 
     signOut() {
-
+        this.selectedUser = null;
+        // goto home.
+        nlib.nav.gotoUrl('/');        
     };
 
     //-- public properties.

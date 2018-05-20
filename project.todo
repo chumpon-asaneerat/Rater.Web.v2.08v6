@@ -794,6 +794,7 @@ My Choice Rater v2.0:
                 service.js:
                     ✔ UserService class rename method registerCustomer to register. @done (2018-5-21 00:57:47)
                     ✔ UserService class implements register method. @done (2018-5-21 00:57:47)
+                    ✔ UserService class implements signOut method. @done (2018-5-21 01:01:02)
                 tags.js:
                     ✔ Update signin-entry tag now show CustomerName instead of CustomerId. @done (2018-5-21 00:12:27)
                     ✔ update register-entry tag now work properly. @done (2018-5-21 00:56:53)
