@@ -756,6 +756,7 @@ My Choice Rater v2.0:
                 ☐ DeviceMLView (VIEW).
             Stored Procedures and Functions:
                 ✔ SignIn (SP) updated. @done (2018-5-21 00:06:01)
+                ✔ GetMemberDescription (SP) added. @done (2018-5-21 02:47:58)
                 ☐ SaveDevice (SP).
                 ☐ SaveDeviceML (SP).
                 ☐ GetDevices (SP).                
@@ -771,6 +772,10 @@ My Choice Rater v2.0:
                 Gulp Tasks:
                     ☐ db-script-2018-05-21 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                Misc:
+                    GetMemberDescription:
+                        ✔ definition file created. @done (2018-5-21 02:49:57)
+                        ✔ wrapper code updated. @done (2018-5-21 02:53:14)
                 Device:
                     SaveDevice:
                         ☐ definition file created.
@@ -789,6 +794,8 @@ My Choice Rater v2.0:
                     ☐ Implements xxxxx supports page, nav, footer, content (ML).
         Clients:
             Core Libraries:
+                api.js:
+                    ✔ Update api add new url for GetMemberDescription SP. @done (2018-5-21 02:55:00)
                 nlib.js:
                     ☐ 
                 service.js:
@@ -796,6 +803,8 @@ My Choice Rater v2.0:
                     ✔ UserService class implements register method. @done (2018-5-21 00:57:47)
                     ✔ UserService class implements signOut method. @done (2018-5-21 01:01:02)
                     ✔ Add ClientInfo class. @done (2018-5-21 01:18:41)
+                    ✔ UserService class update logic to save/load data from local storage. @done (2018-5-21 02:56:07)
+                    ☐ UserService class update code to sync member description when language changed.
                 tags.js:
                     ✔ Update signin-entry tag now show CustomerName instead of CustomerId. @done (2018-5-21 00:12:27)
                     ✔ update register-entry tag now work properly. @done (2018-5-21 00:56:53)

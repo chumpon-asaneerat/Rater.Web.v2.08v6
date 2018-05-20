@@ -29,6 +29,14 @@ function __SignIn(req, res) {
     });
 };
 
+function __GetMemberDescription(req, res) {
+    raterdb.CallSp(req, res, function (req, res, reqModel) {
+        raterdb.GetMemberDescription(reqModel.data, function (dbResult) {
+            nlib.sendJson(req, res, dbResult);
+        });
+    });
+};
+
 /**
  * Init routes.
  * 
@@ -38,6 +46,7 @@ function init_routes(app) {
     // register-signin.
     app.all('/api/edl/register', __RegisterCustomer); // OK.
     app.all('/api/edl/signin', __SignIn); // OK.
+    app.all('/api/edl/search-member', __GetMemberDescription); // OK
 };
 
 exports.init_routes = init_routes;

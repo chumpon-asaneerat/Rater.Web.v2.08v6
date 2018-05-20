@@ -5,6 +5,14 @@
     </span>
     <span class="float-right m-0 p-0 ml-auto">
         <div class="v-divider"></div>
+        <label class="m-0 p-1">
+            &nbsp;
+            <span id="user-info" class="fas fa-user-circle"></span>
+             &nbsp;
+            {app.user.selectedUser.FullNameNative}
+            &nbsp;
+        </label>
+        <div class="v-divider"></div>
         <label class="m-0 p-1">&copy;&nbsp;{label.copyright}&nbsp;&nbsp;&nbsp;</label>
     </span>
 
@@ -71,10 +79,15 @@
             }
         };
 
+        let onCurrentUserChanged = (sender, evtData) => {
+            self.update();
+        };
+
         app.content.modelService.modelLoaded.add(onModelLoaded);
+        app.user.currentUserChanged.add(onCurrentUserChanged);
 
         //-- END SERVICE EVENT HANDLERS
 
-        //#endregion 
+        //#endregion
     </script>
 </page-footer>

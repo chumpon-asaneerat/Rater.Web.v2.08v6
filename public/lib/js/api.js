@@ -78,6 +78,7 @@ class API {
             /* register/signIn/getUserHomeUrl */
             { name: "register", url: "/api/edl/register" },
             { name: "signIn", url: "/api/edl/signin" },
+            { name: "getMemberDescription", url: "/api/edl/search-member" },
             { name: "getUserHomeUrl", url: "/api/edl/utils/userhome" },
             /* reports */
             { name: "getRawVotes", url: "/api/reports/raw-votes/search" },

@@ -128,6 +128,114 @@ class ClientInfo extends LocalStorage {
     }
 };
 
+/* The UserInfo class. */
+class UserInfo extends LocalStorage {
+    constructor() {
+        super();
+        this._valueChanged = new EventHandler();
+        this.name = 'uid'
+        this.ttl = 24 * 60 * 60 * 1000;
+        this.load();
+        this.checkExist();
+
+        this._FullNameNative = "";
+        this._CustomerNameNative = "";
+    };
+
+    //- public methods
+    getDefault() {
+        return {
+            "customerId": "",
+            "memberId": "",
+            "MemberType": ""
+        };
+    };
+
+    reset() {
+        this.data = this.getDefault();
+        this._FullNameNative = "";
+        this._CustomerNameNative = "";
+        this.save();
+    };
+
+    sync(langId) {
+        let fn = api.getMemberDescription({
+            "langId": langId,
+            "customerId": this.customerId,
+            "memberId": this.memberId
+        });
+        $.when(fn).then(r => {
+            if (r && r.errors && !r.errors.hasError && r.data && r.data.length > 0) {
+                this.FullNameNative = r.data[0].FullNameNative;
+                this.CustomerNameNative = r.data[0].CustomerNameNative;
+            }
+            else {
+                this.FullNameNative = this.memberId;
+                this.CustomerNameNative = this.customerId;
+            }
+            // raise event.
+            this._valueChanged.invoke(this, EventArgs.Empty);
+        });
+    };
+
+    //-- public properties.
+    get customerId() { 
+        if (!this.data) this.checkExist();
+        return this.data.customerId;
+    };
+    set customerId(value) {
+        if (!this.data) this.checkExist();
+        this.data.customerId = value;
+    };
+
+    get memberId() {
+        if (!this.data) this.checkExist();
+        return this.data.memberId;
+    };
+    set memberId(value) {
+        if (!this.data) this.checkExist();
+        this.data.memberId = value;
+    };
+
+    get MemberType() {
+        if (!this.data) this.checkExist();
+        return this.data.MemberType;
+    };
+    set MemberType(value) {
+        if (!this.data) this.checkExist();
+        this.data.MemberType = value;
+    };
+
+    get FullNameNative() {
+        return this._FullNameNative;
+    };
+    set FullNameNative(value) {
+        this._FullNameNative = value;
+    };
+
+    get CustomerNameNative() {
+        return this._CustomerNameNative;
+    };
+    set CustomerNameNative(value) {
+        this._CustomerNameNative = value;
+    };
+
+    get value() {
+        return {
+            "customerId": this.customerId,
+            "memberId": this.memberId,
+            "MemberType": this.MemberType,
+            "FullNameNative": this.FullNameNative,
+            "CustomerNameNative": this.CustomerNameNative
+        }
+    };
+
+    //-- event properties
+    get valueChanged() {
+        return this._valueChanged;
+    }
+};
+
 // The Language Service class.
 class LanguageService extends DataSource {
     //-- constructor
@@ -256,7 +364,7 @@ class LanguageService extends DataSource {
 
     get isLocked() {
         return this._locked;
-    }
+    };
 };
 
 class ContentModel {
@@ -426,9 +534,19 @@ class ContentService {
 // The User Service class.
 class UserService {
     constructor() {
-        this._selectedUser = null;
+        this._userInfo = new UserInfo();
+        this._selectedUser = this._userInfo.data;
         this._userNotFound = new EventHandler();
         this._currentUserChanged = new EventHandler();
+
+        let self = this;
+
+        let onValueChanged = (sender, evtData) => {
+            // raise event that selected user is changed.
+            self._currentUserChanged.invoke(self, EventArgs.Empty);
+        };
+
+        this._userInfo.valueChanged.add(onValueChanged);
     };
 
     //-- public methods.
@@ -445,6 +563,11 @@ class UserService {
                 nlib.nav.gotoUrl('/');
             }
         });
+    };
+
+    // refresh description of current user by specificed langId.
+    refresh(langId) {
+        this._userInfo.sync(langId);
     };
     
     signIn(user, chooseCompanies) {
@@ -469,28 +592,46 @@ class UserService {
     };
 
     signOut() {
-        this.selectedUser = null;
+        this._userInfo.reset();
+        this.selectedUser = this._userInfo.data;
         // goto home.
         nlib.nav.gotoUrl('/');        
     };
 
     //-- public properties.
     get selectedUser() {
-        return this._selectedUser;
+        return this._userInfo.value;
+        //return this._selectedUser;
     };
     set selectedUser(value) {
         // some checking reqired.
+        if (!value) {
+            this._userInfo.customerId = "";
+            this._userInfo.memberId = "";
+            this._userInfo.MemberType = "";
+            this._userInfo.FullNameNative = "";
+            this._userInfo.CustomerNameNative = "";
+        }
+        else {
+            this._userInfo.customerId = value.customerId;
+            this._userInfo.memberId = value.memberId;
+            this._userInfo.MemberType = value.MemberType;
+            this._userInfo.FullNameNative = value.FullNameNative;
+            this._userInfo.CustomerNameNative = value.CustomerNameNative;
+        }
+        this._userInfo.save();
+
         this._selectedUser = value;
-        this.currentUserChanged.invoke(this, EventArgs.Empty);
+        this._currentUserChanged.invoke(this, EventArgs.Empty);
     };
 
     //-- public events.
     get userNotFound() {
         return this._userNotFound;
-    }
+    };
     get currentUserChanged() {
         return this._currentUserChanged;
-    }
+    };
 }
 
 // The Client App class.
@@ -499,7 +640,7 @@ class ClientApp {
         this._clientInfo = new ClientInfo();
         this._contServ = new ContentService();
         this._userServ = new UserService();
-    }
+    };
 
     //-- public properties.
     get client() {
@@ -510,13 +651,19 @@ class ClientApp {
     };
     get user() {
         return this._userServ;
-    }
+    };
 };
 
 ; (function () {
     //console.log('Init app core...');
     window.lang = window.lang || new LanguageService();
     window.app = window.app || new ClientApp();
+
+    let onLanguageChanged = (sender, evtData) => {
+        app.user.refresh(lang.currentLangId);
+    };
+
+    lang.selectedIndexChanged.add(onLanguageChanged);
 
     // mount riot method call when model service assigned.
     let onModelServiceChanged = (sender, evtData) => {        

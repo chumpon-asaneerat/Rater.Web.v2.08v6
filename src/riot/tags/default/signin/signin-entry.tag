@@ -213,7 +213,7 @@
         let onUserChanged = (sender, evtData) => {
             let user = app.user.selectedUser;
             let str = (user) ? user.FullNameNative + ' (' + user.CustomerNameNative + ')' : '';
-            console.log(str);
+            console.log(str, ' required to redirect to home by user role.');
             let $ctrl = $('#currUser');
             if ($ctrl) {
                 $ctrl.text(str);
