@@ -202,13 +202,9 @@
             let user = app.user.selectedUser;
             let str = (user) ? user.FullNameNative + ' (' + user.customerId + ')' : '';
             console.log(str);
-            //console.log(str);
             let $ctrl = $('#currUser');
             if ($ctrl) {
                 $ctrl.text(str);
-            }
-            else { 
-                console.log(str);
             }
         };
         // content event handler.

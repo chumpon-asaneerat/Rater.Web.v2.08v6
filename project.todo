@@ -742,10 +742,16 @@ My Choice Rater v2.0:
                 nlib.js:
                     ☐ 
                 service.js:
-                    ☐ 
+                    ✔ Add UserService class. @done (2018-5-20 23:29:09)
+                    ✔ UserService class add signIn method. @done (2018-5-20 23:29:40)
+                    ✔ UserService class add signOut method. @done (2018-5-20 23:29:40)
+                    ✔ UserService class add registerCustomer method. @done (2018-5-20 23:29:40)
+                    ✔ UserService class add add userNotFound event. @done (2018-5-20 23:30:10)
+                    ✔ UserService class add add currentUserChanged event. @done (2018-5-20 23:30:10)
                 tags.js:
-                    ☐ Add XXX tag with supports ML code.
-                    ☐ Add XXX tag with supports ML code.
+                    ✔ Update page-nav-bar tag move condition checks into virtual tag. @done (2018-5-20 23:31:02)
+                    ✔ Update signin-entry tag now supports connect to server. @done (2018-5-20 23:33:43)
+                    ✔ Update signin-entry tag now supports allow to choose user if more than on user found. @done (2018-5-20 23:33:44)
                 model.js files:
                     ☐ all model.js file.
             Concepts:

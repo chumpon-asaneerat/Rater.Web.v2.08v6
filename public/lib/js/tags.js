@@ -261,13 +261,9 @@ riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div cl
             let user = app.user.selectedUser;
             let str = (user) ? user.FullNameNative + ' (' + user.customerId + ')' : '';
             console.log(str);
-
             let $ctrl = $('#currUser');
             if ($ctrl) {
                 $ctrl.text(str);
-            }
-            else {
-                console.log(str);
             }
         };
 
