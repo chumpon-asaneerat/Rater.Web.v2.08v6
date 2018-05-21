@@ -83,6 +83,8 @@ class API {
             /* reports */
             { name: "getRawVotes", url: "/api/reports/raw-votes/search" },
             { name: "getVoteSummaries", url: "/api/reports/vote-summaries/search" },
+            /* clients */
+            { name: "registerClient", url: "/api/edl/client/register" },
             /* page content model */
             { name: "getModel", url: API.getUrl("models") }
         ]

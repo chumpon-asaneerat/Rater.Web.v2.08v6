@@ -1,6 +1,0 @@
-{
-    "links": [
-        { "text": "ลงทะเบียน", "url": "#", "active": "", "type": "font", "src": "user-plus" },
-        { "text": "เข้าใช้งาน", "url": "#", "active": "", "type": "font", "src": "user-circle" }
-    ]
-}

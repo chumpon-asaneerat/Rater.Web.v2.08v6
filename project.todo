@@ -716,6 +716,8 @@ My Choice Rater v2.0:
                     ✔ Add MockPromise class. @done (5/19/2018, 10:22:30 PM)
                     ✔ Add Date format extension method. @done (5/19/2018, 10:25:19 PM)
                     ✔ Update EventHandler class. Add handled property in evtData. @done (5/19/2018, 11:13:42 PM)
+                Views:
+                    ✔ Remove all excepts dev-home. @done (2018-5-22 04:25:45)
             Concepts:
                 Quokka samples:
                     ✔ Add 03.promise.js !!PROVED!!. @done (5/19/2018, 10:21:19 PM)
@@ -809,54 +811,35 @@ My Choice Rater v2.0:
                 ✔ Change all module.js of all views to empty code. @done (2018-5-21 21:44:55)
     Update on [2018-05-22]:
         Database Create Scripts:
-            Tables and Views:
-                ☐ Device (TABLE).
-                ☐ DeviceML (TABLE).
-                ☐ DeviceView (VIEW).
-                ☐ DeviceMLView (VIEW).
-            Stored Procedures and Functions:
-                ☐ SaveDevice (SP).
-                ☐ SaveDeviceML (SP).
-                ☐ GetDevices (SP).                
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP) Add New Error Code.
+            Drop Script:
+                ✔ Add Drop scripts. @done (2018-5-22 04:16:16)
         Database Document Updated:
             Error Code:
-                ☐ Update Error Code in Excel file.
+                ✔ Update Error Code in Excel file. @done (2018-5-22 04:16:58)
             Server Update History:
-                ☐ Add server-update.todo to keep track generate script file status.
+                ✔ Add server-update.todo to keep track generate script file status. @done (2018-5-22 04:16:45)
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-22 (generate db script).
+                    ✔ db-script-2018-05-22 (generate db script). @done (2018-5-22 01:11:36)
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                Device:
-                    SaveDevice:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-                    SaveDeviceML:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-                    GetDevices:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
+                ✔ Remove all definition files. @done (2018-5-22 04:19:36)
             Core Libraries:
                 Modules:
-                    ☐ app-routes.js updated. Add routes update SPs apis.
-                    ☐ rater-web-db.js updated. Add stored procedures update SPs.
-                Views:
-                    ☐ Implements xxxxx supports page, nav, footer, content (ML).
+                    ✔ mssql-db.js update code to work with date string. @done (2018-5-22 03:04:12)
+                    ✔ rater-web-db.js remove all. @done (2018-5-22 04:21:44)
+                    ✔ api routes remove all. @done (2018-5-22 04:22:07)
         Clients:
             Core Libraries:
                 nlib.js:
-                    ☐ 
-                service.js:
-                    ☐ 
+                    ✔ Add extenstion for jQuery to supports $.when.all @done (2018-5-22 03:02:56)
                 tags.js:
-                    ☐ 
+                    ✔ Remove all. @done (2018-5-22 04:23:50)
             Concepts:
-                ☐ Update sample dashboard (example 06).
-                ☐ Update sample highchart (example 09).
+                Quokka samples:
+                    ✔ Remove all. @done (2018-5-22 04:23:07)
+                tests:
+                    ✔ Remove all. @done (2018-5-22 04:24:30)
     Update on [2018-05-23]:
         Database Create Scripts:
             Tables and Views:
