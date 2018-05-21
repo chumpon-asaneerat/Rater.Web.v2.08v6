@@ -855,9 +855,13 @@ My Choice Rater v2.0:
                     ✔ Add Drop scripts. @done (2018-5-22 04:16:16)
             Database Create Scripts:
                 Tables and Views:
-                    ☐ ErrorMessageML (TABLE).
-                    ☐ ErrorMessageView (VIEW).
-                    ☐ ErrorMessageMLView (VIEW).
+                    ✔ dboView (VIEW). @done (2018-5-22 05:11:26)
+                    ✔ Language (TABLE). @done (2018-5-22 05:15:13)
+                    ✔ LanguageView (VIEW). @done (2018-5-22 05:15:14)
+                    ✔ ErrorMessage (TABLE). @done (2018-5-22 05:17:34)
+                    ✔ ErrorMessageML (TABLE). @done (2018-5-22 05:19:12)
+                    ✔ ErrorMessageView (VIEW). @done (2018-5-22 05:19:12)
+                    ✔ ErrorMessageMLView (VIEW). @done (2018-5-22 05:19:13)
                 Stored Procedures and Functions:
                     ✔ IsSameDate (Function). @done (2018-5-22 05:08:49)
                     ✔ IsSameMonth (Function). @done (2018-5-22 05:08:50)
@@ -865,9 +869,14 @@ My Choice Rater v2.0:
                     ✔ IsNullOrEmpty (Function). @done (2018-5-22 05:08:52)
                     ✔ GetRandomHexCode (SP). @done (2018-5-22 05:08:52)
                     ✔ DeleteAll (SP). @done (2018-5-22 05:08:53)
-                    ☐ (SP).
-                    ☐ (SP).
-                    ☐ (SP).
+                    ✔ GetErrorMsg (SP). @done (2018-5-22 05:33:36)
+                    ✔ SaveErrorMsg (SP). @done (2018-5-22 05:33:37)
+                    ✔ SaveErrorMsgML (SP). @done (2018-5-22 05:34:09)
+                    ✔ GetErrorMsgs (SP). @done (2018-5-22 05:34:40)
+                    ✔ SaveLanguage (SP). @done (2018-5-22 05:35:06)
+                    ✔ DisableLanguage (SP). @done (2018-5-22 05:35:38)
+                    ✔ EnableLanguage (SP). @done (2018-5-22 05:35:39)
+                    ✔ GetLanguages (SP). @done (2018-5-22 05:35:55)
                 Init Stored Procedures:
                     ☐ InitErrorMessages (SP) Add New Error Code.
             Database Document Updated:
