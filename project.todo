@@ -728,6 +728,15 @@ My Choice Rater v2.0:
                     ✔ Add 10.delegate.take.2.js. !!FINISHED!! @done (5/19/2018, 11:13:40 PM)
     Update on [2018-05-20]:
         Clients:
+            Third Parties:
+                client-side-capcha-1.0.0:
+                    ✔ add to public/dist and setup route. @done (2018-5-21 22:55:59)
+                    ✔ fixed example (demo) reference. @done (2018-5-21 22:56:31)
+                js-captcha-1.1.0:
+                    ✔ add to public/dist and setup route. @done (2018-5-21 22:55:59)
+                puzzle-captcha-1.0.0-1.0.0:
+                    ✔ add to public/dist and setup route. @done (2018-5-21 22:56:00)
+                    ✔ fixed example (demo) reference and add sample image. @done (2018-5-21 22:56:33)
             Core Libraries:
                 nlib.js:
                     ✔ Add NJson class. @done (2018-5-20 23:46:14)
