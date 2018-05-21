@@ -742,7 +742,10 @@ My Choice Rater v2.0:
                 scroll-magic-2.0.5:
                     ✔ add to public/dist and setup route. @done (2018-5-21 23:10:37)
                 fabricjs-2.3.0:
-                    ☐ add to public/dist and setup route.
+                    ✔ add to public/dist and setup route. @done (2018-5-21 23:20:34)
+                snapjs-1.9.2:
+                    ✔ add to public/dist and setup route. @done (2018-5-21 23:20:51)
+                    ✔ update all reference in demo files. @done (2018-5-21 23:27:08)
             Core Libraries:
                 nlib.js:
                     ✔ Add NJson class. @done (2018-5-20 23:46:14)
