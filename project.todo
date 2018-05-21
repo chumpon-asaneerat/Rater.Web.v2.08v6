@@ -749,55 +749,25 @@ My Choice Rater v2.0:
                     ✔ Port Brackets sample site. @done (5/20/2018, 12:57:20 AM)
     Update on [2018-05-21]:
         Database Create Scripts:
-            Tables and Views:
-                ☐ Device (TABLE).
-                ☐ DeviceML (TABLE).
-                ☐ DeviceView (VIEW).
-                ☐ DeviceMLView (VIEW).
             Stored Procedures and Functions:
                 ✔ SignIn (SP) updated. @done (2018-5-21 00:06:01)
                 ✔ GetMemberDescription (SP) added. @done (2018-5-21 02:47:58)
-                ☐ SaveDevice (SP).
-                ☐ SaveDeviceML (SP).
-                ☐ GetDevices (SP).                
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP) Add New Error Code.
         Database Document Updated:
-            Error Code:
-                ☐ Update Error Code in Excel file.
             Server Update History:
-                ☐ Add server-update.todo to keep track generate script file status.
+                ✔ Add server-update.todo to keep track generate script file status. @done (2018-5-21 21:40:03)
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-21 (generate db script).
+                    ✔ db-script-2018-05-21 (generate db script). @done (2018-5-21 21:39:26)
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Misc:
                     GetMemberDescription:
                         ✔ definition file created. @done (2018-5-21 02:49:57)
                         ✔ wrapper code updated. @done (2018-5-21 02:53:14)
-                Device:
-                    SaveDevice:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-                    SaveDeviceML:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-                    GetDevices:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-            Core Libraries:
-                Modules:
-                    ☐ app-routes.js updated. Add routes update SPs apis.
-                    ☐ rater-web-db.js updated. Add stored procedures update SPs.
-                Views:
-                    ☐ Implements xxxxx supports page, nav, footer, content (ML).
         Clients:
             Core Libraries:
                 api.js:
                     ✔ Update api add new url for GetMemberDescription SP. @done (2018-5-21 02:55:00)
-                nlib.js:
-                    ☐ 
                 service.js:
                     ✔ UserService class rename method registerCustomer to register. @done (2018-5-21 00:57:47)
                     ✔ UserService class implements register method. @done (2018-5-21 00:57:47)
@@ -810,9 +780,15 @@ My Choice Rater v2.0:
                     ✔ update register-entry tag now work properly. @done (2018-5-21 00:56:53)
                     ✔ Update signin-entry tag now supports show scrollbar in choose company properly. @done (2018-5-21 01:58:48)
                     ✔ Update page-footer tag now show current user on footer. @done (2018-5-21 04:09:40)
-            Concepts:
-                ☐ Update sample dashboard (example 06).
-                ☐ Update sample highchart (example 09).
+        URGENT TASK:
+            Update security:
+                ✔ Backup all code in views to views (backup2). @done (2018-5-21 21:43:37)
+                ✔ Backup all code in lib to lib (backup2). @done (2018-5-21 21:43:37)
+                ✔ Backup all code in api to api (backup2). @done (2018-5-21 21:43:38)
+                ✔ Backup all code in src to src (backup2). @done (2018-5-21 21:43:38)
+                ✔ Backup all code in public/lib to public/lib (backup2). @done (2018-5-21 21:43:39)
+                ✔ Change all index.handlebars files to simple one html for test. @done (2018-5-21 21:44:55)
+                ✔ Change all module.js of all views to empty code. @done (2018-5-21 21:44:55)
     Update on [2018-05-22]:
         Database Create Scripts:
             Tables and Views:

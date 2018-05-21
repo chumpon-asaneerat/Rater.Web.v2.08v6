@@ -24,6 +24,10 @@ EDL Database Server:
         ✔ Generate script. @done (5/18/2018, 12:53:22 PM)
         ✔ Update to production server. @done (5/18/2018, 12:53:22 PM)
     Script for 2018-05-21:
+        ✔ Verify and checks correction. @done (2018-5-21 21:38:16)
+        ✔ Generate script. @done (2018-5-21 21:38:18)
+        ☐ Update to production server.
+    Script for 2018-05-22:
         ☐ Verify and checks correction.
         ☐ Generate script.
         ☐ Update to production server.
