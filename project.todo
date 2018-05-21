@@ -810,6 +810,8 @@ My Choice Rater v2.0:
                 ✔ Change all index.handlebars files to simple one html for test. @done (2018-5-21 21:44:55)
                 ✔ Change all module.js of all views to empty code. @done (2018-5-21 21:44:55)
     Update on [2018-05-22]:
+        Database Scripts folder:
+            ✔ Remove all scripts folders from 2018-04-26 until 2018-05-21. @done (2018-5-22 04:52:49)
         Database Create Scripts:
             Drop Script:
                 ✔ Add Drop scripts. @done (2018-5-22 04:16:16)
@@ -831,8 +833,12 @@ My Choice Rater v2.0:
                     ✔ api routes remove all. @done (2018-5-22 04:22:07)
         Clients:
             Core Libraries:
+                api.js:
+                    ✔ Remove all api. @done (2018-5-22 04:50:34)
                 nlib.js:
                     ✔ Add extenstion for jQuery to supports $.when.all @done (2018-5-22 03:02:56)
+                service.js:
+                    ✔ Remove all code. @done (2018-5-22 04:50:59)
                 tags.js:
                     ✔ Remove all. @done (2018-5-22 04:23:50)
             Concepts:
