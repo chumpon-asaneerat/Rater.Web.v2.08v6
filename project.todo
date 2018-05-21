@@ -840,6 +840,11 @@ My Choice Rater v2.0:
                     ✔ Remove all. @done (2018-5-22 04:23:07)
                 tests:
                     ✔ Remove all. @done (2018-5-22 04:24:30)
+        Git:
+            master:
+                ✔ Commit clean project. @done (2018-5-22 04:41:58)
+            v1:
+                ✔ Commit backup project to v1 branch. @done (2018-5-22 04:41:59)
     Update on [2018-05-23]:
         Database Create Scripts:
             Tables and Views:
