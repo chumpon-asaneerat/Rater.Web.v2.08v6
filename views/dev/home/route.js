@@ -13,6 +13,22 @@ const baseUrl = '/dev';
 function getIndex(req, res, next) {
     //var targetFile = path.join(workPath, 'index.html');
     //nlib.sendFile(req, res, targetFile);
+    /*
+    let cookies = '';
+    //console.log(res);
+    if (!req.cookies.uid) {
+        let options = {
+            maxAge: 1000 * 60 * 15, // would expire after 15 minutes
+            httpOnly: false
+        }
+        // use response to update cookie.
+        res.cookie('uid', 'add some cookies.', options);
+    }
+    else {
+        cookies = req.cookies.uid;
+        console.log(cookies);
+    } 
+    */
 
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {
