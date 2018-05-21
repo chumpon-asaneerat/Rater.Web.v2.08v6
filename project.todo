@@ -739,6 +739,8 @@ My Choice Rater v2.0:
                     ✔ fixed example (demo) reference and add sample image. @done (2018-5-21 22:56:33)
                 paperjs-0.11.5:
                     ✔ add to public/dist and setup route. @done (2018-5-21 23:02:44)
+                scroll-magic-2.0.5:
+                    ✔ add to public/dist and setup route. @done (2018-5-21 23:10:37)
             Core Libraries:
                 nlib.js:
                     ✔ Add NJson class. @done (2018-5-20 23:46:14)
