@@ -819,9 +819,6 @@ My Choice Rater v2.0:
                 Server Update History:
                     ✔ Add server-update.todo to keep track generate script file status. @done (2018-5-22 04:16:45)
             Node Server:
-                Build Scripts:
-                    Gulp Tasks:
-                        ✔ db-script-2018-05-22 (generate db script). @done (2018-5-22 01:11:36)
                 Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                     ✔ Remove all definition files. @done (2018-5-22 04:19:36)
                 Core Libraries:
@@ -884,6 +881,17 @@ My Choice Rater v2.0:
                     ☐ Update Error Code in Excel file.
                 Server Update History:
                     ☐ Add server-update.todo to keep track generate script file status.
+            Node Server:
+                Build Scripts:
+                    Gulp Tasks:
+                        ✔ db-script-2018-05-22 (generate db script). @done (2018-5-22 01:11:36)
+                Node Modules:
+                    ✔ Add express-fingerprint. @done (2018-5-22 06:18:16)
+                Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                    Misc:
+                        XXX:
+                            ☐ definition file created.
+                            ☐ wrapper code updated.
     Update on [2018-05-23]:
         Database Create Scripts:
             Tables and Views:

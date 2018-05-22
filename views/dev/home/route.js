@@ -11,6 +11,9 @@ const workPath = path.join(rootPath, 'views', 'dev', 'home');
 const baseUrl = '/dev';
 
 function getIndex(req, res, next) {
+    // Fingerprint object.
+    //console.log(req.fingerprint);
+
     //var targetFile = path.join(workPath, 'index.html');
     //nlib.sendFile(req, res, targetFile);
     /*
