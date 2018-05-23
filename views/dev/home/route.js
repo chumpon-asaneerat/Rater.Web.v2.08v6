@@ -40,9 +40,13 @@ function getIndex(req, res, next) {
     var rw2 = {};
     rw2 = nlib.cookie2obj(req, res);
 
+    console.log('before:', rw2);
+
     rw2.id1 = rw2.id1 || 'AAAA';
     rw2.id2 = rw2.id2 || 'BBBB';
     rw2.id3 = rw2.id3 || 'CCCC';
+
+    console.log('after:', rw2);
 
     nlib.obj2cookie(req, res, rw2, options);
 
