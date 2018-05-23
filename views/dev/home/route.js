@@ -6,6 +6,7 @@ const fs = require('fs');
 const rootPath = process.env['ROOT_PATHS'];
 
 const nlib = require(path.join(rootPath, 'lib', 'nlib-core'));
+const rwc = require(path.join(rootPath, 'rater-web-secure'));
 
 const workPath = path.join(rootPath, 'views', 'dev', 'home');
 const baseUrl = '/dev';
