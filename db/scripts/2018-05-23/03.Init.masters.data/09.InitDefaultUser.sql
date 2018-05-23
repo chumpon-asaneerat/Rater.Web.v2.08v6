@@ -29,7 +29,3 @@ BEGIN
 END
 
 GO
-
-EXEC InitDefaultUser;
-
-GO

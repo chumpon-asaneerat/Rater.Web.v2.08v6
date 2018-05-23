@@ -1042,6 +1042,7 @@ My Choice Rater v2.0:
                 ✔ InitLicenseTypes (SP). @done (2018-5-23 19:36:22)
                 ✔ InitLicenseFeatures (SP). @done (2018-5-23 19:37:47)
                 ✔ InitMasterPKs (SP). @done (2018-5-23 19:19:35)
+                ✔ InitDeviceTypes (SP). @done (2018-5-23 22:09:40)
                 ✔ InitDefaultUser (SP). @done (2018-5-23 19:51:32)
                 ☐ InitErrorMessages (SP ALTER).
         Database Document Updated:
