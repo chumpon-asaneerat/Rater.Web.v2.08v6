@@ -950,6 +950,17 @@ My Choice Rater v2.0:
                     ✔ QSlideItemML (TABLE). @done (2018-5-23 20:19:22)
                     ✔ QSlideItemView (VIEW). @done (2018-5-23 20:19:25)
                     ✔ QSlideItemMLView (VIEW). @done (2018-5-23 20:19:36)
+                Devices:
+                    ✔ DeviceType (TABLE). @done (2018-5-23 21:02:59)
+                    ✔ DeviceTypeML (TABLE). @done (2018-5-23 21:03:01)
+                    ✔ DeviceTypeView (VIEW). @done (2018-5-23 21:20:36)
+                    ✔ DeviceTypeMLView (VIEW). @done (2018-5-23 21:20:36)
+                    ✔ Device (TABLE). @done (2018-5-23 21:10:36)
+                    ✔ DeviceML (TABLE). @done (2018-5-23 21:10:36)
+                    ✔ DeviceView (VIEW). @done (2018-5-23 21:23:33)
+                    ✔ DeviceMLView (VIEW). @done (2018-5-23 21:26:46)
+                Votes:
+                    ✔ Vote (TABLE). @done (2018-5-23 20:46:49)
             Stored Procedures and Functions:
                 Error Message:
                     ✔ InitErrorMessages (SP CREATE). @done (2018-5-23 18:47:18)
@@ -1015,6 +1026,11 @@ My Choice Rater v2.0:
                     ✔ SaveQSlideItem (SP). @done (2018-5-23 20:29:50)
                     ✔ SaveQSlideItemML (SP). @done (2018-5-23 20:29:51)
                     ✔ GetQSlideItems (SP). @done (2018-5-23 20:30:06)
+                Devices:
+                    ☐ 
+                Votes:
+                    ✔ SaveVote (SP). @done (2018-5-23 20:47:20)
+                Reports:
         Database Document Updated:
             Server Update History:
                 ☐ Add server-update.todo to keep track generate script file status.
