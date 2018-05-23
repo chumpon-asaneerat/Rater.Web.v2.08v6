@@ -7,7 +7,8 @@
         "mode": "sp",
         "name": "GetErrorMsgs",
         "inputs": [
-            { "name": "langId", "sqlType": "nvarchar(3)", "default": null }
+            { "name": "langId", "sqlType": "nvarchar(3)", "default": null },
+            { "name": "errCode", "sqlType": "int", "default": null }
         ]
     }
 }

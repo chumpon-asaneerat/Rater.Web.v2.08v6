@@ -18,7 +18,8 @@ GO
 -- =============================================
 CREATE PROCEDURE [dbo].[GetErrorMsgs] 
 (
-  @langId nvarchar(3) = null 
+  @langId nvarchar(3) = null,
+	@errCode int = null
 )
 AS
 BEGIN
@@ -30,6 +31,7 @@ BEGIN
 		 , Enabled
 	  FROM ErrorMessageMLView
 	 WHERE langId = COALESCE(@langId, langId)
+	   AND ErrCode = COALESCE(@errCode, ErrCode)
 	   AND Enabled = 1
 	 Order By SortOrder, ErrCode
 END

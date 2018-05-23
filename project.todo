@@ -122,7 +122,7 @@ My Choice Rater v2.0:
                 Gulp Tasks:
                     ✔ db-script-2018-04-26 (generate db script). @done (4/21/2018, 1:09:35 PM)
                     ✔ riot-tags (generate combine riot's tags js file). @done (4/21/2018, 1:09:36 PM)
-            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):                
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):     
                 Utilities:
                     GetRandomHexCode:
                         ✔ definition file created. @done (4/24/2018, 12:53:21 AM)
@@ -1065,183 +1065,238 @@ My Choice Rater v2.0:
                     GetRandomHexCode:
                         ✔ definition file created. @done (2018-5-23 23:20:52)
                         ✔ wrapper code updated. @done (2018-5-23 23:51:56)
+                        ✔ setup route. @done (2018-5-24 00:31:49)
                 Languages and Error Messages:
                     SaveErrorMsg:
                         ✔ definition file created. @done (2018-5-23 23:23:10)
                         ✔ wrapper code updated. @done (2018-5-23 23:52:16)
+                        ✔ setup route. @done (2018-5-24 00:34:18)
                     SaveErrorMsgML:
                         ✔ definition file created. @done (2018-5-23 23:23:11)
                         ✔ wrapper code updated. @done (2018-5-23 23:52:21)
+                        ✔ setup route. @done (2018-5-24 00:34:19)
                     GetErrorMsgs:
                         ✔ definition file created. @done (2018-5-23 23:22:52)
                         ✔ wrapper code updated. @done (2018-5-23 23:52:28)
+                        ✔ setup route. @done (2018-5-24 00:34:20)
                     GetErrorMsg:
                         ✔ definition file created. @done (2018-5-23 23:40:15)
                         ✔ wrapper code updated. @done (2018-5-23 23:52:49)
+                        ✔ setup route. @done (2018-5-24 00:34:22)
                     SaveLanguage:
                         ✔ definition file created. @done (2018-5-23 23:23:31)
                         ✔ wrapper code updated. @done (2018-5-23 23:53:37)
+                        ✔ setup route. @done (2018-5-24 00:34:23)
                     DisableLanguage:
                         ✔ definition file created. @done (2018-5-23 23:21:46)
                         ✔ wrapper code updated. @done (2018-5-23 23:53:38)
+                        ✔ setup route. @done (2018-5-24 00:34:24)
                     EnableLanguage:
                         ✔ definition file created. @done (2018-5-23 23:21:47)
                         ✔ wrapper code updated. @done (2018-5-23 23:53:39)
+                        ✔ setup route. @done (2018-5-24 00:34:25)
                     GetLanguages:
                         ✔ definition file created. @done (2018-5-23 23:23:34)
                         ✔ wrapper code updated. @done (2018-5-23 23:53:47)
+                        ✔ setup route. @done (2018-5-24 00:34:25)
                 Member Types:
                     GetMemberTypes:
                         ✔ definition file created. @done (2018-5-23 23:24:16)
                         ✔ wrapper code updated. @done (2018-5-23 23:53:49)
+                        ☐ setup route.
                 Period Units:
                     SavePeriodUnit:
                         ✔ definition file created. @done (2018-5-23 23:25:13)
                         ✔ wrapper code updated. @done (2018-5-23 23:54:41)
+                        ☐ setup route.
                     SavePeriodUnitML:
                         ✔ definition file created. @done (2018-5-23 23:25:18)
                         ✔ wrapper code updated. @done (2018-5-23 23:54:42)
+                        ☐ setup route.
                     GetPeriodUnits:
                         ✔ definition file created. @done (2018-5-23 23:25:19)
                         ✔ wrapper code updated. @done (2018-5-23 23:54:43)
+                        ☐ setup route.
                 Limit Units:
                     SaveLimitUnit:
                         ✔ definition file created. @done (2018-5-23 23:26:04)
                         ✔ wrapper code updated. @done (2018-5-23 23:54:53)
+                        ☐ setup route.
                     SaveLimitUnitML:
                         ✔ definition file created. @done (2018-5-23 23:26:06)
                         ✔ wrapper code updated. @done (2018-5-23 23:54:53)
+                        ☐ setup route.
                     GetLimitUnits:
                         ✔ definition file created. @done (2018-5-23 23:26:07)
                         ✔ wrapper code updated. @done (2018-5-23 23:54:54)
+                        ☐ setup route.
                 License Types:
                     SaveLicenseType:
                         ✔ definition file created. @done (2018-5-23 23:27:21)
                         ✔ wrapper code updated. @done (2018-5-23 23:55:02)
+                        ☐ setup route.
                     SaveLicenseTypeML:
                         ✔ definition file created. @done (2018-5-23 23:27:24)
                         ✔ wrapper code updated. @done (2018-5-23 23:55:03)
+                        ☐ setup route.
                     GetLicenseTypes:
                         ✔ definition file created. @done (2018-5-23 23:27:25)
                         ✔ wrapper code updated. @done (2018-5-23 23:55:09)
+                        ☐ setup route.
                 License Features:
                     SaveLicenseFeature:
                         ✔ definition file created. @done (2018-5-23 23:27:31)
                         ✔ wrapper code updated. @done (2018-5-23 23:55:15)
+                        ☐ setup route.
                     GetLicenseFeatures:
                         ✔ definition file created. @done (2018-5-23 23:27:32)
                         ✔ wrapper code updated. @done (2018-5-23 23:55:21)
+                        ☐ setup route.
                     GetLicenses:
                         ✔ definition file created. @done (2018-5-23 23:27:33)
                         ✔ wrapper code updated. @done (2018-5-23 23:55:25)
+                        ☐ setup route.
                 UserInfo:
                     SaveUserInfo:
                         ✔ definition file created. @done (2018-5-23 23:28:06)
                         ✔ wrapper code updated. @done (2018-5-23 23:56:39)
+                        ☐ setup route.
                     SaveUserInfoML:
                         ✔ definition file created. @done (2018-5-23 23:28:14)
                         ✔ wrapper code updated. @done (2018-5-23 23:56:40)
+                        ☐ setup route.
                     GetUserInfos:
                         ✔ definition file created. @done (2018-5-23 23:28:15)
                         ✔ wrapper code updated. @done (2018-5-23 23:56:40)
+                        ☐ setup route.
                 Customers:
                     SaveCustomer:
                         ✔ definition file created. @done (2018-5-23 23:28:35)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:27)
+                        ☐ setup route.
                     SaveCustomerML:
                         ✔ definition file created. @done (2018-5-23 23:28:37)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:28)
+                        ☐ setup route.
                     GetCustomers:
                         ✔ definition file created. @done (2018-5-23 23:28:42)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:28)
+                        ☐ setup route.
                 MemberInfo:
                     SaveMemberInfo:
                         ✔ definition file created. @done (2018-5-23 23:29:09)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:30)
+                        ☐ setup route.
                     SaveMemberInfoML:
                         ✔ definition file created. @done (2018-5-23 23:29:10)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:30)
+                        ☐ setup route.
                     GetMemberInfos:
                         ✔ definition file created. @done (2018-5-23 23:29:11)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:31)
+                        ☐ setup route.
                 Branchs:
                     SaveBranch:
                         ✔ definition file created. @done (2018-5-23 23:29:36)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:32)
+                        ☐ setup route.
                     SaveBranchML:
                         ✔ definition file created. @done (2018-5-23 23:29:41)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:32)
+                        ☐ setup route.
                     GetBranchs:
                         ✔ definition file created. @done (2018-5-23 23:29:44)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:33)
+                        ☐ setup route.
                 Orgs:
                     SaveOrg:
                         ✔ definition file created. @done (2018-5-23 23:30:01)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:04)
+                        ☐ setup route.
                     SaveOrgML:
                         ✔ definition file created. @done (2018-5-23 23:30:05)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:04)
+                        ☐ setup route.
                     GetOrgs:
                         ✔ definition file created. @done (2018-5-23 23:30:18)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:05)
+                        ☐ setup route.
                 QSets:
                     SaveQSet:
                         ✔ definition file created. @done (2018-5-23 23:30:29)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:06)
+                        ☐ setup route.
                     SaveQSetML:
                         ✔ definition file created. @done (2018-5-23 23:30:35)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:07)
+                        ☐ setup route.
                     GetQSets:
                         ✔ definition file created. @done (2018-5-23 23:30:43)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:08)
+                        ☐ setup route.
                 QSlides:
                     SaveQSlide:
                         ✔ definition file created. @done (2018-5-23 23:31:00)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:15)
+                        ☐ setup route.
                     SaveQSlideML:
                         ✔ definition file created. @done (2018-5-23 23:31:05)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:16)
+                        ☐ setup route.
                     GetQSlides:
                         ✔ definition file created. @done (2018-5-23 23:31:13)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:17)
+                        ☐ setup route.
                 QSlideItems:
                     SaveQSlideItem:
                         ✔ definition file created. @done (2018-5-23 23:31:24)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:18)
+                        ☐ setup route.
                     SaveQSlideItemML:
                         ✔ definition file created. @done (2018-5-23 23:31:34)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:19)
+                        ☐ setup route.
                     GetQSlideItems:
                         ✔ definition file created. @done (2018-5-23 23:31:40)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:19)
+                        ☐ setup route.
                 Device and Device Types:
                     SaveDevice:
                         ✔ definition file created. @done (2018-5-23 23:36:32)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:16)
+                        ☐ setup route.
                     SaveDeviceML:
                         ✔ definition file created. @done (2018-5-23 23:37:29)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:18)
+                        ☐ setup route.
                     GetDevices:
                         ✔ definition file created. @done (2018-5-23 23:37:51)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:18)
+                        ☐ setup route.
                     GetDeviceTypes:
                         ✔ definition file created. @done (2018-5-23 23:49:15)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:19)
+                        ☐ setup route.
                 Votes:
                     SaveVote:
                         ✔ definition file created. @done (2018-5-23 23:32:39)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:41)
+                        ☐ setup route.
                 Reports:
                     GetRawVotes:
                         ✔ definition file created. @done (2018-5-23 23:33:05)
                         ✔ wrapper code updated. @done (2018-5-24 00:04:05)
+                        ☐ setup route.
                     GetVoteSummaries:
                         ✔ definition file created. @done (2018-5-23 23:33:06)
                         ✔ wrapper code updated. @done (2018-5-24 00:04:06)
+                        ☐ setup route.
             Core Module:
                 nlib-core-js:
                     ✔ Add cookie2obj method. @done (2018-5-23 17:20:13)
                     ✔ Add obj2cookie method. @done (2018-5-23 17:20:14)
+                mssql-db.js:
+                    ✔ Update code to auto search definition file in sub directory. @done (2018-5-24 00:33:53)
                 rater-web-secure.js:
                     ☐ 
                     ☐ 
