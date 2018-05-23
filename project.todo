@@ -1281,16 +1281,16 @@ My Choice Rater v2.0:
                     SaveVote:
                         ✔ definition file created. @done (2018-5-23 23:32:39)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:41)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:17:54)
                 Reports:
                     GetRawVotes:
                         ✔ definition file created. @done (2018-5-23 23:33:05)
                         ✔ wrapper code updated. @done (2018-5-24 00:04:05)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:17:56)
                     GetVoteSummaries:
                         ✔ definition file created. @done (2018-5-23 23:33:06)
                         ✔ wrapper code updated. @done (2018-5-24 00:04:06)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:17:56)
             Core Module:
                 nlib-core-js:
                     ✔ Add cookie2obj method. @done (2018-5-23 17:20:13)
