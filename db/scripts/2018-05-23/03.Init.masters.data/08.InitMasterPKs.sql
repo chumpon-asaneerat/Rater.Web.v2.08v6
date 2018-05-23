@@ -42,3 +42,7 @@ BEGIN
 END
 
 GO
+
+EXEC InitMasterPKs;
+
+GO

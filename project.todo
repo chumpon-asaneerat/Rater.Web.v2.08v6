@@ -897,6 +897,15 @@ My Choice Rater v2.0:
                     ✔ LimitUnitML (TABLE). @done (2018-5-23 19:01:50)
                     ✔ LimitUnitView (VIEW). @done (2018-5-23 19:02:00)
                     ✔ LimitUnitMLView (VIEW). @done (2018-5-23 19:02:00)
+                License Types:
+                    ✔ LicenseType (TABLE). @done (2018-5-23 19:24:29)
+                    ✔ LicenseTypeML (TABLE). @done (2018-5-23 19:24:30)
+                    ✔ LicenseTypeView (VIEW). @done (2018-5-23 19:24:30)
+                    ✔ LicenseTypeMLView (VIEW). @done (2018-5-23 19:24:31)
+                License Features and License:
+                    ✔ LicenseFeature (TABLE). @done (2018-5-23 19:26:22)
+                    ✔ LicenseFeatureMLView (VIEW). @done (2018-5-23 19:26:37)
+                    ✔ LicenseMLView (VIEW). @done (2018-5-23 19:27:31)
             Stored Procedures and Functions:
                 Error Message:
                     ✔ InitErrorMessages (SP CREATE). @done (2018-5-23 18:47:18)
@@ -914,6 +923,14 @@ My Choice Rater v2.0:
                     ✔ SaveLimitUnit (SP). @done (2018-5-23 19:05:48)
                     ✔ SaveLimitUnitML (SP). @done (2018-5-23 19:05:48)
                     ✔ GetLimitUnits (SP). @done (2018-5-23 19:05:49)
+                License Types:
+                    ✔ SaveLicenseType (SP). @done (2018-5-23 19:32:25)
+                    ✔ SaveLicenseTypeML (SP). @done (2018-5-23 19:32:26)
+                    ✔ GetLicenseTypes (SP). @done (2018-5-23 19:32:27)
+                License Features and License:
+                    ✔ SaveLicenseFeature (SP). @done (2018-5-23 19:33:53)
+                    ✔ GetLicenseFeatures (SP). @done (2018-5-23 19:33:54)
+                    ✔ GetLicenses (SP). @done (2018-5-23 19:34:08)
         Database Document Updated:
             Server Update History:
                 ☐ Add server-update.todo to keep track generate script file status.
@@ -922,6 +939,9 @@ My Choice Rater v2.0:
                 ✔ InitMemberTypes (SP). @done (2018-5-23 19:13:44)
                 ✔ InitPeriodUnits (SP). @done (2018-5-23 19:16:16)
                 ✔ InitLimitUnits (SP). @done (2018-5-23 19:16:17)
+                ✔ InitLicenseTypes (SP). @done (2018-5-23 19:36:22)
+                ✔ InitLicenseFeatures (SP). @done (2018-5-23 19:37:47)
+                ✔ InitMasterPKs (SP). @done (2018-5-23 19:19:35)
                 ☐ InitErrorMessages (SP ALTER).
         Database Document Updated:
             Error Code:
