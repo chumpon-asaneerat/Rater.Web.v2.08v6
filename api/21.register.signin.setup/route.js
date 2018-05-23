@@ -13,9 +13,17 @@ const raterdb = require(path.join(rootPath, 'lib', 'rater-web-db'));
 // ================================================================
 // [==== Resiger/Sign In ====]
 // ================================================================
-function __RegisterCustomer(req, res) {
+function __Register(req, res) {
     raterdb.CallSp(req, res, function (req, res, reqModel) {
-        raterdb.RegisterCustomer(reqModel.data, function (dbResult) {
+        raterdb.Register(reqModel.data, function (dbResult) {
+            nlib.sendJson(req, res, dbResult);
+        });
+    });
+};
+
+function __CheckUsers(req, res) {
+    raterdb.CallSp(req, res, function (req, res, reqModel) {
+        raterdb.CheckUsers(reqModel.data, function (dbResult) {
             nlib.sendJson(req, res, dbResult);
         });
     });
@@ -28,7 +36,8 @@ function __RegisterCustomer(req, res) {
  */
 function init_routes(app) {
     // register-signin.
-    app.all('/api/edl/register', __RegisterCustomer); // OK.
+    app.all('/api/edl/register', __Register); // OK.
+    app.all('/api/edl/users', __CheckUsers); // OK.
 };
 
 exports.init_routes = init_routes;

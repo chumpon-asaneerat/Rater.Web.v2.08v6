@@ -1043,6 +1043,7 @@ My Choice Rater v2.0:
                     ✔ GetRawVotes (SP). @done (2018-5-23 23:05:21)
                 Register-SignIn-Setup:
                     ✔ Register (SP). @done (2018-5-24 04:04:30)
+                    ✔ CheckUsers (SP). @done (2018-5-24 04:23:44)
         Database Document Updated:
             Server Update History:
                 ☐ Add server-update.todo to keep track generate script file status.
@@ -1301,6 +1302,10 @@ My Choice Rater v2.0:
                         ✔ definition file created. @done (2018-5-24 04:06:03)
                         ✔ wrapper code updated. @done (2018-5-24 04:10:46)
                         ✔ setup route. @done (2018-5-24 04:10:47)
+                    CheckUsers:
+                        ✔ definition file created. @done (2018-5-24 04:23:55)
+                        ✔ wrapper code updated. @done (2018-5-24 04:24:38)
+                        ✔ setup route. @done (2018-5-24 04:27:25)
             Core Module:
                 nlib-core-js:
                     ✔ Add cookie2obj method. @done (2018-5-23 17:20:13)
