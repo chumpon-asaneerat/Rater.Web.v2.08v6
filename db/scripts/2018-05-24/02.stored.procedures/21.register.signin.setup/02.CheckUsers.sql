@@ -37,16 +37,7 @@ BEGIN
     BEGIN TRY
 		SELECT A.langId
 			 , A.customerId
-			 , A.memberId
-			 , A.MemberType
-             , A.IsEDLUser
-			 , A.PrefixEN
-			 , A.FirstNameEN
-			 , A.LastNameEN
              , A.FullNameEN
-			 , A.PrefixNative
-			 , A.FirstNameNative
-			 , A.LastNameNative
              , A.FullNameNative
 			 , B.CustomerNameEN
 			 , B.CustomerNameNative
