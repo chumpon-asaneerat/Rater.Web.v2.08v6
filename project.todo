@@ -1217,27 +1217,27 @@ My Choice Rater v2.0:
                 Device and Device Types:
                     SaveDevice:
                         ✔ definition file created. @done (2018-5-23 23:36:32)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-24 00:03:16)
                     SaveDeviceML:
                         ✔ definition file created. @done (2018-5-23 23:37:29)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-24 00:03:18)
                     GetDevices:
                         ✔ definition file created. @done (2018-5-23 23:37:51)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-24 00:03:18)
                     GetDeviceTypes:
                         ✔ definition file created. @done (2018-5-23 23:49:15)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-24 00:03:19)
                 Votes:
                     SaveVote:
                         ✔ definition file created. @done (2018-5-23 23:32:39)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-24 00:03:41)
                 Reports:
                     GetRawVotes:
                         ✔ definition file created. @done (2018-5-23 23:33:05)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-24 00:04:05)
                     GetVoteSummaries:
                         ✔ definition file created. @done (2018-5-23 23:33:06)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-24 00:04:06)
             Core Module:
                 nlib-core-js:
                     ✔ Add cookie2obj method. @done (2018-5-23 17:20:13)
