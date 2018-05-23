@@ -875,24 +875,58 @@ My Choice Rater v2.0:
                     ✔ EnableLanguage (SP). @done (2018-5-22 05:35:39)
                     ✔ GetLanguages (SP). @done (2018-5-22 05:35:55)
                 Init Stored Procedures:
-                    ☐ InitErrorMessages (SP) Add New Error Code.
+                    ✔ InitErrorMessages (SP) Add New Error Code. @done (2018-5-23 17:16:29)
             Database Document Updated:
                 Error Code:
-                    ☐ Update Error Code in Excel file.
+                    ✔ Update Error Code in Excel file. @done (2018-5-23 17:16:30)
                 Server Update History:
-                    ☐ Add server-update.todo to keep track generate script file status.
+                    ✔ Add server-update.todo to keep track generate script file status. @done (2018-5-23 17:16:30)
             Node Server:
                 Build Scripts:
                     Gulp Tasks:
                         ✔ db-script-2018-05-22 (generate db script). @done (2018-5-22 01:11:36)
                 Node Modules:
                     ✔ Add express-fingerprint. @done (2018-5-22 06:18:16)
-                Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                    Misc:
-                        XXX:
-                            ☐ definition file created.
-                            ☐ wrapper code updated.
     Update on [2018-05-23]:
+        Database Create Scripts:
+            Tables and Views:
+            Stored Procedures and Functions:
+        Database Document Updated:
+            Server Update History:
+                ☐ Add server-update.todo to keep track generate script file status.
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-21 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                XX:
+                    YY:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+            Core Module:
+                nlib-core-js:
+                    ✔ Add cookie2obj method. @done (2018-5-23 17:20:13)
+                    ✔ Add obj2cookie method. @done (2018-5-23 17:20:14)
+        Clients:
+            Third Parties:
+                XXX:
+                    ☐ add to public/dist and setup route.
+                    ☐ fixed example (demo) reference.
+            Core Libraries:
+                api.js:
+                    ☐ 
+                service.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+    Update on [2018-05-24]:
         Database Create Scripts:
             Tables and Views:
                 ☐ ClientSession (TABLE).                
@@ -914,7 +948,7 @@ My Choice Rater v2.0:
                 XXX:
                     YYY:
                         ☐ definition file created.
-                        ☐ wrapper code updated.
+                        ☐ wrapper code updated.            
             Unit Test Scripts for databse:
                 MemberTypes:
                     GetMemberTypes:

@@ -11,7 +11,7 @@ const rootPath = process.env['ROOT_PATHS'];
  * 
  * @param {express} app 
  */
-function init_routes(app) {
+function init_routes(app) {    
     // Generalized Error Handling.
     // Using the wildcard '*' in our route, we can create a route to catch every 
     // request to a route we have not defined elsewhere.
@@ -51,6 +51,7 @@ function init_routes(app) {
             // If shouldRedirect is not defined in our error, sends our original err data.
             res.status(err.statusCode).send(err.message);
         }
-    });};
+    });
+};
 
 exports.init_routes = init_routes;
