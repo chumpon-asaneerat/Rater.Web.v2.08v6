@@ -1033,6 +1033,11 @@ My Choice Rater v2.0:
                 Votes:
                     ✔ SaveVote (SP). @done (2018-5-23 20:47:20)
                 Reports:
+                    ✔ __GenerateSubOrgInClause (SP). @done (2018-5-23 23:04:45)
+                    ✔ GenerateSubOrgInClause (SP). @done (2018-5-23 23:04:59)
+                    ✔ __BuildTotalVoteCountQuery (SP). @done (2018-5-23 23:05:10)
+                    ✔ GetVoteSummaries (SP). @done (2018-5-23 23:05:20)
+                    ✔ GetRawVotes (SP). @done (2018-5-23 23:05:21)
         Database Document Updated:
             Server Update History:
                 ☐ Add server-update.todo to keep track generate script file status.
