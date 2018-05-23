@@ -153,8 +153,6 @@ BEGIN
     EXEC SaveErrorMsg 1213, N'Org Id cannot be null or empty string.'
     EXEC SaveErrorMsg 1214, N'No Org match Org Id in specificed Customer Id.'
     EXEC SaveErrorMsg 1215, N'Org Name (ML) already exists.'
-    -- DEVICES.
-
     -- QSETS.
     EXEC SaveErrorMsg 1401, N'Customer Id cannot be null or empty string.'
     EXEC SaveErrorMsg 1402, N'Customer Id is not found.'
@@ -174,7 +172,6 @@ BEGIN
     EXEC SaveErrorMsg 1416, N'Description (default) cannot be null or empty string.'
     EXEC SaveErrorMsg 1417, N'Description (default) already exists.'
     EXEC SaveErrorMsg 1418, N'Description (ML) cannot be null or empty string.'
-
     -- QSLIDES.
     EXEC SaveErrorMsg 1501, N'Customer Id cannot be null or empty string.'
     EXEC SaveErrorMsg 1502, N'Question Set Id cannot be null or empty string.'
@@ -192,7 +189,6 @@ BEGIN
     EXEC SaveErrorMsg 1514, N'No QSlide match QSetId and QSeq.'
     EXEC SaveErrorMsg 1515, N'Question Text (ML) cannot be null or empty string.'
     EXEC SaveErrorMsg 1516, N'Question Text (ML) already exists.'
-
     -- QSLIDEITEMS.
     EXEC SaveErrorMsg 1601, N'Customer Id cannot be null or empty string.'
     EXEC SaveErrorMsg 1602, N'Question Set Id cannot be null or empty string.'
@@ -214,7 +210,6 @@ BEGIN
     EXEC SaveErrorMsg 1618, N'No QSlideItem match QSetId, QSeq and QSSeq.'
     EXEC SaveErrorMsg 1619, N'Question Item Text (ML) cannot be null or empty string.'
     EXEC SaveErrorMsg 1620, N'Question Item Text (ML) already exists.'
-
     -- VOTES.
     EXEC SaveErrorMsg 1701, N'Customer Id cannot be null or empty string.'
     EXEC SaveErrorMsg 1702, N'Customer Id not found.'
@@ -224,28 +219,26 @@ BEGIN
     EXEC SaveErrorMsg 1706, N'Org Id not found.'
     EXEC SaveErrorMsg 1707, N'QSet Id cannot be null or empty string.'
     EXEC SaveErrorMsg 1708, N'QSet Id not found.'
-
     -- REGISTER CUSTOMER.
     EXEC SaveErrorMsg 1801, N'CustomerName cannot be null or empty string.'
     EXEC SaveErrorMsg 1802, N'UserName and Password cannot be null or empty string.'
-
     -- SIGNIN.
-    EXEC SaveErrorMsg 1901, N'Reserved not exist.'
-
+    EXEC SaveErrorMsg 1901, N'Customer Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 1902, N'User Name cannot be null or empty string.'
+    EXEC SaveErrorMsg 1903, N'Password cannot be null or empty string.'
+    EXEC SaveErrorMsg 1904, N'Cannot found User that match information.'
     -- GET VOTE SUMMARIES.
     EXEC SaveErrorMsg 2001, N'CustomerId cannot be null or empty string.'
     EXEC SaveErrorMsg 2002, N'QSetId cannot be null or empty string.'
     EXEC SaveErrorMsg 2003, N'QSeq cannot be null.'
     EXEC SaveErrorMsg 2004, N'The default OrgId not found.'
     EXEC SaveErrorMsg 2005, N'The BranchId not found.'
-
     -- GET RAW VOTES
     EXEC SaveErrorMsg 2101, N'CustomerId cannot be null or empty string.'
     EXEC SaveErrorMsg 2102, N'QSetId cannot be null or empty string.'
     EXEC SaveErrorMsg 2103, N'QSeq cannot be null or less than 1.'
     EXEC SaveErrorMsg 2104, N'Begin Date and End Date cannot be null.'
     EXEC SaveErrorMsg 2105, N'LangId Is Null Or Empty String.'
-
     -- ERROR MESSAGES
     EXEC SaveErrorMsg 2201, N'Error Code cannot be null or empty string.'
     EXEC SaveErrorMsg 2202, N'Language Id cannot be null or empty string.'

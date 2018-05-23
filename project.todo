@@ -961,6 +961,8 @@ My Choice Rater v2.0:
                     ✔ DeviceMLView (VIEW). @done (2018-5-23 21:26:46)
                 Votes:
                     ✔ Vote (TABLE). @done (2018-5-23 20:46:49)
+                Register-SignIn-Setup:
+                    ✔ LogInView (VIEW). @done (2018-5-24 04:50:36)
             Stored Procedures and Functions:
                 Error Message:
                     ✔ InitErrorMessages (SP CREATE). @done (2018-5-23 18:47:18)
@@ -1044,6 +1046,7 @@ My Choice Rater v2.0:
                 Register-SignIn-Setup:
                     ✔ Register (SP). @done (2018-5-24 04:04:30)
                     ✔ CheckUsers (SP). @done (2018-5-24 04:23:44)
+                    ✔ SignIn (SP). @done (2018-5-24 05:12:31)
         Database Document Updated:
             Server Update History:
                 ☐ Add server-update.todo to keep track generate script file status.
@@ -1306,6 +1309,10 @@ My Choice Rater v2.0:
                         ✔ definition file created. @done (2018-5-24 04:23:55)
                         ✔ wrapper code updated. @done (2018-5-24 04:24:38)
                         ✔ setup route. @done (2018-5-24 04:27:25)
+                    SignIn:
+                        ✔ definition file created. @done (2018-5-24 05:13:06)
+                        ✔ wrapper code updated. @done (2018-5-24 05:13:16)
+                        ✔ setup route. @done (2018-5-24 05:14:18)
             Core Module:
                 nlib-core-js:
                     ✔ Add cookie2obj method. @done (2018-5-23 17:20:13)
