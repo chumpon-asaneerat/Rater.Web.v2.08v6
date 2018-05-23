@@ -1002,6 +1002,8 @@ My Choice Rater v2.0:
                     ✔ SaveCustomer (SP). @done (2018-5-23 20:23:37)
                     ✔ SaveCustomerML (SP). @done (2018-5-23 20:23:38)
                     ✔ GetCustomers (SP). @done (2018-5-23 20:23:38)
+                    ✔ DeleteCustomer (SP). @done (2018-5-24 03:34:28)
+                    ✔ DeleteCustomers (SP). @done (2018-5-24 03:34:36)
                 MemberInfo:
                     ✔ SaveMemberInfo (SP). @done (2018-5-23 20:24:21)
                     ✔ SaveMemberInfoML (SP). @done (2018-5-23 20:24:21)
@@ -1052,6 +1054,7 @@ My Choice Rater v2.0:
                 ✔ InitMasterPKs (SP). @done (2018-5-23 19:19:35)
                 ✔ InitDeviceTypes (SP). @done (2018-5-23 22:09:40)
                 ✔ InitDefaultUser (SP). @done (2018-5-23 19:51:32)
+                ✔ InitSample (SP). @done (2018-5-24 03:36:30)
                 ☐ InitErrorMessages (SP ALTER).
         Database Document Updated:
             Error Code:
