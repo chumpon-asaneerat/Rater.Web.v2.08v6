@@ -256,6 +256,20 @@ BEGIN
     EXEC SaveErrorMsg 2301, N'Client Id cannot be null or empty string.'
     EXEC SaveErrorMsg 2302, N'Client Init Date cannot be null.'
     EXEC SaveErrorMsg 2303, N'Client is already registered.'
+
+    -- DEVICES
+    EXEC SaveErrorMsg 2401, N'Customer Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 2402, N'Device Type Id not found.'
+    EXEC SaveErrorMsg 2403, N'Device Name (default) cannot be null or empty string.'
+    EXEC SaveErrorMsg 2404, N'Customer Id is not found.'
+    EXEC SaveErrorMsg 2405, N'Device Id is not found.'
+    EXEC SaveErrorMsg 2406, N'Device Name (default) already exists.'
+    EXEC SaveErrorMsg 2407, N'Customer Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 2408, N'Lang Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 2409, N'Lang Id not exist.'
+    EXEC SaveErrorMsg 2410, N'Device Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 2411, N'Device Id is not found.'
+    EXEC SaveErrorMsg 2412, N'Device Name (ML) is already exists.'
 END
 
 GO

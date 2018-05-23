@@ -1027,7 +1027,9 @@ My Choice Rater v2.0:
                     ✔ SaveQSlideItemML (SP). @done (2018-5-23 20:29:51)
                     ✔ GetQSlideItems (SP). @done (2018-5-23 20:30:06)
                 Devices:
-                    ☐ 
+                    ✔ SaveDevice (SP). @done (2018-5-23 22:30:05)
+                    ✔ SaveDeviceML (SP). @done (2018-5-23 22:55:08)
+                    ✔ GetDevices (SP). @done (2018-5-23 22:55:17)
                 Votes:
                     ✔ SaveVote (SP). @done (2018-5-23 20:47:20)
                 Reports:
