@@ -1030,6 +1030,7 @@ My Choice Rater v2.0:
                     ✔ SaveDevice (SP). @done (2018-5-23 22:30:05)
                     ✔ SaveDeviceML (SP). @done (2018-5-23 22:55:08)
                     ✔ GetDevices (SP). @done (2018-5-23 22:55:17)
+                    ✔ GetDeviceTypes (SP). @done (2018-5-23 23:47:34)
                 Votes:
                     ✔ SaveVote (SP). @done (2018-5-23 20:47:20)
                 Reports:
@@ -1060,9 +1061,182 @@ My Choice Rater v2.0:
                 Gulp Tasks:
                     ☐ db-script-2018-05-23 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                XX:
-                    YY:
-                        ☐ definition file created.
+                Utilities:
+                    GetRandomHexCode:
+                        ✔ definition file created. @done (2018-5-23 23:20:52)
+                        ☐ wrapper code updated.
+                Languages and Error Messages:
+                    SaveErrorMsg:
+                        ✔ definition file created. @done (2018-5-23 23:23:10)
+                        ☐ wrapper code updated.
+                    SaveErrorMsgML:
+                        ✔ definition file created. @done (2018-5-23 23:23:11)
+                        ☐ wrapper code updated.
+                    GetErrorMsgs:
+                        ✔ definition file created. @done (2018-5-23 23:22:52)
+                        ☐ wrapper code updated.
+                    GetErrorMsg:
+                        ✔ definition file created. @done (2018-5-23 23:40:15)
+                        ☐ wrapper code updated.
+                    SaveLanguage:
+                        ✔ definition file created. @done (2018-5-23 23:23:31)
+                        ☐ wrapper code updated.                        
+                    DisableLanguage:
+                        ✔ definition file created. @done (2018-5-23 23:21:46)
+                        ☐ wrapper code updated.
+                    EnableLanguage:
+                        ✔ definition file created. @done (2018-5-23 23:21:47)
+                        ☐ wrapper code updated.
+                    GetLanguages:
+                        ✔ definition file created. @done (2018-5-23 23:23:34)
+                        ☐ wrapper code updated.
+                Member Types:
+                    GetMemberTypes:
+                        ✔ definition file created. @done (2018-5-23 23:24:16)
+                        ☐ wrapper code updated.
+                Period Units:
+                    SavePeriodUnit:
+                        ✔ definition file created. @done (2018-5-23 23:25:13)
+                        ☐ wrapper code updated.
+                    SavePeriodUnitML:
+                        ✔ definition file created. @done (2018-5-23 23:25:18)
+                        ☐ wrapper code updated.
+                    GetPeriodUnits:
+                        ✔ definition file created. @done (2018-5-23 23:25:19)
+                        ☐ wrapper code updated.
+                Limit Units:
+                    SaveLimitUnit:
+                        ✔ definition file created. @done (2018-5-23 23:26:04)
+                        ☐ wrapper code updated.
+                    SaveLimitUnitML:
+                        ✔ definition file created. @done (2018-5-23 23:26:06)
+                        ☐ wrapper code updated.
+                    GetLimitUnits:
+                        ✔ definition file created. @done (2018-5-23 23:26:07)
+                        ☐ wrapper code updated.
+                License Types:
+                    SaveLicenseType:
+                        ✔ definition file created. @done (2018-5-23 23:27:21)
+                        ☐ wrapper code updated.
+                    SaveLicenseTypeML:
+                        ✔ definition file created. @done (2018-5-23 23:27:24)
+                        ☐ wrapper code updated.
+                    GetLicenseTypes:
+                        ✔ definition file created. @done (2018-5-23 23:27:25)
+                        ☐ wrapper code updated.
+                License Features:
+                    SaveLicenseFeature:
+                        ✔ definition file created. @done (2018-5-23 23:27:31)
+                        ☐ wrapper code updated.
+                    GetLicenseFeatures:
+                        ✔ definition file created. @done (2018-5-23 23:27:32)
+                        ☐ wrapper code updated.
+                    GetLicenses:
+                        ✔ definition file created. @done (2018-5-23 23:27:33)
+                        ☐ wrapper code updated.
+                UserInfo:
+                    SaveUserInfo:
+                        ✔ definition file created. @done (2018-5-23 23:28:06)
+                        ☐ wrapper code updated.
+                    SaveUserInfoML:
+                        ✔ definition file created. @done (2018-5-23 23:28:14)
+                        ☐ wrapper code updated.
+                    GetUserInfos:
+                        ✔ definition file created. @done (2018-5-23 23:28:15)
+                        ☐ wrapper code updated.
+                Customers:
+                    SaveCustomer:
+                        ✔ definition file created. @done (2018-5-23 23:28:35)
+                        ☐ wrapper code updated.
+                    SaveCustomerML:
+                        ✔ definition file created. @done (2018-5-23 23:28:37)
+                        ☐ wrapper code updated.
+                    GetCustomers:
+                        ✔ definition file created. @done (2018-5-23 23:28:42)
+                        ☐ wrapper code updated.
+                MemberInfo:
+                    SaveMemberInfo:
+                        ✔ definition file created. @done (2018-5-23 23:29:09)
+                        ☐ wrapper code updated.
+                    SaveMemberInfoML:
+                        ✔ definition file created. @done (2018-5-23 23:29:10)
+                        ☐ wrapper code updated.
+                    GetMemberInfos:
+                        ✔ definition file created. @done (2018-5-23 23:29:11)
+                        ☐ wrapper code updated.
+                Branchs:
+                    SaveBranch:
+                        ✔ definition file created. @done (2018-5-23 23:29:36)
+                        ☐ wrapper code updated.
+                    SaveBranchML:
+                        ✔ definition file created. @done (2018-5-23 23:29:41)
+                        ☐ wrapper code updated.
+                    GetBranchs:
+                        ✔ definition file created. @done (2018-5-23 23:29:44)
+                        ☐ wrapper code updated.
+                Orgs:
+                    SaveOrg:
+                        ✔ definition file created. @done (2018-5-23 23:30:01)
+                        ☐ wrapper code updated.
+                    SaveOrgML:
+                        ✔ definition file created. @done (2018-5-23 23:30:05)
+                        ☐ wrapper code updated.
+                    GetOrgs:
+                        ✔ definition file created. @done (2018-5-23 23:30:18)
+                        ☐ wrapper code updated.
+                QSets:
+                    SaveQSet:
+                        ✔ definition file created. @done (2018-5-23 23:30:29)
+                        ☐ wrapper code updated.
+                    SaveQSetML:
+                        ✔ definition file created. @done (2018-5-23 23:30:35)
+                        ☐ wrapper code updated.
+                    GetQSets:
+                        ✔ definition file created. @done (2018-5-23 23:30:43)
+                        ☐ wrapper code updated.
+                QSlides:
+                    SaveQSlide:
+                        ✔ definition file created. @done (2018-5-23 23:31:00)
+                        ☐ wrapper code updated.
+                    SaveQSlideML:
+                        ✔ definition file created. @done (2018-5-23 23:31:05)
+                        ☐ wrapper code updated.
+                    GetQSlides:
+                        ✔ definition file created. @done (2018-5-23 23:31:13)
+                        ☐ wrapper code updated.
+                QSlideItems:
+                    SaveQSlideItem:
+                        ✔ definition file created. @done (2018-5-23 23:31:24)
+                        ☐ wrapper code updated.
+                    SaveQSlideItemML:
+                        ✔ definition file created. @done (2018-5-23 23:31:34)
+                        ☐ wrapper code updated.
+                    GetQSlideItems:
+                        ✔ definition file created. @done (2018-5-23 23:31:40)
+                        ☐ wrapper code updated.
+                Device and Device Types:
+                    SaveDevice:
+                        ✔ definition file created. @done (2018-5-23 23:36:32)
+                        ☐ wrapper code updated.
+                    SaveDeviceML:
+                        ✔ definition file created. @done (2018-5-23 23:37:29)
+                        ☐ wrapper code updated.
+                    GetDevices:
+                        ✔ definition file created. @done (2018-5-23 23:37:51)
+                        ☐ wrapper code updated.
+                    GetDeviceTypes:
+                        ✔ definition file created. @done (2018-5-23 23:49:15)
+                        ☐ wrapper code updated.
+                Votes:
+                    SaveVote:
+                        ✔ definition file created. @done (2018-5-23 23:32:39)
+                        ☐ wrapper code updated.
+                Reports:
+                    GetRawVotes:
+                        ✔ definition file created. @done (2018-5-23 23:33:05)
+                        ☐ wrapper code updated.
+                    GetVoteSummaries:
+                        ✔ definition file created. @done (2018-5-23 23:33:06)
                         ☐ wrapper code updated.
             Core Module:
                 nlib-core-js:

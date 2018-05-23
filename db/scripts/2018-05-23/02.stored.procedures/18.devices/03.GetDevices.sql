@@ -54,7 +54,7 @@ BEGIN
 	   AND OMLV.OrgID = DMLV.OrgId
 	   AND MIMLV.CustomerId = DMLV.CustomerId
 	   AND MIMLV.MemberID = DMLV.MemberID
-	 ORDER BY SortOrder, LangId, CustomerId, BranchId;
+	 ORDER BY DMLV.SortOrder, DMLV.LangId, DMLV.CustomerId, DMLV.DeviceId;
 END
 
 GO
