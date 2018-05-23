@@ -1160,106 +1160,106 @@ My Choice Rater v2.0:
                     SaveUserInfo:
                         ✔ definition file created. @done (2018-5-23 23:28:06)
                         ✔ wrapper code updated. @done (2018-5-23 23:56:39)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:11:49)
                     SaveUserInfoML:
                         ✔ definition file created. @done (2018-5-23 23:28:14)
                         ✔ wrapper code updated. @done (2018-5-23 23:56:40)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:11:50)
                     GetUserInfos:
                         ✔ definition file created. @done (2018-5-23 23:28:15)
                         ✔ wrapper code updated. @done (2018-5-23 23:56:40)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:11:51)
                 Customers:
                     SaveCustomer:
                         ✔ definition file created. @done (2018-5-23 23:28:35)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:27)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:12:22)
                     SaveCustomerML:
                         ✔ definition file created. @done (2018-5-23 23:28:37)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:28)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:12:23)
                     GetCustomers:
                         ✔ definition file created. @done (2018-5-23 23:28:42)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:28)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:12:23)
                 MemberInfo:
                     SaveMemberInfo:
                         ✔ definition file created. @done (2018-5-23 23:29:09)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:30)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:36)
                     SaveMemberInfoML:
                         ✔ definition file created. @done (2018-5-23 23:29:10)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:30)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:36)
                     GetMemberInfos:
                         ✔ definition file created. @done (2018-5-23 23:29:11)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:31)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:37)
                 Branchs:
                     SaveBranch:
                         ✔ definition file created. @done (2018-5-23 23:29:36)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:32)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:38)
                     SaveBranchML:
                         ✔ definition file created. @done (2018-5-23 23:29:41)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:32)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:39)
                     GetBranchs:
                         ✔ definition file created. @done (2018-5-23 23:29:44)
                         ✔ wrapper code updated. @done (2018-5-23 23:58:33)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:40)
                 Orgs:
                     SaveOrg:
                         ✔ definition file created. @done (2018-5-23 23:30:01)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:04)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:41)
                     SaveOrgML:
                         ✔ definition file created. @done (2018-5-23 23:30:05)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:04)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:42)
                     GetOrgs:
                         ✔ definition file created. @done (2018-5-23 23:30:18)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:05)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:43)
                 QSets:
                     SaveQSet:
                         ✔ definition file created. @done (2018-5-23 23:30:29)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:06)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:44)
                     SaveQSetML:
                         ✔ definition file created. @done (2018-5-23 23:30:35)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:07)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:45)
                     GetQSets:
                         ✔ definition file created. @done (2018-5-23 23:30:43)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:08)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:45)
                 QSlides:
                     SaveQSlide:
                         ✔ definition file created. @done (2018-5-23 23:31:00)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:15)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:47)
                     SaveQSlideML:
                         ✔ definition file created. @done (2018-5-23 23:31:05)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:16)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:47)
                     GetQSlides:
                         ✔ definition file created. @done (2018-5-23 23:31:13)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:17)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:48)
                 QSlideItems:
                     SaveQSlideItem:
                         ✔ definition file created. @done (2018-5-23 23:31:24)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:18)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:50)
                     SaveQSlideItemML:
                         ✔ definition file created. @done (2018-5-23 23:31:34)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:19)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:51)
                     GetQSlideItems:
                         ✔ definition file created. @done (2018-5-23 23:31:40)
                         ✔ wrapper code updated. @done (2018-5-23 23:59:19)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:15:52)
                 Device and Device Types:
                     SaveDevice:
                         ✔ definition file created. @done (2018-5-23 23:36:32)
