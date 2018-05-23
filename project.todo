@@ -880,6 +880,8 @@ My Choice Rater v2.0:
     Update on [2018-05-23]:
         Database Create Scripts:
             Tables and Views:
+                Local Logs:
+                    ✔ LocalLog (TABLE). @done (2018-5-23 19:55:24)
                 MasterPK:
                     ✔ MasterPK (TABLE). @done (2018-5-23 18:27:04)                    
                 Member Types:
@@ -913,9 +915,48 @@ My Choice Rater v2.0:
                     ✔ UserInfoMLView (VIEW). @done (2018-5-23 19:42:29)
                 Customer PKs:
                     ✔ CustomerPK (TABLE). @done (2018-5-23 19:43:06)
+                Customers:
+                    ✔ Customer (TABLE). @done (2018-5-23 20:00:44)
+                    ✔ CustomerML (TABLE). @done (2018-5-23 20:00:45)
+                    ✔ CustomerView (VIEW). @done (2018-5-23 20:00:45)
+                    ✔ CustomerMLView (VIEW). @done (2018-5-23 20:00:46)
+                MemberInfo:
+                    ✔ MemberInfo (TABLE). @done (2018-5-23 20:02:59)
+                    ✔ MemberInfoML (TABLE). @done (2018-5-23 20:03:20)
+                    ✔ MemberInfoView (VIEW). @done (2018-5-23 20:03:43)
+                    ✔ MemberInfoMLView (VIEW). @done (2018-5-23 20:03:57)
+                Branchs:
+                    ✔ Branch (TABLE). @done (2018-5-23 20:01:49)
+                    ✔ BranchML (TABLE). @done (2018-5-23 20:01:49)
+                    ✔ BranchView (VIEW). @done (2018-5-23 20:02:37)
+                    ✔ BranchMLView (VIEW). @done (2018-5-23 20:02:37)
+                Orgs:
+                    ✔ Org (TABLE). @done (2018-5-23 20:04:26)
+                    ✔ OrgML (TABLE). @done (2018-5-23 20:04:35)
+                    ✔ OrgView (VIEW). @done (2018-5-23 20:04:46)
+                    ✔ OrgMLView (VIEW). @done (2018-5-23 20:05:03)
+                QSets:
+                    ✔ QSet (TABLE). @done (2018-5-23 20:16:21)
+                    ✔ QSetML (TABLE). @done (2018-5-23 20:16:31)
+                    ✔ QSetView (VIEW). @done (2018-5-23 20:16:53)
+                    ✔ QSetMLView (VIEW). @done (2018-5-23 20:17:02)
+                QSlides:
+                    ✔ QSlide (TABLE). @done (2018-5-23 20:17:34)
+                    ✔ QSlideML (TABLE). @done (2018-5-23 20:17:44)
+                    ✔ QSlideView (VIEW). @done (2018-5-23 20:18:09)
+                    ✔ QSlideMLView (VIEW). @done (2018-5-23 20:18:21)
+                QSlideItems:
+                    ✔ QSlideItem (TABLE). @done (2018-5-23 20:18:45)
+                    ✔ QSlideItemML (TABLE). @done (2018-5-23 20:19:22)
+                    ✔ QSlideItemView (VIEW). @done (2018-5-23 20:19:25)
+                    ✔ QSlideItemMLView (VIEW). @done (2018-5-23 20:19:36)
             Stored Procedures and Functions:
                 Error Message:
                     ✔ InitErrorMessages (SP CREATE). @done (2018-5-23 18:47:18)
+                Local Logs:
+                    ✔ BeginLog (SP). @done (2018-5-23 19:57:01)
+                    ✔ Log (SP). @done (2018-5-23 19:57:44)
+                    ✔ EndLog (SP). @done (2018-5-23 19:57:47)
                 MasterPK:
                     ✔ SetMasterPK (SP). @done (2018-5-23 18:31:16)
                     ✔ NextMasterPK (SP). @done (2018-5-23 18:31:17)
@@ -946,6 +987,34 @@ My Choice Rater v2.0:
                     ✔ SetCustomerPK (SP). @done (2018-5-23 19:47:45)
                     ✔ NextCustomerPK (SP). @done (2018-5-23 19:48:24)
                     ✔ GetCustomerPK (SP). @done (2018-5-23 19:49:02)
+                Customers:
+                    ☐ SaveCustomer (SP).
+                    ☐ SaveCustomerML (SP).
+                    ☐ GetCustomers (SP).
+                MemberInfo:
+                    ☐ SaveMemberInfo (SP).
+                    ☐ SaveMemberInfoML (SP).
+                    ☐ GetMemberInfos (SP).
+                Branchs:
+                    ☐ SaveBranch (SP).
+                    ☐ SaveBranchML (SP).
+                    ☐ GetBranchs (SP).
+                Orgs:
+                    ☐ SaveOrg (SP).
+                    ☐ SaveOrgML (SP).
+                    ☐ GetOrgs (SP).
+                QSets:
+                    ☐ SaveQSet (SP).
+                    ☐ SaveQSetML (SP).
+                    ☐ GetQSets (SP).
+                QSlides:
+                    ☐ SaveQSlide (SP).
+                    ☐ SaveQSlideML (SP).
+                    ☐ GetQSlides (SP).
+                QSlideItems:
+                    ☐ SaveQSlideItem (SP).
+                    ☐ SaveQSlideItemML (SP).
+                    ☐ GetQSlideItems (SP).
         Database Document Updated:
             Server Update History:
                 ☐ Add server-update.todo to keep track generate script file status.
