@@ -25,7 +25,7 @@ GO
 --exec GetMemberInfos N'TH', N'EDL-C2017060011';            -- for get MemberInfos by CustomerID.
 --exec GetMemberInfos N'TH', N'EDL-C2017060011', N'M00001'; -- for get MemberInfo by CustomerID and MemberId.
 -- =============================================
-ALTER PROCEDURE [dbo].[GetMemberInfos] 
+CREATE PROCEDURE [dbo].[GetMemberInfos] 
 (
   @langId nvarchar(3) = NULL
 , @customerId nvarchar(30) = NULL

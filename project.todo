@@ -988,33 +988,33 @@ My Choice Rater v2.0:
                     ✔ NextCustomerPK (SP). @done (2018-5-23 19:48:24)
                     ✔ GetCustomerPK (SP). @done (2018-5-23 19:49:02)
                 Customers:
-                    ☐ SaveCustomer (SP).
-                    ☐ SaveCustomerML (SP).
-                    ☐ GetCustomers (SP).
+                    ✔ SaveCustomer (SP). @done (2018-5-23 20:23:37)
+                    ✔ SaveCustomerML (SP). @done (2018-5-23 20:23:38)
+                    ✔ GetCustomers (SP). @done (2018-5-23 20:23:38)
                 MemberInfo:
-                    ☐ SaveMemberInfo (SP).
-                    ☐ SaveMemberInfoML (SP).
-                    ☐ GetMemberInfos (SP).
+                    ✔ SaveMemberInfo (SP). @done (2018-5-23 20:24:21)
+                    ✔ SaveMemberInfoML (SP). @done (2018-5-23 20:24:21)
+                    ✔ GetMemberInfos (SP). @done (2018-5-23 20:24:21)
                 Branchs:
-                    ☐ SaveBranch (SP).
-                    ☐ SaveBranchML (SP).
-                    ☐ GetBranchs (SP).
+                    ✔ SaveBranch (SP). @done (2018-5-23 20:25:01)
+                    ✔ SaveBranchML (SP). @done (2018-5-23 20:25:28)
+                    ✔ GetBranchs (SP). @done (2018-5-23 20:25:28)
                 Orgs:
-                    ☐ SaveOrg (SP).
-                    ☐ SaveOrgML (SP).
-                    ☐ GetOrgs (SP).
+                    ✔ SaveOrg (SP). @done (2018-5-23 20:26:20)
+                    ✔ SaveOrgML (SP). @done (2018-5-23 20:26:20)
+                    ✔ GetOrgs (SP). @done (2018-5-23 20:26:20)
                 QSets:
-                    ☐ SaveQSet (SP).
-                    ☐ SaveQSetML (SP).
-                    ☐ GetQSets (SP).
+                    ✔ SaveQSet (SP). @done (2018-5-23 20:29:08)
+                    ✔ SaveQSetML (SP). @done (2018-5-23 20:29:08)
+                    ✔ GetQSets (SP). @done (2018-5-23 20:29:09)
                 QSlides:
-                    ☐ SaveQSlide (SP).
-                    ☐ SaveQSlideML (SP).
-                    ☐ GetQSlides (SP).
+                    ✔ SaveQSlide (SP). @done (2018-5-23 20:29:10)
+                    ✔ SaveQSlideML (SP). @done (2018-5-23 20:29:10)
+                    ✔ GetQSlides (SP). @done (2018-5-23 20:29:11)
                 QSlideItems:
-                    ☐ SaveQSlideItem (SP).
-                    ☐ SaveQSlideItemML (SP).
-                    ☐ GetQSlideItems (SP).
+                    ✔ SaveQSlideItem (SP). @done (2018-5-23 20:29:50)
+                    ✔ SaveQSlideItemML (SP). @done (2018-5-23 20:29:51)
+                    ✔ GetQSlideItems (SP). @done (2018-5-23 20:30:06)
         Database Document Updated:
             Server Update History:
                 ☐ Add server-update.todo to keep track generate script file status.

@@ -31,7 +31,7 @@ GO
 --exec GetOrgs N'EN', N'EDL-C2017060008', N'B0001'; -- Gets EN language in Branch 1.
 --exec GetOrgs N'TH', N'EDL-C2017060008', N'B0002'; -- Gets TH language in Branch 2.
 -- =============================================
-ALTER PROCEDURE [dbo].[GetOrgs] 
+CREATE PROCEDURE [dbo].[GetOrgs] 
 (
   @langId nvarchar(3) = NULL
 , @customerId nvarchar(30) = NULL

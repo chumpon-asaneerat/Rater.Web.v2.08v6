@@ -22,7 +22,7 @@ GO
 --exec GetCustomers N'TH';                     -- for get customers for TH language.
 --exec GetCustomers N'TH', N'EDL-C2017060011'; -- for get customer for TH language by Customer Id.
 -- =============================================
-ALTER PROCEDURE [dbo].[GetCustomers] 
+CREATE PROCEDURE [dbo].[GetCustomers] 
 (
   @langId nvarchar(3) = NULL
 , @customerId nvarchar(30) = NULL
