@@ -1059,7 +1059,7 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-23 (generate db script).
+                    ☐ db-script-2018-05-24 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Utilities:
                     GetRandomHexCode:
@@ -1264,19 +1264,19 @@ My Choice Rater v2.0:
                     SaveDevice:
                         ✔ definition file created. @done (2018-5-23 23:36:32)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:16)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:21:19)
                     SaveDeviceML:
                         ✔ definition file created. @done (2018-5-23 23:37:29)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:18)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:21:19)
                     GetDevices:
                         ✔ definition file created. @done (2018-5-23 23:37:51)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:18)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:21:21)
                     GetDeviceTypes:
                         ✔ definition file created. @done (2018-5-23 23:49:15)
                         ✔ wrapper code updated. @done (2018-5-24 00:03:19)
-                        ☐ setup route.
+                        ✔ setup route. @done (2018-5-24 01:21:22)
                 Votes:
                     SaveVote:
                         ✔ definition file created. @done (2018-5-23 23:32:39)
