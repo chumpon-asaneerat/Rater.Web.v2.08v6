@@ -1137,83 +1137,83 @@ My Choice Rater v2.0:
                 UserInfo:
                     SaveUserInfo:
                         ✔ definition file created. @done (2018-5-23 23:28:06)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:56:39)
                     SaveUserInfoML:
                         ✔ definition file created. @done (2018-5-23 23:28:14)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:56:40)
                     GetUserInfos:
                         ✔ definition file created. @done (2018-5-23 23:28:15)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:56:40)
                 Customers:
                     SaveCustomer:
                         ✔ definition file created. @done (2018-5-23 23:28:35)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:27)
                     SaveCustomerML:
                         ✔ definition file created. @done (2018-5-23 23:28:37)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:28)
                     GetCustomers:
                         ✔ definition file created. @done (2018-5-23 23:28:42)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:28)
                 MemberInfo:
                     SaveMemberInfo:
                         ✔ definition file created. @done (2018-5-23 23:29:09)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:30)
                     SaveMemberInfoML:
                         ✔ definition file created. @done (2018-5-23 23:29:10)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:30)
                     GetMemberInfos:
                         ✔ definition file created. @done (2018-5-23 23:29:11)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:31)
                 Branchs:
                     SaveBranch:
                         ✔ definition file created. @done (2018-5-23 23:29:36)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:32)
                     SaveBranchML:
                         ✔ definition file created. @done (2018-5-23 23:29:41)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:32)
                     GetBranchs:
                         ✔ definition file created. @done (2018-5-23 23:29:44)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:58:33)
                 Orgs:
                     SaveOrg:
                         ✔ definition file created. @done (2018-5-23 23:30:01)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:04)
                     SaveOrgML:
                         ✔ definition file created. @done (2018-5-23 23:30:05)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:04)
                     GetOrgs:
                         ✔ definition file created. @done (2018-5-23 23:30:18)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:05)
                 QSets:
                     SaveQSet:
                         ✔ definition file created. @done (2018-5-23 23:30:29)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:06)
                     SaveQSetML:
                         ✔ definition file created. @done (2018-5-23 23:30:35)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:07)
                     GetQSets:
                         ✔ definition file created. @done (2018-5-23 23:30:43)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:08)
                 QSlides:
                     SaveQSlide:
                         ✔ definition file created. @done (2018-5-23 23:31:00)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:15)
                     SaveQSlideML:
                         ✔ definition file created. @done (2018-5-23 23:31:05)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:16)
                     GetQSlides:
                         ✔ definition file created. @done (2018-5-23 23:31:13)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:17)
                 QSlideItems:
                     SaveQSlideItem:
                         ✔ definition file created. @done (2018-5-23 23:31:24)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:18)
                     SaveQSlideItemML:
                         ✔ definition file created. @done (2018-5-23 23:31:34)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:19)
                     GetQSlideItems:
                         ✔ definition file created. @done (2018-5-23 23:31:40)
-                        ☐ wrapper code updated.
+                        ✔ wrapper code updated. @done (2018-5-23 23:59:19)
                 Device and Device Types:
                     SaveDevice:
                         ✔ definition file created. @done (2018-5-23 23:36:32)
