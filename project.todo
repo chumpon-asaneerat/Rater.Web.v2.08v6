@@ -1382,20 +1382,20 @@ My Choice Rater v2.0:
                 edl:
                     admin:
                         home:
-                            ☐ add route.js.
-                            ☐ add index.handlebars.
+                            ✔ add route.js. @done (2018-5-24 17:21:05)
+                            ✔ add index.handlebars. @done (2018-5-24 17:21:05)
                             ✔ add app.js. @done (2018-5-24 17:13:09)
                             ✔ add model.js. @done (2018-5-24 17:13:10)
                     supervisor:
                         home:
-                            ☐ add route.js.
-                            ☐ add index.handlebars.
+                            ✔ add route.js. @done (2018-5-24 17:21:44)
+                            ✔ add index.handlebars. @done (2018-5-24 17:21:45)
                             ✔ add app.js. @done (2018-5-24 17:13:11)
                             ✔ add model.js. @done (2018-5-24 17:13:11)
                     staff:
                         home:
-                            ☐ add route.js.
-                            ☐ add index.handlebars.
+                            ✔ add route.js. @done (2018-5-24 17:22:21)
+                            ✔ add index.handlebars. @done (2018-5-24 17:22:21)
                             ✔ add app.js. @done (2018-5-24 17:13:12)
                             ✔ add model.js. @done (2018-5-24 17:13:13)
         Clients:
