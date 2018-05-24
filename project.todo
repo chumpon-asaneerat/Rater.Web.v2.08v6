@@ -1399,15 +1399,7 @@ My Choice Rater v2.0:
                             ✔ add app.js. @done (2018-5-24 17:13:12)
                             ✔ add model.js. @done (2018-5-24 17:13:13)
         Clients:
-            Third Parties:
-                XXX:
-                    ☐ add to public/dist and setup route.
-                    ☐ fixed example (demo) reference.
             Core Libraries:
-                api.js:
-                    ☐ 
-                service.js:
-                    ☐ 
                 tags.js:
                     common:
                         ✔ add page-content-absolute.tag. @done (2018-5-24 16:55:02)
@@ -1470,6 +1462,10 @@ My Choice Rater v2.0:
                                 ✔ add edl-staff-page-layout.tag. @done (2018-5-24 16:44:41)
                             home:
                                 ✔ add edl-staff-home-dashboard.tag. @done (2018-5-24 16:48:04)
+                api.js:
+                    ☐ 
+                service.js:
+                    ☐ 
     Update on [2018-05-25]:
         Database Create Scripts:
             Tables and Views:
@@ -1504,7 +1500,8 @@ My Choice Rater v2.0:
             Third Parties:
                 AAA X.X.X:
                     ☐ organize files.
-                    ☐ setup route.
+                    ☐ add to public/dist and setup route.
+                    ☐ fixed example (demo) reference.
             Core Libraries:
                 api.js:
                     ☐ xxx

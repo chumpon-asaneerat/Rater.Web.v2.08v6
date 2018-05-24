@@ -6,7 +6,7 @@ const fs = require('fs');
 const rootPath = process.env['ROOT_PATHS'];
 
 const nlib = require(path.join(rootPath, 'lib', 'nlib-core'));
-const rwc = require(path.join(rootPath, 'rater-web-secure'));
+const rwc = require(path.join(rootPath, 'lib', 'rater-web-secure'));
 
 const workPath = path.join(rootPath, 'views', 'edl', 'staff', 'home');
 const baseUrl = '/edl/staff';
@@ -66,6 +66,7 @@ function getJsonModelByLangId(req, res, next) {
  * @param {express} app 
  */
 function init_routes(app) {
+    console.log('    + route:', baseUrl + '/');
     app.get(baseUrl + '/', getIndex);
     app.get(baseUrl + '/js/:fileName', getJSFile);
     app.get(baseUrl + '/css/:fileName', getCSSFile);
