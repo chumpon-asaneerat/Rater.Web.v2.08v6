@@ -1342,10 +1342,10 @@ My Choice Rater v2.0:
                     ☐ 
                 tags.js:
                     common:
-                        ☐ add 
-                        ☐ add 
-                        ☐ add 
-                        ☐ add 
+                        ✔ add page-content-absolute.tag. @done (2018-5-24 16:55:02)
+                        ✔ add page-content-relative.tag. @done (2018-5-24 16:55:14)
+                        ✔ add page-nav-bar.tag. @done (2018-5-24 16:55:22)
+                        ✔ add page-footer.tag. @done (2018-5-24 16:55:31)
                     dev:
                         __layouts:
                             ✔ add dev-page-layout.tag. @done (2018-5-24 16:18:42)
