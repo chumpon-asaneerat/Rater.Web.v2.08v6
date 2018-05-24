@@ -1053,7 +1053,7 @@ My Choice Rater v2.0:
                     ✔ SignIn (SP). @done (2018-5-24 05:12:31)
         Database Document Updated:
             Server Update History:
-                ☐ Add server-update.todo to keep track generate script file status.
+                ✔ Add server-update.todo to keep track generate script file status. @done (2018-5-24 18:33:32)
             Init Stored Procedures:
                 ✔ InitLanguage (SP). @done (2018-5-23 19:11:09)
                 ✔ InitMemberTypes (SP). @done (2018-5-23 19:13:44)
@@ -1065,7 +1065,7 @@ My Choice Rater v2.0:
                 ✔ InitDeviceTypes (SP). @done (2018-5-23 22:09:40)
                 ✔ InitDefaultUser (SP). @done (2018-5-23 19:51:32)
                 ✔ InitSample (SP). @done (2018-5-24 03:36:30)
-                ☐ InitErrorMessages (SP ALTER).
+                ✔ InitErrorMessages (SP ALTER). @done (2018-5-24 18:33:37)
         Database Document Updated:
             Error Code:
                 ✔ Update Error Code in Excel file. @done (2018-5-24 15:22:44)
@@ -1462,10 +1462,6 @@ My Choice Rater v2.0:
                                 ✔ add edl-staff-page-layout.tag. @done (2018-5-24 16:44:41)
                             home:
                                 ✔ add edl-staff-home-dashboard.tag. @done (2018-5-24 16:48:04)
-                api.js:
-                    ☐ 
-                service.js:
-                    ☐ 
     Update on [2018-05-25]:
         Database Create Scripts:
             Tables and Views:

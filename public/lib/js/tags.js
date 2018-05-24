@@ -10,6 +10,8 @@ riot.tag2('page-content-absolute', '<div id="page-content-abs" class="container-
 riot.tag2('page-footer', '', '', 'class="navbar fixed-bottom m-0 p-0 navbar-light bg-primary"', function(opts) {
 });
 riot.tag2('page-nav-bar', '', '', 'class="container-fluid"', function(opts) {
+        console.log('Navbar created.');
+        this.tracker = new RiotTrack(this);
 });
 riot.tag2('admin-home-dashboard', '<yield></yield>', '', '', function(opts) {
 });
