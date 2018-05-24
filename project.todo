@@ -1355,35 +1355,35 @@ My Choice Rater v2.0:
                         home:
                             ✔ add default-home-dashboard.tag. @done (2018-5-24 16:21:38)
                         register:
-                            ☐ add 
+                            ✔ add register-entry.tag. @done (2018-5-24 16:31:38)
                         signin:
-                            ☐ add 
+                            ✔ add signin-entry.tag. @done (2018-5-24 16:33:58)
                     customer:
                         admin:
                             __layouts:
-                                ☐ add 
+                                ✔ add admin-page-layout.tag. @done (2018-5-24 16:29:52)
                             home:
-                                ☐ add 
+                                ✔ add admin-home-dashboard.tag. @done (2018-5-24 16:36:17)
                         exclusive:
                             __layouts:
-                                ☐ add 
+                                ✔ add exclusive-page-layout.tag. @done (2018-5-24 16:30:01)
                             home:
-                                ☐ add 
+                                ✔ add exclusive-home-dashboard.tag. @done (2018-5-24 16:37:23)
                         staff:
                             __layouts:
-                                ☐ add 
+                                ✔ add staff-page-layout.tag. @done (2018-5-24 16:30:05)
                             home:
-                                ☐ add 
+                                ✔ add staff-home-dashboard.tag. @done (2018-5-24 16:38:09)
                         device:
                             __layouts:
-                                ☐ add 
+                                ✔ add device-page-layout.tag. @done (2018-5-24 16:30:13)
                             home:
-                                ☐ add 
+                                ✔ add device-home-dashboard.tag. @done (2018-5-24 16:39:15)
                         question:
                             __layouts:
-                                ☐ add 
+                                ✔ add question-page-layout.tag. @done (2018-5-24 16:30:19)
                             home:
-                                ☐ add 
+                                ✔ add question-home-dashboard.tag. @done (2018-5-24 16:40:00)
                     edl:
                         admin:
                             __layouts:
