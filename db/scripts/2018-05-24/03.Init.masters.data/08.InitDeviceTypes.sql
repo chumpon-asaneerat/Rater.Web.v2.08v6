@@ -44,7 +44,7 @@ BEGIN
 	-- Browser Mobile - Safari
 	INSERT INTO DeviceType VALUES (205, N'Safari mobile browser')
 	-- Browser Mobile - Safari
-	INSERT INTO DeviceType VALUES (205, N'Edge mobile browser')
+	INSERT INTO DeviceType VALUES (206, N'Edge mobile browser')
 
 	-- [ENGLISH]
 	INSERT INTO DeviceTypeML VALUES(  0, N'EN', N'Unknown');

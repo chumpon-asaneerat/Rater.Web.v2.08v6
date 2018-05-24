@@ -1068,11 +1068,11 @@ My Choice Rater v2.0:
                 ☐ InitErrorMessages (SP ALTER).
         Database Document Updated:
             Error Code:
-                ☐ Update Error Code in Excel file.
+                ✔ Update Error Code in Excel file. @done (2018-5-24 15:22:44)
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-24 (generate db script).
+                    ✔ db-script-2018-05-24 (generate db script). @done (2018-5-24 15:22:45)
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 Utilities:
                     GetRandomHexCode:
@@ -1323,10 +1323,8 @@ My Choice Rater v2.0:
                     ✔ Add obj2cookie method. @done (2018-5-23 17:20:14)
                 mssql-db.js:
                     ✔ Update code to auto search definition file in sub directory. @done (2018-5-24 00:33:53)
-                rater-web-secure.js:
-                    ☐ 
-                    ☐ 
-                    ☐ 
+                rater-web-db.js:
+                    ✔ Restore exists all SPs routes. @done (2018-5-24 15:28:34)
         Clients:
             Third Parties:
                 XXX:
@@ -1342,12 +1340,12 @@ My Choice Rater v2.0:
     Update on [2018-05-25]:
         Database Create Scripts:
             Tables and Views:
-                ☐ ClientSession (TABLE).                
+                ☐ (TABLE).                
             Stored Procedures and Functions:
-                ☐ SaveClientSession (SP).
-                ☐ ClearClientSessions (SP).
-                ☐ GetClientSession (SP).
-                ☐ GetClientSessions (SP).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
         Database Document Updated:
@@ -1356,12 +1354,61 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-23 (generate db script).
+                    ☐ db-script-2018-05-25 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 XXX:
                     YYY:
                         ☐ definition file created.
-                        ☐ wrapper code updated.            
+                        ☐ wrapper code updated.
+            Core Module:
+                nlib-core-js:
+                    ☐ 
+                rater-web-db.js:
+                    ☐ 
+                rater-web-secure.js:
+                    ☐ 
+        Clients:
+            Third Parties:
+                AAA X.X.X:
+                    ☐ organize files.
+                    ☐ setup route.
+            Core Libraries:
+                api.js:
+                    ☐ xxx
+                nlib.js:
+                    ☐ xxx
+                service.js:
+                    ☐ xxx
+                tags.js:
+                    ☐ xxx
+    Update on [2018-05-30]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).                
+            Stored Procedures and Functions:
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-25 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                XXX:
+                    YYY:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+            Core Module:
+                rater-web-secure.js:
+                    ☐ 
+                    ☐ 
+                    ☐ 
             Unit Test Scripts for databse:
                 MemberTypes:
                     GetMemberTypes:

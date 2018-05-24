@@ -8,10 +8,15 @@ exports = module.exports = {
         portNumber: 3010
     },
     db: {
+        //-- For DEV
         serverName: 'localhost',
         dbName: 'TestDb7x3',
         userName: 'sa',
         passWord: 'winnt123',
+        //-- For EDL
+        //dbName: 'RaterWeb2x8',
+        //userName: 'sa',
+        //passWord: 'P@ssw0rd',
         getDatabaseConfig: function () {
             return {
                 user: this.userName,
