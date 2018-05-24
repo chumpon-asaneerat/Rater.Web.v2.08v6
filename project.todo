@@ -1344,6 +1344,8 @@ My Choice Rater v2.0:
                     common:
                         ☐ add 
                         ☐ add 
+                        ☐ add 
+                        ☐ add 
                     dev:
                         __layouts:
                             ✔ add dev-page-layout.tag. @done (2018-5-24 16:18:42)
@@ -1387,19 +1389,19 @@ My Choice Rater v2.0:
                     edl:
                         admin:
                             __layouts:
-                                ☐ add 
+                                ✔ add edl-admin-page-layout.tag. @done (2018-5-24 16:44:12)
                             home:
-                                ☐ add 
+                                ✔ add edl-admin-home-dashboard.tag. @done (2018-5-24 16:48:10)
                         supervisor:
                             __layouts:
-                                ☐ add 
+                                ✔ add edl-supervisor-page-layout.tag. @done (2018-5-24 16:45:08)
                             home:
-                                ☐ add 
+                                ✔ add edl-supervisor-home-dashboard.tag. @done (2018-5-24 16:46:20)
                         staff:
                             __layouts:
-                                ☐ add 
+                                ✔ add edl-staff-page-layout.tag. @done (2018-5-24 16:44:41)
                             home:
-                                ☐ add 
+                                ✔ add edl-staff-home-dashboard.tag. @done (2018-5-24 16:48:04)
     Update on [2018-05-25]:
         Database Create Scripts:
             Tables and Views:
