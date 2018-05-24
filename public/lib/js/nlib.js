@@ -1355,4 +1355,4 @@ class NJson {
             dest[key] = (!src[dKey]) ? null : src[dKey];
         })
     };
-}
+};

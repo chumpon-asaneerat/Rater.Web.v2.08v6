@@ -1325,6 +1325,11 @@ My Choice Rater v2.0:
                     ✔ Update code to auto search definition file in sub directory. @done (2018-5-24 00:33:53)
                 rater-web-db.js:
                     ✔ Restore exists all SPs routes. @done (2018-5-24 15:28:34)
+            Views:
+                dev:
+                    home:
+                        ✔ Update route.js. @done (2018-5-24 16:16:34)
+                        ✔ Update index.handlebars. @done (2018-5-24 16:16:34)
         Clients:
             Third Parties:
                 XXX:
@@ -1336,7 +1341,65 @@ My Choice Rater v2.0:
                 service.js:
                     ☐ 
                 tags.js:
-                    ☐ 
+                    common:
+                        ☐ add 
+                        ☐ add 
+                    dev:
+                        __layouts:
+                            ✔ add dev-page-layout.tag. @done (2018-5-24 16:18:42)
+                        home:
+                            ✔ add dev-home-dashboard.tag. @done (2018-5-24 16:18:58)
+                    default:
+                        __layouts:
+                            ✔ add default-page-layout.tag. @done (2018-5-24 16:20:37)
+                        home:
+                            ✔ add default-home-dashboard.tag. @done (2018-5-24 16:21:38)
+                        register:
+                            ☐ add 
+                        signin:
+                            ☐ add 
+                    customer:
+                        admin:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
+                        exclusive:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
+                        staff:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
+                        device:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
+                        question:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
+                    edl:
+                        admin:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
+                        supervisor:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
+                        staff:
+                            __layouts:
+                                ☐ add 
+                            home:
+                                ☐ add 
     Update on [2018-05-25]:
         Database Create Scripts:
             Tables and Views:
