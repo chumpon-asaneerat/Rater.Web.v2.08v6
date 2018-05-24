@@ -1,4 +1,4 @@
-
+//#region DOMEvents class
 /*
 class DOMEvents {
     constructor() { 
@@ -20,7 +20,10 @@ class DOMEvents {
     window.evts.listen();
 })();
 */
+//#endregion
 
+//#region RiotTrack class
+/*
 class RiotTrack {
     constructor(riotTag) {
         this.__tag = riotTag;
@@ -32,6 +35,8 @@ class RiotTrack {
         return this.__tag;
     };
 };
+*/
+//#endregion
 
 class ClientApp {
     constructor() {

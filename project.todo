@@ -1514,7 +1514,9 @@ My Choice Rater v2.0:
                     ☐ fixed example (demo) reference.
             Core Libraries:
                 api.js:
-                    ☐ xxx
+                    ✔ remove all api functions. @done (2018-5-25 05:07:02)
+                    ✔ add LanguageAPI class and create new namespace to access. @done (2018-5-25 05:07:03)
+                    ✔ add SecureAPI class and create new namespace to access. @done (2018-5-25 05:07:13)
                 nlib.js:
                     ☐ xxx
                 service.js:

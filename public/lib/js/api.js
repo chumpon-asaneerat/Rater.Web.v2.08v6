@@ -1,3 +1,4 @@
+//#region API Class
 class API {
     /* common ajax related functions. */
     static get ajax() {
@@ -11,10 +12,6 @@ class API {
         }
     }
 
-    static get functions() {
-        return []
-    };
-    
     static getUrl(relUrl) {
         let result = window.location.pathname;
         if (!result.endsWith('/')) {
@@ -39,12 +36,72 @@ class API {
 
     constructor() {
         let self = this;
-        API.functions.forEach(fn => {
-            self.__proto__[fn.name] = function (data) { return API.ajax.post(fn.url, data) };
-        });
-    }
-}
+        if (this.functions && this.functions.length > 0) {
+            this.functions.forEach(fn => {
+                self.__proto__[fn.name] = function (data) { return API.ajax.post(fn.url, data) };
+            });
+        }
+    };
+
+    get functions() { return [] };
+};
+
+; (function () {
+    // Init the api namespace object.
+    window.api = window.api || {};
+})();
+
+//#endregion
+
+//#region Language API class
+
+class LanguageAPI extends API
+{
+    constructor() { 
+        super(); 
+    };
+
+    get functions() {
+        return [
+            // languages related functions.
+            { name: "getLanguages", url: "/api/edl/languages/search" },
+            { name: "enableLanguage", url: "/api/edl/languages/enable" },
+            { name: "disableLanguage", url: "/api/edl/languages/disable" }
+        ];
+    };
+};
+
+; (function () {
+    // Init in api namespace.
+    window.api.lang = window.api.lang || new LanguageAPI();
+})();
+
+//#endregion
+
+//#region Language API class - move to register/signin app.js later
+
+class SecureAPI extends API {
+    constructor() { 
+        super(); 
+    };
+
+    get functions() {
+        return [
+            // register/signin related functions.
+            { name: "register", url: "/api/edl/register" },
+            { name: "signIn", url: "/api/edl/signin" },
+            { name: "getUsers", url: "/api/edl/users" }
+        ];
+    };
+};
 
 ;(function() {
-    window.api = window.api || new API();
+    // Init in api namespace.
+    window.api.secure = window.api.secure || new SecureAPI();
+})();
+
+//#endregion
+
+; (function () {
+
 })();
