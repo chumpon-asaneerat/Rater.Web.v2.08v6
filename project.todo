@@ -1465,9 +1465,10 @@ My Choice Rater v2.0:
     Update on [2018-05-25]:
         Database Create Scripts:
             Tables and Views:
-                ☐ (TABLE).                
+                ✔ ClientAccess (TABLE). @done (2018-5-25 05:27:17)
             Stored Procedures and Functions:
-                ☐ (SP).
+                ✔ SignIn (SP) ALTER. @done (2018-5-25 06:43:20)
+                ✔ CheckAccess (SP). @done (2018-5-25 06:43:38)
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
         Database Document Updated:
@@ -1478,10 +1479,10 @@ My Choice Rater v2.0:
                 Gulp Tasks:
                     ☐ db-script-2018-05-25 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                XXX:
-                    YYY:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
+                Signin and Register:
+                    CheckAccess:
+                        ✔ definition file created. @done (2018-5-25 06:45:51)
+                        ✔ wrapper code updated. @done (2018-5-25 06:46:43)
             Core Module:
                 nlib-core-js:
                     ☐ 

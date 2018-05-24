@@ -98,6 +98,9 @@ class SecureAPI extends API {
 ;(function() {
     // Init in api namespace.
     window.api.secure = window.api.secure || new SecureAPI();
+
+    // example.
+    //api.secure.getUsers({ langId: 'EN', userName: 'somchai@yahoo.co.th', passWord: '1234' });
 })();
 
 //#endregion
