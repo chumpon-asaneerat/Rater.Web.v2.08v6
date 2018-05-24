@@ -1330,6 +1330,74 @@ My Choice Rater v2.0:
                     home:
                         ✔ Update route.js. @done (2018-5-24 16:16:34)
                         ✔ Update index.handlebars. @done (2018-5-24 16:16:34)
+                        ✔ Update app.js. @done (2018-5-24 16:58:20)
+                        ✔ Update model.js. @done (2018-5-24 16:58:21)
+                default:
+                    home:
+                        ✔ add route.js. @done (2018-5-24 17:05:18)
+                        ✔ add index.handlebars. @done (2018-5-24 17:05:19)
+                        ✔ add app.js. @done (2018-5-24 17:05:19)
+                        ✔ add model.js. @done (2018-5-24 17:05:20)
+                    register:
+                        ✔ add route.js. @done (2018-5-24 17:05:20)
+                        ✔ add index.handlebars. @done (2018-5-24 17:05:21)
+                        ✔ add app.js. @done (2018-5-24 17:05:21)
+                        ✔ add model.js. @done (2018-5-24 17:05:22)
+                    signin:
+                        ✔ add route.js. @done (2018-5-24 17:05:23)
+                        ✔ add index.handlebars. @done (2018-5-24 17:05:23)
+                        ✔ add app.js. @done (2018-5-24 17:05:24)
+                        ✔ add model.js. @done (2018-5-24 17:05:26)
+                customer:
+                    admin:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
+                    exclusive:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
+                    staff:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
+                    device:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
+                    question:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
+                edl:
+                    admin:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
+                    supervisor:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
+                    staff:
+                        home:
+                            ☐ add route.js.
+                            ☐ add index.handlebars.
+                            ☐ add app.js.
+                            ☐ add model.js.
         Clients:
             Third Parties:
                 XXX:
