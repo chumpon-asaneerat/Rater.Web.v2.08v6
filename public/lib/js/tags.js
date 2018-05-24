@@ -10,8 +10,10 @@ riot.tag2('page-content-absolute', '<div id="page-content-abs" class="container-
 riot.tag2('page-footer', '', '', 'class="navbar fixed-bottom m-0 p-0 navbar-light bg-primary"', function(opts) {
 });
 riot.tag2('page-nav-bar', '', '', 'class="container-fluid"', function(opts) {
-        console.log('Navbar created.');
-        this.tracker = new RiotTrack(this);
+
+
+        let self = this;
+
 });
 riot.tag2('admin-home-dashboard', '<yield></yield>', '', '', function(opts) {
 });
@@ -43,7 +45,11 @@ riot.tag2('default-page', '<div data-is="page-nav-bar"></div> <div data-is="page
 });
 riot.tag2('dev-home-dashboard', '<h1>DEV HOME!!!</h1>', '', '', function(opts) {
 });
+riot.tag2('dev-register-entry', '', '', '', function(opts) {
+});
 riot.tag2('dev-report-dashboard', '<h1>DEV REPORT HOME!!!</h1>', '', '', function(opts) {
+});
+riot.tag2('dev-signin-entry', '', '', '', function(opts) {
 });
 riot.tag2('dev-page', '<div data-is="page-nav-bar"></div> <div data-is="page-content-absolute" data-simplebar> <yield></yield> </div> <div data-is="page-footer"></div>', '', '', function(opts) {
 });

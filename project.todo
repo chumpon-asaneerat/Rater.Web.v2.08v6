@@ -1468,9 +1468,6 @@ My Choice Rater v2.0:
                 ☐ (TABLE).                
             Stored Procedures and Functions:
                 ☐ (SP).
-                ☐ (SP).
-                ☐ (SP).
-                ☐ (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
         Database Document Updated:
@@ -1499,6 +1496,16 @@ My Choice Rater v2.0:
                         ✔ Update index.handlebars. @done (2018-5-25 04:00:23)
                         ✔ Update app.js. @done (2018-5-25 04:00:23)
                         ✔ Update model.js. @done (2018-5-25 04:00:24)
+                    register:
+                        ✔ Update route.js. @done (2018-5-25 04:33:17)
+                        ✔ Update index.handlebars. @done (2018-5-25 04:33:18)
+                        ✔ Update app.js. @done (2018-5-25 04:33:18)
+                        ✔ Update model.js. @done (2018-5-25 04:33:19)
+                    signin:
+                        ✔ Update route.js. @done (2018-5-25 04:33:26)
+                        ✔ Update index.handlebars. @done (2018-5-25 04:33:27)
+                        ✔ Update app.js. @done (2018-5-25 04:33:29)
+                        ✔ Update model.js. @done (2018-5-25 04:33:28)
         Clients:
             Third Parties:
                 AAA X.X.X:
@@ -1516,6 +1523,11 @@ My Choice Rater v2.0:
                     dev:
                         report:
                             ✔ Add dev-report-dashboard.tag. @done (2018-5-25 04:01:10)
+                        register:
+                            ✔ Add dev-register-entry.tag. @done (2018-5-25 04:33:02)
+                        signin:
+                            ✔ Add dev-signin-entry.tag. @done (2018-5-25 04:33:02)
+                            
     Update on [2018-05-30]:
         Database Create Scripts:
             Tables and Views:

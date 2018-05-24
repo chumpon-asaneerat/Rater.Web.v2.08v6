@@ -1,3 +1,5 @@
+
+/*
 class DOMEvents {
     constructor() { 
     };
@@ -17,6 +19,7 @@ class DOMEvents {
     window.evts = window.evts || new DOMEvents();
     window.evts.listen();
 })();
+*/
 
 class RiotTrack {
     constructor(riotTag) {

@@ -8,14 +8,14 @@ const rootPath = process.env['ROOT_PATHS'];
 const nlib = require(path.join(rootPath, 'lib', 'nlib-core'));
 const rwc = require(path.join(rootPath, 'lib', 'rater-web-secure'));
 
-const workPath = path.join(rootPath, 'views', 'dev', 'report');
-const baseUrl = '/dev/report';
+const workPath = path.join(rootPath, 'views', 'dev', 'register');
+const baseUrl = '/dev/register';
 
 function getIndex(req, res, next) {
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {        
         res.render(targetFile, { 
-            title: "Dev Report Home.", 
+            title: "Dev Register Home.", 
             baseUrl: baseUrl
         });
     }
