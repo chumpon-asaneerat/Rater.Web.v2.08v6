@@ -1492,6 +1492,13 @@ My Choice Rater v2.0:
                     ☐ 
                 rater-web-secure.js:
                     ☐ 
+            Views:
+                dev:
+                    report:
+                        ✔ Update route.js. @done (2018-5-25 04:00:22)
+                        ✔ Update index.handlebars. @done (2018-5-25 04:00:23)
+                        ✔ Update app.js. @done (2018-5-25 04:00:23)
+                        ✔ Update model.js. @done (2018-5-25 04:00:24)
         Clients:
             Third Parties:
                 AAA X.X.X:
@@ -1506,7 +1513,9 @@ My Choice Rater v2.0:
                 service.js:
                     ☐ xxx
                 tags.js:
-                    ☐ xxx
+                    dev:
+                        report:
+                            ✔ Add dev-report-dashboard.tag. @done (2018-5-25 04:01:10)
     Update on [2018-05-30]:
         Database Create Scripts:
             Tables and Views:

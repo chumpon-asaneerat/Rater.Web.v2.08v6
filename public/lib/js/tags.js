@@ -43,6 +43,8 @@ riot.tag2('default-page', '<div data-is="page-nav-bar"></div> <div data-is="page
 });
 riot.tag2('dev-home-dashboard', '<h1>DEV HOME!!!</h1>', '', '', function(opts) {
 });
+riot.tag2('dev-report-dashboard', '<h1>DEV REPORT HOME!!!</h1>', '', '', function(opts) {
+});
 riot.tag2('dev-page', '<div data-is="page-nav-bar"></div> <div data-is="page-content-absolute" data-simplebar> <yield></yield> </div> <div data-is="page-footer"></div>', '', '', function(opts) {
 });
 riot.tag2('edl-admin-home-dashboard', '<yield></yield>', '', '', function(opts) {
