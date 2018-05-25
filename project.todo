@@ -1570,17 +1570,17 @@ My Choice Rater v2.0:
                         home:
                             ✔ Update route.js. @done (2018-5-25 15:06:21)
                             ✔ Update model.js. @done (2018-5-25 20:47:16)
-                            ☐ route.js add getModels.
+                            ✔ route.js add getModels. @done (2018-5-25 21:32:01)
                     supervisor:
                         home:
                             ✔ Update route.js. @done (2018-5-25 15:06:21)
                             ✔ Update model.js. @done (2018-5-25 20:47:14)
-                            ☐ route.js add getModels.
+                            ✔ route.js add getModels. @done (2018-5-25 21:32:01)
                     staff:
                         home:
                             ✔ Update route.js. @done (2018-5-25 15:06:22)
                             ✔ Update model.js. @done (2018-5-25 20:47:13)
-                            ☐ route.js add getModels.
+                            ✔ route.js add getModels. @done (2018-5-25 21:32:02)
         Clients:
             Core Libraries:
                 api.js:
