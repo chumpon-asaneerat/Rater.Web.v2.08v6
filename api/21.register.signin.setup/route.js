@@ -34,7 +34,7 @@ function __SignIn(req, res) {
     if (!rwc.hasAccessId(req, res)) {
         raterdb.CallSp(req, res, function (req, res, reqModel) {
             raterdb.SignIn(reqModel.data, function (dbResult) {
-                reqModel.accessId = null;
+                reqModel.data.accessId = null;
                 rwc.setAccessId(req, res, dbResult, function (url) {
                     // returns results.
                     dbResult.url = url;
@@ -71,7 +71,7 @@ function __GetAccessUser(req, res) {
         let rw2 = nlib.cookie2obj(req, res) || {};
         let accessId = rw2.accessId;
         raterdb.CallSp(req, res, function (req, res, reqModel) {
-            reqModel.accessId = accessId;
+            reqModel.data.accessId = accessId;            
             raterdb.GetAccessUser(reqModel.data, function (dbResult) {
                 rwc.getHomeUrl(accessId, function (url) {                
                     nlib.sendJson(req, res, dbResult);
@@ -95,7 +95,7 @@ function __SignOut(req, res) {
         let rw2 = nlib.cookie2obj(req, res) || {};
         let accessId = rw2.accessId;        
         raterdb.CallSp(req, res, function (req, res, reqModel) {
-            reqModel.accessId = accessId;
+            reqModel.data.accessId = accessId;
             raterdb.SignOut(reqModel.data, function (dbResult) {
                 rwc.clearAccessId(req, res, function (url) {
                     dbResult.url = url;

@@ -128,8 +128,10 @@ class UserPerference extends LocalStorage {
 
 class ClientAccess {
     constructor() {
-        this.__userListChanged = new EventHandler();
         this._users = [];
+        this._current = null;
+        this.__userListChanged = new EventHandler();
+        this._currentUserChanged = new EventHandler();
     };
 
     getUsers(login) {
@@ -153,12 +155,16 @@ class ClientAccess {
         });
     };
 
-    getCurrentUser() {
-        let fn = api.secure.getCurrentUser();
+    getCurrentUser(langId) {
+        let fn = api.secure.getCurrentUser({ langId: langId });
         $.when(fn).then((r) => {
-            if (r && !r.errors.hasError) {
-                console.log(r);
+            if (r && !r.errors.hasError && r.data && r.data.length > 0) {
+                this._current = r.data[0];
             }
+            else {
+                this._current = null;
+            }
+            this._currentUserChanged.invoke(this, EventArgs.Empty);
         });
     };
 
@@ -170,7 +176,7 @@ class ClientAccess {
         this.clear();
         let fn = api.secure.signIn(user);
         $.when(fn).then((r) => {
-            if (r && !r.errors.hasError) {
+            if (r && !r.errors.hasError) {                
                 nlib.nav.gotoUrl(r.url);
             }
         });
@@ -193,9 +199,26 @@ class ClientAccess {
         return this._users;
     };
 
+    get current() {
+        return this._current;
+    };
+
+    get currentUserName() {
+        if (!this._current || !this._current.FullNameNative) {
+            return '';
+        }
+        else {
+            return this._current.FullNameNative;
+        }
+    };
+
     get userListChanged() {
         return this.__userListChanged;
     };
+
+    get currentUserChanged() {
+        return this._currentUserChanged;
+    }
 };
 
 ; (function () {
@@ -231,6 +254,8 @@ class LanguageService {
                     // keep to perf.
                     this._pref.langId = this._current.langId.toUpperCase();
                     this._pref.save();
+                    // get current user.
+                    secure.getCurrentUser(this._current.langId.toUpperCase());
                     // raise event.
                     this._currentChanged.invoke(this, EventArgs.Empty);
                 }
@@ -241,6 +266,8 @@ class LanguageService {
                 // keep to perf.
                 this._pref.langId = this._current.langId.toUpperCase();
                 this._pref.save();
+                // get current user.
+                secure.getCurrentUser(this._current.langId.toUpperCase());
                 // raise event.
                 this._currentChanged.invoke(this, EventArgs.Empty);
             }
@@ -305,6 +332,8 @@ class LanguageService {
 class RaterPage {
     constructor() {
         this._modelML = { };
+        this._modelLoaded = new EventHandler();
+
         let self = this;
         let onLanguageChanted = (sender, evtData) => {
             let LId = lang.langId;
@@ -323,6 +352,9 @@ class RaterPage {
                     self.update(LId, modelType, r);
                     ++index;
                 });
+                //console.log('all model loaded.');
+                // raise events.
+                self._modelLoaded.invoke(this, EventArgs.Empty);
             });
         };
 
@@ -343,7 +375,13 @@ class RaterPage {
     get model() {
         if (!lang.current || !lang.langId)
             return null;
-        return this._modelML[lang.langId];
+        let result = this._modelML[lang.langId];
+        //console.log(result);
+        return result;
+    };
+
+    get modelLoaded() {
+        return this._modelLoaded;
     };
 };
 

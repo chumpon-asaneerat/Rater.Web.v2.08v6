@@ -78,7 +78,7 @@ DECLARE @iCnt int = 0;
 				 , N'EDL Co., Ltd.' AS CustomerNameNative
 				 , A.MemberId
 				 , B.FullNameEN
-				 , B.FirstNameNative
+				 , B.FullNameNative
 				 , B.IsEDLUser
 				 , B.MemberType
 				 , D.MemberTypeDescriptionEN
@@ -103,7 +103,7 @@ DECLARE @iCnt int = 0;
 				 , C.CustomerNameNative
 				 , A.MemberId
 				 , B.FullNameEN
-				 , B.FirstNameNative
+				 , B.FullNameNative
 				 , B.IsEDLUser
 				 , B.MemberType
 				 , D.MemberTypeDescriptionEN
