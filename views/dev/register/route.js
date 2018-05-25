@@ -1,6 +1,7 @@
 // common requires
 const path = require('path');
 const fs = require('fs');
+const find = require('find');
 
 //const rootPath = path.dirname(require.main.filename);
 const rootPath = process.env['ROOT_PATHS'];
@@ -60,6 +61,22 @@ function getJsonModelByLangId(req, res, next) {
     }
 };
 
+function getModelNames(req, res, next) {
+    let names = [];
+    let contentENPath = path.join(workPath, 'contents', 'EN');
+    find.fileSync(contentENPath).forEach(file => {
+        try {
+            names.push(path.basename(file, '.json').toLowerCase());
+        }
+        catch (ex) {
+            //console.error(file, ex);
+        }
+    });
+    let result = new nlib.NResult();
+    result.result(names);
+    nlib.sendJson(req, res, result);
+};
+
 /**
  * Init routes.
  * 
@@ -71,6 +88,7 @@ function init_routes(app) {
     app.get(baseUrl + '/js/:fileName', getJSFile);
     app.get(baseUrl + '/css/:fileName', getCSSFile);
     app.all(baseUrl + '/models', getJsonModelByLangId);
+    app.all(baseUrl + '/modelnames', getModelNames);
 };
 
 exports.init_routes = init_routes;

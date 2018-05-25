@@ -1499,37 +1499,46 @@ My Choice Rater v2.0:
                     ✔ Add getHomeUrl method. @done (2018-5-25 14:56:21)
             Views:
                 dev:
+                    home:
+                        ✔ Update model.js. @done (2018-5-25 21:15:59)
+                        ✔ route.js add getModels. @done (2018-5-25 21:16:00)
                     report:
                         ✔ Update route.js. @done (2018-5-25 04:00:22)
                         ✔ Update index.handlebars. @done (2018-5-25 04:00:23)
                         ✔ Update app.js. @done (2018-5-25 04:00:23)
                         ✔ Update model.js. @done (2018-5-25 04:00:24)
+                        ✔ route.js add getModels. @done (2018-5-25 21:16:17)
                     register:
                         ✔ Update route.js. @done (2018-5-25 04:33:17)
                         ✔ Update index.handlebars. @done (2018-5-25 04:33:18)
                         ✔ Update app.js. @done (2018-5-25 04:33:18)
                         ✔ Update model.js. @done (2018-5-25 04:33:19)
+                        ✔ route.js add getModels. @done (2018-5-25 21:16:18)
                     signin:
                         ✔ Update route.js. @done (2018-5-25 04:33:26)
                         ✔ Update index.handlebars. @done (2018-5-25 04:33:27)
                         ✔ Update app.js. @done (2018-5-25 04:33:29)
                         ✔ Update model.js. @done (2018-5-25 04:33:28)
+                        ✔ route.js add getModels. @done (2018-5-25 21:16:19)
                 default:
                     home:
                         ✔ Update route.js. @done (2018-5-25 20:50:41)
                         ✔ Update index.handlebars. @done (2018-5-25 20:50:42)
                         ✔ Update app.js. @done (2018-5-25 20:50:43)
                         ✔ Update model.js. @done (2018-5-25 20:50:43)
+                        ☐ route.js add getModels.
                     signin:
                         ✔ Update route.js. @done (2018-5-25 20:50:44)
                         ✔ Update index.handlebars. @done (2018-5-25 20:50:44)
                         ✔ Update app.js. @done (2018-5-25 20:50:45)
                         ✔ Update model.js. @done (2018-5-25 20:50:47)
+                        ✔ route.js add getModels. @done (2018-5-25 21:16:22)
                     register:
                         ✔ Update route.js. @done (2018-5-25 20:50:48)
                         ✔ Update index.handlebars. @done (2018-5-25 20:50:49)
                         ✔ Update app.js. @done (2018-5-25 20:50:49)
                         ✔ Update model.js. @done (2018-5-25 20:50:50)
+                        ☐ route.js add getModels.
                 customer:
                     admin:
                         home:
@@ -1570,6 +1579,8 @@ My Choice Rater v2.0:
                     ✔ remove all api functions. @done (2018-5-25 05:07:02)
                     ✔ add LanguageAPI class and create new namespace to access. @done (2018-5-25 05:07:03)
                     ✔ add SecureAPI class and create new namespace to access. @done (2018-5-25 05:07:13)
+                    ✔ add ModelAPI class and create new namespace to access. @done (2018-5-25 21:19:14)
+                    ✔ ModeAPI class add supports getModelNames. @done (2018-5-25 21:19:30)
                 service.js:
                     ✔ Add ClientAccess class. @done (2018-5-25 10:33:00)
                     ✔ Add BS4Modal class. @done (2018-5-25 10:33:00)
@@ -1579,6 +1590,7 @@ My Choice Rater v2.0:
                     ✔ Add UserPerference class. @done (2018-5-25 16:45:50)
                     ✔ Add LanguageService class and create new namespace to access. @done (2018-5-25 16:46:10)
                     ✔ Add RaterPage class and create new namespace to access. @done (2018-5-25 18:55:25)
+                    ✔ LanguageService add supports getModelNames when language changed. @done (2018-5-25 21:18:38)
                 tags.js:
                     dev:
                         report:

@@ -117,6 +117,7 @@ class ModelAPI extends API {
     get functions() {
         return [
             // page content model.
+            { name: "getModelNames", url: API.getUrl("modelnames") },
             { name: "getModel", url: API.getUrl("models") }
         ];
     };

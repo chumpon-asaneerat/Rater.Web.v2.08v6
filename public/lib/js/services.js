@@ -337,24 +337,33 @@ class RaterPage {
         let self = this;
         let onLanguageChanted = (sender, evtData) => {
             let LId = lang.langId;
-            let modelTypes = ['page', 'banner', 'nav', 'footer'];
-            let fns = []
-            modelTypes.forEach(type => {
-                let data = { langId: LId, modelType: type };
-                let fn = api.model.getModel(data);
-                fns.push(fn);
-            });
-            $.when.all(fns).then(promiseRs => {
-                let index = 0;
-                promiseRs.forEach(promiseR => {
-                    let r = promiseR[0].data;
-                    let modelType = modelTypes[index];
-                    self.update(LId, modelType, r);
-                    ++index;
-                });
-                //console.log('all model loaded.');
-                // raise events.
-                self._modelLoaded.invoke(this, EventArgs.Empty);
+            let fnX = api.model.getModelNames();
+            $.when(fnX).then((r) => {
+                if (r.data) {
+                    let modelTypes = r.data;
+                    let fns = []
+                    modelTypes.forEach(type => {
+                        let data = { langId: LId, modelType: type };
+                        let fn = api.model.getModel(data);
+                        fns.push(fn);
+                    });
+
+                    $.when.all(fns).then(promiseRs => {
+                        let index = 0;
+                        promiseRs.forEach(promiseR => {
+                            let r = promiseR[0].data;
+                            let modelType = modelTypes[index];
+                            self.update(LId, modelType, r);
+                            ++index;
+                        });
+                        //console.log('all model loaded.');
+                        // raise events.
+                        self._modelLoaded.invoke(this, EventArgs.Empty);
+                    });
+                }
+                else {
+                    console.log('No models.');
+                }
             });
         };
 
