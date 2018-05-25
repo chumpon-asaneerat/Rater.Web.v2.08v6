@@ -68,17 +68,35 @@ class ClientAccess {
         });
     };
 
+    getCurrentUser() {
+        let fn = api.secure.getCurrentUser();
+    };
+
     clear() {
         this._users = [];
     }
 
     signIn(user) {
         this.clear();
-        console.log('Sign In:', user);
+        let fn = api.secure.signIn(user);
+        $.when(fn).then((r) => {
+            if (r && !r.errors.hasError) {
+                nlib.nav.gotoUrl(r.url);
+            }
+        });
     };
 
     signOut() {
         this.clear();
+        let fn = api.secure.signOut();
+        $.when(fn).then((r) => {
+            if (r && r.url) {
+                nlib.nav.gotoUrl(r.url);
+            }
+            else {
+                nlib.nav.gotoUrl('/');
+            }
+        });
     };
 
     get users() {
@@ -87,7 +105,7 @@ class ClientAccess {
 
     get userListChanged() {
         return this.__userListChanged;
-    }
+    };
 };
 
 ; (function () {

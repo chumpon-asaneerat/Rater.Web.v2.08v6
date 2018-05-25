@@ -89,8 +89,10 @@ class SecureAPI extends API {
         return [
             // register/signin related functions.
             { name: "register", url: "/api/edl/register" },
+            { name: "getUsers", url: "/api/edl/users" },
             { name: "signIn", url: "/api/edl/signin" },
-            { name: "getUsers", url: "/api/edl/users" }
+            { name: "getCurrentUser", url: "/api/edl/user" },
+            { name: "signOut", url: "/api/edl/signout" },
         ];
     };
 };

@@ -33,24 +33,6 @@ function getIndex(req, res, next) {
         console.log(cookies);
     } 
     */
-
-    let options = {
-        maxAge: 15 * 1000, // would expire after 15 seconds
-        httpOnly: false
-    }    
-    var rw2 = {};
-    rw2 = nlib.cookie2obj(req, res);
-
-    console.log('before:', rw2);
-
-    rw2.id1 = rw2.id1 || 'AAAA';
-    rw2.id2 = rw2.id2 || 'BBBB';
-    rw2.id3 = rw2.id3 || 'CCCC';
-
-    console.log('after:', rw2);
-
-    nlib.obj2cookie(req, res, rw2, options);
-
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {        
         res.render(targetFile, { 

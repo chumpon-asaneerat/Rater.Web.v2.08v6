@@ -12,10 +12,17 @@ const workPath = path.join(rootPath, 'views', 'dev', 'report');
 const baseUrl = '/dev/report';
 
 function getIndex(req, res, next) {
+    if (!rwc.hasAccessId(req, res)) {
+        rwc.getHomeUrl(null, function(url) {
+            //console.log('Request to' + baseUrl + ' but no access id: ', url);
+            return res.redirect(url);
+        });
+        return; // detected not has access id so exit here without do the rest code.
+    }
     var targetFile = path.join(workPath, 'index.handlebars');
-    if (fs.existsSync(targetFile)) {        
-        res.render(targetFile, { 
-            title: "Dev Report Home.", 
+    if (fs.existsSync(targetFile)) {
+        res.render(targetFile, {
+            title: "Dev Report Home.",
             baseUrl: baseUrl
         });
     }

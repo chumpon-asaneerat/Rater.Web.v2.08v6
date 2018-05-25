@@ -12,6 +12,17 @@ const workPath = path.join(rootPath, 'views', 'dev', 'signin');
 const baseUrl = '/dev/signin';
 
 function getIndex(req, res, next) {
+    if (rwc.hasAccessId(req, res)) {
+        let rw2 = nlib.cookie2obj(req, res) || {};
+        let accessId = rw2.accessId;
+        if (accessId && accessId.length > 0) {
+            rwc.getHomeUrl(accessId, function (url) {
+                //console.log('Request to' + baseUrl + ' but no access id: ', url);
+                return res.redirect(url);
+            });
+            return; // detected not has access id so exit here without do the rest code.
+        }
+    }
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {        
         res.render(targetFile, { 
