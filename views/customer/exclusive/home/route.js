@@ -12,6 +12,13 @@ const workPath = path.join(rootPath, 'views', 'customer', 'exclusive', 'home');
 const baseUrl = '/exclusive';
 
 function getIndex(req, res, next) {
+    if (!rwc.hasAccessId(req, res)) {
+        rwc.getHomeUrl(null, function (url) {
+            //console.log('Request to' + baseUrl + ' but no access id: ', url);
+            return res.redirect(url);
+        });
+        return; // detected not has access id so exit here without do the rest code.
+    }
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {
         res.render(targetFile, {
@@ -66,7 +73,7 @@ function getJsonModelByLangId(req, res, next) {
  * @param {express} app 
  */
 function init_routes(app) {
-    console.log('    + route:', baseUrl + '/');
+    //console.log('    + route:', baseUrl + '/');
     app.get(baseUrl + '/', getIndex);
     app.get(baseUrl + '/js/:fileName', getJSFile);
     app.get(baseUrl + '/css/:fileName', getCSSFile);
