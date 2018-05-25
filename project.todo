@@ -1516,11 +1516,6 @@ My Choice Rater v2.0:
                         ✔ Update app.js. @done (2018-5-25 04:33:29)
                         ✔ Update model.js. @done (2018-5-25 04:33:28)
         Clients:
-            Third Parties:
-                AAA X.X.X:
-                    ☐ organize files.
-                    ☐ add to public/dist and setup route.
-                    ☐ fixed example (demo) reference.
             Core Libraries:
                 api.js:
                     ✔ remove all api functions. @done (2018-5-25 05:07:02)
@@ -1529,7 +1524,8 @@ My Choice Rater v2.0:
                 nlib.js:
                     ☐ xxx
                 service.js:
-                    ☐ xxx
+                    ✔ Add ClientAccess class. For register/getusers/signin/signout. @done (2018-5-25 10:33:00)
+                    ✔ Add BS4Modal class. @done (2018-5-25 10:33:00)
                 tags.js:
                     dev:
                         report:
