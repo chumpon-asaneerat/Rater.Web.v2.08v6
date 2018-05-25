@@ -349,7 +349,7 @@ class RaterPage {
 
 ; (function () {
     //console.log('Init language service...');
-    window.page = window.page || new RaterPage();    
+    window.page = window.page || new RaterPage();
 })();
 
 //#endregion
