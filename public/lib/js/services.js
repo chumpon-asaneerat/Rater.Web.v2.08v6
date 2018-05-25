@@ -70,6 +70,11 @@ class ClientAccess {
 
     getCurrentUser() {
         let fn = api.secure.getCurrentUser();
+        $.when(fn).then((r) => {
+            if (r && !r.errors.hasError) {
+                console.log(r);
+            }
+        });
     };
 
     clear() {

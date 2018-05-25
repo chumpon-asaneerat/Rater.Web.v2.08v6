@@ -12,27 +12,17 @@ const workPath = path.join(rootPath, 'views', 'dev', 'home');
 const baseUrl = '/dev';
 
 function getIndex(req, res, next) {
-    // Fingerprint object.
-    //console.log(req.fingerprint);
-
-    //var targetFile = path.join(workPath, 'index.html');
-    //nlib.sendFile(req, res, targetFile);
-    /*
-    let cookies = '';
-    //console.log(res);
-    if (!req.cookies.uid) {
-        let options = {
-            maxAge: 1000 * 60 * 15, // would expire after 15 minutes
-            httpOnly: false
+    if (rwc.hasAccessId(req, res)) {
+        let rw2 = nlib.cookie2obj(req, res) || {};
+        let accessId = rw2.accessId;
+        if (accessId && accessId.length > 0) {
+            rwc.getHomeUrl(accessId, function (url) {
+                //console.log('Request to' + baseUrl + ' but no access id: ', url);
+                return res.redirect(url);
+            });
+            return; // detected not has access id so exit here without do the rest code.
         }
-        // use response to update cookie.
-        res.cookie('uid', 'add some cookies.', options);
     }
-    else {
-        cookies = req.cookies.uid;
-        console.log(cookies);
-    } 
-    */
     var targetFile = path.join(workPath, 'index.handlebars');
     if (fs.existsSync(targetFile)) {        
         res.render(targetFile, { 
@@ -87,7 +77,7 @@ function getJsonModelByLangId(req, res, next) {
  * @param {express} app 
  */
 function init_routes(app) {
-    console.log('    + route:', baseUrl + '/');
+    //console.log('    + route:', baseUrl + '/');
     app.get(baseUrl + '/', getIndex);
     app.get(baseUrl + '/js/:fileName', getJSFile);
     app.get(baseUrl + '/css/:fileName', getCSSFile);
