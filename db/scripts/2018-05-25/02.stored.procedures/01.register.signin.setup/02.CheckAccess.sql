@@ -5,10 +5,10 @@ GO
 
 -- =============================================
 -- Author: Chumpon Asaneerat
--- Name: BeginLog.
--- Description:	Begin Log.
+-- Name: CheckAccess.
+-- Description:	Check Access.
 -- [== History ==]
--- <2018-05-09> :
+-- <2018-05-25> :
 --	- Stored Procedure Created.
 --
 -- [== Example ==]
@@ -30,8 +30,6 @@ DECLARE @iCnt int = 0;
     --    0 : Success
 	-- 2301 : Access Id cannot be null or empty string.
 	-- 2302 : Access Id not found.
-	-- 2303 : 
-	-- 2304 : 
     -- OTHER : SQL Error Number & Error Message.
 	BEGIN TRY
 		IF (dbo.IsNullOrEmpty(@accessId) = 1)

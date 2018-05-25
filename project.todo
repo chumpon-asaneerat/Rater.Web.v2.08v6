@@ -1469,6 +1469,8 @@ My Choice Rater v2.0:
             Stored Procedures and Functions:
                 ✔ SignIn (SP) ALTER. @done (2018-5-25 06:43:20)
                 ✔ CheckAccess (SP). @done (2018-5-25 06:43:38)
+                ✔ GetAccessUser (SP). @done (2018-5-25 07:38:15)
+                ✔ SignOut (SP). @done (2018-5-25 07:51:11)
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
         Database Document Updated:
@@ -1483,6 +1485,12 @@ My Choice Rater v2.0:
                     CheckAccess:
                         ✔ definition file created. @done (2018-5-25 06:45:51)
                         ✔ wrapper code updated. @done (2018-5-25 06:46:43)
+                    GetAccessUser:
+                        ✔ definition file created. @done (2018-5-25 07:39:20)
+                        ✔ wrapper code updated. @done (2018-5-25 07:40:20)
+                    SignOut:
+                        ✔ definition file created. @done (2018-5-25 07:51:15)
+                        ✔ wrapper code updated. @done (2018-5-25 07:51:19)
             Core Module:
                 nlib-core-js:
                     ☐ 

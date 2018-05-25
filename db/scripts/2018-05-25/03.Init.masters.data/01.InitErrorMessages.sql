@@ -244,12 +244,15 @@ BEGIN
     EXEC SaveErrorMsg 2202, N'Language Id cannot be null or empty string.'
     EXEC SaveErrorMsg 2203, N'Language Id not found.'
     EXEC SaveErrorMsg 2204, N'Error Message (ML) cannot be null or empty string.'
-
     -- CLIENTS
     EXEC SaveErrorMsg 2301, N'Access Id cannot be null or empty string.'
     EXEC SaveErrorMsg 2302, N'Access Id not found.'
-    EXEC SaveErrorMsg 2303, N''
-
+    EXEC SaveErrorMsg 2303, N'Lang Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 2304, N'Lang Id not found.'
+    EXEC SaveErrorMsg 2305, N'Access Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 2306, N'Access Id not found.'
+    EXEC SaveErrorMsg 2307, N'Access Id cannot be null or empty string.'
+    EXEC SaveErrorMsg 2308, N'Access Id not found.'
     -- DEVICES
     EXEC SaveErrorMsg 2401, N'Customer Id cannot be null or empty string.'
     EXEC SaveErrorMsg 2402, N'Device Type Id not found.'

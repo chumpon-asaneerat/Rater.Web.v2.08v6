@@ -45,6 +45,22 @@ function __CheckAccess(req, res) {
     });
 };
 
+function __GetAccessUser(req, res) {
+    raterdb.CallSp(req, res, function (req, res, reqModel) {
+        raterdb.GetAccessUser(reqModel.data, function (dbResult) {
+            nlib.sendJson(req, res, dbResult);
+        });
+    });
+};
+
+function __SignOut(req, res) {
+    raterdb.CallSp(req, res, function (req, res, reqModel) {
+        raterdb.SignOut(reqModel.data, function (dbResult) {
+            nlib.sendJson(req, res, dbResult);
+        });
+    });
+};
+
 /**
  * Init routes.
  * 
@@ -56,6 +72,8 @@ function init_routes(app) {
     app.all('/api/edl/users', __CheckUsers); // OK.
     app.all('/api/edl/signin', __SignIn); // OK.
     app.all('/api/edl/check', __CheckAccess); // OK.
+    app.all('/api/edl/user', __GetAccessUser); // OK.
+    app.all('/api/edl/signout', __SignOut); // OK.
 };
 
 exports.init_routes = init_routes;
