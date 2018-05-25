@@ -159,6 +159,40 @@ class BS4Modal {
 
 //#endregion
 
+//#region BS4ToolTip class
+
+class BS4ToolTip {
+    constructor() {
+    };
+
+    show(selector, msg, placement, timeout) {
+        let $ctrl = $(selector);
+        if (!$ctrl) return; // No control not found.
+        if (!msg || msg.length <= 0) return; // No message.
+
+        let options = {
+            trigger: 'manual',
+            placement: (placement) ? placement : 'top',
+            title: msg
+        };
+
+        let attr = $ctrl.attr('rel');
+        if (!attr) {
+            $ctrl.attr('rel', 'tooltip');
+        }
+
+        $ctrl.tooltip(options).tooltip('show');        
+
+        let tout = (timeout) ? timeout : 3000;
+        setTimeout(() => {
+            //$ctrl.tooltip('hide');
+            $ctrl.tooltip('dispose');
+        }, tout);
+    };
+};
+
+//#endregion
+
 class ClientApp {
     constructor() {
 

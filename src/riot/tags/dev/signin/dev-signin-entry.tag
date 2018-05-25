@@ -94,12 +94,36 @@
         let self = this;
         this.users = [];
         this.modal = new BS4Modal('#selectCustomer');
+        this.tooltip = new BS4ToolTip();
 
         //-- setup service handlers.
         let onUserListChanged = (sender, evt) => { self.updateUsers(); };
         secure.userListChanged.add(onUserListChanged);
 
         //-- private methods.
+        this.validateInput = (user) => {
+            if (!user) {
+                //this.showErrMessage('User is null.');
+                return false;
+            }
+            if (!user.userName || user.userName.trim() === '') {
+                //this.showErrMessage('Please Enter User Name.');
+                this.tooltip.show('#userName', 'Please Enter User Name.');
+                return false;
+            }
+            if (!nlib.utils.isValidEmail(user.userName)) {
+                //this.showErrMessage('Please Enter User Name.');
+                this.tooltip.show('#userName', 'User Name is not valid email address.');
+                return false;
+            }
+            if (!user.passWord || user.passWord.trim() === '') {
+                //this.showErrMessage('Please Enter Password.');
+                this.tooltip.show('#passWord', 'Please Enter Password.');
+                return false;
+            }
+            return true;
+        };
+
         this.getUser = (customerId) => { 
             let user = { 
                 "langId": 'TH', 
@@ -113,7 +137,8 @@
         this.updateUsers = () => {
             if (secure.users.length <= 0) { return; }
             if (secure.users.length === 1) { 
-                secure.signIn(self.getUser(secure.users[0].customerId));
+                let user = self.getUser(secure.users[0].customerId);
+                secure.signIn(user);
             }
             else {
                 self.users = secure.users; // init users list on self.
@@ -126,12 +151,15 @@
         //-- click events
         this.onSignInUser = (e) => {
             e.preventDefault();
-            secure.getUsers(self.getUser()); // request user list.
+            let user = self.getUser();
+            if (!self.validateInput(user)) return;
+            secure.getUsers(user); // request user list.
         };
 
         this.onSelectedCustomer = (e) => {
             e.preventDefault();
-            secure.signIn(self.getUser(e.item.user.customerId));
+            let user = self.getUser(e.item.user.customerId);
+            secure.signIn(user);
             self.modal.hide(); // hide modal
         };
     </script>

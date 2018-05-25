@@ -54,9 +54,33 @@ riot.tag2('dev-signin-entry', '<div class="container-fluid py-3 semi-trans"> <di
         let self = this;
         this.users = [];
         this.modal = new BS4Modal('#selectCustomer');
+        this.tooltip = new BS4ToolTip();
 
         let onUserListChanged = (sender, evt) => { self.updateUsers(); };
         secure.userListChanged.add(onUserListChanged);
+
+        this.validateInput = (user) => {
+            if (!user) {
+
+                return false;
+            }
+            if (!user.userName || user.userName.trim() === '') {
+
+                this.tooltip.show('#userName', 'Please Enter User Name.');
+                return false;
+            }
+            if (!nlib.utils.isValidEmail(user.userName)) {
+
+                this.tooltip.show('#userName', 'User Name is not valid email address.');
+                return false;
+            }
+            if (!user.passWord || user.passWord.trim() === '') {
+
+                this.tooltip.show('#passWord', 'Please Enter Password.');
+                return false;
+            }
+            return true;
+        };
 
         this.getUser = (customerId) => {
             let user = {
@@ -71,7 +95,8 @@ riot.tag2('dev-signin-entry', '<div class="container-fluid py-3 semi-trans"> <di
         this.updateUsers = () => {
             if (secure.users.length <= 0) { return; }
             if (secure.users.length === 1) {
-                secure.signIn(self.getUser(secure.users[0].customerId));
+                let user = self.getUser(secure.users[0].customerId);
+                secure.signIn(user);
             }
             else {
                 self.users = secure.users;
@@ -83,12 +108,15 @@ riot.tag2('dev-signin-entry', '<div class="container-fluid py-3 semi-trans"> <di
 
         this.onSignInUser = (e) => {
             e.preventDefault();
-            secure.getUsers(self.getUser());
+            let user = self.getUser();
+            if (!self.validateInput(user)) return;
+            secure.getUsers(user);
         };
 
         this.onSelectedCustomer = (e) => {
             e.preventDefault();
-            secure.signIn(self.getUser(e.item.user.customerId));
+            let user = self.getUser(e.item.user.customerId);
+            secure.signIn(user);
             self.modal.hide();
         };
 });
