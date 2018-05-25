@@ -54,15 +54,14 @@ class ClientAccess {
         let fn = api.secure.getUsers(login);
         $.when(fn).then((r) => {
             if (!r || !r.errors) { 
-                console.log('No data returns.'); 
+                //console.log('No data returns.'); 
             }
             if (r.errors.hasError) { 
-                console.log(r.errors); 
+                //console.log(r.errors); 
             }
             if (!r.data || r.data.length <= 0) { 
-                console.log('No user found.'); 
+                //console.log('No user found.'); 
             }
-
             self._users = r.data;
             self.__userListChanged.invoke(self, EventArgs.Empty);
         });
@@ -187,6 +186,33 @@ class BS4ToolTip {
         setTimeout(() => {
             //$ctrl.tooltip('hide');
             $ctrl.tooltip('dispose');
+        }, tout);
+    };
+};
+
+//#endregion
+
+//#region BS4Alert class
+
+class BS4Alert extends BS4ToolTip {
+    constructor() {
+        super();
+        this._selector = '[role="alert"]';
+    };
+
+    show(msg, placement, timeout) {
+        let $ctrl = $(this._selector);
+
+        $ctrl.removeClass("alert-primary");
+        $ctrl.addClass("alert-danger");
+
+        let pment = (placement) ? placement : 'bottom';
+        let tout = (timeout) ? timeout : 3000;
+        super.show($ctrl, msg, pment, tout);
+
+        setTimeout(() => {
+            $ctrl.removeClass("alert-danger");
+            $ctrl.addClass("alert-primary");
         }, tout);
     };
 };

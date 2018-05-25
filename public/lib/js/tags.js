@@ -55,13 +55,14 @@ riot.tag2('dev-signin-entry', '<div class="container-fluid py-3 semi-trans"> <di
         this.users = [];
         this.modal = new BS4Modal('#selectCustomer');
         this.tooltip = new BS4ToolTip();
+        this.alert = new BS4Alert();
 
         let onUserListChanged = (sender, evt) => { self.updateUsers(); };
         secure.userListChanged.add(onUserListChanged);
 
         this.validateInput = (user) => {
             if (!user) {
-
+                this.alert.show('User is null.');
                 return false;
             }
             if (!user.userName || user.userName.trim() === '') {
@@ -93,7 +94,10 @@ riot.tag2('dev-signin-entry', '<div class="container-fluid py-3 semi-trans"> <di
         };
 
         this.updateUsers = () => {
-            if (secure.users.length <= 0) { return; }
+            if (secure.users.length <= 0) {
+                this.alert.show('User not found.');
+                return;
+            }
             if (secure.users.length === 1) {
                 let user = self.getUser(secure.users[0].customerId);
                 secure.signIn(user);
