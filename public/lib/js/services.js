@@ -213,7 +213,7 @@ class LanguageService {
         this._pref.load(); // load once.
         this._current = null;
         this._languages = [];
-        this.__languageListChanged = new EventHandler();
+        this._languageListChanged = new EventHandler();
         this._currentChanged = new EventHandler();
     };
 
@@ -261,7 +261,7 @@ class LanguageService {
                 //console.log('No user found.'); 
             }
             self._languages = r.data;
-            self.__languageListChanged.invoke(self, EventArgs.Empty);
+            self._languageListChanged.invoke(self, EventArgs.Empty);
             self.chnage(self._pref.langId); // set langId from preference.
         });
     };
@@ -274,8 +274,17 @@ class LanguageService {
         return this._current;
     }
 
+    get langId() {
+        if (!this._current || !this._current.langId) {
+            return null;
+        }
+        else {
+            return this._current.langId.toUpperCase();
+        }
+    }
+
     get languageListChanged() {
-        return this.__languageListChanged;
+        return this._languageListChanged;
     };
 
     get currentChanged() {
@@ -287,6 +296,60 @@ class LanguageService {
     //console.log('Init language service...');
     window.lang = window.lang || new LanguageService();
     lang.getLanguages();
+})();
+
+//#endregion
+
+//#region RaterPage
+
+class RaterPage {
+    constructor() {
+        this._modelML = { };
+        let self = this;
+        let onLanguageChanted = (sender, evtData) => {
+            let LId = lang.langId;
+            let modelTypes = ['page', 'banner', 'nav', 'footer'];
+            let fns = []
+            modelTypes.forEach(type => {
+                let data = { langId: LId, modelType: type };
+                let fn = api.model.getModel(data);
+                fns.push(fn);
+            });
+            $.when.all(fns).then(promiseRs => {
+                let index = 0;
+                promiseRs.forEach(promiseR => {
+                    let r = promiseR[0].data;
+                    let modelType = modelTypes[index];
+                    self.update(LId, modelType, r);
+                    ++index;
+                });
+            });
+        };
+
+        lang.currentChanged.add(onLanguageChanted);
+    };
+
+    update(langId, modelType, obj) {
+        //console.log(modelType, obj);
+        let LId = langId.toUpperCase();     
+        this._modelML[LId] = this._modelML[LId] || { langId: LId };
+        this._modelML[LId][modelType] = this._modelML[LId][modelType] || obj;
+    };
+
+    get models() {
+        return this._modelML;
+    };
+
+    get model() {
+        if (!lang.current || !lang.langId)
+            return null;
+        return this._modelML[lang.langId];
+    };
+};
+
+; (function () {
+    //console.log('Init language service...');
+    window.page = window.page || new RaterPage();    
 })();
 
 //#endregion

@@ -78,7 +78,7 @@ class LanguageAPI extends API
 
 //#endregion
 
-//#region Language API class - move to register/signin app.js later
+//#region Secure API class - move to register/signin app.js later
 
 class SecureAPI extends API {
     constructor() { 
@@ -92,7 +92,7 @@ class SecureAPI extends API {
             { name: "getUsers", url: "/api/edl/users" },
             { name: "signIn", url: "/api/edl/signin" },
             { name: "getCurrentUser", url: "/api/edl/user" },
-            { name: "signOut", url: "/api/edl/signout" },
+            { name: "signOut", url: "/api/edl/signout" }
         ];
     };
 };
@@ -103,6 +103,33 @@ class SecureAPI extends API {
 
     // example.
     //api.secure.getUsers({ langId: 'EN', userName: 'somchai@yahoo.co.th', passWord: '1234' });
+})();
+
+//#endregion
+
+
+
+
+
+
+//#region Model API class
+
+class ModelAPI extends API {
+    constructor() {
+        super();
+    };
+
+    get functions() {
+        return [
+            // page content model.
+            { name: "getModel", url: API.getUrl("models") }
+        ];
+    };
+};
+
+; (function () {
+    // Init in api namespace.
+    window.api.model = window.api.model || new ModelAPI();
 })();
 
 //#endregion
