@@ -1610,6 +1610,104 @@ My Choice Rater v2.0:
                     common:
                         page-footer:
                             ✔ Update code and add supports get current user. @done (2018-5-25 20:19:59)
+    Update on [2018-05-26]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).                
+            Stored Procedures and Functions:
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-26 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                XXX:
+                    YYY:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+            Core Module:
+                nlib-core.js:
+                    ☐ 
+                rater-web-db.js:
+                    ☐ 
+                rater-web-secure.js:
+                    ☐ 
+            Views:
+                dev:
+                    home:
+                        ☐ update model.js
+                        ☐ update route.js.
+                    report:
+                        ☐ update model.js
+                        ☐ update route.js.
+                    register:
+                        ☐ update model.js
+                        ☐ update route.js.
+                    signin:
+                        ☐ update model.js
+                        ☐ update route.js.
+                default:
+                    home:
+                        ☐ update model.js
+                        ☐ update route.js.
+                    signin:
+                        ☐ update model.js
+                        ☐ update route.js.
+                    register:
+                        ☐ update model.js
+                        ☐ update route.js.
+                customer:
+                    admin:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+                    exclusive:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+                    staff:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+                    device:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+                    question:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+                edl:
+                    admin:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+                    supervisor:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+                    staff:
+                        home:
+                            ☐ update model.js
+                            ☐ update route.js.
+        Clients:
+            Core Libraries:
+                api.js:
+                    ☐ xxx
+                nlib.js:
+                    ☐ xxx
+                service.js:
+                    ☐ xxx
+                tags.js:
+                    ☐ xxx
                             
     Update on [2018-05-30]:
         Database Create Scripts:
