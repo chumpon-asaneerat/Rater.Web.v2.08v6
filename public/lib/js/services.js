@@ -97,6 +97,8 @@ class ClientAccess {
 
 //#endregion
 
+//#region BS4Modal class
+
 class BS4Modal {
     constructor(id) {
         this._id = id;
@@ -131,6 +133,8 @@ class BS4Modal {
         return this.id;
     };
 };
+
+//#endregion
 
 class ClientApp {
     constructor() {
