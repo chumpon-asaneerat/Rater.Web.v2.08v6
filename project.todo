@@ -1514,6 +1514,22 @@ My Choice Rater v2.0:
                         ✔ Update index.handlebars. @done (2018-5-25 04:33:27)
                         ✔ Update app.js. @done (2018-5-25 04:33:29)
                         ✔ Update model.js. @done (2018-5-25 04:33:28)
+                default:
+                    home:
+                        ✔ Update route.js. @done (2018-5-25 20:50:41)
+                        ✔ Update index.handlebars. @done (2018-5-25 20:50:42)
+                        ✔ Update app.js. @done (2018-5-25 20:50:43)
+                        ✔ Update model.js. @done (2018-5-25 20:50:43)
+                    signin:
+                        ✔ Update route.js. @done (2018-5-25 20:50:44)
+                        ✔ Update index.handlebars. @done (2018-5-25 20:50:44)
+                        ✔ Update app.js. @done (2018-5-25 20:50:45)
+                        ✔ Update model.js. @done (2018-5-25 20:50:47)
+                    register:
+                        ✔ Update route.js. @done (2018-5-25 20:50:48)
+                        ✔ Update index.handlebars. @done (2018-5-25 20:50:49)
+                        ✔ Update app.js. @done (2018-5-25 20:50:49)
+                        ✔ Update model.js. @done (2018-5-25 20:50:50)
                 customer:
                     admin:
                         home:
