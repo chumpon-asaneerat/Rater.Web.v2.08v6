@@ -1557,6 +1557,9 @@ My Choice Rater v2.0:
                     ✔ Add BS4Modal class. @done (2018-5-25 10:33:00)
                     ✔ Add BS4ToolTip class. @done (2018-5-25 15:54:25)
                     ✔ Add BS4Alert class. @done (2018-5-25 16:06:26)
+                    ✔ Add LocalStorage class. @done (2018-5-25 16:45:39)
+                    ✔ Add UserPerference class. @done (2018-5-25 16:45:50)
+                    ✔ Add LanguageService class and create new namespace to access. @done (2018-5-25 16:46:10)
                 tags.js:
                     dev:
                         report:

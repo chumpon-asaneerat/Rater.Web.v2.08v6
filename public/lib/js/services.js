@@ -38,6 +38,92 @@ class RiotTrack {
 */
 //#endregion
 
+//#region LocalStorage class
+
+class LocalStorage {
+    constructor() {
+        this._name = ''
+        this._data = null
+        this._ttl = 0;
+    };
+
+    //-- public methods.
+    checkExist() {
+        if (!this.data) {
+            this.data = this.getDefault();
+            this.save();
+        }
+    };
+
+    getDefault() {
+        return {}
+    };
+
+    save() {
+        if (!this._name) return; // no name specificed.
+        let ttl = (this._ttl) ? this._ttl : 0;
+        nlib.storage.set(this._name, this._data, { TTL: ttl }); // 1 days.
+    };
+
+    load() {
+        if (!this._name) return; // no name specificed.
+        let ttl = (this._ttl) ? this._ttl : 0;
+        this._data = nlib.storage.get(this._name);
+    };
+
+    //-- public properties.
+    get name() { return this._name; };
+    set name(value) { this._name = value; };
+
+    get data() { return this._data; };
+    set data(value) { this._data = value; };
+
+    get ttl() { return this._ttl; };
+    set ttl(value) { this._ttl = value; };
+};
+
+//#endregion
+
+//#region UserPerference class
+
+class UserPerference extends LocalStorage {
+    constructor() {
+        super();
+        this.name = 'uperf'
+        this.ttl = 0;
+        this._prefchanged = null;
+        this.load();
+        this.checkExist();
+    };
+
+    //-- public methods.
+    getDefault() {
+        return {
+            langId: 'EN'
+        }
+    };
+
+    load() {
+        super.load();
+    };
+
+    save() {
+        super.save();
+    };
+
+    //-- public properties.
+    get langId() {
+        if (!this.data) this.checkExist();
+        return this.data.langId;
+    };
+    set langId(value) {
+        if (!this.data) this.checkExist();
+        this.data.langId = value;
+    };
+};
+
+//#endregion
+
 //#region ClientAccess class
 
 class ClientAccess {
@@ -113,8 +199,94 @@ class ClientAccess {
 };
 
 ; (function () {
-    //console.log('Init app core...');
+    //console.log('Init client access service...');
     window.secure = window.secure || new ClientAccess();
+})();
+
+//#endregion
+
+//#region LanguageService class
+
+class LanguageService {
+    constructor() {
+        this._pref = new UserPerference();
+        this._pref.load(); // load once.
+        this._current = null;
+        this._languages = [];
+        this.__languageListChanged = new EventHandler();
+        this._currentChanged = new EventHandler();
+    };
+
+    chnage(langId) {
+        if (!langId || langId.length < 2) return; // invalid.
+        let langs = this._languages.map((item) => { return item.langId.toUpperCase() });
+        let index = langs.indexOf(langId.toUpperCase());
+        if (index === -1) return; // not found.
+        let newVal = this._languages[index];
+        if (newVal) {
+            if (this._current) {
+                if (this._current.langId.toUpperCase() !== newVal.langId.toUpperCase()) {
+                    // LangId changed.
+                    this._current = newVal;
+                    // keep to perf.
+                    this._pref.langId = this._current.langId.toUpperCase();
+                    this._pref.save();
+                    // raise event.
+                    this._currentChanged.invoke(this, EventArgs.Empty);
+                }
+            }
+            else {
+                // no current so set new one.
+                this._current = newVal;
+                // keep to perf.
+                this._pref.langId = this._current.langId.toUpperCase();
+                this._pref.save();
+                // raise event.
+                this._currentChanged.invoke(this, EventArgs.Empty);
+            }
+        }
+    };
+
+    getLanguages() {
+        let self = this;
+        let fn = api.lang.getLanguages({ enabled:true });
+        $.when(fn).then((r) => {
+            if (!r || !r.errors) {
+                //console.log('No data returns.'); 
+            }
+            if (r.errors.hasError) {
+                //console.log(r.errors); 
+            }
+            if (!r.data || r.data.length <= 0) {
+                //console.log('No user found.'); 
+            }
+            self._languages = r.data;
+            self.__languageListChanged.invoke(self, EventArgs.Empty);
+            self.chnage(self._pref.langId); // set langId from preference.
+        });
+    };
+
+    get languages() {
+        return this._languages;
+    };
+
+    get current() {
+        return this._current;
+    }
+
+    get languageListChanged() {
+        return this.__languageListChanged;
+    };
+
+    get currentChanged() {
+        return this._currentChanged;
+    };
+};
+
+; (function () {
+    //console.log('Init language service...');
+    window.lang = window.lang || new LanguageService();
+    lang.getLanguages();
 })();
 
 //#endregion
