@@ -1526,7 +1526,7 @@ My Choice Rater v2.0:
                         ✔ Update index.handlebars. @done (2018-5-25 20:50:42)
                         ✔ Update app.js. @done (2018-5-25 20:50:43)
                         ✔ Update model.js. @done (2018-5-25 20:50:43)
-                        ☐ route.js add getModels.
+                        ✔ route.js add getModels. @done (2018-5-25 21:21:35)
                     signin:
                         ✔ Update route.js. @done (2018-5-25 20:50:44)
                         ✔ Update index.handlebars. @done (2018-5-25 20:50:44)
@@ -1538,7 +1538,7 @@ My Choice Rater v2.0:
                         ✔ Update index.handlebars. @done (2018-5-25 20:50:49)
                         ✔ Update app.js. @done (2018-5-25 20:50:49)
                         ✔ Update model.js. @done (2018-5-25 20:50:50)
-                        ☐ route.js add getModels.
+                        ✔ route.js add getModels. @done (2018-5-25 21:21:36)
                 customer:
                     admin:
                         home:
