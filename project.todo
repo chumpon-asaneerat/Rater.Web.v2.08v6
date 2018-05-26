@@ -1679,9 +1679,9 @@ My Choice Rater v2.0:
                             ✔ remove all links in nav.json both EN and TH. @done (2018-5-26 21:57:30)
                     staff:
                         home:
-                            ☐ add all contents jsons from v1.
-                            ☐ fixed link in banner.json both EN and TH.
-                            ☐ remove all links in nav.json both EN and TH.
+                            ✔ add all contents jsons from v1. @done (2018-5-26 22:01:02)
+                            ✔ fixed link in banner.json both EN and TH. @done (2018-5-26 22:01:03)
+                            ✔ remove all links in nav.json both EN and TH. @done (2018-5-26 22:01:04)
                     device:
                         home:
                             ☐ add all contents jsons from v1.
