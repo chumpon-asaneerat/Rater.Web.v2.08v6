@@ -1643,26 +1643,28 @@ My Choice Rater v2.0:
             Views:
                 dev:
                     home:
-                        ☐ update model.js
-                        ☐ update route.js.
-                    report:
-                        ☐ update model.js
-                        ☐ update route.js.
+                        ✔ update link in nav.json both EN and TH. @done (2018-5-26 21:18:34)
+                        ✔ update model.js @done (2018-5-26 21:29:14)
                     register:
-                        ☐ update model.js
-                        ☐ update route.js.
+                        ✔ update link in nav.json both EN and TH. @done (2018-5-26 21:21:10)
+                        ✔ update link in banner.json both EN and TH. @done (2018-5-26 21:21:17)
+                        ✔ update model.js @done (2018-5-26 21:29:15)
                     signin:
-                        ✔ add contents signin.json @done (2018-5-26 20:52:24)
+                        ✔ add contents signin.json. @done (2018-5-26 20:52:24)
+                        ✔ update link in banner.json both EN and TH. @done (2018-5-26 21:15:37)
+                        ✔ update link in nav.json both EN and TH. @done (2018-5-26 21:14:28)
+                    report:
+                        ✔ remove all links in nav.json both EN and TH. @done (2018-5-26 21:32:15)
                 default:
                     home:
-                        ☐ update model.js
-                        ☐ update route.js.
-                    signin:
-                        ☐ update model.js
+                        ✔ add all contents jsons from v1. @done (2018-5-26 21:02:35)
                         ☐ update route.js.
                     register:
-                        ☐ update model.js
+                        ✔ add all contents jsons from v1. @done (2018-5-26 21:08:47)
                         ☐ update route.js.
+                    signin:
+                        ✔ add all contents jsons from dev-signin. @done (2018-5-26 20:58:04)
+                        ✔ fixed link in nav.json both EN and TH. @done (2018-5-26 21:07:46)
                 customer:
                     admin:
                         home:
@@ -1714,6 +1716,8 @@ My Choice Rater v2.0:
                         ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:53:29)
                     dev-signin-entry:
                         ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:54:27)
+                    default-signin-entry:
+                        ✔ update all code from dev-signIn-entry. @done (2018-5-26 20:57:42)
                             
     Update on [2018-05-30]:
         Database Create Scripts:

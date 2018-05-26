@@ -1,6 +1,6 @@
 {
     "links": [
-        { "text": "Register", "url": "#", "active": "", "type": "none", "src": "" },
-        { "text": "Sign In", "url": "#", "active": "", "type": "image", "src": "/images/common/login.gif" }
+        { "text": "Register", "url": "/dev/register", "active": "", "type": "none", "src": "" },
+        { "text": "Sign In", "url": "/dev/signin", "active": "", "type": "image", "src": "/images/common/login.gif" }
     ]
 }
