@@ -1615,7 +1615,7 @@ My Choice Rater v2.0:
             Tables and Views:
                 ☐ (TABLE).                
             Stored Procedures and Functions:
-                ☐ (SP).
+                ✔ CheckUsers (SP) ALTER. @done (2018-5-26 22:32:31)
                 ☐ (SP).
                 ☐ (SP).
                 ☐ (SP).
@@ -1695,9 +1695,9 @@ My Choice Rater v2.0:
                 edl:
                     admin:
                         home:
-                            ☐ add all contents jsons from v1.
-                            ☐ fixed link in banner.json both EN and TH.
-                            ☐ remove all links in nav.json both EN and TH.
+                            ✔ add all contents jsons from v1. @done (2018-5-26 22:02:25)
+                            ✔ fixed link in banner.json both EN and TH. @done (2018-5-26 22:02:26)
+                            ✔ remove all links in nav.json both EN and TH. @done (2018-5-26 22:02:27)
                     supervisor:
                         home:
                             ☐ add all contents jsons from v1.
