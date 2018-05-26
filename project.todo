@@ -1658,13 +1658,13 @@ My Choice Rater v2.0:
                 default:
                     home:
                         ✔ add all contents jsons from v1. @done (2018-5-26 21:02:35)
-                        ☐ update route.js.
+                        ✔ banner.json fixed link both TH and EN. @done (2018-5-26 21:39:36)
                     register:
                         ✔ add all contents jsons from v1. @done (2018-5-26 21:08:47)
-                        ☐ update route.js.
                     signin:
                         ✔ add all contents jsons from dev-signin. @done (2018-5-26 20:58:04)
                         ✔ fixed link in nav.json both EN and TH. @done (2018-5-26 21:07:46)
+                        ✔ fixed link in banner.json both EN and TH. @done (2018-5-26 21:43:15)
                 customer:
                     admin:
                         home:
