@@ -1,19 +1,23 @@
 <page-footer class="navbar fixed-bottom m-0 p-0 navbar-light bg-primary">
     <span class="float-left m-0 p-0">
-        <label class="m-0 p-1">&nbsp;{page.model.footer.label.status}&nbsp;:</label>
-        <div class="v-divider">&nbsp;</div>
+        <virtual if={(page.model && page.model.footer && page.model.footer.label)}>
+            <label class="m-0 p-1">&nbsp;{page.model.footer.label.status}&nbsp;:</label>
+            <div class="v-divider">&nbsp;</div>
+        </virtual>
     </span>
     <span class="float-right m-0 p-0 ml-auto">
         <div class="v-divider"></div>
         <label class="m-0 p-1">
             &nbsp;
             <span id="user-info" class="fas fa-user-circle"></span>
-            &nbsp;
-            {secure.currentUserName}
-            &nbsp;
+            <virtual if={secure.current}>
+                &nbsp; {secure.currentUserName} &nbsp;
+            </virtual>
         </label>
         <div class="v-divider"></div>
-        <label class="m-0 p-1">&copy;&nbsp;{page.model.footer.label.copyright}&nbsp;&nbsp;&nbsp;</label>
+        <virtual if={(page.model && page.model.footer && page.model.footer.label)}>
+            <label class="m-0 p-1">&copy;&nbsp;{page.model.footer.label.copyright}&nbsp;&nbsp;&nbsp;</label>
+        </virtual>
     </span>
 
     <style>
@@ -34,16 +38,14 @@
         }
     </style>
     <script>
+        //-- local variables.
         let self = this;
         
-        let onModelLoaded = (sender, evtData) => {
-            self.update();
-        };
+        //-- setup service handlers.
+        let onModelLoaded = (sender, evtData) => { self.update(); };
         page.modelLoaded.add(onModelLoaded);
 
-        let onCurrentUserChanged = (sender, evtData) => {
-            self.update();
-        };
+        let onCurrentUserChanged = (sender, evtData) => { self.update(); };
         secure.currentUserChanged.add(onCurrentUserChanged);
     </script>
 </page-footer>

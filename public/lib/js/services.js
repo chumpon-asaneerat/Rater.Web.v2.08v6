@@ -240,7 +240,7 @@ class LanguageService {
         this._currentChanged = new EventHandler();
     };
 
-    chnage(langId) {
+    change(langId) {
         if (!langId || langId.length < 2) return; // invalid.
         let langs = this._languages.map((item) => { return item.langId.toUpperCase() });
         let index = langs.indexOf(langId.toUpperCase());
@@ -289,7 +289,7 @@ class LanguageService {
             }
             self._languages = r.data;
             self._languageListChanged.invoke(self, EventArgs.Empty);
-            self.chnage(self._pref.langId); // set langId from preference.
+            self.change(self._pref.langId); // set langId from preference.
         });
     };
 

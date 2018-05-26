@@ -3,23 +3,25 @@
         <div class="row">
             <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;">
                 <div class="card card-body">
-                    <h3 class="text-center mb-4 alert alert-success" role="alert">
-                        Sign In
-                    </h3>
-                    <fieldset>
-                        <div class="form-group">
-                            <label for="userName">&nbsp;User Name:</label>
-                            <input class="form-control input-lg" placeholder="User Name" id="userName" name="userName" type="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="passWord">&nbsp;Password:</label>
-                            <input class="form-control input-lg" placeholder="Password" id="passWord" name="passWord" value="" type="password">
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="{onSignInUser}">
-                            <i class="fas fa-key"></i>
-                            Sign In
-                        </button>
-                    </fieldset>
+                    <virtual if={(page.model && page.model.signin && page.model.signin.label && page.model.signin.hint)}>
+                        <h3 class="text-center mb-4 alert alert-success" role="alert">
+                            {page.model.signin.label.title}
+                        </h3>                    
+                        <fieldset>
+                            <div class="form-group">                            
+                                <label for="userName">&nbsp;{page.model.signin.label.userName}</label>
+                                <input class="form-control input-lg" placeholder="{page.model.signin.hint.userName}" id="userName" name="userName" type="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="passWord">&nbsp;{page.model.signin.label.passWord}</label>
+                                <input class="form-control input-lg" placeholder="{page.model.signin.hint.passWord}" id="passWord" name="passWord" value="" type="password">
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="{onSignInUser}">
+                                <i class="fas fa-key"></i>
+                                {page.model.signin.label.signIn}
+                            </button>
+                        </fieldset>
+                    </virtual>
                 </div>
             </div>
         </div>
@@ -31,7 +33,9 @@
             <div class="modal-content">
                 <div class="modal-header alert-success">
                     <h5 class="modal-title">
-                        Choose Company
+                        <virtual if={(page.model && page.model.signin && page.model.signin.label)}>
+                            {page.model.signin.label.chooseCompany}
+                        </virtual>
                     </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -97,7 +101,10 @@
         this.tooltip = new BS4ToolTip();
         this.alert = new BS4Alert();
 
-        //-- setup service handlers.
+        //-- setup service handlers.        
+        let onModelLoaded = (sender, evtData) => { self.update(); };
+        page.modelLoaded.add(onModelLoaded);
+
         let onUserListChanged = (sender, evt) => { self.updateUsers(); };
         secure.userListChanged.add(onUserListChanged);
 
@@ -127,7 +134,7 @@
 
         this.getUser = (customerId) => { 
             let user = { 
-                "langId": 'TH', 
+                "langId": lang.langId, // current lang id.
                 "userName": $('#userName').val(), 
                 "passWord": $('#passWord').val() 
             };

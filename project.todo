@@ -1652,8 +1652,7 @@ My Choice Rater v2.0:
                         ☐ update model.js
                         ☐ update route.js.
                     signin:
-                        ☐ update model.js
-                        ☐ update route.js.
+                        ✔ add contents signin.json @done (2018-5-26 20:52:24)
                 default:
                     home:
                         ☐ update model.js
@@ -1705,9 +1704,16 @@ My Choice Rater v2.0:
                 nlib.js:
                     ☐ xxx
                 service.js:
-                    ☐ xxx
+                    ✔ Language Service fixed misspell method name 'chaage' -> 'chnage'. @done (2018-5-26 20:52:44)
                 tags.js:
-                    ☐ xxx
+                    page-nav-bar:
+                        ✔ port code from v1. @done (2018-5-26 20:53:17)
+                        ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:53:29)
+                        ✔ setup model change handler. @done (2018-5-26 20:53:42)
+                    page-footer:
+                        ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:53:29)
+                    dev-signin-entry:
+                        ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:54:27)
                             
     Update on [2018-05-30]:
         Database Create Scripts:
