@@ -1612,34 +1612,15 @@ My Choice Rater v2.0:
                             ✔ Update code and add supports get current user. @done (2018-5-25 20:19:59)
     Update on [2018-05-26]:
         Database Create Scripts:
-            Tables and Views:
-                ☐ (TABLE).                
             Stored Procedures and Functions:
                 ✔ CheckUsers (SP) ALTER. @done (2018-5-26 22:32:31)
-                ☐ (SP).
-                ☐ (SP).
-                ☐ (SP).
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP) Add New Error Code.
-        Database Document Updated:
-            Error Code:
-                ☐ Update Error Code in Excel file.
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-26 (generate db script).
-            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                XXX:
-                    YYY:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
+                    ✔ db-script-2018-05-26 (generate db script). @done (2018-5-26 22:53:52)
             Core Module:
-                nlib-core.js:
-                    ☐ 
-                rater-web-db.js:
-                    ☐ 
                 rater-web-secure.js:
-                    ☐ 
+                    ✔ change dev mode off. @done (2018-5-26 22:50:40)
             Views:
                 dev:
                     home:
@@ -1710,10 +1691,6 @@ My Choice Rater v2.0:
                             ✔ remove all links in nav.json both EN and TH. @done (2018-5-26 22:41:36)
         Clients:
             Core Libraries:
-                api.js:
-                    ☐ xxx
-                nlib.js:
-                    ☐ xxx
                 service.js:
                     ✔ Language Service fixed misspell method name 'chaage' -> 'chnage'. @done (2018-5-26 20:52:44)
                 tags.js:
@@ -1727,7 +1704,261 @@ My Choice Rater v2.0:
                         ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:54:27)
                     default-signin-entry:
                         ✔ update all code from dev-signIn-entry. @done (2018-5-26 20:57:42)
-                            
+    Update on [2018-05-27]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).                
+            Stored Procedures and Functions:
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-27 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                XXX:
+                    YYY:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+            Core Module:
+                rater-web-db.js:
+                    ☐ 
+                rater-web-secure.js:
+                    ☐ 
+            Views:
+                dev:
+                    home:
+                        ☐ update .
+                    register:
+                        ☐ update .
+                    signin:
+                        ☐ update .
+                    report:
+                        ☐ update .
+                default:
+                    home:
+                        ☐ update .
+                    register:
+                        ☐ update .
+                    signin:
+                        ☐ update .
+                customer:
+                    admin:
+                        home:
+                            ☐ update .
+                    exclusive:
+                        home:
+                            ☐ update .
+                    staff:
+                        home:
+                            ☐ update .
+                    device:
+                        home:
+                            ☐ update .
+                    question:
+                        home:
+                            ☐ update .
+                edl:
+                    admin:
+                        home:
+                            ☐ update .
+                    supervisor:
+                        home:
+                            ☐ update .
+                    staff:
+                        home:
+                            ☐ update .
+        Clients:
+            Core Libraries:
+                api.js:
+                    ☐ xxx
+                nlib.js:
+                    ☐ xxx
+                service.js:
+                    ☐ update .
+                tags.js:
+                    page-nav-bar:
+                        ☐ update .
+                    page-footer:
+                        ☐ update .
+                    dev-signin-entry:
+                        ☐ update .
+                    default-signin-entry:
+                        ☐ update .
+    Update on [2018-05-28]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).                
+            Stored Procedures and Functions:
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-28 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                XXX:
+                    YYY:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+            Core Module:
+                rater-web-db.js:
+                    ☐ 
+                rater-web-secure.js:
+                    ☐ 
+            Views:
+                dev:
+                    home:
+                        ☐ update .
+                    register:
+                        ☐ update .
+                    signin:
+                        ☐ update .
+                    report:
+                        ☐ update .
+                default:
+                    home:
+                        ☐ update .
+                    register:
+                        ☐ update .
+                    signin:
+                        ☐ update .
+                customer:
+                    admin:
+                        home:
+                            ☐ update .
+                    exclusive:
+                        home:
+                            ☐ update .
+                    staff:
+                        home:
+                            ☐ update .
+                    device:
+                        home:
+                            ☐ update .
+                    question:
+                        home:
+                            ☐ update .
+                edl:
+                    admin:
+                        home:
+                            ☐ update .
+                    supervisor:
+                        home:
+                            ☐ update .
+                    staff:
+                        home:
+                            ☐ update .
+        Clients:
+            Core Libraries:
+                api.js:
+                    ☐ xxx
+                nlib.js:
+                    ☐ xxx
+                service.js:
+                    ☐ update .
+                tags.js:
+                    page-nav-bar:
+                        ☐ update .
+                    page-footer:
+                        ☐ update .
+                    dev-signin-entry:
+                        ☐ update .
+                    default-signin-entry:
+                        ☐ update .
+    Update on [2018-05-29]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).                
+            Stored Procedures and Functions:
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP) Add New Error Code.
+        Database Document Updated:
+            Error Code:
+                ☐ Update Error Code in Excel file.
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-05-29 (generate db script).
+            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
+                XXX:
+                    YYY:
+                        ☐ definition file created.
+                        ☐ wrapper code updated.
+            Core Module:
+                rater-web-db.js:
+                    ☐ 
+                rater-web-secure.js:
+                    ☐ 
+            Views:
+                dev:
+                    home:
+                        ☐ update .
+                    register:
+                        ☐ update .
+                    signin:
+                        ☐ update .
+                    report:
+                        ☐ update .
+                default:
+                    home:
+                        ☐ update .
+                    register:
+                        ☐ update .
+                    signin:
+                        ☐ update .
+                customer:
+                    admin:
+                        home:
+                            ☐ update .
+                    exclusive:
+                        home:
+                            ☐ update .
+                    staff:
+                        home:
+                            ☐ update .
+                    device:
+                        home:
+                            ☐ update .
+                    question:
+                        home:
+                            ☐ update .
+                edl:
+                    admin:
+                        home:
+                            ☐ update .
+                    supervisor:
+                        home:
+                            ☐ update .
+                    staff:
+                        home:
+                            ☐ update .
+        Clients:
+            Core Libraries:
+                api.js:
+                    ☐ xxx
+                nlib.js:
+                    ☐ xxx
+                service.js:
+                    ☐ update .
+                tags.js:
+                    page-nav-bar:
+                        ☐ update .
+                    page-footer:
+                        ☐ update .
+                    dev-signin-entry:
+                        ☐ update .
+                    default-signin-entry:
+                        ☐ update .
     Update on [2018-05-30]:
         Database Create Scripts:
             Tables and Views:
@@ -1745,7 +1976,7 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-25 (generate db script).
+                    ☐ db-script-2018-05-30 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 XXX:
                     YYY:
@@ -1754,8 +1985,18 @@ My Choice Rater v2.0:
             Core Module:
                 rater-web-secure.js:
                     ☐ 
-                    ☐ 
-                    ☐ 
+        Clients:
+            Core Libraries:
+                api.js:
+                    ☐ xxx
+                nlib.js:
+                    ☐ xxx
+                service.js:
+                    ☐ xxx
+                tags.js:
+                    ☐ xxx
+    Update on [2018-XX-XX]:
+        Node Server:
             Unit Test Scripts for databse:
                 MemberTypes:
                     GetMemberTypes:
@@ -1855,15 +2096,6 @@ My Choice Rater v2.0:
                 AAA X.X.X:
                     ☐ organize files.
                     ☐ setup route.
-            Core Libraries:
-                api.js:
-                    ☐ xxx
-                nlib.js:
-                    ☐ xxx
-                service.js:
-                    ☐ xxx
-                tags.js:
-                    ☐ xxx
             Concepts:
                 ☐ concept1 tested.
                 ☐ concept2 tested.
