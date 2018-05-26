@@ -1659,6 +1659,7 @@ My Choice Rater v2.0:
                     home:
                         ✔ add all contents jsons from v1. @done (2018-5-26 21:02:35)
                         ✔ banner.json fixed link both TH and EN. @done (2018-5-26 21:39:36)
+                        ✔ fixed link in banner.json both EN and TH. @done (2018-5-26 21:55:40)
                     register:
                         ✔ add all contents jsons from v1. @done (2018-5-26 21:08:47)
                     signin:
@@ -1668,37 +1669,45 @@ My Choice Rater v2.0:
                 customer:
                     admin:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ✔ add all contents jsons from v1. @done (2018-5-26 21:51:56)
+                            ✔ fixed link in banner.json both EN and TH. @done (2018-5-26 21:51:56)
+                            ✔ remove all links in nav.json both EN and TH. @done (2018-5-26 21:52:19)
                     exclusive:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ☐ add all contents jsons from v1.
+                            ☐ fixed link in banner.json both EN and TH.
+                            ☐ remove all links in nav.json both EN and TH.
                     staff:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ☐ add all contents jsons from v1.
+                            ☐ fixed link in banner.json both EN and TH.
+                            ☐ remove all links in nav.json both EN and TH.
                     device:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ☐ add all contents jsons from v1.
+                            ☐ fixed link in banner.json both EN and TH.
+                            ☐ remove all links in nav.json both EN and TH.
                     question:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ☐ add all contents jsons from v1.
+                            ☐ fixed link in banner.json both EN and TH.
+                            ☐ remove all links in nav.json both EN and TH.
                 edl:
                     admin:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ☐ add all contents jsons from v1.
+                            ☐ fixed link in banner.json both EN and TH.
+                            ☐ remove all links in nav.json both EN and TH.
                     supervisor:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ☐ add all contents jsons from v1.
+                            ☐ fixed link in banner.json both EN and TH.
+                            ☐ remove all links in nav.json both EN and TH.
                     staff:
                         home:
-                            ☐ update model.js
-                            ☐ update route.js.
+                            ☐ add all contents jsons from v1.
+                            ☐ fixed link in banner.json both EN and TH.
+                            ☐ remove all links in nav.json both EN and TH.
         Clients:
             Core Libraries:
                 api.js:
