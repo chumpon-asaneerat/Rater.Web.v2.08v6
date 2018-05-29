@@ -1722,6 +1722,8 @@ My Choice Rater v2.0:
                 ✔ Log (SP). @done (2018-5-29 09:46:47)
                 ✔ EndLog (SP). @done (2018-5-29 09:46:55)
                 ✔ GetRandomCode (SP). @done (2018-5-29 09:48:03)
+                ✔ SaveErrorMsg (SP). @done (2018-5-29 09:50:30)
+                ✔ GetErrorMsg (SP). @done (2018-5-29 09:50:37)
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
         Database Document Updated:
