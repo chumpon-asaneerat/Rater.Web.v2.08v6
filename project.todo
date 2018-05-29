@@ -1704,7 +1704,7 @@ My Choice Rater v2.0:
                         ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:54:27)
                     default-signin-entry:
                         ✔ update all code from dev-signIn-entry. @done (2018-5-26 20:57:42)
-    Update on [2018-05-27]:
+    Update on [2018-05-29]:
         Database Create Scripts:
             Tables and Views:
                 ☐ (TABLE).                
@@ -1789,7 +1789,7 @@ My Choice Rater v2.0:
                         ☐ update .
                     default-signin-entry:
                         ☐ update .
-    Update on [2018-05-28]:
+    Update on [2018-05-30]:
         Database Create Scripts:
             Tables and Views:
                 ☐ (TABLE).                
@@ -1874,7 +1874,7 @@ My Choice Rater v2.0:
                         ☐ update .
                     default-signin-entry:
                         ☐ update .
-    Update on [2018-05-29]:
+    Update on [2018-05-31]:
         Database Create Scripts:
             Tables and Views:
                 ☐ (TABLE).                
@@ -1959,7 +1959,7 @@ My Choice Rater v2.0:
                         ☐ update .
                     default-signin-entry:
                         ☐ update .
-    Update on [2018-05-30]:
+    Update on [2018-06-01]:
         Database Create Scripts:
             Tables and Views:
                 ☐ (TABLE).                
