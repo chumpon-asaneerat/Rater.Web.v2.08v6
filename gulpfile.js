@@ -273,10 +273,16 @@ gulp.task('db-script-2018-05-29', function () {
         .pipe(gulp.dest('db/scripts/dist/'));
 });
 
+/*
 gulp.task('task2', function () {
     console.log('vscode call log task2 running...');
 });
 
 gulp.task('default', ['riot-tags', 'task2'], function () {
+    console.log('vscode call default task running...');
+});
+*/
+
+gulp.task('default', ['riot-tags'], function () {
     console.log('vscode call default task running...');
 });
