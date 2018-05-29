@@ -31,27 +31,29 @@ CREATE PROCEDURE [dbo].[GetMemberTypes]
 )
 AS
 BEGIN
+DECLARE @tId nvarchar(3) = NULL;
 DECLARE @lId nvarchar(3) = NULL;
 DECLARE @iCnt int = NULL;
-	IF (dbo.IsNullOrEmpty(@langId) = 1)
+	-- Find Proper LangId
+	EXEC FindLangId @langId, @lId out;
+
+	IF (@langId IS NULL OR LTRIM(RTRIM(@langId)) = N'')
 	BEGIN
-		SET @lId = N'EN';
+		SET @tId = @lId;
 	END
 	ELSE
 	BEGIN
-		IF (dbo.IsLangExist(@langId) = 0)
+		IF (@tId <> @lId)
 		BEGIN
-			-- LangId Not Exist.
-			SET @lId = N'EN';
+			SET @tId = @lId;
 		END
 		ELSE
 		BEGIN
-			-- LangId Exist.
-			SET @lId = @langId;
+			SET @tId = UPPER(LTRIM(RTRIM(@langId)));
 		END
 	END
 
-	SELECT A.langId
+	SELECT @tId AS langId
 		 , A.mTypeId
 		 , A.MTypeDesc
 		 --, A.LangOrder
