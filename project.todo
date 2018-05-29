@@ -1707,7 +1707,8 @@ My Choice Rater v2.0:
     Update on [2018-05-29]:
         Database Create Scripts:
             Tables and Views:
-                ☐ (TABLE).                
+                ✔ Add LocalLoc (TABLE). @done (2018-5-29 09:37:45)
+                ✔ Add dboView (VIEW). @done (2018-5-29 09:37:45)
             Stored Procedures and Functions:
                 ☐ (SP).
             Init Stored Procedures:
