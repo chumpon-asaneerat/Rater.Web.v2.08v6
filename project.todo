@@ -1727,6 +1727,7 @@ My Choice Rater v2.0:
                 ✔ GetErrorMsg (SP). @done (2018-5-29 09:50:37)
                 ✔ SaveLanguage (SP). @done (2018-5-29 09:52:03)
                 ✔ GetLanguages (SP). @done (2018-5-29 10:01:30)
+                ✔ GetMemberTypes (SP). @done (2018-5-29 10:51:29)
             Init Stored Procedures:
                 ✔ InitErrorMessages (SP) Part 1. @done (2018-5-29 09:55:04)
                 ✔ InitLanguages (SP). @done (2018-5-29 09:53:42)

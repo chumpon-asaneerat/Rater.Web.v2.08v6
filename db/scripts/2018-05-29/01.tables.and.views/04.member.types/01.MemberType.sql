@@ -7,8 +7,8 @@ GO
 CREATE TABLE [dbo].[MemberType](
 	[MTypeId] [int] NOT NULL,
 	[LangId] [nvarchar](3) NOT NULL,
-	[Description] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_MemberType_1] PRIMARY KEY CLUSTERED 
+	[MTypeDesc] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_MemberType] PRIMARY KEY CLUSTERED 
 (
 	[MTypeId] ASC,
 	[LangId] ASC
