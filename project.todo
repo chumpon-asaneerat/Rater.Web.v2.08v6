@@ -1714,6 +1714,7 @@ My Choice Rater v2.0:
                 ✔ Add NewIDView (VIEW) as part of NewSID script. @done (2018-5-29 09:44:28)
                 ✔ Add MemberType (TABLE). @done (2018-5-29 10:28:02)
                 ✔ Add PeriodUnit (TABLE). @done (2018-5-29 11:43:05)
+                ✔ Add LimitUnit (TABLE). @done (2018-5-29 11:47:58)
             Stored Procedures and Functions:
                 ✔ IsNullOrEmpty (FN). @done (2018-5-29 09:44:00)
                 ✔ IsSameDate (FN). @done (2018-5-29 09:44:01)
