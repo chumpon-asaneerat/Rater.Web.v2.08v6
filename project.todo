@@ -1709,6 +1709,8 @@ My Choice Rater v2.0:
             Tables and Views:
                 ✔ Add LocalLoc (TABLE). @done (2018-5-29 09:37:45)
                 ✔ Add dboView (VIEW). @done (2018-5-29 09:37:45)
+                ✔ Add Language (TABLE). @done (2018-5-29 09:39:43)
+                ✔ Add ErrorMessage (TABLE). @done (2018-5-29 09:39:44)
             Stored Procedures and Functions:
                 ☐ (SP).
             Init Stored Procedures:
