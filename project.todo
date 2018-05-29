@@ -1711,7 +1711,13 @@ My Choice Rater v2.0:
                 ✔ Add dboView (VIEW). @done (2018-5-29 09:37:45)
                 ✔ Add Language (TABLE). @done (2018-5-29 09:39:43)
                 ✔ Add ErrorMessage (TABLE). @done (2018-5-29 09:39:44)
+                ✔ Add NewIDView (VIEW) as part of NewSID script. @done (2018-5-29 09:44:28)
             Stored Procedures and Functions:
+                ✔ IsNullOrEmpty (FN). @done (2018-5-29 09:44:00)
+                ✔ IsSameDate (FN). @done (2018-5-29 09:44:01)
+                ✔ IsSameMonth (FN). @done (2018-5-29 09:44:02)
+                ✔ IsSameYear (FN). @done (2018-5-29 09:44:02)
+                ✔ NewSID (FN). @done (2018-5-29 09:44:03)
                 ☐ (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
