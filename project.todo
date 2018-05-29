@@ -1730,6 +1730,7 @@ My Choice Rater v2.0:
             Init Stored Procedures:
                 ✔ InitErrorMessages (SP) Part 1. @done (2018-5-29 09:55:04)
                 ✔ InitLanguages (SP). @done (2018-5-29 09:53:42)
+                ✔ InitMemberTypes (SP). @done (2018-5-29 10:28:52)
         Database Document Updated:
             Error Code:
                 ☐ Update Error Code in Excel file.
