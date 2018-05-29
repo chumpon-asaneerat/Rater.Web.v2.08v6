@@ -1727,6 +1727,7 @@ My Choice Rater v2.0:
                 ✔ SaveLanguage (SP). @done (2018-5-29 09:52:03)
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP) Add New Error Code.
+                ✔ InitLanguages (SP). @done (2018-5-29 09:53:42)
         Database Document Updated:
             Error Code:
                 ☐ Update Error Code in Excel file.
