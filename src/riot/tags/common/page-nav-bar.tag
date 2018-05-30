@@ -28,6 +28,31 @@
         <!-- Right Nav Item for languages -->
         <div class="d-flex flex-row order-2 order-sm-3 order-md-3 order-lg-3">
             <ul class="navbar-nav flex-row ml-auto">
+                <!-- SIGN OUT BUTTON  -->
+                <virtual if={(page.model.nav.signout)}>
+                    <li class="nav-item">
+                        <a href="{page.model.nav.signout.url}" class="nav-link py-2 align-middle" onclick="{onSignOut}">
+                            <div class="d-inline-block">
+                                <!-- FONT-ICON AND TEXT -->
+                                <virtual if={(page.model.nav.signout.type==='font')}>
+                                    <div class="v-divider"></div>
+                                    <span>&nbsp;</span>
+                                    <div class="d-inline-block m-0 p-0">
+                                        <span class="fas fa-{page.model.nav.signout.src} navbar-text w-auto m-0 p-0">
+                                            <virtual if={(page.model.nav.signout.text !=='')}>
+                                                <span class="d-inline-block rater-text w-auto m-0 p-0">
+                                                    &nbsp;{page.model.nav.signout.text}&nbsp;
+                                                </span>
+                                            </virtual>
+                                        </span>
+                                    </div>
+                                    <div class="v-divider"></div>
+                                    <span>&nbsp;</span>
+                                </virtual>
+                            </div>
+                        </a>
+                    </li>
+                </virtual>
                 <!-- CURRENT LANGUAGE WITH DROPDOWN ARROW -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle px-2 align-middle" data-toggle="dropdown" href="javascript:void(0);" id="nav-languages">
@@ -139,6 +164,12 @@
             let selLang = e.item.eachlang
             let langId = selLang.langId;
             lang.change(langId);
+            e.preventUpdate = true;
+        };
+
+        this.onSignOut = (e) => {
+            e.preventDefault();
+            secure.signOut();
             e.preventUpdate = true;
         };
     </script>

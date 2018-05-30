@@ -1755,7 +1755,7 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-05-28 (generate db script).
+                    ☐ db-script-2018-05-30 (generate db script).
             Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
                 XXX:
                     YYY:
@@ -1777,29 +1777,23 @@ My Choice Rater v2.0:
                 customer:
                     admin:
                         home:
-                            ☐ update .
+                            ✔ add signout in nav.json in content EN and TH. @done (2018-5-30 08:04:17)
                     exclusive:
                         home:
-                            ☐ update .
+                            ✔ add signout in nav.json in content EN and TH. @done (2018-5-30 08:04:17)
                     staff:
                         home:
-                            ☐ update .
-                    device:
-                        home:
-                            ☐ update .
-                    question:
-                        home:
-                            ☐ update .
+                            ✔ add signout in nav.json in content EN and TH. @done (2018-5-30 08:04:18)
                 edl:
                     admin:
                         home:
-                            ☐ update .
+                            ✔ add signout in nav.json in content EN and TH. @done (2018-5-30 08:04:18)
                     supervisor:
                         home:
-                            ☐ update .
+                            ✔ add signout in nav.json in content EN and TH. @done (2018-5-30 08:04:20)
                     staff:
                         home:
-                            ☐ update .
+                            ✔ add signout in nav.json in content EN and TH. @done (2018-5-30 08:04:21)
         Clients:
             Core Libraries:
                 api.js:
@@ -1810,12 +1804,8 @@ My Choice Rater v2.0:
                     ☐ update .
                 tags.js:
                     page-nav-bar:
-                        ☐ update .
+                        ✔ update signout handler. @done (2018-5-30 08:05:59)
                     page-footer:
-                        ☐ update .
-                    dev-signin-entry:
-                        ☐ update .
-                    default-signin-entry:
                         ☐ update .
     Update on [2018-05-31]:
         Database Create Scripts:
