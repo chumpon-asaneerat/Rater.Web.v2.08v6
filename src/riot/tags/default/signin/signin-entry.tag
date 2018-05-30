@@ -1,4 +1,4 @@
-<signin-entry class="h-100">
+<signin-entry>
     <div class="container-fluid py-3 semi-trans">
         <div class="row">
             <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;">
@@ -6,9 +6,9 @@
                     <virtual if={(page.model && page.model.signin && page.model.signin.label && page.model.signin.hint)}>
                         <h3 class="text-center mb-4 alert alert-success" role="alert">
                             {page.model.signin.label.title}
-                        </h3>                    
+                        </h3>
                         <fieldset>
-                            <div class="form-group">                            
+                            <div class="form-group">
                                 <label for="userName">&nbsp;{page.model.signin.label.userName}</label>
                                 <input class="form-control input-lg" placeholder="{page.model.signin.hint.userName}" id="userName" name="userName" type="email">
                             </div>
@@ -80,6 +80,9 @@
     </div>
 
     <style>
+        .semi-trans { opacity: 0.97; }
+        .err-msg { color: red; }
+        .curr-user { color: navy; }
         .profile-image { 
             margin: 5px auto;
             padding: 5px;
