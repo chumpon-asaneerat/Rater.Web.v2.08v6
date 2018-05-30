@@ -105,28 +105,28 @@
         let onModelLoaded = (sender, evtData) => { self.update(); };
         page.modelLoaded.add(onModelLoaded);
 
+        let onLanguageChanged = (sender, evt) => { self.modal.hide();};
+        lang.currentChanged.add(onLanguageChanged);
+
         let onUserListChanged = (sender, evt) => { self.updateUsers(); };
         secure.userListChanged.add(onUserListChanged);
 
         //-- private methods.
         this.validateInput = (user) => {
             if (!user) {
-                this.alert.show('User is null.');
+                this.alert.show(page.model.msg.userIsNull);
                 return false;
             }
             if (!user.userName || user.userName.trim() === '') {
-                //this.showErrMessage('Please Enter User Name.');
-                this.tooltip.show('#userName', 'Please Enter User Name.');
+                this.tooltip.show('#userName', page.model.msg.userNameRequired);
                 return false;
             }
             if (!nlib.utils.isValidEmail(user.userName)) {
-                //this.showErrMessage('Please Enter User Name.');
-                this.tooltip.show('#userName', 'User Name is not valid email address.');
+                this.tooltip.show('#userName', page.model.msg.userNameIsNotEmail);
                 return false;
             }
             if (!user.passWord || user.passWord.trim() === '') {
-                //this.showErrMessage('Please Enter Password.');
-                this.tooltip.show('#passWord', 'Please Enter Password.');
+                this.tooltip.show('#passWord', page.model.msg.passWordRequired);
                 return false;
             }
             return true;
@@ -144,7 +144,7 @@
 
         this.updateUsers = () => {
             if (secure.users.length <= 0) { 
-                this.alert.show('User not found.');
+                this.alert.show(page.model.msg.userNotFound);
                 return; 
             }
             if (secure.users.length === 1) { 

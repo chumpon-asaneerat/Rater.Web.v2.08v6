@@ -54,7 +54,65 @@ riot.tag2('staff-page', '<div data-is="page-nav-bar"></div> <div data-is="page-c
 });
 riot.tag2('default-home-dashboard', '<h3>Home Dashboard</h3> <yield></yield>', '', '', function(opts) {
 });
-riot.tag2('register-entry', '', '', 'class="h-100"', function(opts) {
+riot.tag2('register-entry', '<div class="container-fluid py-3 semi-trans"> <div class="row"> <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;"> <div class="card card-body"> <virtual if="{(page.model && page.model.register && page.model.register.label && page.model.register.hint)}"> <h3 class="text-center mb-4 alert alert-success" role="alert"> {page.model.register.label.title} </h3> <fieldset> <div class="form-group has-error"> <label for="customerName">&nbsp;{page.model.register.label.customerName}</label> <input class="form-control input-lg" placeholder="{page.model.register.hint.customerName}" id="customerName" name="customerName" type="text"> </div> <div class="form-group has-error"> <label for="userName">&nbsp;{page.model.register.label.userName}</label> <input class="form-control input-lg" placeholder="{page.model.register.hint.userName}" id="userName" name="userName" type="email"> </div> <div class="form-group has-success"> <label for="passWord">&nbsp;{page.model.register.label.passWord}</label> <input class="form-control input-lg" placeholder="{page.model.register.hint.passWord}" id="passWord" name="passWord" value="" type="password"> </div> <div class="form-group has-success"> <label for="confirnPassword">&nbsp;{page.model.register.label.confirmPassWord}</label> <input class="form-control input-lg" placeholder="{page.model.register.hint.confirmPassWord}" id="confirnPassword" name="confirnPassword" value="" type="password"> </div> <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="{onRegisterCustomer}"> <i class="fas fa-user-plus"></i> {page.model.register.label.signUp} </button> </fieldset> </virtual> </div> </div> </div> </div>', 'register-entry,[data-is="register-entry"]{ width: 100%; height: 100%; } register-entry .semi-trans,[data-is="register-entry"] .semi-trans{ opacity: 0.97; }', 'class="h-100"', function(opts) {
+
+        let self = this;
+        this.tooltip = new BS4ToolTip();
+        this.alert = new BS4Alert();
+
+        let onModelLoaded = (sender, evtData) => { self.update(); };
+        page.modelLoaded.add(onModelLoaded);
+
+        this.validateInput = (customer) => {
+            if (!customer) {
+                this.alert.show(page.model.msg.customerIsNull);
+                return false;
+            }
+            if (!customer.customerName || customer.customerName.trim() === '') {
+                this.tooltip.show($('#customerName'), page.model.msg.customerNameRequired);
+                return false;
+            }
+            if (!customer.userName || customer.userName.trim() === '') {
+                this.tooltip.show('#userName', page.model.msg.userNameRequired);
+                return false;
+            }
+            if (!nlib.utils.isValidEmail(customer.userName)) {
+                this.tooltip.show('#userName', page.model.msg.userNameIsNotEmail);
+                return false;
+            }
+            if (!customer.passWord || customer.passWord.trim() === '') {
+                this.tooltip.show('#passWord', page.model.msg.passWordRequired);
+                return false;
+            }
+            if (!customer.confirnPassword || customer.confirnPassword.trim() === '') {
+                this.tooltip.show('#confirnPassword', page.model.msg.confirmPasswordRequired);
+                return false;
+            }
+            if (customer.confirnPassword !== customer.passWord) {
+                this.tooltip.show('#confirnPassword', page.model.msg.confirmPasswordMismatch);
+                return false;
+            }
+            return true;
+        };
+
+        this.getCustomer = () => {
+            let customer = {
+                "langId": lang.langId,
+                "customerName": $('#customerName').val(),
+                "userName": $('#userName').val(),
+                "passWord": $('#passWord').val(),
+                "confirnPassword": $('#confirnPassword').val()
+            };
+            return customer;
+        };
+
+        this.onRegisterCustomer = (e) => {
+            e.preventDefault();
+            let customer = self.getCustomer();
+            if (!self.validateInput(customer)) return;
+
+            console.log(customer);
+        };
 });
 riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div class="row"> <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;"> <div class="card card-body"> <virtual if="{(page.model && page.model.signin && page.model.signin.label && page.model.signin.hint)}"> <h3 class="text-center mb-4 alert alert-success" role="alert"> {page.model.signin.label.title} </h3> <fieldset> <div class="form-group"> <label for="userName">&nbsp;{page.model.signin.label.userName}</label> <input class="form-control input-lg" placeholder="{page.model.signin.hint.userName}" id="userName" name="userName" type="email"> </div> <div class="form-group"> <label for="passWord">&nbsp;{page.model.signin.label.passWord}</label> <input class="form-control input-lg" placeholder="{page.model.signin.hint.passWord}" id="passWord" name="passWord" value="" type="password"> </div> <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="{onSignInUser}"> <i class="fas fa-key"></i> {page.model.signin.label.signIn} </button> </fieldset> </virtual> </div> </div> </div> </div> <div class="modal fade" id="selectCustomer" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header alert-success"> <h5 class="modal-title"> <virtual if="{(page.model && page.model.signin && page.model.signin.label)}"> {page.model.signin.label.chooseCompany} </virtual> </h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div> <div class="modal-body m-0 p-0"> <div class="container-fluid m-0 p-0" data-simplebar> <div class="list-group m-1 p-1 pl-1 pr-2"> <virtial each="{user in users}"> <a href="javascript:void(0);" class="list-group-item list-group-item-action m-auto p-0" customerid="{user.customerId}" onclick="{onSelectedCustomer}"> <div class="d-flex m-0 p-1"> <div class="flex-column m-1 p-0"> <div class="profile-image align-middle"></div> </div> <div class="flex-column m-0 p-0"> <div class="m-0 p-0"> <p class="m-0 p-0"> &nbsp;{user.CustomerNameNative} </p> </div> <div class="m-0 p-0"> <p class="m-0 p-0"> &nbsp;{user.FullNameNative} </p> </div> </div> </div> </a> </virtial> </div> </div> </div> <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button> </div> </div> </div> </div>', 'signin-entry .profile-image,[data-is="signin-entry"] .profile-image{ margin: 5px auto; padding: 5px; width: 30px; height: 30px; background-color: rebeccapurple; border: 1px solid cornflowerblue; border-radius: 50%; } signin-entry .modal-dialog,[data-is="signin-entry"] .modal-dialog{ padding-top: 3em; } signin-entry .modal-body,[data-is="signin-entry"] .modal-body{ max-height: 300px; }', 'class="h-100"', function(opts) {
 
@@ -67,27 +125,27 @@ riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div cl
         let onModelLoaded = (sender, evtData) => { self.update(); };
         page.modelLoaded.add(onModelLoaded);
 
+        let onLanguageChanged = (sender, evt) => { self.modal.hide();};
+        lang.currentChanged.add(onLanguageChanged);
+
         let onUserListChanged = (sender, evt) => { self.updateUsers(); };
         secure.userListChanged.add(onUserListChanged);
 
         this.validateInput = (user) => {
             if (!user) {
-                this.alert.show('User is null.');
+                this.alert.show(page.model.msg.userIsNull);
                 return false;
             }
             if (!user.userName || user.userName.trim() === '') {
-
-                this.tooltip.show('#userName', 'Please Enter User Name.');
+                this.tooltip.show('#userName', page.model.msg.userNameRequired);
                 return false;
             }
             if (!nlib.utils.isValidEmail(user.userName)) {
-
-                this.tooltip.show('#userName', 'User Name is not valid email address.');
+                this.tooltip.show('#userName', page.model.msg.userNameIsNotEmail);
                 return false;
             }
             if (!user.passWord || user.passWord.trim() === '') {
-
-                this.tooltip.show('#passWord', 'Please Enter Password.');
+                this.tooltip.show('#passWord', page.model.msg.passWordRequired);
                 return false;
             }
             return true;
@@ -105,7 +163,7 @@ riot.tag2('signin-entry', '<div class="container-fluid py-3 semi-trans"> <div cl
 
         this.updateUsers = () => {
             if (secure.users.length <= 0) {
-                this.alert.show('User not found.');
+                this.alert.show(page.model.msg.userNotFound);
                 return;
             }
             if (secure.users.length === 1) {

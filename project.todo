@@ -1737,83 +1737,10 @@ My Choice Rater v2.0:
                 ✔ InitErrorMessages (SP) Part 1. @done (2018-5-29 09:55:04)
                 ✔ InitLanguages (SP). @done (2018-5-29 09:53:42)
                 ✔ InitMemberTypes (SP). @done (2018-5-29 10:28:52)
-        Database Document Updated:
-            Error Code:
-                ☐ Update Error Code in Excel file.
         Node Server:
             Build Scripts:
                 Gulp Tasks:
                     ✔ db-script-2018-05-29 (generate db script). @done (2018-5-29 09:54:57)
-            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                XXX:
-                    YYY:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-            Core Module:
-                rater-web-db.js:
-                    ☐ 
-                rater-web-secure.js:
-                    ☐ 
-            Views:
-                dev:
-                    home:
-                        ☐ update .
-                    register:
-                        ☐ update .
-                    signin:
-                        ☐ update .
-                    report:
-                        ☐ update .
-                default:
-                    home:
-                        ☐ update .
-                    register:
-                        ☐ update .
-                    signin:
-                        ☐ update .
-                customer:
-                    admin:
-                        home:
-                            ☐ update .
-                    exclusive:
-                        home:
-                            ☐ update .
-                    staff:
-                        home:
-                            ☐ update .
-                    device:
-                        home:
-                            ☐ update .
-                    question:
-                        home:
-                            ☐ update .
-                edl:
-                    admin:
-                        home:
-                            ☐ update .
-                    supervisor:
-                        home:
-                            ☐ update .
-                    staff:
-                        home:
-                            ☐ update .
-        Clients:
-            Core Libraries:
-                api.js:
-                    ☐ xxx
-                nlib.js:
-                    ☐ xxx
-                service.js:
-                    ☐ update .
-                tags.js:
-                    page-nav-bar:
-                        ☐ update .
-                    page-footer:
-                        ☐ update .
-                    dev-signin-entry:
-                        ☐ update .
-                    default-signin-entry:
-                        ☐ update .
     Update on [2018-05-30]:
         Database Create Scripts:
             Tables and Views:
@@ -1840,22 +1767,13 @@ My Choice Rater v2.0:
                 rater-web-secure.js:
                     ☐ 
             Views:
-                dev:
-                    home:
-                        ☐ update .
-                    register:
-                        ☐ update .
-                    signin:
-                        ☐ update .
-                    report:
-                        ☐ update .
                 default:
-                    home:
-                        ☐ update .
                     register:
-                        ☐ update .
+                        ✔ port layout from v1 and update code. @done (2018-5-30 07:28:38)
+                        ✔ add msg.json in content EN and TH. @done (2018-5-30 07:28:39)
                     signin:
-                        ☐ update .
+                        ✔ add msg.json in content EN and TH. @done (2018-5-30 07:28:40)
+                        ✔ auto hide modal when language changed. @done (2018-5-30 07:28:42)
                 customer:
                     admin:
                         home:
