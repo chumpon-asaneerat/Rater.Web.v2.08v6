@@ -102,9 +102,8 @@
         this.onRegisterCustomer = (e) => {
             e.preventDefault();
             let customer = self.getCustomer();
-            if (!self.validateInput(customer)) return;
-            //secure.getUsers(user); // request user list.
-            console.log(customer);
+            if (!self.validateInput(customer)) return;            
+            secure.register(customer); // register customer.
         };
     </script>
     

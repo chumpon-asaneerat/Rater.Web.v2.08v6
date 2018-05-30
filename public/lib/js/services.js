@@ -195,6 +195,20 @@ class ClientAccess {
         });
     };
 
+    register(customer) {
+        this.clear();
+        let fn = api.secure.register(customer);
+        $.when(fn).then((r) => {
+            if (r && !r.errors.hasError) {
+                // goto home.
+                nlib.nav.gotoUrl('/');
+            }
+            else {
+                // something error.
+            }
+        });
+    };
+
     get users() {
         return this._users;
     };
@@ -218,7 +232,7 @@ class ClientAccess {
 
     get currentUserChanged() {
         return this._currentUserChanged;
-    }
+    };
 };
 
 ; (function () {
