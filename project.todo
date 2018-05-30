@@ -1765,7 +1765,7 @@ My Choice Rater v2.0:
                 rater-web-db.js:
                     ☐ 
                 rater-web-secure.js:
-                    ☐ 
+                    ✔ Change timeout for accessId to 30 minutes. @done (2018-5-30 08:19:04)
             Views:
                 default:
                     register:
