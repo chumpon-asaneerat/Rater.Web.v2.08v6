@@ -41,7 +41,7 @@
             width: 100%;
             height: 100%;
         }
-        .semi-trans { opacity: 0.97; }
+        .semi-trans { opacity: 0.96; }
     </style>
 
     <script>

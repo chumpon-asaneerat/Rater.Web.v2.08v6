@@ -1,4 +1,4 @@
-<signin-entry>
+<signin-entry class="h-100">
     <div class="container-fluid py-3 semi-trans">
         <div class="row">
             <div class="col-lg-6 col-md-8 col-sm-8 col-xs-8 mx-auto" style="margin-top: 5%;">
@@ -80,7 +80,7 @@
     </div>
 
     <style>
-        .semi-trans { opacity: 0.97; }
+        .semi-trans { opacity: 0.96; }
         .err-msg { color: red; }
         .curr-user { color: navy; }
         .profile-image { 
