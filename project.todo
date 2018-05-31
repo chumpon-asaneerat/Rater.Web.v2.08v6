@@ -1833,6 +1833,7 @@ My Choice Rater v2.0:
             Core Libraries:
                 rater-client.css:
                     ✔ Add sidebar styles. @done (2018-5-31 21:14:03)
+                    ✔ Update sidebar fixed for used with simplebar.js. @done (2018-5-31 23:02:23)
                 api.js:
                     ☐ xxx
                 nlib.js:
@@ -1842,12 +1843,46 @@ My Choice Rater v2.0:
                 tags.js:
                     dev-home:
                         ✔ add supports sidebars. @done (2018-5-31 22:06:44)
+                    dev-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:55)
+                    dev-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:41)
                     dev-report:
                         ✔ add supports sidebars. @done (2018-5-31 22:06:45)
-                    dev-signin-entry:
-                        ☐ update .
-                    default-signin-entry:
-                        ☐ update .
+                    dev-report-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:06:14)
+                    admin-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:09)
+                    admin-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:43)
+                    exclusive-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:12)
+                    exclusive-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:44)
+                    staff-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:14)
+                    staff-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:45)
+                    device-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:16)
+                    device-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:46)
+                    question-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:17)
+                    question-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:47)
+                    edl-admin-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:19)
+                    edl-admin-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:48)
+                    edl-supervisor-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:21)
+                    edl-supervisor-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:50)
+                    edl-staff-page-layout:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:22)
+                    edl-staff-home-dashboard:
+                        ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:51)
     Update on [2018-06-01]:
         Database Create Scripts:
             Tables and Views:

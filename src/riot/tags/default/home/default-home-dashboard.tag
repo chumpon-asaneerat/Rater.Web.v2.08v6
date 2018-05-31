@@ -1,3 +1,6 @@
 <default-home-dashboard>
-    <h1>DEFAULT HOME!!!</h1>
+    <div data-is="sidebars" data-simplebar></div>
+    <div data-is="dashboard-content" data-simplebar>
+        <yield />
+    </div>
 </default-home-dashboard>

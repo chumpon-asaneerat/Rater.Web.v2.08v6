@@ -1,4 +1,4 @@
-<sidebars class="sidebar" data-simplebar>
+<sidebars class="sidebar">
     <virtual if={(page.model.sidebar && page.model.sidebar.items && page.model.sidebar.items.length > 0)}>
         <ul>
             <virtual each={item in page.model.sidebar.items}>
@@ -8,8 +8,8 @@
                             <span class="fas fa-{item.src}"></span>
                             <label>{item.text}</label>
                         </virtual>
-                        <virtual if={item.type==='image' }>
-                            <img src="{item.src}"></span>
+                        <virtual if={item.type === 'image'}>
+                            <img src="{item.src}" />
                             <label>{item.text}</label>
                         </virtual>
                     </a>

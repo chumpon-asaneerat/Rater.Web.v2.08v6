@@ -1,6 +1,6 @@
 <dev-report-dashboard>
-    <div data-is="sidebars"></div>
-    <div data-is="dashboard-content">
+    <div data-is="sidebars" data-simplebar></div>
+    <div data-is="dashboard-content" data-simplebar>
         <yield />
     </div>
 </dev-report-dashboard>
