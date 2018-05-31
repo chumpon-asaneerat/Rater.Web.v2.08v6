@@ -1742,28 +1742,7 @@ My Choice Rater v2.0:
                 Gulp Tasks:
                     ✔ db-script-2018-05-29 (generate db script). @done (2018-5-29 09:54:57)
     Update on [2018-05-30]:
-        Database Create Scripts:
-            Tables and Views:
-                ☐ (TABLE).                
-            Stored Procedures and Functions:
-                ☐ (SP).
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP) Add New Error Code.
-        Database Document Updated:
-            Error Code:
-                ☐ Update Error Code in Excel file.
-        Node Server:
-            Build Scripts:
-                Gulp Tasks:
-                    ☐ db-script-2018-05-30 (generate db script).
-            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                XXX:
-                    YYY:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
             Core Module:
-                rater-web-db.js:
-                    ☐ 
                 rater-web-secure.js:
                     ✔ Change timeout for accessId to 30 minutes. @done (2018-5-30 08:19:04)
             Views:
@@ -1795,18 +1774,14 @@ My Choice Rater v2.0:
                         home:
                             ✔ add signout in nav.json in content EN and TH. @done (2018-5-30 08:04:21)
         Clients:
-            Core Libraries:
-                api.js:
-                    ☐ xxx
-                nlib.js:
-                    ☐ xxx
                 service.js:
                     ✔ update ClientAccess class add register method. @done (2018-5-30 08:13:50)
                 tags.js:
                     page-nav-bar:
                         ✔ update signout handler. @done (2018-5-30 08:05:59)
-                    page-footer:
-                        ☐ update .
+        Samples:
+                riot:
+                    ✔ remove misplacs end body tag in all samples. @done (2018-5-31 09:05:51)
     Update on [2018-05-31]:
         Database Create Scripts:
             Tables and Views:
