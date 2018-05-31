@@ -96,7 +96,7 @@ body {
     position: absolute;
     top: 5px;
     bottom: 5px;
-    right: 6px;
+    right: 1px;
     left: 205px;
     /* Same as the width of the sidebar */
     font-size: 28px;
