@@ -1811,18 +1811,7 @@ My Choice Rater v2.0:
                 dev:
                     home:
                         ☐ update .
-                    register:
-                        ☐ update .
-                    signin:
-                        ☐ update .
                     report:
-                        ☐ update .
-                default:
-                    home:
-                        ☐ update .
-                    register:
-                        ☐ update .
-                    signin:
                         ☐ update .
                 customer:
                     admin:
@@ -1840,18 +1829,10 @@ My Choice Rater v2.0:
                     question:
                         home:
                             ☐ update .
-                edl:
-                    admin:
-                        home:
-                            ☐ update .
-                    supervisor:
-                        home:
-                            ☐ update .
-                    staff:
-                        home:
-                            ☐ update .
         Clients:
             Core Libraries:
+                rater-client.css:
+                    ☐ Add sidebar styles.
                 api.js:
                     ☐ xxx
                 nlib.js:

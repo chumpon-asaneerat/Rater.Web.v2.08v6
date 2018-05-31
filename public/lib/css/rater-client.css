@@ -8,6 +8,84 @@ body {
     padding-top: 2em;
 }
 
+/* SIDEBARS */
+
+.sidebar {
+    position: absolute;
+    /* Stay at the top */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    /* Set the width of the sidebar */
+    width: 200px;
+    /* Full-height: remove this if you want "auto" height */
+    height: 100%;
+    /* Stay on top */
+    z-index: 1;
+    /* Colors */
+    /* color: white; */
+    color: black;
+    /* background: black; */
+    background: whitesmoke;
+    /* Disable horizontal scroll */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* The navigation menu links */
+
+.sidebar>ul { margin-left: 0px; padding: 3px 5px; list-style: none; display: block; }
+.sidebar>ul>li { margin: 0 auto; padding: 5px; padding-top: 10px; padding-bottom: 2px; }
+
+.sidebar>ul>li:hover {
+    background: #ffb76b;
+    background: -moz-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background: -webkit-linear-gradient(top, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    background: linear-gradient(to bottom, #ffb76b 0%, #ffa73d 50%, #ff7c00 51%, #ff7f04 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04', GradientType=0);
+    border-radius: 3px;
+}
+
+.sidebar>ul>li>a { display: block; margin: 0 auto; text-decoration: none; font-size: 16px; color: black; }
+.sidebar .active { background-color: cornflowerblue; border-radius: 3px; }
+.sidebar>ul>li.active>a { color: white; }
+.sidebar>ul>li>a:hover { color: white; }
+.sidebar>ul>li>a>span { margin-left: 5px; margin-right: 6px; width: 20px; }
+
+.content {
+    margin-left: 200px;
+    /* Same as the width of the sidebar */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    height: 100%;
+    width: auto;
+    position: relative;
+    background: whitesmoke;
+    overflow: auto;
+    z-index: 1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
+@media screen and (max-width: 800px) {
+    .sidebar { width: 150px; }
+    .sidebar>ul>li { margin: 0 auto; text-align: center; }
+    .sidebar>ul>li>a>span { margin: 0 auto; margin-bottom: 5px; width: auto; display: block; }
+    .sidebar>ul>li>a>label { font-size: 14px; display: block; }
+    .content { margin-left: 150px; }
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar { width: 55px; }
+    .sidebar>ul>li { margin: 0 auto; text-align: center; }
+    .sidebar>ul>li>a>span { margin: 0 auto; margin-bottom: 5px; width: auto; display: block; }
+    .sidebar>ul>li>a>label { display: none; }
+    .content { margin-left: 55px; }
+}
+
+/* AUTO FILL */
+
 /*
 :-webkit-autofill,
 :-webkit-autofill:hover,
