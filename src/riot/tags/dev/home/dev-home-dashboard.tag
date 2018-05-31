@@ -1,6 +1,6 @@
 <dev-home-dashboard>
-    <h1>DEV HOME!!!</h1>
-    <script>
-        //this.uid = cookie['uid'];
-    </script>
+    <div data-is="sidebars"></div>
+    <div data-is="dashboard-content">
+        <yield />
+    </div>
 </dev-home-dashboard>

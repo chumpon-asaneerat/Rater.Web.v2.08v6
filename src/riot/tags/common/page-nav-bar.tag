@@ -83,7 +83,7 @@
                 <!-- EACH MAIN MENU ITEM LINKS -->
                 <virtual if={(page.model && page.model.nav && page.model.nav.links && page.model.nav.links.length > 0)}>
                     <virtual each={link in page.model.nav.links}>
-                        <li class="nav-item {link.active}">
+                        <li class="nav-item {(link.active === 'active' || link.active === 'true') ? 'active' : ''}">
                             <a class="nav-link align-middle" href="{link.url}">
                                 <span>&nbsp;</span>
                                 <div class="v-divider"></div>

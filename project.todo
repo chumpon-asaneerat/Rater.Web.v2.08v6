@@ -1832,7 +1832,7 @@ My Choice Rater v2.0:
         Clients:
             Core Libraries:
                 rater-client.css:
-                    ☐ Add sidebar styles.
+                    ✔ Add sidebar styles. @done (2018-5-31 21:14:03)
                 api.js:
                     ☐ xxx
                 nlib.js:
@@ -1840,10 +1840,10 @@ My Choice Rater v2.0:
                 service.js:
                     ☐ update .
                 tags.js:
-                    page-nav-bar:
-                        ☐ update .
-                    page-footer:
-                        ☐ update .
+                    dev-home:
+                        ✔ add supports sidebars. @done (2018-5-31 22:06:44)
+                    dev-report:
+                        ✔ add supports sidebars. @done (2018-5-31 22:06:45)
                     dev-signin-entry:
                         ☐ update .
                     default-signin-entry:

@@ -1,4 +1,6 @@
 <dev-report-dashboard>
-    <h1>DEV REPORT HOME!!!</h1>
-
+    <div data-is="sidebars"></div>
+    <div data-is="dashboard-content">
+        <yield />
+    </div>
 </dev-report-dashboard>
