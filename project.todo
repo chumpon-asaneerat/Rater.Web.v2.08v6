@@ -1810,9 +1810,9 @@ My Choice Rater v2.0:
             Views:
                 dev:
                     home:
-                        ☐ update .
+                        ✔ add sidebar.json. @done (2018-5-31 23:30:36)
                     report:
-                        ☐ update .
+                        ✔ add sidebar.json. @done (2018-5-31 23:30:37)
                 customer:
                     admin:
                         home:
@@ -1834,8 +1834,9 @@ My Choice Rater v2.0:
                 rater-client.css:
                     ✔ Add sidebar styles. @done (2018-5-31 21:14:03)
                     ✔ Update sidebar fixed for used with simplebar.js. @done (2018-5-31 23:02:23)
+                    ✔ Update fixed dashboard-content. @done (2018-5-31 23:39:10)
                 api.js:
-                    ☐ xxx
+                    ☐ xxx                    
                 nlib.js:
                     ☐ xxx
                 service.js:
