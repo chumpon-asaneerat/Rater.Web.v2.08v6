@@ -1704,43 +1704,6 @@ My Choice Rater v2.0:
                         ✔ fixed up reference properties in riot tags. @done (2018-5-26 20:54:27)
                     default-signin-entry:
                         ✔ update all code from dev-signIn-entry. @done (2018-5-26 20:57:42)
-    Update on [2018-05-29]:
-        Database Create Scripts:
-            Tables and Views:
-                ✔ Add LocalLoc (TABLE). @done (2018-5-29 09:37:45)
-                ✔ Add dboView (VIEW). @done (2018-5-29 09:37:45)
-                ✔ Add Language (TABLE). @done (2018-5-29 09:39:43)
-                ✔ Add ErrorMessage (TABLE). @done (2018-5-29 09:39:44)
-                ✔ Add NewIDView (VIEW) as part of NewSID script. @done (2018-5-29 09:44:28)
-                ✔ Add MemberType (TABLE). @done (2018-5-29 10:28:02)
-                ✔ Add PeriodUnit (TABLE). @done (2018-5-29 11:43:05)
-                ✔ Add LimitUnit (TABLE). @done (2018-5-29 11:47:58)
-            Stored Procedures and Functions:
-                ✔ IsNullOrEmpty (FN). @done (2018-5-29 09:44:00)
-                ✔ IsSameDate (FN). @done (2018-5-29 09:44:01)
-                ✔ IsSameMonth (FN). @done (2018-5-29 09:44:02)
-                ✔ IsSameYear (FN). @done (2018-5-29 09:44:02)
-                ✔ NewSID (FN). @done (2018-5-29 09:44:03)
-                ✔ BeginLoig (SP). @done (2018-5-29 09:46:43)
-                ✔ Log (SP). @done (2018-5-29 09:46:47)
-                ✔ EndLog (SP). @done (2018-5-29 09:46:55)
-                ✔ GetRandomCode (SP). @done (2018-5-29 09:48:03)
-                ✔ SaveErrorMsg (SP). @done (2018-5-29 09:50:30)
-                ✔ GetErrorMsg (SP). @done (2018-5-29 09:50:37)
-                ✔ SaveLanguage (SP). @done (2018-5-29 09:52:03)
-                ✔ GetLanguages (SP). @done (2018-5-29 10:01:30)
-                ✔ GetMemberTypes (SP). @done (2018-5-29 10:51:29)
-                ✔ FindLangId (SP). @done (2018-5-29 11:31:08)
-                ✔ EnableLanguage (SP). @done (2018-5-29 11:38:04)
-                ✔ DisableLanguage (SP). @done (2018-5-29 11:38:04)
-            Init Stored Procedures:
-                ✔ InitErrorMessages (SP) Part 1. @done (2018-5-29 09:55:04)
-                ✔ InitLanguages (SP). @done (2018-5-29 09:53:42)
-                ✔ InitMemberTypes (SP). @done (2018-5-29 10:28:52)
-        Node Server:
-            Build Scripts:
-                Gulp Tasks:
-                    ✔ db-script-2018-05-29 (generate db script). @done (2018-5-29 09:54:57)
     Update on [2018-05-30]:
             Core Module:
                 rater-web-secure.js:
@@ -1783,64 +1746,19 @@ My Choice Rater v2.0:
                 riot:
                     ✔ remove misplacs end body tag in all samples. @done (2018-5-31 09:05:51)
     Update on [2018-05-31]:
-        Database Create Scripts:
-            Tables and Views:
-                ☐ (TABLE).                
-            Stored Procedures and Functions:
-                ☐ (SP).
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP) Add New Error Code.
-        Database Document Updated:
-            Error Code:
-                ☐ Update Error Code in Excel file.
         Node Server:
-            Build Scripts:
-                Gulp Tasks:
-                    ☐ db-script-2018-05-29 (generate db script).
-            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                XXX:
-                    YYY:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-            Core Module:
-                rater-web-db.js:
-                    ☐ 
-                rater-web-secure.js:
-                    ☐ 
             Views:
                 dev:
                     home:
                         ✔ add sidebar.json. @done (2018-5-31 23:30:36)
                     report:
                         ✔ add sidebar.json. @done (2018-5-31 23:30:37)
-                customer:
-                    admin:
-                        home:
-                            ☐ update .
-                    exclusive:
-                        home:
-                            ☐ update .
-                    staff:
-                        home:
-                            ☐ update .
-                    device:
-                        home:
-                            ☐ update .
-                    question:
-                        home:
-                            ☐ update .
         Clients:
             Core Libraries:
                 rater-client.css:
                     ✔ Add sidebar styles. @done (2018-5-31 21:14:03)
                     ✔ Update sidebar fixed for used with simplebar.js. @done (2018-5-31 23:02:23)
                     ✔ Update fixed dashboard-content. @done (2018-5-31 23:39:10)
-                api.js:
-                    ☐ xxx                    
-                nlib.js:
-                    ☐ xxx
-                service.js:
-                    ☐ update .
                 tags.js:
                     dev-home:
                         ✔ add supports sidebars. @done (2018-5-31 22:06:44)
@@ -1886,6 +1804,8 @@ My Choice Rater v2.0:
                         ✔ fixed code to supports sidebar and simplebar.js. @done (2018-5-31 23:05:51)
     Update on [2018-06-01]:
         Database Create Scripts:
+            Move:
+                ✔ Move DB Scripts from 2018-05-29 to 2018-06-05. @done (2018-6-1 10:02:52)
             Tables and Views:
                 ☐ (TABLE).                
             Stored Procedures and Functions:
@@ -1920,6 +1840,43 @@ My Choice Rater v2.0:
                     ☐ xxx
                 tags.js:
                     ☐ xxx
+    Update on [2018-06-05]:
+        Database Create Scripts:
+            Tables and Views:
+                ✔ Add LocalLoc (TABLE). @done (2018-5-29 09:37:45)
+                ✔ Add dboView (VIEW). @done (2018-5-29 09:37:45)
+                ✔ Add Language (TABLE). @done (2018-5-29 09:39:43)
+                ✔ Add ErrorMessage (TABLE). @done (2018-5-29 09:39:44)
+                ✔ Add NewIDView (VIEW) as part of NewSID script. @done (2018-5-29 09:44:28)
+                ✔ Add MemberType (TABLE). @done (2018-5-29 10:28:02)
+                ✔ Add PeriodUnit (TABLE). @done (2018-5-29 11:43:05)
+                ✔ Add LimitUnit (TABLE). @done (2018-5-29 11:47:58)
+            Stored Procedures and Functions:
+                ✔ IsNullOrEmpty (FN). @done (2018-5-29 09:44:00)
+                ✔ IsSameDate (FN). @done (2018-5-29 09:44:01)
+                ✔ IsSameMonth (FN). @done (2018-5-29 09:44:02)
+                ✔ IsSameYear (FN). @done (2018-5-29 09:44:02)
+                ✔ NewSID (FN). @done (2018-5-29 09:44:03)
+                ✔ BeginLoig (SP). @done (2018-5-29 09:46:43)
+                ✔ Log (SP). @done (2018-5-29 09:46:47)
+                ✔ EndLog (SP). @done (2018-5-29 09:46:55)
+                ✔ GetRandomCode (SP). @done (2018-5-29 09:48:03)
+                ✔ SaveErrorMsg (SP). @done (2018-5-29 09:50:30)
+                ✔ GetErrorMsg (SP). @done (2018-5-29 09:50:37)
+                ✔ SaveLanguage (SP). @done (2018-5-29 09:52:03)
+                ✔ GetLanguages (SP). @done (2018-5-29 10:01:30)
+                ✔ GetMemberTypes (SP). @done (2018-5-29 10:51:29)
+                ✔ FindLangId (SP). @done (2018-5-29 11:31:08)
+                ✔ EnableLanguage (SP). @done (2018-5-29 11:38:04)
+                ✔ DisableLanguage (SP). @done (2018-5-29 11:38:04)
+            Init Stored Procedures:
+                ✔ InitErrorMessages (SP) Part 1. @done (2018-5-29 09:55:04)
+                ✔ InitLanguages (SP). @done (2018-5-29 09:53:42)
+                ✔ InitMemberTypes (SP). @done (2018-5-29 10:28:52)
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ✔ db-script-2018-06-05 (generate db script). @done (2018-5-29 09:54:57)
     Update on [2018-XX-XX]:
         Node Server:
             Unit Test Scripts for databse:
