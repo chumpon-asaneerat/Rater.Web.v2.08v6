@@ -5,8 +5,8 @@ GO
 
 -- =============================================
 -- Author: Chumpon Asaneerat
--- Name: MinDateTime.
--- Description:	MinDateTime is function to returns minimum value posible for datetime.
+-- Name: ToMinTime.
+-- Description: ToMinTime is function for set time of specificed datetime to 00:00:00.000.
 -- [== History ==]
 -- <2018-06-01> :
 --	- Function Created.
@@ -14,16 +14,19 @@ GO
 -- [== Example ==]
 --
 -- =============================================
-CREATE FUNCTION [dbo].[MinDateTime]
+CREATE FUNCTION [dbo].[ToMinTime]
 (
+ @dt datetime
 )
 RETURNS datetime
 AS
 BEGIN
-DECLARE @dt datetime;
 DECLARE @vDateStr nvarchar(40);
 DECLARE @result datetime;
-    SELECT @dt = CAST(CAST(0xD1BA AS BIGINT) * -1 AS DATETIME);
+	IF (@dt IS NULL)
+	BEGIN
+		RETURN NULL;
+	END
 	SET @vDateStr = (CONVERT(nvarchar(4), DatePart(yyyy, @dt)) + '-' +
 				     CONVERT(nvarchar(2), DatePart(mm, @dt)) + '-' +
 					 CONVERT(nvarchar(2), DatePart(dd, @dt)) + ' ' +
