@@ -1811,7 +1811,7 @@ My Choice Rater v2.0:
                 ✔ Add MaxDateTime (FN). @done (2018-6-1 10:40:46)
                 ✔ Add ToMinTime (FN) @done (2018-6-1 11:17:51)
                 ✔ Add ToMaxTime (FN) @done (2018-6-1 11:17:52)
-    Update on [2018-06-05]:
+    Update on [2018-06-09]:
         Database Create Scripts:
             Tables and Views:
                 ✔ Add LocalLoc (TABLE). @done (2018-5-29 09:37:45)
@@ -1851,7 +1851,94 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ✔ db-script-2018-06-05 (generate db script). @done (2018-5-29 09:54:57)
+                    ✔ db-script-2018-06-09 (generate db script). @done (2018-5-29 09:54:57)
+        Clients:
+            Third Parties:
+                Remove Unused Libraries:
+                    ✔ animate-css-3.5 @done (2018-6-9 00:14:26)
+                    ✔ bootstrap-3.3 @done (2018-6-9 00:14:27)
+                    ✔ datatables @done (2018-6-9 00:14:28)
+                    ✔ flag-icon-css-2.8 @done (2018-6-9 00:14:28)
+                    ✔ font-awesome-4.6 @done (2018-6-9 00:14:29)
+                    ✔ reveal-3.4 @done (2018-6-9 00:14:30)
+                    ✔ riotjs-3.9 @done (2018-6-9 00:14:30)
+                    ✔ wow-1.1 @done (2018-6-9 00:14:31)
+    Update on [2018-06-10]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).
+            Stored Procedures and Functions:
+                ☐ (FN).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP).
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-06-10 (generate db script).
+        Clients:
+            Core Libraries:
+                rater-client.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+    Update on [2018-06-12]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).
+            Stored Procedures and Functions:
+                ☐ (FN).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP).
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-06-11 (generate db script).
+        Clients:
+            Core Libraries:
+                rater-client.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+    Update on [2018-06-13]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).
+            Stored Procedures and Functions:
+                ☐ (FN).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP).
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-06-11 (generate db script).
+        Clients:
+            Core Libraries:
+                rater-client.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+    Update on [2018-06-14]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).
+            Stored Procedures and Functions:
+                ☐ (FN).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP).
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-06-11 (generate db script).
+        Clients:
+            Core Libraries:
+                rater-client.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
     Update on [2018-XX-XX]:
         Node Server:
             Unit Test Scripts for databse:
