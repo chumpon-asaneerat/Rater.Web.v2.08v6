@@ -1806,42 +1806,11 @@ My Choice Rater v2.0:
         Database Create Scripts:
             Move:
                 ✔ Move DB Scripts from 2018-05-29 to 2018-06-05. @done (2018-6-1 10:02:52)
-            Tables and Views:
-                ☐ (TABLE).                
             Stored Procedures and Functions:
                 ✔ Add MinDateTime (FN). @done (2018-6-1 10:40:46)
                 ✔ Add MaxDateTime (FN). @done (2018-6-1 10:40:46)
                 ✔ Add ToMinTime (FN) @done (2018-6-1 11:17:51)
                 ✔ Add ToMaxTime (FN) @done (2018-6-1 11:17:52)
-                ☐ (SP).
-                ☐ (SP).
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP) Add New Error Code.
-        Database Document Updated:
-            Error Code:
-                ☐ Update Error Code in Excel file.
-        Node Server:
-            Build Scripts:
-                Gulp Tasks:
-                    ☐ db-script-2018-05-30 (generate db script).
-            Stored Procedure Definitions (json files) and Wrapper Code (rater-web-db.js):  
-                XXX:
-                    YYY:
-                        ☐ definition file created.
-                        ☐ wrapper code updated.
-            Core Module:
-                rater-web-secure.js:
-                    ☐ 
-        Clients:
-            Core Libraries:
-                api.js:
-                    ☐ xxx
-                nlib.js:
-                    ☐ xxx
-                service.js:
-                    ☐ xxx
-                tags.js:
-                    ☐ xxx
     Update on [2018-06-05]:
         Database Create Scripts:
             Tables and Views:
