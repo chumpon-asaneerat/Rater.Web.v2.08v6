@@ -30,7 +30,7 @@ let config = {
 }
 
 describe('Database', () => { 
-    describe('node-mssql@4.1.0', () => {
+    describe.skip('node-mssql@4.1.0', () => {
         test('Direct', () => {
             let cp = new sql.ConnectionPool(config);
             cp.connect().then((pool) => {
