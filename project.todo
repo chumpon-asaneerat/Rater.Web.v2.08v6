@@ -2,6 +2,10 @@ My Choice Rater v2.0:
     Update on [2018-06-12]:
         Database Create Scripts:
             Tables and Views:
+                ✔ LimitUnit (TABLE) change column name. @done (2018-6-12 23:05:50)
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
                 ☐ (TABLE).
             Stored Procedures and Functions:
                 ✔ IsLangExist (FN). @done (2018-6-12 17:53:39)
