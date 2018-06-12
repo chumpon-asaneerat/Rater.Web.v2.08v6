@@ -13,6 +13,19 @@ My Choice Rater v2.0:
                 Gulp Tasks:
                     ✔ db-script-2018-06-09 remove. @done (2018-6-12 20:32:53)
                     ☐ db-script-2018-06-14 add (generate db script).
+            Server Libraries:
+                nLib-core.js:
+                    ✔ Move to Backup folder. @done (2018-6-12 20:39:27)
+                    ✔ Create empty file. @done (2018-6-12 20:39:52)
+                mssql-db.js:
+                    ✔ Move to Backup folder. @done (2018-6-12 20:40:21)
+                    ✔ Create empty file. @done (2018-6-12 20:40:22)
+                rater-web-db.js:
+                    ✔ Move to Backup folder. @done (2018-6-12 20:40:27)
+                    ✔ Create empty file. @done (2018-6-12 20:40:27)
+                rater-web-secure.js:
+                    ✔ Move to Backup folder. @done (2018-6-12 20:40:33)
+                    ✔ Create empty file. @done (2018-6-12 20:40:34)
         Clients:
             Third Party Libraries:
                 ✔ Remove handlebars and jquery-handlebars. @done (2018-6-12 20:29:02)

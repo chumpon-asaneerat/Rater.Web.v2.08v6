@@ -9,7 +9,7 @@ const conf = require('./configs/app-configs');
 const middleware = require('./lib/app-middlewares');
 const commonpaths = require('./lib/app-paths');
 const routes = require('./lib/app-routes');
-const nlib = require('./lib/nlib-core');
+//const nlib = require('./lib/nlib-core');
 
 // create express middle ware instance.
 var app = express();
