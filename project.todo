@@ -13,6 +13,10 @@ My Choice Rater v2.0:
                 Gulp Tasks:
                     ✔ db-script-2018-06-09 remove. @done (2018-6-12 20:32:53)
                     ☐ db-script-2018-06-14 add (generate db script).
+            Node Modules:
+                mssql:
+                    ✔ Try version 4.1.0 but seem not good. @done (2018-6-12 22:47:15)
+                    ✔ Reinstall version 3.3.0. @done (2018-6-12 22:47:41)
             Server Libraries:
                 nLib-core.js:
                     ✔ Move to Backup folder. @done (2018-6-12 20:39:27)
