@@ -1,6 +1,5 @@
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
@@ -16,6 +15,8 @@ GO
 --	- change column LangId to langId
 --	- change column MemberTypeId to memberTypeId
 -- <2018-05-29> :
+--	- change column match new structure.
+-- <2018-06-12> :
 --	- change column match new structure.
 --
 -- [== Example ==]
@@ -36,7 +37,6 @@ DECLARE @lId nvarchar(3) = NULL;
 DECLARE @iCnt int = NULL;
 	-- Find Proper LangId
 	EXEC FindLangId @langId, @lId out;
-
 	IF (@langId IS NULL OR LTRIM(RTRIM(@langId)) = N'')
 	BEGIN
 		SET @tId = @lId;
@@ -54,15 +54,15 @@ DECLARE @iCnt int = NULL;
 	END
 
 	SELECT @tId AS langId
-		 , A.mTypeId
-		 , A.MTypeDesc
+		 , A.memberTypeId
+		 , A.TypeName
 		 --, A.LangOrder
 		 --, A.LangEnabled 
 	  FROM MemberType A, Language B
 	 WHERE B.LangEnabled = COALESCE(@enabled, B.LangEnabled)
 	   AND UPPER(LTRIM(RTRIM(B.LangId))) = UPPER(LTRIM(RTRIM(@lId)))
 	   AND UPPER(LTRIM(RTRIM(A.LangId))) = UPPER(LTRIM(RTRIM(@lId)))
-	 ORDER BY B.LangOrder, A.mTypeId
+	 ORDER BY B.LangOrder, A.memberTypeId
 END
 
 GO

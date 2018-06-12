@@ -9,6 +9,7 @@ My Choice Rater v2.0:
                 ☐ (TABLE).
             Stored Procedures and Functions:
                 ✔ IsLangExist (FN). @done (2018-6-12 17:53:39)
+                ✔ GetMemberTypes (SP). change column match new structure. @done (2018-6-12 23:13:44)
                 ☐ (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP).
