@@ -1863,19 +1863,20 @@ My Choice Rater v2.0:
                     ✔ reveal-3.4 @done (2018-6-9 00:14:30)
                     ✔ riotjs-3.9 @done (2018-6-9 00:14:30)
                     ✔ wow-1.1 @done (2018-6-9 00:14:31)
-    Update on [2018-06-10]:
+    Update on [2018-06-12]:
         Database Create Scripts:
             Tables and Views:
                 ☐ (TABLE).
             Stored Procedures and Functions:
-                ☐ (FN).
+                ✔ IsLangExist (FN). @done (2018-6-12 17:53:39)
                 ☐ (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP).
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-06-10 (generate db script).
+                    ☐ db-script-2018-06-09 remove.
+                    ☐ db-script-2018-06-14 add (generate db script).
         Clients:
             Core Libraries:
                 rater-client.js:

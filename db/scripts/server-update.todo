@@ -43,7 +43,11 @@ EDL Database Server:
         ✔ Verify and checks correction. @done (2018-5-26 23:04:56)
         ✔ Generate script. @done (2018-5-26 23:04:56)
         ✔ Update to production server. @done (2018-5-29 09:16:29)
-    Script for 2018-05-2X:
+    Script for 2018-06-01:
+        ✔ Verify and checks correction. @done (2018-6-12 17:58:49)
+        ✔ Generate script. @done (2018-6-12 17:58:50)
+        ☐ Update to production server.
+    Script for 2018-06-14:
         ☐ Verify and checks correction.
         ☐ Generate script.
         ☐ Update to production server.
