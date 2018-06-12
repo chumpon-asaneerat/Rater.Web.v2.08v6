@@ -4,7 +4,7 @@ My Choice Rater v2.0:
             Tables and Views:
                 ✔ LimitUnit (TABLE) change column name. @done (2018-6-12 23:05:50)
                 ✔ PeriodUnit (TABLE). change column name. @done (2018-6-12 23:06:51)
-                ☐ (TABLE).
+                ✔ MemberType (TABLE). change column name. @done (2018-6-12 23:09:54)
                 ☐ (TABLE).
                 ☐ (TABLE).
             Stored Procedures and Functions:
