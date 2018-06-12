@@ -3,7 +3,7 @@ My Choice Rater v2.0:
         Database Create Scripts:
             Tables and Views:
                 ✔ LimitUnit (TABLE) change column name. @done (2018-6-12 23:05:50)
-                ☐ (TABLE).
+                ✔ PeriodUnit (TABLE). change column name. @done (2018-6-12 23:06:51)
                 ☐ (TABLE).
                 ☐ (TABLE).
                 ☐ (TABLE).

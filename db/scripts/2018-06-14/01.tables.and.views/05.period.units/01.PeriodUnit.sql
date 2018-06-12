@@ -7,7 +7,7 @@ GO
 CREATE TABLE [dbo].[PeriodUnit](
 	[PeriodUnitId] [int] NOT NULL,
 	[LangId] [nvarchar](3) NOT NULL,
-	[PeriodDesc] [nvarchar](50) NOT NULL,
+	[PeriodName] [nvarchar](50) NOT NULL,
  CONSTRAINT [PK_PeriodUnit_1] PRIMARY KEY CLUSTERED 
 (
 	[PeriodUnitId] ASC,
@@ -20,5 +20,5 @@ GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The ISO 639-1 alpha 2 code.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'PeriodUnit', @level2type=N'COLUMN',@level2name=N'LangId'
 GO
 
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The Default Description For Period Unit' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'PeriodUnit', @level2type=N'COLUMN',@level2name=N'PeriodDesc'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The Period Unit Name' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'PeriodUnit', @level2type=N'COLUMN',@level2name=N'PeriodName'
 GO
