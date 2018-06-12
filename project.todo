@@ -11,7 +11,7 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-06-09 remove.
+                    ✔ db-script-2018-06-09 remove. @done (2018-6-12 20:32:53)
                     ☐ db-script-2018-06-14 add (generate db script).
         Clients:
             Third Party Libraries:
