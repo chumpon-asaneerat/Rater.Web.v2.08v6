@@ -1,4 +1,5 @@
-﻿const express = require('express');
+﻿/*
+const express = require('express');
 const path = require('path');
 
 // setup root path.
@@ -28,3 +29,5 @@ var server = app.listen(app.get('port'), function () {
     var portName = server.address().port;
     console.log(appName + ' listening on port ' + portName);
 });
+*/
+

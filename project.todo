@@ -57,34 +57,11 @@ My Choice Rater v2.0:
                 ✔ Remove jsTree. @done (2018-6-12 20:31:57)
                 ✔ Remove chosen and select2. @done (2018-6-12 20:32:07)
     Update on [2018-06-13]:
-        Database Create Scripts:
-            Tables and Views:
-                ☐ (TABLE).
-                ☐ (TABLE).
-                ☐ (VIEW).
-                ☐ (VIEW).
-            Stored Procedures and Functions:
-                ☐ (FN).
-                ☐ (FN).
-                ☐ (SP).
-                ☐ (SP).
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP).
         Node Server:
             Server Libraries:
+                server.js:
+                    ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 22:26:10)
                 nLib-core.js:
-                    ☐ 
-                mssql-db.js:
-                    ☐ 
-                rater-web-db.js:
-                    ☐ 
-                rater-web-secure.js:
-                    ☐ 
-        Clients:
-            Core Libraries:
-                rater-client.js:
-                    ☐ 
-                tags.js:
                     ☐ 
     Update on [2018-06-14]:
         Database Create Scripts:
@@ -99,6 +76,44 @@ My Choice Rater v2.0:
             Build Scripts:
                 Gulp Tasks:
                     ☐ db-script-2018-06-14 (generate db script).
+        Clients:
+            Core Libraries:
+                rater-client.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+    Update on [2018-06-15]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).
+            Stored Procedures and Functions:
+                ☐ (FN).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP).
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-06-15 (generate db script).
+        Clients:
+            Core Libraries:
+                rater-client.js:
+                    ☐ 
+                tags.js:
+                    ☐ 
+    Update on [2018-06-16]:
+        Database Create Scripts:
+            Tables and Views:
+                ☐ (TABLE).
+            Stored Procedures and Functions:
+                ☐ (FN).
+                ☐ (SP).
+            Init Stored Procedures:
+                ☐ InitErrorMessages (SP).
+        Node Server:
+            Build Scripts:
+                Gulp Tasks:
+                    ☐ db-script-2018-06-16 (generate db script).
         Clients:
             Core Libraries:
                 rater-client.js:
