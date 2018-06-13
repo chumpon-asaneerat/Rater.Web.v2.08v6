@@ -3,9 +3,9 @@ const path = require('path');
 // setup root path.
 process.env['ROOT_PATHS'] = path.dirname(require.main.filename);
 
-/*
-
 const conf = require('./configs/app-configs');
+
+/*
 const middleware = require('./lib/app-middlewares');
 const commonpaths = require('./lib/app-paths');
 const routes = require('./lib/app-routes');
@@ -29,4 +29,9 @@ var server = app.listen(app.get('port'), function () {
     console.log(appName + ' listening on port ' + portName);
 });
 */
+
+console.log(conf.server);
+console.log(conf.app);
+console.log(conf.db);
+console.log(conf.db.getConfig());
 

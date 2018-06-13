@@ -59,12 +59,14 @@ My Choice Rater v2.0:
     Update on [2018-06-13]:
         Node Server:
             Server Libraries:
-                server.js:
-                    ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 22:26:10)
                 app-configs.js:
                     ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 23:04:03)
+                    ✔ Convert code to ES6 class. @done (2018-6-13 23:22:06)
                 nLib-core.js:
                     ☐ 
+                server.js:
+                    ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 22:26:10)
+                    ✔ Test ServerConfig class. @done (2018-6-13 23:22:20)
     Update on [2018-06-14]:
         Database Create Scripts:
             Tables and Views:
