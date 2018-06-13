@@ -61,6 +61,8 @@ My Choice Rater v2.0:
             Server Libraries:
                 server.js:
                     ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 22:26:10)
+                app-configs.js:
+                    ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 23:04:03)
                 nLib-core.js:
                     ☐ 
     Update on [2018-06-14]:

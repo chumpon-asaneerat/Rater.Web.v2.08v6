@@ -1,4 +1,5 @@
 // Export
+/*
 exports = module.exports = {
     app: {
         name: 'My Choice Rater Web',
@@ -32,3 +33,4 @@ exports = module.exports = {
         }
     }
 };
+*/
