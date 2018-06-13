@@ -1,11 +1,15 @@
-﻿const express = require('express');
-const path = require('path');
+﻿const path = require('path');
 // setup root path.
 process.env['ROOT_PATHS'] = path.dirname(require.main.filename);
+const rootPath = process.env['ROOT_PATHS'];
+const libPath = path.join(rootPath, 'lib');
 
-const conf = require('./configs/app-configs');
+const conf = require(path.join(libPath, 'server-configs'));
+const esvr = require(path.join(libPath, 'express-server'));
+const server = new esvr.ExpressServer();
 
 /*
+const conf = require('./configs/app-configs');
 const middleware = require('./lib/app-middlewares');
 const commonpaths = require('./lib/app-paths');
 const routes = require('./lib/app-routes');
@@ -30,8 +34,10 @@ var server = app.listen(app.get('port'), function () {
 });
 */
 
-console.log(conf.server);
-console.log(conf.app);
+//console.log(conf.app);
+//console.log(conf.server);
 console.log(conf.db);
-console.log(conf.db.getConfig());
+
+// Run Express Server.
+//server.start();
 

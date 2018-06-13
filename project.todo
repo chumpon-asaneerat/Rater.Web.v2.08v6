@@ -62,24 +62,21 @@ My Choice Rater v2.0:
                 app-configs.js:
                     ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 23:04:03)
                     ✔ Convert code to ES6 class. @done (2018-6-13 23:22:06)
-                nLib-core.js:
-                    ☐ 
                 server.js:
                     ✔ comment out all code for test refactor related modules to ES6. @done (2018-6-13 22:26:10)
                     ✔ Test ServerConfig class. @done (2018-6-13 23:22:20)
     Update on [2018-06-14]:
-        Database Create Scripts:
-            Tables and Views:
-                ☐ (TABLE).
-            Stored Procedures and Functions:
-                ☐ (FN).
-                ☐ (SP).
-            Init Stored Procedures:
-                ☐ InitErrorMessages (SP).
         Node Server:
-            Build Scripts:
-                Gulp Tasks:
-                    ☐ db-script-2018-06-14 (generate db script).
+            Server Libraries:
+                app-configs.js:
+                    ✔ move app-configs.js and change name to server-configs.js. @done (2018-6-14 00:37:10)
+                server-configs.js:
+                    ✔ The config data now load fron server-config.json file in configs folder. @done (2018-6-14 00:37:13)
+                express-server.js:
+                    ✔ Implements __initPort method. @done (2018-6-14 00:49:13)
+                    ✔ Implements start method. @done (2018-6-14 00:49:21)
+                server.js:
+                    ☐ 
         Clients:
             Core Libraries:
                 rater-client.js:

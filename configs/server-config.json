@@ -1,0 +1,34 @@
+{
+    "app": {
+        "name": "My Choice Rater Web",
+        "version": "v2.0.8",
+        "build": 4322,
+        "updated": "2018-06-14 01:00"
+    },
+    "server": {
+        "port": 3010
+    },
+    "db": {
+        "accounts": [
+            {
+                "name": "dev",
+                "login": {
+                    "server": "localhost",
+                    "database": "TestDb7x3",
+                    "user": "sa",
+                    "password": "winnt123"
+                }
+            },
+            {
+                "name": "edl",
+                "login": {
+                    "server": "localhost",
+                    "database": "RaterWeb2x8",
+                    "user": "sa",
+                    "password": "P@ssw0rd"
+                }
+            }
+        ],
+        "current": "dev"
+    }
+}
