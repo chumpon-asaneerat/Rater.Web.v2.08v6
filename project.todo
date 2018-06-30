@@ -78,9 +78,29 @@ My Choice Rater v2.0:
     Update on [2018-06-30]:
         Database Create Scripts:
             Tables and Views:
+                ✔ MasterPK (TABLE). @done (2018-6-30 09:52:38)
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
+                ☐ (TABLE).
                 ☐ (TABLE).
             Stored Procedures and Functions:
                 ☐ (FN).
+                ☐ (FN).
+                ☐ (FN).
+                ☐ (FN).
+                ☐ (FN).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
+                ☐ (SP).
                 ☐ (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP).

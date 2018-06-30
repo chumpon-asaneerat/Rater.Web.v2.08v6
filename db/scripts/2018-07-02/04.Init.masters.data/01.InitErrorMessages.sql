@@ -22,9 +22,8 @@ GO
 CREATE PROCEDURE [dbo].[InitErrorMessages]
 AS
 BEGIN
-    DECLARE @langId nvarchar(3);
-    -- <<<<[================= EN =================]>>>>
-    SET @langId = N'EN';
+	-- <<<<[================= EN =================]>>>>
+	SET @langId = N'EN';
     -- SUCCESS.
     EXEC SaveErrorMsg @langId, 0000, N'Success.'
     -- LANGUAGES.
@@ -33,9 +32,13 @@ BEGIN
     EXEC SaveErrorMsg @langId, 1003, N'Language Description (en) is duplicated.'
     EXEC SaveErrorMsg @langId, 1004, N'Currency Symbol cannot be null or empty string.'
     EXEC SaveErrorMsg @langId, 1005, N'Currency Description(EN) cannot be null or empty string.'
+	-- MASTER PK.
+    EXEC SaveErrorMsg @langId, 1101, N'Table Name is null or empty string.'
+    EXEC SaveErrorMsg @langId, 1102, N'Seed Reset Mode should be number 1-3.'
+    EXEC SaveErrorMsg @langId, 1103, N'Seed Digits should be number 1-9.'
 
-    -- <<<<[================= TH =================]>>>>
-    SET @langId = N'TH';
+	-- <<<<[================= TH =================]>>>>
+	SET @langId = N'TH';
     -- SUCCESS.
     EXEC SaveErrorMsg @langId, 0000, N'ดำเนินการสำเร็จ.'
     -- LANGUAGES.
@@ -44,6 +47,10 @@ BEGIN
     EXEC SaveErrorMsg @langId, 1003, N'คำอธิบายภาษา (EN) ตรวจพบข้อความซ้ำ.'
     EXEC SaveErrorMsg @langId, 1004, N'รหัสสกุลเงิน ไม่สามารถใช้ค่าว่าง หรือข้อความว่างได้'
     EXEC SaveErrorMsg @langId, 1005, N'ชื่อสกุลเงิน (EN) ไม่สามารถใช้ค่าว่าง หรือข้อความว่างได้'
+	-- MASTER PK.
+    EXEC SaveErrorMsg @langId, 1101, N'ชื่อตาราง ไม่สามารถใช้ค่าว่าง หรือข้อความว่างได้'
+    EXEC SaveErrorMsg @langId, 1102, N'รีเซ็ตโหมด มีค่าระหว่าง 1-3.'
+    EXEC SaveErrorMsg @langId, 1103, N'จำนวนรหัส มีค่าระหว่าง 1-9.'
 END
 
 GO
