@@ -97,13 +97,14 @@ My Choice Rater v2.0:
                 ☐ (FN).
                 ✔ SetMasterPK (SP). @done (2018-6-30 10:11:16)
                 ✔ NextMasterPK (SP). @done (2018-6-30 10:31:38)
-                ☐ (SP).
+                ✔ GetMasterPK (SP). @done (2018-6-30 10:36:12)
                 ☐ (SP).
                 ☐ (SP).
                 ☐ (SP).
                 ☐ (SP).
             Init Stored Procedures:
                 ☐ InitErrorMessages (SP).
+                ☐ InitMasterPK (SP).
         Node Server:
             Build Scripts:
                 Gulp Tasks:
