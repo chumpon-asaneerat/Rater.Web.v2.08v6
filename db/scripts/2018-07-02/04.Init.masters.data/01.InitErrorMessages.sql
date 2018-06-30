@@ -19,7 +19,7 @@ GO
 --
 --exec InitErrorMessages
 -- =============================================
-ALTER PROCEDURE [dbo].[InitErrorMessages]
+CREATE PROCEDURE [dbo].[InitErrorMessages]
 AS
 BEGIN
 DECLARE @langId nvarchar(3);
