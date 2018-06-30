@@ -19,9 +19,10 @@ GO
 --
 --exec InitErrorMessages
 -- =============================================
-CREATE PROCEDURE [dbo].[InitErrorMessages]
+ALTER PROCEDURE [dbo].[InitErrorMessages]
 AS
 BEGIN
+DECLARE @langId nvarchar(3);
 	-- <<<<[================= EN =================]>>>>
 	SET @langId = N'EN';
     -- SUCCESS.
@@ -36,6 +37,9 @@ BEGIN
     EXEC SaveErrorMsg @langId, 1101, N'Table Name is null or empty string.'
     EXEC SaveErrorMsg @langId, 1102, N'Seed Reset Mode should be number 1-3.'
     EXEC SaveErrorMsg @langId, 1103, N'Seed Digits should be number 1-9.'
+    EXEC SaveErrorMsg @langId, 1104, N'Table name is not exists in MasterPK table.'
+    EXEC SaveErrorMsg @langId, 1105, N'Not supports reset mode.'
+    EXEC SaveErrorMsg @langId, 1106, N'Cannot generate seed code for table:'
 
 	-- <<<<[================= TH =================]>>>>
 	SET @langId = N'TH';
@@ -51,6 +55,9 @@ BEGIN
     EXEC SaveErrorMsg @langId, 1101, N'ชื่อตาราง ไม่สามารถใช้ค่าว่าง หรือข้อความว่างได้'
     EXEC SaveErrorMsg @langId, 1102, N'รีเซ็ตโหมด มีค่าระหว่าง 1-3.'
     EXEC SaveErrorMsg @langId, 1103, N'จำนวนรหัส มีค่าระหว่าง 1-9.'
+    EXEC SaveErrorMsg @langId, 1104, N'ไม่พบชื่อตาราง ใน MasterPK table.'
+    EXEC SaveErrorMsg @langId, 1105, N'ไม่รองรับ รีเซ็ตโหมด.'
+    EXEC SaveErrorMsg @langId, 1106, N'ไม่สามารถสร้างรหัสสำหรับตาราง :'
 END
 
 GO

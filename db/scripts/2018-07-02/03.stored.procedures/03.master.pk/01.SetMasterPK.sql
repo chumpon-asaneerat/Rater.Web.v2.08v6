@@ -101,7 +101,7 @@ DECLARE @iTblCnt tinyint;
 			 WHERE LOWER([TableName]) = LOWER(RTRIM(LTRIM(@tableName)));
 		END
 
-		EXEC GetErrorMsg 0, @errNum out, @errMsg out
+		EXEC GetErrorMsg @langId, 0, @errNum out, @errMsg out
 	END TRY
 	BEGIN CATCH
 		SET @errNum = ERROR_NUMBER();
