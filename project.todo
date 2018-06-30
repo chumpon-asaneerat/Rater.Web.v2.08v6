@@ -75,15 +75,7 @@ My Choice Rater v2.0:
                 express-server.js:
                     ✔ Implements __initPort method. @done (2018-6-14 00:49:13)
                     ✔ Implements start method. @done (2018-6-14 00:49:21)
-                server.js:
-                    ☐ 
-        Clients:
-            Core Libraries:
-                rater-client.js:
-                    ☐ 
-                tags.js:
-                    ☐ 
-    Update on [2018-06-15]:
+    Update on [2018-06-30]:
         Database Create Scripts:
             Tables and Views:
                 ☐ (TABLE).
@@ -95,7 +87,8 @@ My Choice Rater v2.0:
         Node Server:
             Build Scripts:
                 Gulp Tasks:
-                    ☐ db-script-2018-06-15 (generate db script).
+                    ✔ db-script-2018-06-14 remove. @done (2018-6-30 09:37:23)
+                    ✔ db-script-2018-07-02 add. @done (2018-6-30 09:37:24)
         Clients:
             Core Libraries:
                 rater-client.js:
