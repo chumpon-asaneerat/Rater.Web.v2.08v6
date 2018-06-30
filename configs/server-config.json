@@ -2,8 +2,8 @@
     "app": {
         "name": "My Choice Rater Web",
         "version": "v2.0.8",
-        "build": 4322,
-        "updated": "2018-06-14 01:00"
+        "build": 4500,
+        "updated": "2018-07-02 09:00"
     },
     "server": {
         "port": 3010
