@@ -21,8 +21,8 @@ gulp.task('riot-tags', function () {
         .pipe(gulp.dest('public/lib/js'));
 });
 
-gulp.task('db-script-2018-06-14', function () {
-    var sDate = '2018-06-14'
+gulp.task('db-script-2018-07-12', function () {
+    var sDate = '2018-07-12';
     var rootPath = 'db/scripts/' + sDate;
     var src = [
         /* Concat all *.sql file in subdirectories. */
